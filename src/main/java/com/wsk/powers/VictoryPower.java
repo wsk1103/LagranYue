@@ -10,7 +10,7 @@ import com.wsk.utils.CommonUtil;
 /**
  * @author wsk1103
  * @date 2019/2/24
- * @desc 一句话说明
+ * @desc 胜利契约
  */
 public class VictoryPower extends AbstractPower {
     public static final String POWER_ID = "MyMod:VictoryPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
