@@ -1,0 +1,10 @@
+﻿{
+  "modid": "sky-test",
+  "name": "爱的供养",
+  "author_list": ["sky"],
+  "description": "爱的供养",
+  "dependencies": ["basemod"],
+  "version": "1.0.0",
+  "sts_version": "02-12-2019",
+  "mts_version": "3.6.0"
+}
