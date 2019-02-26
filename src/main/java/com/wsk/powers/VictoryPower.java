@@ -34,13 +34,7 @@ public class VictoryPower extends AbstractPower {
     }
 
     public void updateDescription() {
-//        this.description = DESCRIPITON;//不需要调用变量的文本更新方式。
         this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
-        //this.description = (DESCRIPTIONS[0] + 变量1 + DESCRIPTIONS[1] + 变量2 + DESCRIPTIONS[3] + ······);需要调用变量的文本更新方式。
-        //例： public static final String[] DESCRIPTIONS = {"在你回合开始时获得","点力量."};
-        //   this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-        //   通过该方式更新后的文本:在你回合开始时获得amount层力量.
-        //   另外一提，除变量this.amount（能力层数对应的变量）外，其他变量被赋值后需要人为调用updateDescription函数进行文本更新。
     }
 
     //触发时机：当一个房间获胜时。
