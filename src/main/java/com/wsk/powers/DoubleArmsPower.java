@@ -12,9 +12,8 @@ import com.wsk.utils.CommonUtil;
  */
 public class DoubleArmsPower extends AbstractPower {
     public static final String POWER_ID = "MyMod:DoubleArmsPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
-    public static final String NAME = "兵器：突穿死翔之枪";//能力的名称。
+    public static final String NAME = "双持";//能力的名称。
 
-    //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static final String[] DESCRIPTIONS = {"允许装备2件 兵器 "};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/ritual.png";
