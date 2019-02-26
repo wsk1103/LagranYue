@@ -51,7 +51,7 @@ public class RoseCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
-                CardRarity.RARE, CardTarget.SELF);
+                CardRarity.COMMON, CardTarget.SELF);
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
 
 //        this.baseBlock = defind;//基础格挡值，除升级以外无任何其他加成. this.block为有敏捷等加成的格挡值.

@@ -21,7 +21,7 @@ public class ChangeArmsUtil {
         //如果拥有
         if (doubleArms) {
             //层数小于2，直接返回，表示可以继续装备
-            if (DoubleArmsPower.getArms() <= 2) {
+            if (DoubleArmsPower.getArms() <= AbstractDungeon.player.getPower(DoubleArmsPower.POWER_ID).amount) {
                 return;
             }
         }

@@ -37,7 +37,7 @@ public class MyMod implements PostInitializeSubscriber,
     private static final String MODNAME = "爱的供养";//Mod名称。
     private static final String AUTHOR = "wsk1103";//mod作者。
     private static final String DESCRIPTION = "v1.0-test\n Make by Sky.";//Mod描叙，随便写。
-    private static final Color COLOR = CardHelper.getColor(120, 120, 120);//mod人物对应的颜色。getColor所需的三个参数分别对应颜色的三个色相R、G、U。查找色相请打开系统自带画图，编辑颜色窗口，右下角的RGU三栏。（仅以Win10的自带画图为例）
+    private static final Color COLOR = CardHelper.getColor(76, 151, 226);//mod人物对应的颜色。getColor所需的三个参数分别对应颜色的三个色相R、G、U。查找色相请打开系统自带画图，编辑颜色窗口，右下角的RGU三栏。（仅以Win10的自带画图为例）
 
     /**
      * 卡牌背景
@@ -181,13 +181,17 @@ public class MyMod implements PostInitializeSubscriber,
         BaseMod.addCard(new PolyBeamCard());
         BaseMod.addCard(new RoseCard());
         BaseMod.addCard(new SkillBlazingSevenRingsCard());
+        BaseMod.addCard(new SkillBrokenShieldCard());
+        BaseMod.addCard(new SkillBrokenSwordCard());
         BaseMod.addCard(new SkillChiharaHoundCard());
         BaseMod.addCard(new SkillDeathBolgCard());
         BaseMod.addCard(new SkillExplosiveArmorCard());
         BaseMod.addCard(new SkillGaeBolgCard());
         BaseMod.addCard(new SkillGanJiangMoYeSwordCard());
+        BaseMod.addCard(new SkillIncompleteArchCard());
         BaseMod.addCard(new SkillKadeboSwordCard());
         BaseMod.addCard(new SkillVictorySwordCard());
+        BaseMod.addCard(new SkillWoodSpearCard());
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
 

@@ -94,6 +94,10 @@ public class MyModCharacter extends CustomPlayer {
         retVal.add(PowerDoubleArmsCard.ID);
         retVal.add(SkillBlazingSevenRingsCard.ID);
         retVal.add(SkillChiharaHoundCard.ID);
+        retVal.add(SkillBrokenShieldCard.ID);
+        retVal.add(SkillBrokenSwordCard.ID);
+        retVal.add(SkillIncompleteArchCard.ID);
+        retVal.add(SkillWoodSpearCard.ID);
 //        retVal.add(AttackFireCard.ID);
 //        retVal.add(AttackIceCard.ID);
 //        retVal.add(BaseDefendCard.ID);
@@ -119,10 +123,6 @@ public class MyModCharacter extends CustomPlayer {
                 580, 580, 0, 9999, 10,
                 //参数含义：80，80 - 初始拥有血量和初始最大血量   0-球球数  99-初始金币数量  5-每回合抽牌数量
                 this, getStartingRelics(), getStartingDeck(), false);
-        //null位置对应参数：CharacterEnum.CharacterName
-        //需要新建一个CharacterEnum类import后使用。代码如下：
-        //@SpireEnum
-        //public static AbstractPlayer.PlayerClass CharacterName; CharacterName为你的角色对应的英文名称
     }
 
     @Override
@@ -205,97 +205,4 @@ public class MyModCharacter extends CustomPlayer {
     public String getVampireText() {
         return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[5];
     }
-
-
-/*    private void reloadAnimation() {
-        this.loadAnimation(atlasURL, this.currentJson, renderscale);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
-        this.state.addListener(new SlimeAnimListener());
-    }
-
-    public void initializeSlotPositions() {
-        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 1);
-        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
-        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 2) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 3);
-        orbPositionsX[5] = xStartOffset + (xSpaceBetweenSlots * 3) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[6] = xStartOffset + (xSpaceBetweenSlots * 4);
-        orbPositionsX[7] = xStartOffset + (xSpaceBetweenSlots * 4) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[8] = xStartOffset + (xSpaceBetweenSlots * 5);
-        orbPositionsX[9] = xStartOffset + (xSpaceBetweenSlots * 5) + xSpaceBottomAlternatingOffset;
-
-        orbPositionsY[0] = yStartOffset;
-        orbPositionsY[1] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[2] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[3] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
-        orbPositionsY[4] = yStartOffset;
-        orbPositionsY[5] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[6] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[7] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
-        orbPositionsY[8] = yStartOffset;
-        orbPositionsY[9] = yStartOffset + ySpaceBottomAlternatingOffset;
-    }
-
-    @Override
-    public void applyStartOfTurnCards() {
-        //Failsafe, should be removed through victory or intangible being removed, but just in case of weird buff nullify effects I don't know about...
-        super.applyStartOfTurnCards();
-        if (this.puddleForm && !this.hasPower(IntangiblePlayerPower.POWER_ID)) {
-            removePuddleForm();
-        }
-    }
-
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
-        if (!this.moved) this.movePosition((float) Settings.WIDTH * this.leftScale, AbstractDungeon.floorY);
-        this.moved = true;
-
-
-        this.hatX = this.skeleton.findBone("eyeback1").getX();
-        this.hatY = this.skeleton.findBone("eyeback1").getY();
-
-    }
-
-    @SpireOverride
-    public void renderPowerIcons(SpriteBatch sb, float x, float y) {
-        float offset = 10.0F;
-        int powersIterated = 0;
-        float YOffset = 0;
-        Iterator var5;
-        AbstractPower p;
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
-            p = (AbstractPower) var5.next();
-            p.renderIcons(sb, x + (offset * Settings.scale), y + ((-48.0F + YOffset) * Settings.scale), Color.WHITE);
-            powersIterated++;
-            if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F;
-                offset = -38.0F;
-            }
-        }
-
-        offset = 0.0F;
-        powersIterated = 0;
-        YOffset = 0.0F;
-
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
-            p = (AbstractPower) var5.next();
-            p.renderAmount(sb, x + ((offset + 32.0F) * Settings.scale), y + ((-66.0F + YOffset) * Settings.scale), Color.WHITE);
-            powersIterated++;
-            if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F;
-                offset = -48.0F;
-            }
-        }
-    }
-
-    private void removePuddleForm() {
-        if (this.puddleForm) {
-            this.currentJson = jsonURL;
-            reloadAnimation();
-            this.puddleForm = false;
-        }
-    }*/
 }

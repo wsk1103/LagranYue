@@ -19,7 +19,6 @@ public class ImprintPower extends AbstractPower {
     public static final String POWER_ID = "MyMod:ImprintPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "死亡印记";//能力的名称。
 
-//    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static final String[] DESCRIPTIONS = {"造成伤害增加","点，当层数到达10层的时候，给予50点伤害"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/ritual.png";
@@ -42,11 +41,6 @@ public class ImprintPower extends AbstractPower {
     public void updateDescription() {
 //        this.description = DESCRIPITON;//不需要调用变量的文本更新方式。
         this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-        //this.description = (DESCRIPTIONS[0] + 变量1 + DESCRIPTIONS[1] + 变量2 + DESCRIPTIONS[3] + ······);需要调用变量的文本更新方式。
-        //例： public static final String[] DESCRIPTIONS = {"在你回合开始时获得","点力量."};
-        //   this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
-        //   通过该方式更新后的文本:在你回合开始时获得amount层力量.
-        //   另外一提，除变量this.amount（能力层数对应的变量）外，其他变量被赋值后需要人为调用updateDescription函数进行文本更新。
     }
 
     //造成伤害时，返回伤害数值
@@ -66,12 +60,4 @@ public class ImprintPower extends AbstractPower {
             }
         }
     }
-
-//    //触发时机：当玩家攻击时。info.可调用伤害信息。
-//    public void onAttack(DamageInfo info, int damageAmount) {//参数： info-伤害信息，damageAmount-伤害数值，target-伤害目标
-//        //伤害分为 一般 ，荆棘，失去HP
-//        if (info.type == DamageInfo.DamageType.NORMAL) {
-//
-//        }
-//    }
 }

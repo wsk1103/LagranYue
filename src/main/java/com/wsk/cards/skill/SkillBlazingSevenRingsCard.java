@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.wsk.cards.AbstractShield;
+import com.wsk.cards.AbstractShieldCard;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.BlazingSevenRingsPower;
 import com.wsk.utils.ChangeArmsUtil;
@@ -21,7 +21,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 一句话说明
  */
-public class SkillBlazingSevenRingsCard extends AbstractShield {
+public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     public static final String ID = "MyMod:SkillBlazingSevenRingsCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 

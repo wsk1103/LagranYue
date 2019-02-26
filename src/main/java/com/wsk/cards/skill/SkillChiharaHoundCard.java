@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.wsk.cards.AbstractArch;
+import com.wsk.cards.AbstractArchCard;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.ChiharaHoundPower;
 import com.wsk.utils.ChangeArmsUtil;
@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 兵器：赤原猎犬
  */
-public class SkillChiharaHoundCard extends AbstractArch {
+public class SkillChiharaHoundCard extends AbstractArchCard {
     public static final String ID = "MyMod:SkillChiharaHoundCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
@@ -62,7 +62,7 @@ public class SkillChiharaHoundCard extends AbstractArch {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
                 new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new ChiharaHoundPower(abstractPlayer, abstractMonster, this.magicNumber, upgraded), this.magicNumber));
+                new ChiharaHoundPower(abstractPlayer, this.magicNumber, upgraded), this.magicNumber));
     }
 
     static {

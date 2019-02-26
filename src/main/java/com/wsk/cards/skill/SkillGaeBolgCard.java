@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.wsk.cards.AbstractSpear;
+import com.wsk.cards.AbstractSpearCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.GaeBolgPowerAbstract;
+import com.wsk.powers.GaeBolgPowerBase;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/25
  * @desc 一句话说明
  */
-public class SkillGaeBolgCard extends AbstractSpear {
+public class SkillGaeBolgCard extends AbstractSpearCard {
     public static final String ID = "MyMod:SkillGaeBolgCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
@@ -35,7 +35,7 @@ public class SkillGaeBolgCard extends AbstractSpear {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.SPECIAL, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
@@ -65,7 +65,7 @@ public class SkillGaeBolgCard extends AbstractSpear {
         //兵器：刺穿死棘之枪
         int platedArmor = 1;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new GaeBolgPowerAbstract(abstractPlayer, this.magicNumber, platedArmor), this.magicNumber));
+                new GaeBolgPowerBase(abstractPlayer, this.magicNumber, platedArmor), this.magicNumber));
     }
 
     static {

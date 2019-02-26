@@ -14,7 +14,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 兵器：誓约胜利之剑
  */
-public class VictorySwordPower extends AbstractSwordPower {
+public class VictorySwordPower extends BaseSwordPower {
     public static final String POWER_ID = "MyMod:VictorySwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：誓约胜利之剑";//能力的名称。
 
@@ -27,7 +27,8 @@ public class VictorySwordPower extends AbstractSwordPower {
     //计算该能力从使用到移除所统计过的回合，目的是移除能力的时候，顺便移除由于该能力获取到的胜利契约点数.
     private int startEnd = 0;
 
-    public VictorySwordPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+    public VictorySwordPower(AbstractCreature owner, int amount) {
+        super(owner, amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;

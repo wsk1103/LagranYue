@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.wsk.cards.AbstractSpear;
+import com.wsk.cards.AbstractSpearCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.DeathBolgPowerAbstract;
+import com.wsk.powers.DeathBolgPowerBase;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/25
  * @desc 兵器：突穿死翔之枪
  */
-public class SkillDeathBolgCard extends AbstractSpear {
+public class SkillDeathBolgCard extends AbstractSpearCard {
     public static final String ID = "MyMod:SkillDeathBolgCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
@@ -63,7 +63,7 @@ public class SkillDeathBolgCard extends AbstractSpear {
                 new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
         //兵器：突穿死翔之枪
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new DeathBolgPowerAbstract(abstractPlayer, this.magicNumber), this.magicNumber));
+                new DeathBolgPowerBase(abstractPlayer, this.magicNumber), this.magicNumber));
     }
 
     static {

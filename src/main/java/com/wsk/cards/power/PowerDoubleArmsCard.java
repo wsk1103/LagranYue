@@ -47,7 +47,8 @@ public class PowerDoubleArmsCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.POWER,
                 AbstractCardEnum.MyModCard,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.RARE, CardTarget.SELF);
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public AbstractCard makeCopy() {
@@ -67,7 +68,8 @@ public class PowerDoubleArmsCard extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         //先为自己增加1点力量
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DoubleArmsPower(abstractPlayer, 0), 0));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                new DoubleArmsPower(abstractPlayer, this.magicNumber), this.magicNumber));
     }
 
     static {

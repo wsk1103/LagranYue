@@ -46,7 +46,22 @@
   },
 
 
-
+  "MyMod:SkillBrokenSwordCard": {
+    "NAME": "兵器：断剑",
+    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。 NL 消耗 "
+  },
+  "MyMod:SkillWoodSpearCard": {
+    "NAME": "兵器：竹枪",
+    "DESCRIPTION": "获得 兵器 枪 。获得 !M! 点力量。 NL 消耗 "
+  },
+  "MyMod:SkillIncompleteArchCard": {
+    "NAME": "兵器：残弓",
+    "DESCRIPTION": "获得 兵器 弓 。获得 !M! 点力量。 NL 消耗 "
+  },
+  "MyMod:SkillBrokenShieldCard": {
+    "NAME": "兵器：破盾",
+    "DESCRIPTION": "获得 兵器 盾 。获得 !M! 点敏捷。 NL 消耗 "
+  },
   "MyMod:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
     "DESCRIPTION": "获得 兵器 枪 。获得 !M! 点力量。攻击时，获得1 多层护甲 。 NL 消耗 "
@@ -129,9 +144,9 @@
     "UPGRADE_DESCRIPTION": "每打出一张 兵器 牌，对所有敌人造成8点伤害。"
   },
   "MyMod:PowerDoubleArmsCard": {
-    "NAME": "双持",
-    "DESCRIPTION": "允许装备2件 兵器 ， 疲惫 ",
-    "UPGRADE_DESCRIPTION": " 固有 。允许装备2件 兵器 ， 疲惫 "
+    "NAME": "武器大师",
+    "DESCRIPTION": "允许装备 !M! 件 兵器 ， 疲惫 ",
+    "UPGRADE_DESCRIPTION": " 固有 。允许装备 !M! 件 兵器 ， 疲惫 "
   },
   "MyMod:BasePowerCard": {
     "NAME": "来自WSK的支持",

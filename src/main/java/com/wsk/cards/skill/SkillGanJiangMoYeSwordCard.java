@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.wsk.cards.AbstractSword;
+import com.wsk.cards.AbstractSwordCard;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.GanJiangMoYePower;
 import com.wsk.utils.ChangeArmsUtil;
@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 一句话说明
  */
-public class SkillGanJiangMoYeSwordCard extends AbstractSword {
+public class SkillGanJiangMoYeSwordCard extends AbstractSwordCard {
     public static final String ID = "MyMod:SkillGanJiangMoYeSwordCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 

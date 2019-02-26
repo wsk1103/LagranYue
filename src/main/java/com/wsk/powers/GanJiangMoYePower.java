@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 兵器：干将莫邪
  */
-public class GanJiangMoYePower extends AbstractSwordPower {
+public class GanJiangMoYePower extends BaseSwordPower {
     public static final String POWER_ID = "MyMod:GanJiangMoYePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：干将莫邪";//能力的名称。
 
@@ -29,7 +29,8 @@ public class GanJiangMoYePower extends AbstractSwordPower {
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
 
-    public GanJiangMoYePower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+    public GanJiangMoYePower(AbstractCreature owner, int amount) {
+        super(owner,amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
