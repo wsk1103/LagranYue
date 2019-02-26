@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.BasePowerCard;
+import com.wsk.cards.power.PowerDoubleArmsCard;
 import com.wsk.cards.skill.*;
 import com.wsk.characters.MyModCharacter;
 import com.wsk.patches.AbstractCardEnum;
@@ -171,14 +172,22 @@ public class MyMod implements PostInitializeSubscriber,
         BaseMod.addCard(new AttackSummerCard());
         BaseMod.addCard(new AttackTopazCard());
         BaseMod.addCard(new BaseAttackCard());
+
         BaseMod.addCard(new BasePowerCard());
+        BaseMod.addCard(new PowerDoubleArmsCard());
+
         BaseMod.addCard(new BaseDefendCard());
         BaseMod.addCard(new DefendCard2());
         BaseMod.addCard(new PolyBeamCard());
         BaseMod.addCard(new RoseCard());
-        BaseMod.addCard(new SkillGaeBolgCard());
-        BaseMod.addCard(new SkillExplosiveArmorCard());
+        BaseMod.addCard(new SkillBlazingSevenRingsCard());
+        BaseMod.addCard(new SkillChiharaHoundCard());
         BaseMod.addCard(new SkillDeathBolgCard());
+        BaseMod.addCard(new SkillExplosiveArmorCard());
+        BaseMod.addCard(new SkillGaeBolgCard());
+        BaseMod.addCard(new SkillGanJiangMoYeSwordCard());
+        BaseMod.addCard(new SkillKadeboSwordCard());
+        BaseMod.addCard(new SkillVictorySwordCard());
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
 

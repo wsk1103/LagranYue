@@ -14,8 +14,8 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/25
  * @desc 兵器：刺穿死棘之枪
  */
-public class GaeBolgPower extends SpearPower {
-    public static final String POWER_ID = "MyMod:GaeBolgPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+public class GaeBolgPowerAbstract extends AbstractSpearPower {
+    public static final String POWER_ID = "MyMod:GaeBolgPowerAbstract";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：刺穿死棘之枪";//能力的名称。
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
@@ -26,7 +26,7 @@ public class GaeBolgPower extends SpearPower {
     private static PowerType POWER_TYPE = PowerType.BUFF;
     private int platedArmor;
 
-    public GaeBolgPower(AbstractCreature owner, int amount, int platedArmor) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+    public GaeBolgPowerAbstract(AbstractCreature owner, int amount, int platedArmor) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;

@@ -28,7 +28,6 @@ public class AttackTopazCard extends CustomCard {
     private static final String IMG = "cards/slimepunch.png";//卡牌牌面的图片路径。
     private static final String UPGRADED_DESCRIPTION;
 
-    public static final String[] EXTENDED_DESCRIPTION;
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
     private static final int COST = 2;//卡牌的费用。
@@ -73,6 +72,5 @@ public class AttackTopazCard extends CustomCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 }

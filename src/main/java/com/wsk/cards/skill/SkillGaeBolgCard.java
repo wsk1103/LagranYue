@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.cards.AbstractSpear;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.GaeBolgPower;
+import com.wsk.powers.GaeBolgPowerAbstract;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -65,7 +65,7 @@ public class SkillGaeBolgCard extends AbstractSpear {
         //兵器：刺穿死棘之枪
         int platedArmor = 1;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new GaeBolgPower(abstractPlayer, this.magicNumber, platedArmor), this.magicNumber));
+                new GaeBolgPowerAbstract(abstractPlayer, this.magicNumber, platedArmor), this.magicNumber));
     }
 
     static {

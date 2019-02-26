@@ -17,9 +17,8 @@ import com.wsk.cards.attack.AttackEmeraldCard;
 import com.wsk.cards.attack.AttackPurpleCard;
 import com.wsk.cards.attack.AttackSummerCard;
 import com.wsk.cards.attack.BaseAttackCard;
-import com.wsk.cards.skill.SkillDeathBolgCard;
-import com.wsk.cards.skill.SkillExplosiveArmorCard;
-import com.wsk.cards.skill.SkillGaeBolgCard;
+import com.wsk.cards.power.PowerDoubleArmsCard;
+import com.wsk.cards.skill.*;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
 import com.wsk.utils.CommonUtil;
@@ -32,7 +31,7 @@ import java.util.ArrayList;
  * @desc 一句话说明
  */
 public class MyModCharacter extends CustomPlayer {
-    private static final int ENERGY_PER_TURN = 5;//角色的初始能量值。
+    private static final int ENERGY_PER_TURN = 10;//角色的初始能量值。
     private static final String[] orbTextures = {"mymod/char/orb/layer1.png",
             "mymod/char/orb/layer2.png",
             "mymod/char/orb/layer3.png",
@@ -85,9 +84,16 @@ public class MyModCharacter extends CustomPlayer {
 //        retVal.add(AttackSapphireCard.ID);
 //        retVal.add(AttackRubyCard.ID);
 //        retVal.add(BaseAttackCard.ID);
-        retVal.add(SkillDeathBolgCard.ID);
+//        retVal.add(SkillDeathBolgCard.ID);
         retVal.add(AttackSummerCard.ID);
         retVal.add(SkillExplosiveArmorCard.ID);
+
+//        retVal.add(SkillVictorySwordCard.ID);
+        retVal.add(SkillGanJiangMoYeSwordCard.ID);
+        retVal.add(SkillKadeboSwordCard.ID);
+        retVal.add(PowerDoubleArmsCard.ID);
+        retVal.add(SkillBlazingSevenRingsCard.ID);
+        retVal.add(SkillChiharaHoundCard.ID);
 //        retVal.add(AttackFireCard.ID);
 //        retVal.add(AttackIceCard.ID);
 //        retVal.add(BaseDefendCard.ID);
@@ -110,7 +116,7 @@ public class MyModCharacter extends CustomPlayer {
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo("爱的供养", "爱的供养-----MyMod",
-                580, 580, 0, 9999, 5,
+                580, 580, 0, 9999, 10,
                 //参数含义：80，80 - 初始拥有血量和初始最大血量   0-球球数  99-初始金币数量  5-每回合抽牌数量
                 this, getStartingRelics(), getStartingDeck(), false);
         //null位置对应参数：CharacterEnum.CharacterName

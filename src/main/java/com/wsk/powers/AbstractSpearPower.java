@@ -5,15 +5,14 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 /**
  * @author wsk1103
  * @date 2019/2/25
- * @desc 攻击时，给予一层易伤
+ * @desc 枪，攻击时，给予一层易伤
  */
-public class SpearPower extends AbstractPower {
+public class AbstractSpearPower extends AbstractArmsPower {
 
     //触发时机：当玩家攻击时。
     @Override

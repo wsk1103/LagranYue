@@ -29,8 +29,8 @@
   },
   "MyMod:AttackPurpleCard": {
     "NAME": "紫宝石的打击",
-    "DESCRIPTION": "造成 !D! 点伤害 2次，从抽牌堆随机获得一张攻击牌。会根据兵器的类型进行相应的 强化 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，从抽牌堆随机获得一张攻击牌，并且费用降低为0。会根据兵器的类型进行相应的 强化 。"
+    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌。会根据兵器的类型进行相应的 强化 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌，并且费用降低为0。会根据兵器的类型进行相应的 强化 。"
   },
   "MyMod:AttackSummerCard": {
     "NAME": "那年夏天的宝石梦",
@@ -55,27 +55,28 @@
     "NAME": "兵器：突穿死翔之枪",
     "DESCRIPTION": "获得 兵器 枪 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 "
   },
-  "MyMod:Split": {
+  "MyMod:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。每回合开始，获得1点 胜利誓约 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 点力量。每回合开始，获得1点 胜利誓约 。NL 消耗 "
+    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 点力量。每回合开始，获得 !M! 点 胜利誓约 。NL 消耗 "
   },
-  "MyMod:SuperSplit": {
+  "MyMod:SkillKadeboSwordCard": {
     "NAME": "兵器：卡拉德波加",
-    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。攻击造成伤害时，恢复未被格挡的1/2伤害的生命值。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。攻击时，恢复该攻击卡的数值的1/4的生命值。 NL 消耗 "
   },
-  "MyMod:LeadByExample": {
+  "MyMod:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。攻击时，都会被重复打出1次。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器 剑 。获得 !M! 点力量。每回合你使用的目标为敌人的牌都会被重复打出 !M! 次。 NL 消耗 "
   },
-  "MyMod:SlimeTap": {
+  "MyMod:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 兵器 弓 。获得 !M! 点力量。攻击时，给予被攻击者1层 虚弱。 NL 消耗"
+    "DESCRIPTION": "获得 兵器 弓 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 获得 兵器 弓 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
   },
-  "MyMod:Teamwork": {
+  "MyMod:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": "获得 兵器 盾 。获得 !M! 点敏捷。获得 !B! 格挡。获得 壁垒 。免疫5伤害以内的攻击。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器 盾 。获得 !M! 点敏捷。获得 !B! 格挡。获得 壁垒 。免疫5伤害以内的攻击。 NL 消耗"
+    "DESCRIPTION": "获得 兵器 盾 。获得 !B! 格挡。获得 !M! 点敏捷。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器 盾 。获得 !B! 格挡。获得 !M! 点敏捷。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗"
   },
   "MyMod:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
@@ -127,10 +128,10 @@
     "DESCRIPTION": "每打出一张 兵器 牌，对所有敌人造成5点伤害。",
     "UPGRADE_DESCRIPTION": "每打出一张 兵器 牌，对所有敌人造成8点伤害。"
   },
-  "MyMod:Recycling": {
+  "MyMod:PowerDoubleArmsCard": {
     "NAME": "双持",
-    "DESCRIPTION": "增加一个兵器区。",
-    "UPGRADE_DESCRIPTION": " 固有 。增加一个兵器区。"
+    "DESCRIPTION": "允许装备2件 兵器 ， 疲惫 ",
+    "UPGRADE_DESCRIPTION": " 固有 。允许装备2件 兵器 ， 疲惫 "
   },
   "MyMod:BasePowerCard": {
     "NAME": "来自WSK的支持",
