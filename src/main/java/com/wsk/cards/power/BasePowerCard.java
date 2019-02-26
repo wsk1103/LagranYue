@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.ModRitualPower;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -42,9 +41,6 @@ public class BasePowerCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    //增加的力量
-    private static final int addStrength = 3;
-
     public BasePowerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.POWER,
@@ -55,7 +51,7 @@ public class BasePowerCard extends CustomCard {
 //        this.baseBlock = defind;//基础格挡值，除升级以外无任何其他加成. this.block为有敏捷等加成的格挡值.
 //        this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
 //        this.baseMagicNumber = 0;//特殊值。一般用于表示给予power的层数，也可用于表示一些需要出现在描叙文本里的值。和下一行连用。
-//        this.magicNumber = this.baseMagicNumber;
+        this.magicNumber = this.baseMagicNumber = 1;
 //        this.tags.add(BaseModCardTags.BASIC_STRIKE);
 //        this.tags.add(AbstractCard.CardTags.STRIKE);
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
@@ -76,8 +72,8 @@ public class BasePowerCard extends CustomCard {
             this.upgradeName();//升级名称。必带。
 //            this.upgradeBlock(defind * 2);//升级而增加的护甲。增加的是baseDamage
 //            this.upgradeDamage(wskAttack * 2);//升级而增加的伤害。增加的是baseBlock
-//            this.upgradeMagicNumber(1);//升级而增加的特殊值。增加的是baseMagicNumber
-            this.upgradeBaseCost(0);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
+            this.upgradeMagicNumber(1);//升级而增加的特殊值。增加的是baseMagicNumber
+            this.upgradeBaseCost(1);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
 //            this.isEthereal = false;//虚无属性。
 //            this.exhaust = false;//消耗属性。
 //            this.isInnate = false;//固有属性。
@@ -86,12 +82,8 @@ public class BasePowerCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (upgraded) {
-            //先为自己增加1点力量
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new StrengthPower(abstractPlayer, addStrength), addStrength));
-        }
-        //每回合开始获得力量
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new ModRitualPower(abstractPlayer, addStrength), addStrength));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
     }
 
     static {

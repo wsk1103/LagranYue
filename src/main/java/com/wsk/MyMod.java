@@ -177,7 +177,7 @@ public class MyMod implements PostInitializeSubscriber,
         BaseMod.addCard(new PowerDoubleArmsCard());
 
         BaseMod.addCard(new BaseDefendCard());
-        BaseMod.addCard(new DefendCard2());
+        BaseMod.addCard(new MultipleThornsCard());
         BaseMod.addCard(new PolyBeamCard());
         BaseMod.addCard(new RoseCard());
         BaseMod.addCard(new SkillBlazingSevenRingsCard());

@@ -3,6 +3,7 @@ package com.wsk.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -49,6 +50,12 @@ public class ImprintPower extends AbstractPower {
             return damage + this.amount;
         }
         return damage;
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        //回合结束的时候，层数减少1
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, ImprintPower.POWER_ID, 1));
     }
 
     //触发时机：当回合开始时触发。

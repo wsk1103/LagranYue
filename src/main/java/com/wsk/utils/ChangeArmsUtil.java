@@ -35,4 +35,27 @@ public class ChangeArmsUtil {
         }
     }
 
+    //移除第一个兵器
+    public static void changeOne(AbstractPlayer p) {
+        for (AbstractPower power : AbstractDungeon.player.powers) {
+            if (power instanceof AbstractArmsPower) {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, power.ID));
+                //装备数量-1
+                DoubleArmsPower.subArms();
+                break;
+            }
+        }
+    }
+
+    //获得装备的兵器的数量
+    public static int getArmsNum(AbstractPlayer p) {
+        int result = 0;
+        for (AbstractPower power : AbstractDungeon.player.powers) {
+            if (power instanceof AbstractArmsPower) {
+                result ++;
+            }
+        }
+        return result;
+    }
+
 }

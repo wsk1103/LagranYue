@@ -23,7 +23,7 @@ public class ArmsToHandAction extends AbstractGameAction {
 
     static {
 //        uiStrings = CardCrawlGame.languagePack.getUIString("ComboFromDeckToHandAction");
-        TEXT = "选择一张 连击 牌添加到你的手牌中。";
+        TEXT = "选择一张 兵器 牌添加到你的手牌中。";
     }
 
     public ArmsToHandAction(int amount, boolean update) {

@@ -101,7 +101,7 @@ public class MyModCharacter extends CustomPlayer {
 //        retVal.add(AttackFireCard.ID);
 //        retVal.add(AttackIceCard.ID);
 //        retVal.add(BaseDefendCard.ID);
-//        retVal.add(DefendCard2.ID);
+//        retVal.add(MultipleThornsCard.ID);
 //        retVal.add(PolyBeamCard.ID);
 //        retVal.add(RoseCard.ID);
 //        retVal.add(BasePowerCard.ID);

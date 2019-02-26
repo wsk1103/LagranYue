@@ -8,23 +8,20 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
 /**
  * @author wsk1103
- * @date 2019/2/21
+ * @date 2019/2/26
  * @desc 一句话说明
  */
-public class RoseCard extends CustomCard {
-    public static final String ID = "MyMod:RoseCard";//卡牌在游戏中的id
+public class RubyDefendCard extends CustomCard {
+    public static final String ID = "MyMod:RubyDefendCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
-
-    private static final String UPGRADED_DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
 
     private static final CardStrings cardStrings;
 
@@ -33,46 +30,40 @@ public class RoseCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    public RoseCard() {
+    public RubyDefendCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust =true;
+        this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
     public AbstractCard makeCopy() {
-        return new RoseCard();
+        return new RubyDefendCard();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.upgradeBlock(2);
+            this.upgradeMagicNumber(2);
+
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        if (upgraded) {
-            //人工制品
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
-        }
-
-        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-        c.modifyCostForTurn(this.magicNumber * -3);
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
+        //下回合抽牌
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
     }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
 }
