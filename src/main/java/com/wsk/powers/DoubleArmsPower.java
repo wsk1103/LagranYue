@@ -22,7 +22,7 @@ public class DoubleArmsPower extends AbstractPower {
 
     private static int arms = 0;
 
-    public DoubleArmsPower(AbstractCreature owner) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+    public DoubleArmsPower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
