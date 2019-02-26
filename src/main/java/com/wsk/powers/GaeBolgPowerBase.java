@@ -58,7 +58,7 @@ public class GaeBolgPowerBase extends BaseSpearPower {
 //        //所有多层护甲
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                new PlatedArmorPower(AbstractDungeon.player, -power.amount), -power.amount));
-        super.onRemove();
+//        super.onRemove();
     }
 }
 

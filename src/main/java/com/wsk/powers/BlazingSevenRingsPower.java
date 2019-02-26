@@ -63,6 +63,6 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
                 new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
         //移除壁垒
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
-        super.onRemove();
+//        super.onRemove();
     }
 }

@@ -32,8 +32,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
     private static final int COST = 2;//卡牌的费用。
 
 
-    public SkillBrokenShieldCard() {
-        super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
+    public SkillBrokenShieldCard() { super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
                 CardRarity.COMMON, CardTarget.SELF);

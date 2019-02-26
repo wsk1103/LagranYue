@@ -70,6 +70,6 @@ public class VictorySwordPower extends BaseSwordPower {
             }
         }
         startEnd = 0;
-        super.onRemove();
+//        super.onRemove();
     }
 }

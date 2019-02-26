@@ -55,8 +55,8 @@
     "DESCRIPTION": "获得 兵器 枪 。获得 !M! 点力量。 NL 消耗 "
   },
   "MyMod:SkillIncompleteArchCard": {
-    "NAME": "兵器：残弓",
-    "DESCRIPTION": "获得 兵器 弓 。获得 !M! 点力量。 NL 消耗 "
+    "NAME": "兵器：残弩",
+    "DESCRIPTION": "获得 兵器 弩 。获得 !M! 点力量。 NL 消耗 "
   },
   "MyMod:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
@@ -85,8 +85,8 @@
   },
   "MyMod:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 兵器 弓 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 获得 兵器 弓 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
+    "DESCRIPTION": "获得 兵器 弩 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 获得 兵器 弩 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
   },
   "MyMod:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",

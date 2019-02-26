@@ -78,7 +78,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
     public void onRemove() {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-        super.onRemove();
+//        super.onRemove();
     }
 
 }

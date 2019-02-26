@@ -147,8 +147,8 @@
   },
   "MyMod:SlimeTap": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 兵器 弓 。获得3点力量。打出攻击卡牌时，给予被攻击者1层 虚弱。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "获得 兵器 弓 。获得3点力量。打出攻击卡牌时，给予被攻击者1层 虚弱，1层 易伤。 NL 消耗",
+    "DESCRIPTION": "获得 兵器 弩 。获得3点力量。打出攻击卡牌时，给予被攻击者1层 虚弱。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 兵器 弩 。获得3点力量。打出攻击卡牌时，给予被攻击者1层 虚弱，1层 易伤。 NL 消耗",
     "CARDTYPE":"SKILL",
     "CARDRARIRY":"UNCOMMON",
     "CARDTARGET":"SELF",

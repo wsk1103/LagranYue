@@ -61,6 +61,6 @@ public class ExplosiveArmorPower extends BaseShieldPower {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                     new ThornsPower(AbstractDungeon.player, -this.amount), -this.amount));
         }
-        super.onRemove();
+//        super.onRemove();
     }
 }
