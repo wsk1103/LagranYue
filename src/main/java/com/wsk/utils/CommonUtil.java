@@ -22,20 +22,8 @@ public class CommonUtil {
     public static String getLanguage() {
         String language;
         switch (Settings.language) {
-            case KOR:
-                language = "kor";
-                break;
-            case ZHS:
-                language = "zhs";
-                break;
-            case ZHT:
-                language = "zht";
-                break;
-            case FRA:
-                language = "fra";
-                break;
-            case JPN:
-                language = "jpn";
+            case ENG:
+                language = "eng";
                 break;
             default:
                 language = "zhs";

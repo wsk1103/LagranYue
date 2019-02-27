@@ -15,7 +15,7 @@ import java.util.ArrayList;
 /**
  * @author wsk1103
  * @date 2019/2/26
- * @desc 一句话说明
+ * @desc 复制卡牌
  */
 public class CopyCardAction extends AbstractGameAction {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DualWieldAction");

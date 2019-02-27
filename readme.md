@@ -3,3 +3,5 @@ This is a mod for SlayTheSpire!
 
 Now, I am developing.  
 目前正在开发中，
+
+借鉴史莱姆MOD
