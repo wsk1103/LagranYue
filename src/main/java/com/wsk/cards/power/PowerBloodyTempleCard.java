@@ -53,8 +53,10 @@ public class PowerBloodyTempleCard extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeDamage(1);
-            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.upgradeMagicNumber(1);
             this.isEthereal = false;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
@@ -62,7 +64,7 @@ public class PowerBloodyTempleCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new BloodyTemplePowerUpgraded(abstractPlayer, this.magicNumber), this.magicNumber));
+                    new BloodyTemplePowerUpgraded(abstractPlayer, this.magicNumber/2), this.magicNumber/2));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
                     new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber));

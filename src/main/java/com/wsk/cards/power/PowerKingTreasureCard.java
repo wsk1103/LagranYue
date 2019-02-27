@@ -58,6 +58,7 @@ public class PowerKingTreasureCard extends CustomCard {
             this.upgradeBaseCost(2);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
             this.isEthereal = false;//虚无属性。
             this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
@@ -65,7 +66,7 @@ public class PowerKingTreasureCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePower(abstractPlayer, 0), 0));
-        } else  {
+        } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePowerUpgraded(abstractPlayer, 0), 0));
         }
     }

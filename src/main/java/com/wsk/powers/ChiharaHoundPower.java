@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -38,6 +39,7 @@ public class ChiharaHoundPower extends BaseArchPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        updateDescription();
     }
 
     public void updateDescription() {
@@ -71,7 +73,9 @@ public class ChiharaHoundPower extends BaseArchPower {
 
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount));
+        if (!ChangeArmsUtil.retain()) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount));
+        }
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
 //        super.onRemove();

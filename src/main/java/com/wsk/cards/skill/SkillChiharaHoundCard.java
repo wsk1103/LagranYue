@@ -52,6 +52,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

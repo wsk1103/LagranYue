@@ -37,7 +37,7 @@ public class EatTigerCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
                 CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = 7;
+        this.baseBlock = 6;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -51,7 +51,7 @@ public class EatTigerCard extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeBlock(2);
-            this.upgradeMagicNumber(2);
+            this.upgradeMagicNumber(1);
 
         }
     }

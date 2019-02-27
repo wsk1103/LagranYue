@@ -38,7 +38,7 @@ public class RoseCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust =true;
+        this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -52,6 +52,7 @@ public class RoseCard extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

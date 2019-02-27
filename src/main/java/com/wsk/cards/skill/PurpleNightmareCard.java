@@ -49,7 +49,7 @@ public class PurpleNightmareCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeMagicNumber(1);
+            this.upgradeBaseCost(1);
         }
     }
 

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -22,7 +23,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
     public static final String POWER_ID = "MyMod:GanJiangMoYePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：干将莫邪";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的目标为敌人的牌都会被重复打出", "次"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的目标为敌人的攻击牌都会被重复打出", "次"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/BurningS.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
@@ -30,7 +31,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
 
 
     public GanJiangMoYePower(AbstractCreature owner, int amount) {
-        super(owner,amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+        super(owner, amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -38,6 +39,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        updateDescription();
     }
 
     public void updateDescription() {
@@ -46,7 +48,9 @@ public class GanJiangMoYePower extends BaseSwordPower {
 
     //每回合你使用的目标为敌人的牌都会被重复打出 M 次
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0) && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY)) {
+        if ((!card.purgeOnUse) && (this.amount > 0)
+                && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY)
+                && (card.type == AbstractCard.CardType.ATTACK)) {
             for (int i = 0; i < this.amount; i++) {
                 AbstractMonster m = null;
                 if (action.target != null) {
@@ -76,8 +80,10 @@ public class GanJiangMoYePower extends BaseSwordPower {
 
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+        if (!ChangeArmsUtil.retain()) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+        }
 //        super.onRemove();
     }
 

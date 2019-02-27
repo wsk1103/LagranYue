@@ -38,7 +38,6 @@ public class FantasyCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust =true;
         this.baseBlock = 6;
     }
 

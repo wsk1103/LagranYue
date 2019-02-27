@@ -49,7 +49,7 @@ public class RubyDefendCard extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeBlock(2);
-            this.upgradeMagicNumber(2);
+            this.upgradeMagicNumber(1);
 
         }
     }

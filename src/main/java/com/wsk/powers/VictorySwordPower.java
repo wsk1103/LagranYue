@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -36,6 +37,7 @@ public class VictorySwordPower extends BaseSwordPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        updateDescription();
     }
 
     public void updateDescription() {
@@ -57,16 +59,18 @@ public class VictorySwordPower extends BaseSwordPower {
 
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-        if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
-            int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
-            if (num < 0) {
-                //如果层数不够减，直接移除能力
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new VictoryPower(AbstractDungeon.player, -startEnd), -startEnd));
+        if (!ChangeArmsUtil.retain()) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+            if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
+                int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
+                if (num < 0) {
+                    //如果层数不够减，直接移除能力
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                            new VictoryPower(AbstractDungeon.player, -startEnd), -startEnd));
+                }
             }
         }
         startEnd = 0;

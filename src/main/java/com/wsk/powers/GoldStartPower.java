@@ -33,6 +33,7 @@ public class GoldStartPower extends AbstractPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        updateDescription();
     }
 
     public void updateDescription() {

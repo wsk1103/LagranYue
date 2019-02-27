@@ -7,15 +7,19 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.Keyword;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.wsk.cards.attack.*;
-import com.wsk.cards.power.BasePowerCard;
-import com.wsk.cards.power.PowerDoubleArmsCard;
+import com.wsk.cards.power.*;
 import com.wsk.cards.skill.*;
 import com.wsk.characters.MyModCharacter;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
+import com.wsk.relics.*;
 import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
@@ -151,8 +155,12 @@ public class MyMod implements PostInitializeSubscriber,
     public void receiveEditRelics() {
         logger.info("=========================正在加载新的遗物内容=========================");
 
-        logger.info("===slimebound===这是一个测试，所以没有遗物");
 //        BaseMod.addRelicToCustomPool(new 遗物类名(), AbstractCardEnum.makeBySky);
+        BaseMod.addRelicToCustomPool(new EnkiduRelics(), AbstractCardEnum.MyModCard);
+        BaseMod.addRelicToCustomPool(new GungnirRelics(), AbstractCardEnum.MyModCard);
+        BaseMod.addRelicToCustomPool(new RuleBreakerRelics(), AbstractCardEnum.MyModCard);
+        BaseMod.addRelicToCustomPool(new UnlimitedBladeWorksRelics(), AbstractCardEnum.MyModCard);
+        BaseMod.addRelicToCustomPool(new ZabaniyaRelics(), AbstractCardEnum.MyModCard);
         //null位置对应参数：AbstractCardEnum.BLACK.toString()
         logger.info("=========================加载新的遗物内容成功=========================");
     }
@@ -174,12 +182,32 @@ public class MyMod implements PostInitializeSubscriber,
         BaseMod.addCard(new BaseAttackCard());
 
         BaseMod.addCard(new BasePowerCard());
+        BaseMod.addCard(new PowerBloodyTempleCard());
+        BaseMod.addCard(new PowerDarkTempleCard());
         BaseMod.addCard(new PowerDoubleArmsCard());
+        BaseMod.addCard(new PowerDreamCard());
+        BaseMod.addCard(new PowerGoldStartCard());
+        BaseMod.addCard(new PowerKingTreasureCard());
+        BaseMod.addCard(new PowerRemoveArmorCard());
+        BaseMod.addCard(new PowerTwelveTrialsCard());
+        BaseMod.addCard(new PowerWindKingEnchantmentCard());
 
         BaseMod.addCard(new BaseDefendCard());
+        BaseMod.addCard(new BraveTemperamentCard());
+        BaseMod.addCard(new DefendBetterCard());
+        BaseMod.addCard(new EatTigerCard());
+        BaseMod.addCard(new EmeraldRemorseCard());
+        BaseMod.addCard(new FantasyCard());
+        BaseMod.addCard(new MagicSkyrocketCard());
         BaseMod.addCard(new MultipleThornsCard());
-        BaseMod.addCard(new PolyBeamCard());
+        BaseMod.addCard(new PhysicalFitnessCard());
+//        BaseMod.addCard(new PolyBeamCard());
+        BaseMod.addCard(new PrematureBurialCard());
+        BaseMod.addCard(new ProjectionCard());
+        BaseMod.addCard(new PurpleNightmareCard());
         BaseMod.addCard(new RoseCard());
+        BaseMod.addCard(new RubyDefendCard());
+        BaseMod.addCard(new SapphirePrayerCard());
         BaseMod.addCard(new SkillBlazingSevenRingsCard());
         BaseMod.addCard(new SkillBrokenShieldCard());
         BaseMod.addCard(new SkillBrokenSwordCard());
@@ -197,32 +225,22 @@ public class MyMod implements PostInitializeSubscriber,
 
         logger.info("=========================加载新的卡牌内容成功=========================");
     }
+
     //负责加载你编辑好的文本信息。,例如卡牌说明，遗物说明等等
     @Override
     public void receiveEditStrings() {
         logger.info("=========================正在加载遗物文本信息=========================");
 
-//        String relicStrings = Gdx.files.internal("文本位置").readString(String.valueOf(StandardCharsets.UTF_8));
-//        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        //除遗物文本信息需要导入外，其他文本信息可在类中直接写好，也可导入，具体实现请详参其他mod。文本文件格式.json。文本编码格式UTF-8。
-
         String language = CommonUtil.getLanguage();
-/*
-        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
-        if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
-        if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
-        if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
-        if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
-*/
 
         logger.info("begin editing strings");
-        String relicStrings = Gdx.files.internal("localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String relicStrings = Gdx.files.internal("localization/" + language + "/MyMod-Relics.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
         String powerStrings = Gdx.files.internal("localization/" + language + "/MyMod-Powers.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
         String cardStrings = Gdx.files.internal("localization/" + language + "/MyMod-Cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-        String monsterStrings = Gdx.files.internal("localization/" + language + "/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+/*        String monsterStrings = Gdx.files.internal("localization/" + language + "/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
         String potionStrings = Gdx.files.internal("localization/" + language + "/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
@@ -235,12 +253,13 @@ public class MyMod implements PostInitializeSubscriber,
         String charStrings = Gdx.files.internal("localization/" + language + "/Slimebound-CharacterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
         String UIStrings = Gdx.files.internal("localization/" + language + "/Slimebound-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(UIStrings.class, UIStrings);
+        BaseMod.loadCustomStrings(UIStrings.class, UIStrings);*/
 
         logger.info("done editing strings");
 
         logger.info("=========================加载遗物文本信息成功========================");
     }
+
     //负责加载关键字。
     @Override
     public void receiveEditKeywords() {
@@ -250,24 +269,18 @@ public class MyMod implements PostInitializeSubscriber,
 //        BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
         //文本描叙需要使用到关键字时，请将关键字格式前后加一个空格。
         //例： DESCRIPTION = "这个位置有一个 关键字 需要体现。";
-//        final Gson gson = new Gson();
-//        String language;
-//        language = getLanguage();
-//
-//        logger.info("begin editing strings");
-//        final String json = Gdx.files.internal("localization/" + language + "/Slimebound-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-//
-//        final com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = (com.evacipated.cardcrawl.mod.stslib.Keyword[]) gson.fromJson(json, (Class) com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-//        if (keywords != null) {
-//            for (final Keyword keyword : keywords) {
-//                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-//            }
-//        }
+        final Gson gson = new Gson();
+        String language = CommonUtil.getLanguage();
+        logger.info("begin editing strings");
+        final String json = Gdx.files.internal("localization/" + language + "/MyMod-Keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        final Keyword[] keywords = gson.fromJson(json, Keyword[].class);
+        if (keywords != null) {
+            for (final Keyword keyword : keywords) {
+                BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
         logger.info("==========================注入新的关键字成功==========================");
     }
-
-
-
 
 
 }

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.cards.AbstractSpearCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.DeathBolgPowerBase;
+import com.wsk.powers.DeathBolgPower;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -63,7 +63,7 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
                 new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
         //兵器：突穿死翔之枪
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new DeathBolgPowerBase(abstractPlayer, this.magicNumber), this.magicNumber));
+                new DeathBolgPower(abstractPlayer, this.magicNumber), this.magicNumber));
     }
 
     static {

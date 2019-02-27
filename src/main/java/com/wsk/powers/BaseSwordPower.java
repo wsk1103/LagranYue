@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class BaseSwordPower extends AbstractArmsPower {
     public static final String POWER_ID = "MyMod:BaseSwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
-    public static final String NAME = "兵器：基础剑";//能力的名称。
+    public static final String NAME = "兵器：断剑";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"获得", "点力量"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
@@ -30,6 +30,7 @@ public class BaseSwordPower extends AbstractArmsPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        updateDescription();
     }
 
     public void updateDescription() {

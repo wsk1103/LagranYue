@@ -51,7 +51,8 @@ public class SkillKadeboSwordCard extends AbstractSwordCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.isInnate = true;
+            this.upgradeBaseCost(2);
+//            this.isInnate = true;
         }
     }
 

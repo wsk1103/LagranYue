@@ -58,6 +58,7 @@ public class PowerDarkTempleCard extends CustomCard {
 //            this.upgradeBaseCost(3);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
             this.isEthereal = false;//虚无属性。
             this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

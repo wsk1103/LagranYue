@@ -28,7 +28,7 @@ public class DefendBetterCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int DEFEND = 9;
+    private static final int DEFEND = 8;
 
     public DefendBetterCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

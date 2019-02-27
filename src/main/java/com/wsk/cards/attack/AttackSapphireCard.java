@@ -34,12 +34,10 @@ public class AttackSapphireCard extends CustomCard {
 
     private static final int wskAttack = 10;
 
-    private final int sapphire = 2;
-
     public AttackSapphireCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MyModCard,
-                CardRarity.UNCOMMON, CardTarget.ENEMY);
+                CardRarity.RARE, CardTarget.ENEMY);
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
@@ -63,6 +61,7 @@ public class AttackSapphireCard extends CustomCard {
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        int sapphire = 2;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ImprintPower(m, p, sapphire), sapphire, true, AbstractGameAction.AttackEffect.NONE));
     }//注：卡牌效果的diy区。
 

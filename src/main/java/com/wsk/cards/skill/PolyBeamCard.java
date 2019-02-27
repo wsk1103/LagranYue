@@ -24,6 +24,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/21
  * @desc 一句话说明
  */
+@Deprecated
 public class PolyBeamCard extends CustomCard {
     public static final String ID = "MyMod:PolyBeamCard";//卡牌在游戏中的id
     private static final String NAME /*= "來自WSK的愛"*/;//卡牌显示的名称

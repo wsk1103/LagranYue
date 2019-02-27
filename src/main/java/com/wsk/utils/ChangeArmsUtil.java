@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.powers.*;
+import com.wsk.relics.EnkiduRelics;
 
 /**
  * @author wsk1103
@@ -56,6 +57,14 @@ public class ChangeArmsUtil {
             }
         }
         return result;
+    }
+
+    public static boolean retain() {
+        if (EnkiduRelics.getOnce()) {
+            EnkiduRelics.setOnce();
+            return true;
+        }
+        return false;
     }
 
 }

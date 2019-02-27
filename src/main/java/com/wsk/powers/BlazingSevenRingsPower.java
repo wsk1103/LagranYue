@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -35,6 +36,7 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        updateDescription();
     }
 
     public void updateDescription() {
@@ -58,11 +60,13 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
 
     @Override
     public void onRemove() {
-        //移除敏捷
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
-        //移除壁垒
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
+        if (!ChangeArmsUtil.retain()) {
+            //移除敏捷
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+            //移除壁垒
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
+        }
 //        super.onRemove();
     }
 }

@@ -13,14 +13,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.wsk.cards.attack.AttackEmeraldCard;
-import com.wsk.cards.attack.AttackPurpleCard;
-import com.wsk.cards.attack.AttackSummerCard;
-import com.wsk.cards.attack.BaseAttackCard;
-import com.wsk.cards.power.PowerDoubleArmsCard;
+import com.wsk.cards.attack.*;
+import com.wsk.cards.power.*;
 import com.wsk.cards.skill.*;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
+import com.wsk.relics.EnkiduRelics;
 import com.wsk.utils.CommonUtil;
 
 import java.util.ArrayList;
@@ -77,42 +75,64 @@ public class MyModCharacter extends CustomPlayer {
     //添加初始牌组
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-//        retVal.add(AttackBetterCard.ID);
+        retVal.add(AttackBetterCard.ID);
         retVal.add(AttackEmeraldCard.ID);
+        retVal.add(AttackFireCard.ID);
+        retVal.add(AttackIceCard.ID);
         retVal.add(AttackPurpleCard.ID);
-        retVal.add(SkillGaeBolgCard.ID);
-//        retVal.add(AttackSapphireCard.ID);
-//        retVal.add(AttackRubyCard.ID);
-//        retVal.add(BaseAttackCard.ID);
-//        retVal.add(SkillDeathBolgCard.ID);
+        retVal.add(AttackRubyCard.ID);
+        retVal.add(AttackSapphireCard.ID);
         retVal.add(AttackSummerCard.ID);
-        retVal.add(SkillExplosiveArmorCard.ID);
+        retVal.add(AttackTopazCard.ID);
+        retVal.add(BaseAttackCard.ID);
 
-//        retVal.add(SkillVictorySwordCard.ID);
-        retVal.add(SkillGanJiangMoYeSwordCard.ID);
-        retVal.add(SkillKadeboSwordCard.ID);
+
+        retVal.add(BasePowerCard.ID);
+        retVal.add(PowerBloodyTempleCard.ID);
+        retVal.add(PowerDarkTempleCard.ID);
         retVal.add(PowerDoubleArmsCard.ID);
+        retVal.add(PowerDreamCard.ID);
+        retVal.add(PowerGoldStartCard.ID);
+        retVal.add(PowerKingTreasureCard.ID);
+        retVal.add(PowerRemoveArmorCard.ID);
+        retVal.add(PowerTwelveTrialsCard.ID);
+        retVal.add(PowerWindKingEnchantmentCard.ID);
+
+        retVal.add(BaseDefendCard.ID);
+        retVal.add(BraveTemperamentCard.ID);
+        retVal.add(DefendBetterCard.ID);
+        retVal.add(EatTigerCard.ID);
+        retVal.add(EmeraldRemorseCard.ID);
+        retVal.add(FantasyCard.ID);
+        retVal.add(MagicSkyrocketCard.ID);
+        retVal.add(MultipleThornsCard.ID);
+        retVal.add(PhysicalFitnessCard.ID);
+//        retVal.add(PolyBeamCard.ID);
+        retVal.add(PrematureBurialCard.ID);
+        retVal.add(ProjectionCard.ID);
+        retVal.add(PurpleNightmareCard.ID);
+        retVal.add(RoseCard.ID);
+        retVal.add(RubyDefendCard.ID);
+        retVal.add(SapphirePrayerCard.ID);
         retVal.add(SkillBlazingSevenRingsCard.ID);
-        retVal.add(SkillChiharaHoundCard.ID);
         retVal.add(SkillBrokenShieldCard.ID);
         retVal.add(SkillBrokenSwordCard.ID);
+        retVal.add(SkillChiharaHoundCard.ID);
+        retVal.add(SkillDeathBolgCard.ID);
+        retVal.add(SkillExplosiveArmorCard.ID);
+        retVal.add(SkillGaeBolgCard.ID);
+        retVal.add(SkillGanJiangMoYeSwordCard.ID);
         retVal.add(SkillIncompleteArchCard.ID);
+        retVal.add(SkillKadeboSwordCard.ID);
+        retVal.add(SkillVictorySwordCard.ID);
         retVal.add(SkillWoodSpearCard.ID);
-//        retVal.add(AttackFireCard.ID);
-//        retVal.add(AttackIceCard.ID);
-//        retVal.add(BaseDefendCard.ID);
-//        retVal.add(MultipleThornsCard.ID);
-//        retVal.add(PolyBeamCard.ID);
-//        retVal.add(RoseCard.ID);
-//        retVal.add(BasePowerCard.ID);
         return retVal;
     }
 
     //添加初始遗物
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        //先用史莱姆的遗物ID
-//        retVal.add(AbsorbEndCombat.ID);
+        retVal.add(EnkiduRelics.ID);
 //        UnlockTracker.markRelicAsSeen(AbsorbEndCombat.ID);
         return retVal;
     }
