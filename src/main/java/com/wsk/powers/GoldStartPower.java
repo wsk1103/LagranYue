@@ -21,7 +21,7 @@ public class GoldStartPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = {"每打出3张 兵器 ，消除所有负面状态。已经打出", "张兵器"};
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w25.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public GoldStartPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

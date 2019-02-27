@@ -21,7 +21,7 @@ public class VictorySwordPower extends BaseSwordPower {
 
     public static final String[] DESCRIPTIONS = {"获得", "点力量。每回合开始，获得", "点 胜利誓约 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w5.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 

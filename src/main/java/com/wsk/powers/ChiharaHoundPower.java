@@ -24,7 +24,7 @@ public class ChiharaHoundPower extends BaseArchPower {
 
     public static final String[] DESCRIPTIONS = {"获得", "点力量。攻击时，给予被攻击者", "层 虚弱 。", "层 易伤 "};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w10.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     private boolean update;

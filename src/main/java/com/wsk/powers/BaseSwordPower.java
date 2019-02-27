@@ -20,7 +20,7 @@ public class BaseSwordPower extends AbstractArmsPower {
 
     public static final String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w4.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     String basePower = " 剑 。";

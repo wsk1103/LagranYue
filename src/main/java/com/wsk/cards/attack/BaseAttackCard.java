@@ -37,7 +37,7 @@ public class BaseAttackCard extends CustomCard {
     //实例：  “获得 !M! 层 力量 。如果 力量 超过3层，额外获得 [R] 。”;
 
     private static final CardStrings cardStrings;
-    private static final String IMG = "cards/skyAttack.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/BaseAttackCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
     private static final int COST = 1;//卡牌的费用。

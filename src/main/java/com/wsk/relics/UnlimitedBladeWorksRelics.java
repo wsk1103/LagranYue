@@ -20,8 +20,8 @@ import java.util.Random;
  */
 public class UnlimitedBladeWorksRelics extends CustomRelic {
     public static final String ID = "MyMod:UnlimitedBladeWorksRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
-    public static final String IMG = "relics/greedOoze.png";//遗物图片路径
-    public static final String OUTLINE = "relics/greedOozeOutline.png";//遗物外轮廓路径
+    public static final String IMG = "relics/w37.png";//遗物图片路径
+    public static final String OUTLINE = "relics/w38.png";//遗物外轮廓路径
 
     private Random r = new Random();
 

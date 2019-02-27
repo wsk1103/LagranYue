@@ -27,7 +27,7 @@ public class SkillWoodSpearCard extends AbstractSpearCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/slimepunch.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/SkillWoodSpearCard.png";//卡牌牌面的图片路径。
 
     private static final int COST = 2;//卡牌的费用。
 

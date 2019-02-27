@@ -19,7 +19,7 @@ public class WindKingEnchantmentPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = {"接下来的4个回合内，每回合开始获得", "格挡 ，已经过了", "回合"};
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w29.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public WindKingEnchantmentPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

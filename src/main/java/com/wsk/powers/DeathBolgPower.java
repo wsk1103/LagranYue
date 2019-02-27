@@ -22,7 +22,7 @@ public class DeathBolgPower extends BaseSpearPower {
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static final String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌时，给予被攻击者", "层 死亡印记 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/GluttonyS.png";
+    private static final String IMG = "powers/w3.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 

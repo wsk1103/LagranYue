@@ -17,11 +17,11 @@ import com.wsk.utils.CommonUtil;
  */
 public class GoldStartPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "MyMod:GoldStartPowerUpgraded";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
-    public static final String NAME = "天地开辟乖离之星";//能力的名称。
+    public static final String NAME = "天地开辟乖离之星+";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"每打出2张 兵器 ，消除所有负面状态。已经打出", "张兵器"};
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w25.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public GoldStartPowerUpgraded(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

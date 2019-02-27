@@ -18,7 +18,7 @@ public class DreamPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = {"每回合开始，选择获得", "张被消耗的卡牌。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w22.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public DreamPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

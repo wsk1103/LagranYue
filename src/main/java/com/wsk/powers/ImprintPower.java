@@ -22,7 +22,7 @@ public class ImprintPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = {"造成伤害增加","点，当层数到达10层的时候，给予50点伤害"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/ritual.png";
+    private static final String IMG = "powers/w19.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.DEBUFF;
 

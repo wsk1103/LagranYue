@@ -14,6 +14,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/15
  * @desc 每回合开始获取力量
  */
+@Deprecated
 public class ModRitualPower extends AbstractPower {
     public static final String POWER_ID = "MyMod:ModRitualPower";
     public static final String NAME = "来自WSK的祝福";

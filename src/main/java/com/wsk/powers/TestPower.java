@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
  * @date 2019/2/4
  * @desc 创建能力
  */
+@Deprecated
 public class TestPower extends AbstractPower{
 
     public static final String POWER_ID = "ModBasePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。

@@ -28,7 +28,7 @@ public class SkillKadeboSwordCard extends AbstractSwordCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/slimepunch.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/SkillKadeboSwordCard.png";//卡牌牌面的图片路径。
 
     private static final int COST = 3;//卡牌的费用。
 

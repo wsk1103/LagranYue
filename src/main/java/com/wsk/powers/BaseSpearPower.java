@@ -23,7 +23,7 @@ public class BaseSpearPower extends AbstractArmsPower {
 
     public static final String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
     String basePower = " 枪 。";
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w2.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public BaseSpearPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

@@ -15,6 +15,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/21
  * @desc 一句话说明
  */
+@Deprecated
 public class PolyBeamAgainPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "Slimebound:PolyBeamAgainPowerUpgraded";
     public static final String NAME = "Potency";

@@ -16,12 +16,12 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class KingTreasurePower extends AbstractPower {
-    public static final String POWER_ID = "MyMod:DreamPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "MyMod:KingTreasurePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "王之财宝";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"每打出3张 兵器 ，抽1张牌。已打出","张兵器"};
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w21.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public KingTreasurePower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

@@ -16,7 +16,7 @@ public class DoubleArmsPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = {"装备 兵器 的数量上限增加", "， 疲惫 "};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
-    private static final String IMG = "powers/ritual.png";
+    private static final String IMG = "powers/w28.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 

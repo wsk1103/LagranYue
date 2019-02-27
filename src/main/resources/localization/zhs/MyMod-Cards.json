@@ -191,7 +191,7 @@
     "DESCRIPTION": "当前回合内，使目前手中所有兵器卡牌费用减为0。 NL 消耗"
   },
   "MyMod:EatTigerCard": {
-    "NAME": "扮猪吃老虎",
+    "NAME": "自信回头",
     "DESCRIPTION": "获得!B!  格挡 ，给予敌人 !M! 层虚弱。"
   },
   "MyMod:RubyDefendCard": {
@@ -199,22 +199,22 @@
     "DESCRIPTION": "获得 !B!  格挡  。下个回合额外抽 !M! 张牌。"
   },
   "MyMod:SapphirePrayerCard": {
-    "NAME": "蓝宝石的祈祷",
+    "NAME": "盛怒",
     "DESCRIPTION": " 升级 所有手牌，每张 升级 的卡牌失去 !M! 点生命。 NL 消耗 "
   },
   "MyMod:EmeraldRemorseCard": {
-    "NAME": "绿宝石的悔恨",
+    "NAME": "爱的累赘",
     "DESCRIPTION": "移除一个 兵器， 获得 !M! 点 力量 和 !M! 点 敏捷 。 NL 消耗 ",
     "EXTENDED_DESCRIPTION": [
       "目前没有 兵器 。"
     ]
   },
   "MyMod:PurpleNightmareCard": {
-    "NAME": "紫宝石的噩梦",
+    "NAME": "紫的噩梦",
     "DESCRIPTION": "翻倍敌人身上的 死亡印记 ，如果没有，给予 !M! 层。 NL 消耗 "
   },
   "MyMod:ProjectionCard": {
-    "NAME": "投影",
+    "NAME": "双生花",
     "DESCRIPTION": "选择一张牌，在手牌中加入它的复制品。 NL 消耗"
   },
   "MyMod:FantasyCard": {

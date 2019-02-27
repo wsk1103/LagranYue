@@ -23,7 +23,7 @@ public class RemoveArmorPower extends AbstractPower {
 
     public static final String[] DESCRIPTIONS = {"每打出一张 兵器 牌，对所有敌人造成", "点伤害。"};
 
-    private static final String IMG = "powers/BurningS.png";
+    private static final String IMG = "powers/w27.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public RemoveArmorPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。

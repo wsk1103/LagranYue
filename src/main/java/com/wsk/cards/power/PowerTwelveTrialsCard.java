@@ -27,7 +27,7 @@ public class PowerTwelveTrialsCard extends CustomCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/slimepunch.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/PowerTwelveTrialsCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
     private static final int COST = 2;//卡牌的费用。
