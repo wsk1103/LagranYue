@@ -24,7 +24,7 @@
     "NAME": "兵器：残弩",
     "DESCRIPTIONS": [
       "获得",
-      "点力量。攻击时，给予2层剧毒"
+      "点力量。攻击时，给予2层 中毒"
     ]
   },
   "MyMod:BaseShieldPower": {

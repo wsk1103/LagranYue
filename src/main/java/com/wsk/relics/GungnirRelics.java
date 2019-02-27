@@ -16,7 +16,7 @@ import java.util.Random;
  * @desc 大神宣言，在本场战斗，每当兵器被消耗的时候，不被消耗的概率 +1%，基础值0%。最大值10%
  */
 public class GungnirRelics extends CustomRelic {
-    public static final String ID = "MyMod:EnkiduRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
+    public static final String ID = "MyMod:GungnirRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
     public static final String IMG = "relics/greedOoze.png";//遗物图片路径
     public static final String OUTLINE = "relics/greedOozeOutline.png";//遗物外轮廓路径
 

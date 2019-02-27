@@ -13,7 +13,7 @@
   },
   "MyMod:AttackIceCard": {
     "NAME": "进击的寒冰",
-    "DESCRIPTION": "造成 !D! 伤害, 给予自己 !B! 格挡。  起舞 "
+    "DESCRIPTION": "造成 !D! 伤害, 给予自己 !B!  格挡 。  起舞 "
   },
   "MyMod:AttackRubyCard": {
     "NAME": "红宝石的狂袭",
@@ -49,55 +49,55 @@
 
   "MyMod:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点力量。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。 NL 消耗 "
   },
   "MyMod:SkillWoodSpearCard": {
     "NAME": "兵器：竹枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点力量。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。 NL 消耗 "
   },
   "MyMod:SkillIncompleteArchCard": {
     "NAME": "兵器：残弩",
-    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点力量。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点 力量 。 NL 消耗 "
   },
   "MyMod:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": "获得 兵器  盾 。获得 !M! 点敏捷。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  盾 。获得 !M! 点 敏捷 。 NL 消耗 "
   },
   "MyMod:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点力量。攻击时，获得1 多层护甲 。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。攻击时，获得1 多层护甲 。 NL 消耗 "
   },
   "MyMod:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。攻击时，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 "
   },
   "MyMod:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点力量。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点力量。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 "
   },
   "MyMod:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点力量。攻击时，恢复该攻击卡的数值的1/4的生命值。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。攻击时，恢复该攻击卡的数值的1/4的生命值。 NL 消耗 "
   },
   "MyMod:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点力量。每回合你使用的目标为敌人的攻击牌都会被重复打出 !M! 次。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合你使用的目标为敌人的攻击牌都会被重复打出 !M! 次。 NL 消耗 "
   },
   "MyMod:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 获得 兵器  弩 。获得 !M! 点力量。攻击时，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
+    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点 力量 。攻击时，给予被攻击者 !M! 层 虚弱。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 获得 兵器  弩 。获得 !M! 点 力量 。攻击时，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
   },
   "MyMod:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": "获得 兵器  盾 。获得 !B! 格挡。获得 !M! 点敏捷。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  盾 。获得 !B! 格挡。获得 !M! 点敏捷。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗"
+    "DESCRIPTION": "获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗"
   },
   "MyMod:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
-    "DESCRIPTION": "获得 兵器  盾 。获得 !B! 格挡。获得 !M! 点敏捷。获得 !M! 点 荆棘  。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  盾 。获得 !B! 格挡。获得 !M! 点敏捷。获得 !M! 点 荆棘  。 NL 消耗"
+    "DESCRIPTION": "获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 !M! 点 荆棘  。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 !M! 点 荆棘  。 NL 消耗"
   },
 
 
@@ -113,8 +113,8 @@
   },
   "MyMod:PowerTwelveTrialsCard": {
     "NAME": "十二试炼",
-    "DESCRIPTION": "每打出一张 兵器 ，获得 !M! 点格挡。 NL 虚无 ",
-    "UPGRADE_DESCRIPTION": "每打出一张 兵器 ，获得 !M! 点格挡。"
+    "DESCRIPTION": "每打出一张 兵器 ，获得 !M! 点 格挡 。 NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "每打出一张 兵器 ，获得 !M! 点 格挡 。"
   },
   "MyMod:PowerDarkTempleCard": {
     "NAME": "自我封印·暗黑神殿",
@@ -147,18 +147,18 @@
   },
   "MyMod:BasePowerCard": {
     "NAME": "来自WSK的支持",
-    "DESCRIPTION": "获得 !M! 点 力量。"
+    "DESCRIPTION": "获得 !M! 点  力量 。"
   },
   "MyMod:PowerWindKingEnchantmentCard": {
     "NAME": "风王的结界",
-    "DESCRIPTION": "获得 !B! 格挡 。接下来的4个回合内，每回合开始获得4格挡 ",
-    "UPGRADE_DESCRIPTION": "获得 !B! 格挡。每回合开始获得获得4格挡 "
+    "DESCRIPTION": "获得 !B!  格挡  。接下来的4个回合内，每回合开始获得4 格挡  ",
+    "UPGRADE_DESCRIPTION": "获得 !B!  格挡 。每回合开始获得获得4 格挡  "
   },
 
 
   "MyMod:MultipleThornsCard": {
     "NAME": "多重荆棘",
-    "DESCRIPTION": "给予自己 !B! 格挡 和 !M! 点 荆棘。  NL 消耗 "
+    "DESCRIPTION": "给予自己 !B!  格挡 和 !M! 点 荆棘。  NL 消耗 "
   },
   "MyMod:BaseDefendCard": {
     "NAME": "來自WSK的格挡",
@@ -170,13 +170,13 @@
   },
   "MyMod:RoseCard": {
     "NAME": "怒火冲天",
-    "DESCRIPTION": "获得 !M! 点 力量。 NL 随机将 !M! 张攻击牌加入手牌，本回合的耗能变为0。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "获得 !M! 点 力量 和 !M! 层 人工制品 。 NL 将 !M! 张攻击牌加入手牌，本回合的耗能变为0。 NL 消耗"
+    "DESCRIPTION": "获得 !M! 点  力量 。 NL 随机将 !M! 张攻击牌加入手牌，本回合的耗能变为0。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点  力量  和 !M! 层 人工制品 。 NL 将 !M! 张攻击牌加入手牌，本回合的耗能变为0。 NL 消耗"
   },
   "MyMod:PhysicalFitnessCard": {
     "NAME": "强身健体",
-    "DESCRIPTION": "获得 !B! 格挡，从卡牌中随机获得一张兵器牌，并保留该牌。NL 消耗",
-    "UPGRADE_DESCRIPTION": "获得 !B! 格挡，从卡牌中随机获得一张兵器牌，并且费用减为0，保留该牌。 NL 消耗"
+    "DESCRIPTION": "获得 !B!  格挡 ，从卡牌中随机获得一张兵器牌，并保留该牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 !B!  格挡 ，从卡牌中随机获得一张兵器牌，并且费用减为0，保留该牌。 NL 消耗"
   },
   "MyMod:PrematureBurialCard": {
     "NAME": "过早的埋葬",
@@ -192,11 +192,11 @@
   },
   "MyMod:EatTigerCard": {
     "NAME": "扮猪吃老虎",
-    "DESCRIPTION": "获得!B! 格挡，给予敌人 !M! 层虚弱。"
+    "DESCRIPTION": "获得!B!  格挡 ，给予敌人 !M! 层虚弱。"
   },
   "MyMod:RubyDefendCard": {
     "NAME": "红宝石的防御",
-    "DESCRIPTION": "获得 !B! 格挡 。下个回合额外抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B!  格挡  。下个回合额外抽 !M! 张牌。"
   },
   "MyMod:SapphirePrayerCard": {
     "NAME": "蓝宝石的祈祷",
