@@ -37,7 +37,7 @@ public class PurpleNightmareCard extends CustomCard {
                 AbstractCardEnum.MyModCard,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust =true;
+        this.exhaust = true;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
@@ -58,7 +58,7 @@ public class PurpleNightmareCard extends CustomCard {
         if (m.hasPower(ImprintPower.POWER_ID)) {
             int num = m.getPower(ImprintPower.POWER_ID).amount;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new ImprintPower(m, p, num * 2), num * 2, true, AbstractGameAction.AttackEffect.NONE));
+                    new ImprintPower(m, p, num), num, true, AbstractGameAction.AttackEffect.NONE));
 
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,

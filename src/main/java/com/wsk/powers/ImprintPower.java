@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,7 +21,7 @@ public class ImprintPower extends AbstractPower {
     public static final String POWER_ID = "MyMod:ImprintPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "死亡印记";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"造成伤害增加","点，当层数到达10层的时候，给予50点伤害"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String[] DESCRIPTIONS = {"造成伤害增加","点，当层数到达10层的时候，给予50点伤害。然后移除所有印记。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w19.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
@@ -65,6 +66,7 @@ public class ImprintPower extends AbstractPower {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flashWithoutSound();
                 AbstractDungeon.actionManager.addToBottom(new LoseHPAction(this.owner, this.source, 50, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, ImprintPower.POWER_ID));
             }
         }
     }

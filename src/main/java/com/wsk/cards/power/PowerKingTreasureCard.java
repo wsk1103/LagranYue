@@ -65,9 +65,9 @@ public class PowerKingTreasureCard extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePower(abstractPlayer, 0), 0));
-        } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePowerUpgraded(abstractPlayer, 0), 0));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePower(abstractPlayer, 0), 0));
         }
     }
 

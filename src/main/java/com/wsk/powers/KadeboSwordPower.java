@@ -26,7 +26,7 @@ public class KadeboSwordPower extends BaseSwordPower {
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public KadeboSwordPower(AbstractCreature owner, int amount) {
-        super(owner,amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+        super(owner, amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -38,20 +38,15 @@ public class KadeboSwordPower extends BaseSwordPower {
     }
 
     public void updateDescription() {
-            this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (this.amount + "/4") + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (this.amount + "/4") + DESCRIPTIONS[2]);
     }
 
     //触发时机：当玩家攻击时。info.可调用伤害信息。
     public void onAttack(final DamageInfo info, final int damageAmount, final AbstractCreature target) {//参数： info-伤害信息，damageAmount-伤害数值，target-伤害目标
         if (info.type == DamageInfo.DamageType.NORMAL) {
-            if (this.amount >= 2) {
-                //恢复生命值
-                AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount / 2));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, (this.amount / 4)));
-            }
+            //恢复生命值
+            AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, damageAmount * this.amount / 4));
         }
-        super.onAttack(info, damageAmount, target);
     }
 
     @Override

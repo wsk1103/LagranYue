@@ -3,8 +3,6 @@ package com.wsk.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -39,15 +37,12 @@ public class DarkTemplePowerUpgraded extends AbstractPower {
         this.description = (DESCRIPTIONS[0] + (this.amount * 2) + DESCRIPTIONS[1]);
     }
 
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                if ((!m.isDead) && (!m.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this.owner,
-                            new ImprintPower(m, this.owner, this.amount * 2), this.amount * 2, true, AbstractGameAction.AttackEffect.NONE));
-                }
+    public void atStartOfTurn() {
+        flash();
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if ((!m.isDead) && (!m.isDying)) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this.owner,
+                        new ImprintPower(m, this.owner, this.amount * 2), this.amount * 2, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
     }
