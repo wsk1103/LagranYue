@@ -132,7 +132,7 @@
   },
   "MyMod:PowerBloodyTempleCard": {
     "NAME": "他者封印·鲜血神殿",
-    "DESCRIPTION": "每回合结束恢复 !M! 点生命值。NL 虚无 ",
+    "DESCRIPTION": "每回合结束恢复 !M! 点生命值。 NL 虚无 ",
     "UPGRADE_DESCRIPTION": "每回合结束恢复 !M! 点生命值。"
   },
   "MyMod:PowerRemoveArmorCard": {

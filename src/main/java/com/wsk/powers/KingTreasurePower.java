@@ -2,7 +2,6 @@ package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -48,7 +47,9 @@ public class KingTreasurePower extends AbstractPower {
             if (amount >= 3) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, 1));
                 //重置为0
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, KingTreasurePower.POWER_ID, amount));
+                this.amount = 0;
+                updateDescription();
+//                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, KingTreasurePower.POWER_ID, amount));
             }
         }
     }

@@ -33,7 +33,7 @@ public class BloodyTemplePowerUpgraded extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount * 2));
+        this.description = (DESCRIPTIONS[0] + (this.amount * 2) + DESCRIPTIONS[1]);
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.wsk.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -50,7 +49,8 @@ public class KingTreasurePowerUpgraded extends AbstractPower {
                 AbstractDungeon.actionManager.addToTop(new GainEnergyAction(1));
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, 1));
                 //重置为0
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, KingTreasurePowerUpgraded.POWER_ID, amount));
+                this.amount = 0;
+                updateDescription();
             }
         }
     }

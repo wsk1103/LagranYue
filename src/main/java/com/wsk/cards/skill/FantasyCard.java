@@ -2,7 +2,9 @@ package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -37,7 +39,7 @@ public class FantasyCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
         this.baseBlock = 6;
     }
 
@@ -57,7 +59,7 @@ public class FantasyCard extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //给予所有敌人 缓慢
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.animations.VFXAction(p,
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(p,
                 new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
@@ -68,7 +70,7 @@ public class FantasyCard extends CustomCard {
                 }
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
     }
 

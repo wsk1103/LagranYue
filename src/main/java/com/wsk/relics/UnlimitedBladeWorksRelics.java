@@ -16,7 +16,7 @@ import java.util.Random;
 /**
  * @author wsk1103
  * @date 2019/2/27
- * @desc 无限剑制，在本场战斗，每当使用武器卡牌的时候，获得 能力-武器大师 的概率 + 1%。基础0%，最大5%
+ * @desc 无限剑制，在本场战斗，每当使用武器卡牌的时候，获得1层 能力-武器大师 的概率 + 1%。基础0%，最大5%
  */
 public class UnlimitedBladeWorksRelics extends CustomRelic {
     public static final String ID = "MyMod:UnlimitedBladeWorksRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
@@ -25,7 +25,7 @@ public class UnlimitedBladeWorksRelics extends CustomRelic {
 
     private Random r = new Random();
 
-    public static final String DESCRIPTION = "在本场战斗，每当使用 #y兵器 卡牌的时候，获得 #y能力-武器大师 的概率 + 1%。基础0%，最大5%";//遗物效果的文本描叙。
+    public static final String DESCRIPTION = "在本场战斗，每当使用 #y兵器 卡牌的时候，获得1层 #y能力:武器大师 的概率 + 1%。基础0%，最大5%";//遗物效果的文本描叙。
 
     public UnlimitedBladeWorksRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.BOSS, LandingSound.HEAVY);
@@ -49,7 +49,7 @@ public class UnlimitedBladeWorksRelics extends CustomRelic {
             int i = r.nextInt(100) + 1;
             if (i <= this.counter) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new DoubleArmsPower(AbstractDungeon.player, 2), 2));
+                        new DoubleArmsPower(AbstractDungeon.player, 1), 1));
             }
         }
     }

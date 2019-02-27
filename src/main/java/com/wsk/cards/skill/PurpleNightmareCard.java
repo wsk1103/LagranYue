@@ -35,7 +35,7 @@ public class PurpleNightmareCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.MyModCard,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust =true;
     }

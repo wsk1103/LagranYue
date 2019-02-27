@@ -38,11 +38,7 @@ public class KadeboSwordPower extends BaseSwordPower {
     }
 
     public void updateDescription() {
-        if (this.amount >= 2) {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + "1/2" + DESCRIPTIONS[2]);
-        } else {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + "1/4" + DESCRIPTIONS[2]);
-        }
+            this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (this.amount + "/4") + DESCRIPTIONS[2]);
     }
 
     //触发时机：当玩家攻击时。info.可调用伤害信息。

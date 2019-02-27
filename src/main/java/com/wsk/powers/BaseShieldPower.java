@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -18,7 +19,9 @@ public class BaseShieldPower extends AbstractArmsPower {
     public static final String POWER_ID = "MyMod:BaseShieldPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：破盾";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点敏捷"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String[] DESCRIPTIONS = {"获得", "点敏捷。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+
+    String basePower = " 盾 。";
 
     private static final String IMG = "powers/BurningS.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -35,7 +38,7 @@ public class BaseShieldPower extends AbstractArmsPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
 
@@ -47,8 +50,10 @@ public class BaseShieldPower extends AbstractArmsPower {
     }
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+        if (!ChangeArmsUtil.retain()) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+        }
 //        super.onRemove();
     }
 }

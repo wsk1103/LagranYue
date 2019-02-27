@@ -1,7 +1,6 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -49,7 +48,8 @@ public class GoldStartPower extends AbstractPower {
                 //消除所有负面状态
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this.owner));
                 //重置为0
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, GoldStartPower.POWER_ID, amount));
+                this.amount = 0;
+                updateDescription();
             }
         }
     }

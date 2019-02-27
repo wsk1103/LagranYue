@@ -15,14 +15,12 @@ import com.wsk.relics.EnkiduRelics;
 public class ChangeArmsUtil {
 
     public static void change(AbstractPlayer p) {
-        //装备数量+1
-        DoubleArmsPower.addArms();
         //1. 判断有没有双持这个能力
         boolean doubleArms = p.hasPower(DoubleArmsPower.POWER_ID);
         //如果拥有
         if (doubleArms) {
             //层数小于2，直接返回，表示可以继续装备
-            if (DoubleArmsPower.getArms() <= AbstractDungeon.player.getPower(DoubleArmsPower.POWER_ID).amount) {
+            if (getArmsNum(p) <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
                 return;
             }
         }
@@ -30,8 +28,6 @@ public class ChangeArmsUtil {
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, power.ID));
-                //装备数量-1
-                DoubleArmsPower.subArms();
             }
         }
     }
@@ -41,8 +37,6 @@ public class ChangeArmsUtil {
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, power.ID));
-                //装备数量-1
-                DoubleArmsPower.subArms();
                 break;
             }
         }
@@ -51,7 +45,7 @@ public class ChangeArmsUtil {
     //获得装备的兵器的数量
     public static int getArmsNum(AbstractPlayer p) {
         int result = 0;
-        for (AbstractPower power : AbstractDungeon.player.powers) {
+        for (AbstractPower power : p.powers) {
             if (power instanceof AbstractArmsPower) {
                 result ++;
             }

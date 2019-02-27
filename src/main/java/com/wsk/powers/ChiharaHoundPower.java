@@ -44,9 +44,10 @@ public class ChiharaHoundPower extends BaseArchPower {
 
     public void updateDescription() {
         if (update) {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
+            this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]
+                    + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
         } else {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+            this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
         }
     }
 

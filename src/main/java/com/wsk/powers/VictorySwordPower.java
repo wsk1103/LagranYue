@@ -41,7 +41,7 @@ public class VictorySwordPower extends BaseSwordPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] +  this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] +  this.amount + DESCRIPTIONS[2]);
     }
 
     //造成伤害时，返回伤害数值
@@ -62,15 +62,15 @@ public class VictorySwordPower extends BaseSwordPower {
         if (!ChangeArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                     new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-            if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
-                int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
-                if (num < 0) {
-                    //如果层数不够减，直接移除能力
-                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
-                } else {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+        }
+        if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
+            int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
+            if (num < 0) {
+                //如果层数不够减，直接移除能力
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                             new VictoryPower(AbstractDungeon.player, -startEnd), -startEnd));
-                }
             }
         }
         startEnd = 0;

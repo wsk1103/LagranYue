@@ -40,7 +40,7 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + "。");
     }
 
     @Override
@@ -64,9 +64,9 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
             //移除敏捷
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                     new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
-            //移除壁垒
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
         }
+        //移除壁垒
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
 //        super.onRemove();
     }
 }

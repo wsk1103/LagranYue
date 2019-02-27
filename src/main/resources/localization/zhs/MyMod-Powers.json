@@ -153,8 +153,8 @@
   "MyMod:DoubleArmsPower": {
     "NAME": "武器大师",
     "DESCRIPTIONS": [
-      "允许装备 ",
-      "件 兵器 ， 疲惫 "
+      "装备 兵器 ",
+      "的数量上限增加， 疲惫 "
     ]
   },
   "MyMod:WindKingEnchantmentPower": {

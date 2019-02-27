@@ -6,21 +6,24 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
  * @author wsk1103
  * @date 2019/2/26
- * @desc 剑能力，造成的攻击伤害 + 2;
+ * @desc 剑能力，造成的攻击伤害 + 2
  */
 public class BaseSwordPower extends AbstractArmsPower {
     public static final String POWER_ID = "MyMod:BaseSwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：断剑";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/BurningS.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
+
+    String basePower = " 剑 。";
 
     public BaseSwordPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
@@ -34,7 +37,7 @@ public class BaseSwordPower extends AbstractArmsPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
     //造成伤害时，返回伤害数值
@@ -46,8 +49,10 @@ public class BaseSwordPower extends AbstractArmsPower {
     }
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+        if (!ChangeArmsUtil.retain()) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+        }
 //        super.onRemove();
     }
 }

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -20,8 +21,8 @@ public class BaseSpearPower extends AbstractArmsPower {
     public static final String POWER_ID = "MyMod:BaseSpearPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：竹枪";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
-
+    public static final String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    String basePower = " 枪 。";
     private static final String IMG = "powers/BurningS.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
@@ -37,7 +38,7 @@ public class BaseSpearPower extends AbstractArmsPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
     //触发时机：当玩家攻击时。
@@ -51,8 +52,10 @@ public class BaseSpearPower extends AbstractArmsPower {
     }
     @Override
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+        if (!ChangeArmsUtil.retain()) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+        }
 //        super.onRemove();
     }
 }

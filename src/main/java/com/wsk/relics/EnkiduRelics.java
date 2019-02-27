@@ -22,7 +22,7 @@ public class EnkiduRelics extends CustomRelic {
     //记录第一次保存第一次切换武器，当被使用过后，会被置为 false
     private static boolean once = true;
 
-    public static final String DESCRIPTION = "每次战斗限制一次，切换 #y兵器 的时候，保留第一次的增益效果。";//遗物效果的文本描叙。
+    public static final String DESCRIPTION = "每次战斗仅一次，切换 #y兵器 的时候，保留第一次的增益效果。";//遗物效果的文本描叙。
 
     public EnkiduRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.FLAT);

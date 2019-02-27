@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
 import com.wsk.cards.skill.*;
@@ -133,7 +134,11 @@ public class MyModCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(EnkiduRelics.ID);
-//        UnlockTracker.markRelicAsSeen(AbsorbEndCombat.ID);
+//        retVal.add(GungnirRelics.ID);
+//        retVal.add(RuleBreakerRelics.ID);
+//        retVal.add(UnlimitedBladeWorksRelics.ID);
+//        retVal.add(ZabaniyaRelics.ID);
+        UnlockTracker.markRelicAsSeen(EnkiduRelics.ID);
         return retVal;
     }
 
