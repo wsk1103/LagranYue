@@ -2,6 +2,7 @@ package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -56,6 +57,7 @@ public class RubyDefendCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         //下回合抽牌
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
     }

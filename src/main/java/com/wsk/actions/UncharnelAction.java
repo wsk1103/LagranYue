@@ -41,7 +41,7 @@ public class UncharnelAction extends AbstractGameAction {
 
                     this.p.hand.addToRandomSpot(abstractCard);
                     this.p.exhaustPile.removeCard(abstractCard);
-                    if (this.upgrade && abstractCard.canUpgrade()) {
+                    if (this.upgrade) {
 //                        abstractCard.upgrade();
                         abstractCard.modifyCostForTurn(-abstractCard.cost);
                     }
@@ -71,7 +71,7 @@ public class UncharnelAction extends AbstractGameAction {
 
             this.p.hand.addToRandomSpot(topCard);
             this.p.exhaustPile.removeCard(topCard);
-            if (this.upgrade && topCard.canUpgrade()) {
+            if (this.upgrade) {
 //                topCard.upgrade();
                 topCard.modifyCostForTurn(-topCard.cost);
             }

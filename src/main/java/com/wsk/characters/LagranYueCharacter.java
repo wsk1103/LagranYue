@@ -76,57 +76,70 @@ public class LagranYueCharacter extends CustomPlayer {
     //添加初始牌组
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(AttackBetterCard.ID);
-        retVal.add(AttackEmeraldCard.ID);
-        retVal.add(AttackFireCard.ID);
-        retVal.add(AttackIceCard.ID);
-        retVal.add(AttackPurpleCard.ID);
-        retVal.add(AttackRubyCard.ID);
-        retVal.add(AttackSapphireCard.ID);
-        retVal.add(AttackSummerCard.ID);
-        retVal.add(AttackTopazCard.ID);
+        retVal.add(BaseAttackCard.ID);
+        retVal.add(BaseAttackCard.ID);
+        retVal.add(BaseAttackCard.ID);
         retVal.add(BaseAttackCard.ID);
 
+        retVal.add(BaseDefendCard.ID);
+        retVal.add(BaseDefendCard.ID);
+        retVal.add(BaseDefendCard.ID);
+        retVal.add(BaseDefendCard.ID);
 
         retVal.add(BasePowerCard.ID);
-        retVal.add(PowerBloodyTempleCard.ID);
-        retVal.add(PowerDarkTempleCard.ID);
-        retVal.add(PowerDoubleArmsCard.ID);
-        retVal.add(PowerDreamCard.ID);
-        retVal.add(PowerGoldStartCard.ID);
-        retVal.add(PowerKingTreasureCard.ID);
-        retVal.add(PowerRemoveArmorCard.ID);
-        retVal.add(PowerTwelveTrialsCard.ID);
-        retVal.add(PowerWindKingEnchantmentCard.ID);
-
-        retVal.add(BaseDefendCard.ID);
-        retVal.add(BraveTemperamentCard.ID);
-        retVal.add(DefendBetterCard.ID);
-        retVal.add(EatTigerCard.ID);
-        retVal.add(EmeraldRemorseCard.ID);
-        retVal.add(FantasyCard.ID);
-        retVal.add(MagicSkyrocketCard.ID);
-        retVal.add(MultipleThornsCard.ID);
-        retVal.add(PhysicalFitnessCard.ID);
-//        retVal.add(PolyBeamCard.ID);
-        retVal.add(PrematureBurialCard.ID);
-        retVal.add(ProjectionCard.ID);
-        retVal.add(PurpleNightmareCard.ID);
-        retVal.add(RoseCard.ID);
-        retVal.add(RubyDefendCard.ID);
-        retVal.add(SapphirePrayerCard.ID);
-        retVal.add(SkillBlazingSevenRingsCard.ID);
-        retVal.add(SkillBrokenShieldCard.ID);
-        retVal.add(SkillBrokenSwordCard.ID);
-        retVal.add(SkillChiharaHoundCard.ID);
-        retVal.add(SkillDeathBolgCard.ID);
-        retVal.add(SkillExplosiveArmorCard.ID);
-        retVal.add(SkillGaeBolgCard.ID);
-        retVal.add(SkillGanJiangMoYeSwordCard.ID);
-        retVal.add(SkillIncompleteArchCard.ID);
-        retVal.add(SkillKadeboSwordCard.ID);
-        retVal.add(SkillVictorySwordCard.ID);
         retVal.add(SkillWoodSpearCard.ID);
+
+//        retVal.add(AttackBetterCard.ID);
+//        retVal.add(AttackEmeraldCard.ID);
+//        retVal.add(AttackFireCard.ID);
+//        retVal.add(AttackIceCard.ID);
+//        retVal.add(AttackPurpleCard.ID);
+//        retVal.add(AttackRubyCard.ID);
+//        retVal.add(AttackSapphireCard.ID);
+//        retVal.add(AttackSummerCard.ID);
+//        retVal.add(AttackTopazCard.ID);
+//        retVal.add(BaseAttackCard.ID);
+//
+//
+//        retVal.add(BasePowerCard.ID);
+//        retVal.add(PowerBloodyTempleCard.ID);
+//        retVal.add(PowerDarkTempleCard.ID);
+//        retVal.add(PowerDoubleArmsCard.ID);
+//        retVal.add(PowerDreamCard.ID);
+//        retVal.add(PowerGoldStartCard.ID);
+//        retVal.add(PowerKingTreasureCard.ID);
+//        retVal.add(PowerRemoveArmorCard.ID);
+//        retVal.add(PowerTwelveTrialsCard.ID);
+//        retVal.add(PowerWindKingEnchantmentCard.ID);
+//
+//        retVal.add(BaseDefendCard.ID);
+//        retVal.add(BraveTemperamentCard.ID);
+//        retVal.add(DefendBetterCard.ID);
+//        retVal.add(EatTigerCard.ID);
+//        retVal.add(EmeraldRemorseCard.ID);
+//        retVal.add(FantasyCard.ID);
+//        retVal.add(MagicSkyrocketCard.ID);
+//        retVal.add(MultipleThornsCard.ID);
+//        retVal.add(PhysicalFitnessCard.ID);
+////        retVal.add(PolyBeamCard.ID);
+//        retVal.add(PrematureBurialCard.ID);
+//        retVal.add(ProjectionCard.ID);
+//        retVal.add(PurpleNightmareCard.ID);
+//        retVal.add(RoseCard.ID);
+//        retVal.add(RubyDefendCard.ID);
+//        retVal.add(SapphirePrayerCard.ID);
+//        retVal.add(SkillBlazingSevenRingsCard.ID);
+//        retVal.add(SkillBrokenShieldCard.ID);
+//        retVal.add(SkillBrokenSwordCard.ID);
+//        retVal.add(SkillChiharaHoundCard.ID);
+//        retVal.add(SkillDeathBolgCard.ID);
+//        retVal.add(SkillExplosiveArmorCard.ID);
+//        retVal.add(SkillGaeBolgCard.ID);
+//        retVal.add(SkillGanJiangMoYeSwordCard.ID);
+//        retVal.add(SkillIncompleteArchCard.ID);
+//        retVal.add(SkillKadeboSwordCard.ID);
+//        retVal.add(SkillVictorySwordCard.ID);
+//        retVal.add(SkillWoodSpearCard.ID);
         return retVal;
     }
 
@@ -140,7 +153,7 @@ public class LagranYueCharacter extends CustomPlayer {
 
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
-        final int currentHp = 69;//初始拥有血量
+        final int currentHp = 81;//初始拥有血量
         final int maxHp = currentHp;//初始最大血量
         final int maxOrbs = 0;//球球数
         final int gold = 99;//初始金币数量

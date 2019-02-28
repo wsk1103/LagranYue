@@ -1,6 +1,6 @@
 {
   "LagranYue:BaseAttackCard": {
-    "NAME": "来自WSK的打击",
+    "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。 起舞 "
   },
   "LagranYue:AttackBetterCard": {
@@ -146,7 +146,7 @@
     "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限增加 !M! 。 疲惫 "
   },
   "LagranYue:BasePowerCard": {
-    "NAME": "来自WSK的支持",
+    "NAME": "支持",
     "DESCRIPTION": "获得 !M! 点  力量 。"
   },
   "LagranYue:PowerWindKingEnchantmentCard": {
@@ -161,7 +161,7 @@
     "DESCRIPTION": "给予自己 !B!  格挡 和 !M! 点 荆棘。  NL 消耗 "
   },
   "LagranYue:BaseDefendCard": {
-    "NAME": "來自WSK的格挡",
+    "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "LagranYue:DefendBetterCard": {
