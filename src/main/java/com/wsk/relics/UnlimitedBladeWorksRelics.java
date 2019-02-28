@@ -19,7 +19,7 @@ import java.util.Random;
  * @desc 无限剑制，在本场战斗，每当使用武器卡牌的时候，获得1层 能力-武器大师 的概率 + 1%。基础0%，最大5%
  */
 public class UnlimitedBladeWorksRelics extends CustomRelic {
-    public static final String ID = "MyMod:UnlimitedBladeWorksRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
+    public static final String ID = "LagranYue:UnlimitedBladeWorksRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
     public static final String IMG = "relics/w37.png";//遗物图片路径
     public static final String OUTLINE = "relics/w38.png";//遗物外轮廓路径
 

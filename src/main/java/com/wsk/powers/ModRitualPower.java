@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  */
 @Deprecated
 public class ModRitualPower extends AbstractPower {
-    public static final String POWER_ID = "MyMod:ModRitualPower";
+    public static final String POWER_ID = "LagranYue:ModRitualPower";
     public static final String NAME = "来自WSK的祝福";
     private static AbstractPower.PowerType POWER_TYPE = AbstractPower.PowerType.BUFF;
     private static final String IMG = "powers/ritual.png";

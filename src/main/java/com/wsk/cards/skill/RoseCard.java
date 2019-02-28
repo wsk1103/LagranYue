@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class RoseCard extends CustomCard {
-    public static final String ID = "MyMod:RoseCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:RoseCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
@@ -36,7 +36,7 @@ public class RoseCard extends CustomCard {
     public RoseCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;

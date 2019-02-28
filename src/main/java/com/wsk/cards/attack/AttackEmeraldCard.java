@@ -22,7 +22,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 绿宝石的狂欢
  */
 public class AttackEmeraldCard extends CustomCard {
-    public static final String ID = "MyMod:AttackEmeraldCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:AttackEmeraldCard";//卡牌在游戏中的id
     private static final String NAME /*= "来自WSK的攻击"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
@@ -37,7 +37,7 @@ public class AttackEmeraldCard extends CustomCard {
 
     public AttackEmeraldCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
-                CardType.ATTACK, AbstractCardEnum.MyModCard,
+                CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行

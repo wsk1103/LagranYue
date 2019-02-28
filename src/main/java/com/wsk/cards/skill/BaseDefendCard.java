@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 基础防御卡牌
  */
 public class BaseDefendCard extends CustomCard {
-    public static final String ID = "MyMod:BaseDefendCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:BaseDefendCard";//卡牌在游戏中的id
     private static final String NAME /*= "來自WSK的愛"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "WSK給予 !B! 点 格挡 。"*/;//卡牌下方的描叙内容。
@@ -46,7 +46,7 @@ public class BaseDefendCard extends CustomCard {
     public BaseDefendCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.BASIC, CardTarget.SELF);
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
 

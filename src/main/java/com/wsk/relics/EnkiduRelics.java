@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 天之锁, 切换兵器的时候，保留第一次的增益效果.
  */
 public class EnkiduRelics extends CustomRelic {
-    public static final String ID = "MyMod:EnkiduRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
+    public static final String ID = "LagranYue:EnkiduRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
     public static final String IMG = "relics/w31.png";//遗物图片路径
     public static final String OUTLINE = "relics/w32.png";//遗物外轮廓路径
 

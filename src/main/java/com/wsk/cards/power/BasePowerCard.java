@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class BasePowerCard extends CustomCard {
-    public static final String ID = "MyMod:BasePowerCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:BasePowerCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
@@ -44,7 +44,7 @@ public class BasePowerCard extends CustomCard {
     public BasePowerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.POWER,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.BASIC, CardTarget.SELF);
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
 

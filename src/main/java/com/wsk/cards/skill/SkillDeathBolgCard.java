@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 兵器：突穿死翔之枪
  */
 public class SkillDeathBolgCard extends AbstractSpearCard {
-    public static final String ID = "MyMod:SkillDeathBolgCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:SkillDeathBolgCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
@@ -34,7 +34,7 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
     public SkillDeathBolgCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行

@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class KingTreasurePower extends AbstractPower {
-    public static final String POWER_ID = "MyMod:KingTreasurePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:KingTreasurePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "王之财宝";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"每打出3张 兵器 ，抽1张牌。已打出","张兵器"};

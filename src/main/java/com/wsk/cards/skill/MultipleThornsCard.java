@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class MultipleThornsCard extends CustomCard {
-    public static final String ID = "MyMod:MultipleThornsCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:MultipleThornsCard";//卡牌在游戏中的id
     private static final String NAME /*= "來自WSK的愛"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "WSK給予 !B! 点 格挡 。"*/;//卡牌下方的描叙内容。
@@ -35,7 +35,7 @@ public class MultipleThornsCard extends CustomCard {
     public MultipleThornsCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = DEFEND;//基础格挡值，除升级以外无任何其他加成. this.block为有敏捷等加成的格挡值.
         this.magicNumber = this.baseMagicNumber = 1;

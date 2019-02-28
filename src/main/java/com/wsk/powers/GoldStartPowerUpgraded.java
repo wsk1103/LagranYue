@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class GoldStartPowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "MyMod:GoldStartPowerUpgraded";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:GoldStartPowerUpgraded";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "天地开辟乖离之星+";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"每打出2张 兵器 ，消除所有负面状态。已经打出", "张兵器"};

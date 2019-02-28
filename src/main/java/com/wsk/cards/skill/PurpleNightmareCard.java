@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 紫宝石的噩梦
  */
 public class PurpleNightmareCard extends CustomCard {
-    public static final String ID = "MyMod:PurpleNightmareCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:PurpleNightmareCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
@@ -34,7 +34,7 @@ public class PurpleNightmareCard extends CustomCard {
     public PurpleNightmareCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;

@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 死亡印记
  */
 public class ImprintPower extends AbstractPower {
-    public static final String POWER_ID = "MyMod:ImprintPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:ImprintPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "死亡印记";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"造成伤害增加","点，当层数到达10层的时候，给予50点伤害。然后移除所有印记。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。

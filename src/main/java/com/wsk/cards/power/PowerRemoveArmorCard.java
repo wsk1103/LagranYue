@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 卡路里的顺劈
  */
 public class PowerRemoveArmorCard extends CustomCard {
-    public static final String ID = "MyMod:PowerRemoveArmorCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:PowerRemoveArmorCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
@@ -35,7 +35,7 @@ public class PowerRemoveArmorCard extends CustomCard {
     public PowerRemoveArmorCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.POWER,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.magicNumber = this.baseMagicNumber = 2;

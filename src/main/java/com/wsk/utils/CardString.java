@@ -12,7 +12,7 @@ public class CardString {
     /**
      * 默认卡牌前缀
      */
-    public static final String PRE_CARD = "MyMod:";
+    public static final String PRE_CARD = "LagranYue:";
 
     public static String getPreCard(Class<? extends CustomCard> customCard) {
         return PRE_CARD + customCard.getName();

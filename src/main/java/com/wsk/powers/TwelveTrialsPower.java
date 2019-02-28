@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class TwelveTrialsPower extends AbstractPower {
-    public static final String POWER_ID = "MyMod:TwelveTrialsPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:TwelveTrialsPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "十二试炼";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"每打出一张 兵器 ，获得", "点格挡。"};

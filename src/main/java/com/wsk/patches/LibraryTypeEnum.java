@@ -10,5 +10,5 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
  */
 public class LibraryTypeEnum {
     @SpireEnum
-    public static CardLibrary.LibraryType MyModCard;
+    public static CardLibrary.LibraryType LagranYue;
 }

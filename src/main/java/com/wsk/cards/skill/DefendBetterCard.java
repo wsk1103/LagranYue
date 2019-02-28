@@ -17,7 +17,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class DefendBetterCard extends CustomCard {
-    public static final String ID = "MyMod:DefendBetterCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:DefendBetterCard";//卡牌在游戏中的id
     private static final String NAME /*= "來自WSK的愛"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "WSK給予 !B! 点 格挡 。"*/;//卡牌下方的描叙内容。
@@ -33,7 +33,7 @@ public class DefendBetterCard extends CustomCard {
     public DefendBetterCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
+                AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = DEFEND;//基础格挡值，除升级以外无任何其他加成. this.block为有敏捷等加成的格挡值.
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行

@@ -81,7 +81,7 @@ public class AnalyticCardAttribute {
     private static List<CardAttribute> getCardAttributes() {
         logger.debug("开始解析json");
         List<CardAttribute> cardAttributes;
-        String cardStrings = Gdx.files.internal("localization/" + CommonUtil.getLanguage() + "/MyMod-Cards.json")
+        String cardStrings = Gdx.files.internal("localization/" + CommonUtil.getLanguage() + "/LagranYue-Cards.json")
                 .readString(String.valueOf(StandardCharsets.UTF_8));
         logger.debug("json--->\n" + cardStrings);
         cardAttributes = gson.fromJson(cardStrings, new TypeToken<List<CardAttribute>>() {

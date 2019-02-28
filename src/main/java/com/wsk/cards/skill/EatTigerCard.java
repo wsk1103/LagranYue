@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class EatTigerCard extends CustomCard {
-    public static final String ID = "MyMod:EatTigerCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:EatTigerCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
@@ -35,8 +35,8 @@ public class EatTigerCard extends CustomCard {
     public EatTigerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
-                AbstractCardEnum.MyModCard,
-                CardRarity.COMMON, CardTarget.SELF);
+                AbstractCardEnum.LagranYue,
+                CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         this.baseBlock = 6;
         this.magicNumber = this.baseMagicNumber = 1;
     }

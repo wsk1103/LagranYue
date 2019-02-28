@@ -16,7 +16,7 @@ public class CommonUtil {
      * @return 图片路径
      */
     public static String getResourcePath(String resource) {
-        return "mymod/" + resource;
+        return "LagranYue/" + resource;
     }
 
     public static String getLanguage() {

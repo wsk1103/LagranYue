@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 兵器：誓约胜利之剑
  */
 public class VictorySwordPower extends BaseSwordPower {
-    public static final String POWER_ID = "MyMod:VictorySwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:VictorySwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：誓约胜利之剑";//能力的名称。
 
     public static final String[] DESCRIPTIONS = {"获得", "点力量。每回合开始，获得", "点 胜利誓约 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
