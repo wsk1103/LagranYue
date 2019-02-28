@@ -119,7 +119,7 @@ public class LagranYue implements PostInitializeSubscriber,
 //        SlimeboundCharacter exampleModCharacter = new SlimeboundCharacter("Test", SlimeboundEnum.SLIMEBOUND);
         LagranYueCharacter exampleModCharacter = new LagranYueCharacter("Test", CharacterEnum.LagranYueCharacter);
         BaseMod.addCharacter(exampleModCharacter, CommonUtil.getResourcePath("charSelect/LagranYue.png"),
-                CommonUtil.getResourcePath("charSelect/ali.png"), CharacterEnum.LagranYueCharacter);
+                CommonUtil.getResourcePath("charSelect/portrait.png"), CharacterEnum.LagranYueCharacter);
 
 /*        BaseMod.addCharacter(
                 null, "Mod人物名称", "CharacterName class string",

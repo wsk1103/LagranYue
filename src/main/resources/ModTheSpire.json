@@ -2,7 +2,7 @@
   "modid": "LagranYue",
   "name": "拉格朗·月",
   "author_list": ["sky"],
-  "description": "角色：武器大师·拉格朗·月，包含47张卡片，5件遗物。",
+  "description": "角色：武器大师·拉格朗·月，包含47张卡片，5件遗物。\n GitHub源码：https://github.com/wsk1103/LagranYue",
   "dependencies": ["basemod"],
   "version": "1.0.1",
   "sts_version": "02-28-2019",

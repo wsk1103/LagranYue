@@ -73,8 +73,8 @@
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点 胜利誓约 。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利誓约  。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利誓约  。 NL 消耗 "
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
@@ -180,7 +180,7 @@
   },
   "LagranYue:PrematureBurialCard": {
     "NAME": "过早的埋葬",
-    "DESCRIPTION": "失去 !M! 点生命值，选择获得一张被消耗的牌。"
+    "DESCRIPTION": "受到 !M! 点伤害，选择获得一张被消耗的牌。"
   },
   "LagranYue:MagicSkyrocketCard": {
     "NAME": "魔力暴涨",

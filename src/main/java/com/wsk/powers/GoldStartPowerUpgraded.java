@@ -36,14 +36,14 @@ public class GoldStartPowerUpgraded extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractArmsCard) {
-            AbstractDungeon.player.addPower(new GoldStartPower(this.owner, 1));
-            int amount = this.owner.getPower(GoldStartPower.POWER_ID).amount;
+            AbstractDungeon.player.addPower(new GoldStartPowerUpgraded(this.owner, 1));
+            int amount = this.owner.getPower(GoldStartPowerUpgraded.POWER_ID).amount;
             if (amount >= 2) {
                 //消除所有负面状态
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this.owner));

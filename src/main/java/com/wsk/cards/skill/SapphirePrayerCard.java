@@ -66,7 +66,7 @@ public class SapphirePrayerCard extends CustomCard {
                 }
                 c.upgrade();
                 c.applyPowers();
-                AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
+                AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber));
             }
         }
     }

@@ -30,7 +30,7 @@ import java.util.ArrayList;
  * @desc 一句话说明
  */
 public class LagranYueCharacter extends CustomPlayer {
-    private static final int ENERGY_PER_TURN = 10;//角色的初始能量值。
+    private static final int ENERGY_PER_TURN = 3;//角色的初始能量值。
     private static final String[] orbTextures = {"LagranYue/char/orb/layer1.png",
             "LagranYue/char/orb/layer2.png",
             "LagranYue/char/orb/layer3.png",
@@ -134,20 +134,20 @@ public class LagranYueCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(EnkiduRelics.ID);
-//        retVal.add(GungnirRelics.ID);
-//        retVal.add(RuleBreakerRelics.ID);
-//        retVal.add(UnlimitedBladeWorksRelics.ID);
-//        retVal.add(ZabaniyaRelics.ID);
         UnlockTracker.markRelicAsSeen(EnkiduRelics.ID);
         return retVal;
     }
 
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
+        final int currentHp = 69;//初始拥有血量
+        final int maxHp = currentHp;//初始最大血量
+        final int maxOrbs = 0;//球球数
+        final int gold = 99;//初始金币数量
+        final int cardDraw = 5;//每回合抽牌数量
         return new CharSelectInfo("拉格朗·月", "致力于成为武器大师的拉格朗·月，将要踏平这座高楼！" +
                 "据说仰慕约瑟夫·拉格朗日（Joseph-Louis Lagrange，1736~1813）\n 将使用拉格朗日中值定理选择平衡。-----Make In China",
-                580, 580, 0, 9999, 10,
-                //参数含义：80，80 - 初始拥有血量和初始最大血量   0-球球数  99-初始金币数量  5-每回合抽牌数量
+                currentHp, maxHp, maxOrbs, gold, cardDraw,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 
