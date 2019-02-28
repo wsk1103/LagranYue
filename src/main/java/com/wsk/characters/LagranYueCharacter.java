@@ -144,7 +144,8 @@ public class LagranYueCharacter extends CustomPlayer {
 
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo("拉格朗·月", "拉格朗·月-----LagranYue",
+        return new CharSelectInfo("拉格朗·月", "致力于成为武器大师的拉格朗·月，将要踏平这座高楼！" +
+                "据说仰慕约瑟夫·拉格朗日（Joseph-Louis Lagrange，1736~1813）\n 将使用拉格朗日中值定理选择平衡。-----Make In China",
                 580, 580, 0, 9999, 10,
                 //参数含义：80，80 - 初始拥有血量和初始最大血量   0-球球数  99-初始金币数量  5-每回合抽牌数量
                 this, getStartingRelics(), getStartingDeck(), false);
@@ -187,13 +188,13 @@ public class LagranYueCharacter extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("my-mod", MathUtils.random(-0.2F, 0.2F));
+        CardCrawlGame.sound.playA("LagranYue", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, true);
     }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "my-mod";
+        return "LagranYue";
     }
 
     @Override
