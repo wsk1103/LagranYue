@@ -42,6 +42,7 @@ public class GoldStartPowerUpgraded extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractArmsCard) {
+            this.flash();
             AbstractDungeon.player.addPower(new GoldStartPowerUpgraded(this.owner, 1));
             int amount = this.owner.getPower(GoldStartPowerUpgraded.POWER_ID).amount;
             if (amount >= 2) {

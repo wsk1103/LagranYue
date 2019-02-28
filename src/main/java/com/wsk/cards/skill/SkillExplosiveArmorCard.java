@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +27,7 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
+    private static final String UPGRADED_DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
 
     private static final CardStrings cardStrings;
 
@@ -33,7 +35,7 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
 
     private static final int COST = 3;//卡牌的费用。
 
-    private static final int cardDefend = 8;
+    private static final int cardDefend = 13;
 
     public SkillExplosiveArmorCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -56,8 +58,10 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBlock(4);
+            this.upgradeBlock(3);
             this.isInnate = true;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
@@ -67,17 +71,17 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
         ChangeArmsUtil.change(p);
         //获得格挡
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ExplosiveArmorPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ExplosiveArmorPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //获得敏捷
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //获得荆棘
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
-//        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }

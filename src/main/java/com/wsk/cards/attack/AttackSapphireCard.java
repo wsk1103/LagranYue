@@ -32,19 +32,15 @@ public class AttackSapphireCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 10;
+    private static final int wskAttack = 12;
 
     public AttackSapphireCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
-                CardRarity.RARE, CardTarget.ENEMY);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.magicNumber = this.baseMagicNumber = 2;
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
-        this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
-        this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
-        //例：我需要在升级后虚无、消耗、固有。即可在下方upgrade()方法里this.isEthereal/this.exhaust/this.isInnate调用 赋值为 true。
-        //   使用时满足条件不虚无/消耗，在use中填写if判定语句，满足条件时，this.isEthereal/this.exhaust调用 赋值为false即可。实例不详细赘叙。
     }
 
     public AbstractCard makeCopy() {
@@ -60,9 +56,9 @@ public class AttackSapphireCard extends CustomCard {
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        int sapphire = 2;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ImprintPower(m, p, sapphire), sapphire, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        int sapphire = this.magicNumber;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ImprintPower(m, p, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
     }//注：卡牌效果的diy区。
 
     static {

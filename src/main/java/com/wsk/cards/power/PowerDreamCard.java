@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.DreamPower;
+import com.wsk.powers.DreamPowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -65,7 +67,13 @@ public class PowerDreamCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new DreamPower(abstractPlayer, this.magicNumber), this.magicNumber));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new DreamPowerUpgraded(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new DreamPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        }
     }
 
     static {

@@ -1,18 +1,21 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
  * @author wsk1103
  * @date 2019/2/26
- * @desc 剑能力，造成的攻击伤害 + 2
+ * @desc 剑能力，攻击时，给予1层 虚弱
  */
 public class BaseSwordPower extends AbstractArmsPower {
     public static final String POWER_ID = "LagranYue:BaseSwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
@@ -40,18 +43,20 @@ public class BaseSwordPower extends AbstractArmsPower {
         this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
-    //造成伤害时，返回伤害数值
-    public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
-        if (damageType == DamageInfo.DamageType.NORMAL) {
-            return damage + 2;
-        }
-        return damage;
+    //触发时机：当玩家攻击时。
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        int vulnerable = 1;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
+                new WeakPower(target, vulnerable, false), vulnerable,
+                true, AbstractGameAction.AttackEffect.POISON));
     }
+
     @Override
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

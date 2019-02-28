@@ -42,7 +42,7 @@ public class DarkTemplePowerUpgraded extends AbstractPower {
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if ((!m.isDead) && (!m.isDying)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this.owner,
-                        new ImprintPower(m, this.owner, this.amount * 2), this.amount * 2, true, AbstractGameAction.AttackEffect.NONE));
+                        new ImprintPower(m, this.owner, this.amount * 2), this.amount * 2, true, AbstractGameAction.AttackEffect.POISON));
             }
         }
     }

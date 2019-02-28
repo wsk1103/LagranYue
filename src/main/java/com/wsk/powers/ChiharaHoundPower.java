@@ -56,14 +56,13 @@ public class ChiharaHoundPower extends BaseArchPower {
         super.onAttack(info, damageAmount, target);
         //虚弱
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-                new WeakPower(target, this.amount, false), this.amount, true, AbstractGameAction.AttackEffect.NONE));
+                new WeakPower(target, this.amount, false), this.amount, true, AbstractGameAction.AttackEffect.POISON));
         if (update) {
             //易伤
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
                     new VulnerablePower(target, this.amount, false), this.amount,
-                    true, AbstractGameAction.AttackEffect.NONE));
+                    true, AbstractGameAction.AttackEffect.POISON));
         }
-        super.onAttack(target);
     }
 
 //    //造成伤害时，返回伤害数值

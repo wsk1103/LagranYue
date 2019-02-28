@@ -1,6 +1,7 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,13 +29,13 @@ public class PrematureBurialCard extends CustomCard {
     private static final String IMG = "cards/PrematureBurialCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 1;//卡牌的费用。
 
     public PrematureBurialCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 2;
     }
 
@@ -47,14 +48,14 @@ public class PrematureBurialCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(1);
+            this.upgradeBaseCost(0);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         //失去生命值
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false));
     }
 

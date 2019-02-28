@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -60,7 +61,7 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
         ChangeArmsUtil.change(p);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BaseSwordPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BaseSwordPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

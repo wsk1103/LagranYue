@@ -1,6 +1,7 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -48,7 +49,7 @@ public class GaeBolgPower extends BaseSpearPower {
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         //获得多层护甲
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new PlatedArmorPower(AbstractDungeon.player, platedArmor), platedArmor));
+                new PlatedArmorPower(AbstractDungeon.player, platedArmor), platedArmor, AbstractGameAction.AttackEffect.POISON));
         super.onAttack(info, damageAmount, target);
     }
 

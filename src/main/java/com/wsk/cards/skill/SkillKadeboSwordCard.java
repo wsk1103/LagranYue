@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,7 +31,7 @@ public class SkillKadeboSwordCard extends AbstractSwordCard {
 
     private static final String IMG = "cards/SkillKadeboSwordCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public SkillKadeboSwordCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -51,7 +52,7 @@ public class SkillKadeboSwordCard extends AbstractSwordCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(2);
+            this.upgradeBaseCost(1);
 //            this.isInnate = true;
         }
     }
@@ -61,9 +62,9 @@ public class SkillKadeboSwordCard extends AbstractSwordCard {
         ChangeArmsUtil.change(abstractPlayer);
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new KadeboSwordPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new KadeboSwordPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

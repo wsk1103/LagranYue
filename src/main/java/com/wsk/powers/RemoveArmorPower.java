@@ -38,15 +38,16 @@ public class RemoveArmorPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount * 2) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.amount * 4) + DESCRIPTIONS[1]);
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractArmsCard) {
+            this.flash();
             //对所有敌人造成固定伤害
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
-                    DamageInfo.createDamageMatrix(this.amount * 2, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                    DamageInfo.createDamageMatrix(this.amount * 4, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 }

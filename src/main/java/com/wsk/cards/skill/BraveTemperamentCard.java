@@ -26,7 +26,7 @@ public class BraveTemperamentCard extends CustomCard {
     private static final String IMG = "cards/BraveTemperamentCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public BraveTemperamentCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -45,7 +45,7 @@ public class BraveTemperamentCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(2);
+            this.upgradeBaseCost(1);
         }
     }
 

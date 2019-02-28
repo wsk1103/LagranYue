@@ -36,13 +36,14 @@ public class TwelveTrialsPowerUpgraded extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount * 5) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.amount * 6) + DESCRIPTIONS[1]);
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractArmsCard) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount * 5));
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount * 6));
         }
     }
 }

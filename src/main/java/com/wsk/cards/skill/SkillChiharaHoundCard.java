@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -61,9 +62,9 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
         ChangeArmsUtil.change(abstractPlayer);
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new ChiharaHoundPower(abstractPlayer, this.magicNumber, upgraded), this.magicNumber));
+                new ChiharaHoundPower(abstractPlayer, this.magicNumber, upgraded), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,7 +31,7 @@ public class SkillVictorySwordCard extends AbstractSwordCard {
 
     private static final String IMG = "cards/SkillVictorySwordCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public SkillVictorySwordCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -62,10 +63,10 @@ public class SkillVictorySwordCard extends AbstractSwordCard {
         ChangeArmsUtil.change(abstractPlayer);
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //兵器：誓约胜利之剑
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new VictorySwordPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new VictorySwordPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

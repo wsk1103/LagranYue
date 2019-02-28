@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +39,7 @@ public class PowerWindKingEnchantmentCard extends CustomCard {
                 CardType.POWER,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
-        this.baseBlock = 12;
+        this.baseBlock = 16;
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.magicNumber = this.baseMagicNumber = 4;
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
@@ -63,10 +64,10 @@ public class PowerWindKingEnchantmentCard extends CustomCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(abstractPlayer, abstractPlayer, this.block));
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new WindKingEnchantmentPowerUpgraded(abstractPlayer, 1), 1));
+                    new WindKingEnchantmentPowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new WindKingEnchantmentPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                    new WindKingEnchantmentPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

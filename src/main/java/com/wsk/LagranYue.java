@@ -159,10 +159,17 @@ public class LagranYue implements PostInitializeSubscriber,
         logger.info("=========================正在加载新的卡牌内容=========================");
 
         BaseMod.addCard(new AttackBetterCard());
+        BaseMod.addCard(new AttackDevilCard());
         BaseMod.addCard(new AttackEmeraldCard());
         BaseMod.addCard(new AttackFireCard());
+        BaseMod.addCard(new AttackFutureCard());
+        BaseMod.addCard(new AttackGoldCard());
         BaseMod.addCard(new AttackIceCard());
+        BaseMod.addCard(new AttackKillerCard());
+        BaseMod.addCard(new AttackKingCard());
+        BaseMod.addCard(new AttackLakeCard());
         BaseMod.addCard(new AttackPurpleCard());
+        BaseMod.addCard(new AttackRavagedCard());
         BaseMod.addCard(new AttackRubyCard());
         BaseMod.addCard(new AttackSapphireCard());
         BaseMod.addCard(new AttackSummerCard());

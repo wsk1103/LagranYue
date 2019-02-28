@@ -1,6 +1,7 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -52,7 +53,7 @@ public class BaseShieldPower extends AbstractArmsPower {
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

@@ -1,6 +1,7 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -35,7 +36,7 @@ public class RubyDefendCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 1;
     }
@@ -59,7 +60,13 @@ public class RubyDefendCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         //下回合抽牌
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new DrawCardNextTurnPower(p, 2), 2, AbstractGameAction.AttackEffect.POISON));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new DrawCardNextTurnPower(p, 1), 1, AbstractGameAction.AttackEffect.POISON));
+        }
     }
 
     static {

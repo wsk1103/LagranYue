@@ -40,7 +40,7 @@ public class FantasyCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = 6;
+        this.baseBlock = 9;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
@@ -52,12 +52,13 @@ public class FantasyCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBlock(3);
+            this.upgradeBlock(4);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         //给予所有敌人 缓慢
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p,
                 new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));
@@ -66,12 +67,10 @@ public class FantasyCard extends CustomCard {
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p,
-                            new SlowPower(monster, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                            new SlowPower(monster, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
                 }
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-
     }
 
     static {

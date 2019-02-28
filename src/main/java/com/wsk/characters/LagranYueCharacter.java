@@ -19,6 +19,7 @@ import com.wsk.cards.power.*;
 import com.wsk.cards.skill.*;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
+import com.wsk.powers.DoubleArmsPower;
 import com.wsk.relics.EnkiduRelics;
 import com.wsk.utils.CommonUtil;
 
@@ -89,6 +90,29 @@ public class LagranYueCharacter extends CustomPlayer {
         retVal.add(BasePowerCard.ID);
         retVal.add(SkillWoodSpearCard.ID);
 
+//        retVal.add(SkillBlazingSevenRingsCard.ID);
+//        retVal.add(SkillBlazingSevenRingsCard.ID);
+//        retVal.add(SkillKadeboSwordCard.ID);
+//        retVal.add(SkillKadeboSwordCard.ID);
+//        retVal.add(SkillKadeboSwordCard.ID);
+//        retVal.add(AttackSummerCard.ID);
+//        retVal.add(AttackDevilCard.ID);
+//        retVal.add(AttackFutureCard.ID);
+//        retVal.add(AttackGoldCard.ID);
+//        retVal.add(AttackKillerCard.ID);
+//        retVal.add(AttackKingCard.ID);
+//        retVal.add(AttackLakeCard.ID);
+//        retVal.add(AttackRavagedCard.ID);
+//        retVal.add(PowerDoubleArmsCard.ID);
+//        retVal.add(SapphirePrayerCard.ID);
+//        retVal.add(AttackEmeraldCard.ID);
+//        retVal.add(AttackFireCard.ID);
+//        retVal.add(AttackIceCard.ID);
+//        retVal.add(AttackPurpleCard.ID);
+//        retVal.add(AttackRubyCard.ID);
+//        retVal.add(AttackTopazCard.ID);
+
+
 //        retVal.add(AttackBetterCard.ID);
 //        retVal.add(AttackEmeraldCard.ID);
 //        retVal.add(AttackFireCard.ID);
@@ -121,7 +145,6 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(MagicSkyrocketCard.ID);
 //        retVal.add(MultipleThornsCard.ID);
 //        retVal.add(PhysicalFitnessCard.ID);
-////        retVal.add(PolyBeamCard.ID);
 //        retVal.add(PrematureBurialCard.ID);
 //        retVal.add(ProjectionCard.ID);
 //        retVal.add(PurpleNightmareCard.ID);
@@ -153,13 +176,14 @@ public class LagranYueCharacter extends CustomPlayer {
 
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
-        final int currentHp = 81;//初始拥有血量
+        final int currentHp = 75;//初始拥有血量
         final int maxHp = currentHp;//初始最大血量
         final int maxOrbs = 0;//球球数
         final int gold = 99;//初始金币数量
         final int cardDraw = 5;//每回合抽牌数量
         return new CharSelectInfo("拉格朗·月", "致力于成为武器大师的拉格朗·月，将要踏平这座高楼！" +
-                "据说仰慕约瑟夫·拉格朗日（Joseph-Louis Lagrange，1736~1813）\n 将使用拉格朗日中值定理选择平衡。-----Make In China",
+                "据说仰慕约瑟夫·拉格朗日（Joseph-Louis Lagrange，1736~1813）\n " +
+                "将使用拉格朗日中值定理选择平衡。-----Make In China",
                 currentHp, maxHp, maxOrbs, gold, cardDraw,
                 this, getStartingRelics(), getStartingDeck(), false);
     }

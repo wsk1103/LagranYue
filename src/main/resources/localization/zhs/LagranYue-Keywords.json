@@ -11,49 +11,49 @@
       "疲惫"
     ],
     "PROPERNAME": "疲惫",
-    "DESCRIPTION": "当兵器装备达到上限之后，下一次使用名字附带兵器的卡牌时，将替换之前所有兵器提供的属性加成。"
+    "DESCRIPTION": "当兵器装备达到上限之后，下1次使用名字附带兵器的卡牌时，将替换之前所有兵器提供的属性加成。"
   },
   {
     "NAMES": [
       "起舞"
     ],
     "PROPERNAME": "起舞",
-    "DESCRIPTION": "根据装备兵器的类型，给予攻击效果加成。 NL 剑：造成的攻击伤害 + 2。 NL 弩：攻击时，给予2层 中毒 。 NL 盾：攻击时,获得2点 格挡 。 NL 枪：攻击时，给予一层 易伤 。"
+    "DESCRIPTION": "根据装备兵器的类型，给予攻击效果加成。 NL 剑：攻击时，给予1层 虚弱 。 NL 弩：攻击时，给予2层 中毒 。 NL 盾：攻击时,获得2点 格挡 。 NL 枪：攻击时，给予1层 易伤 。"
   },
   {
     "NAMES": [
       "剑"
     ],
     "PROPERNAME": "剑",
-    "DESCRIPTION": "造成的攻击伤害 + 2"
+    "DESCRIPTION": "攻击时，给予1层 虚弱 "
   },
   {
     "NAMES": [
       "弩"
     ],
     "PROPERNAME": "弩",
-    "DESCRIPTION": "攻击时，给予2层 中毒"
+    "DESCRIPTION": "攻击时，给予2层 中毒 "
   },
   {
     "NAMES": [
       "盾"
     ],
     "PROPERNAME": "盾",
-    "DESCRIPTION": "攻击时,获得2点 格挡"
+    "DESCRIPTION": "攻击时,获得2点 格挡 "
   },
   {
     "NAMES": [
       "枪"
     ],
     "PROPERNAME": "枪",
-    "DESCRIPTION": "攻击时，给予一层 易伤 "
+    "DESCRIPTION": "攻击时，给予1层 易伤 "
   },
   {
     "NAMES": [
       "胜利契约"
     ],
     "PROPERNAME": "胜利契约",
-    "DESCRIPTION": "战斗结束时，回复和胜利契约层数的生命值，增加胜利契约层数的最大生命值"
+    "DESCRIPTION": "战斗结束时，回复和胜利契约层数的生命值，增加胜利契约层数的最大生命值。层数最大值为10"
   },
   {
     "NAMES": [

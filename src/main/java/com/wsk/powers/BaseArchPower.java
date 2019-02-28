@@ -3,6 +3,7 @@ package com.wsk.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PoisonPower;
@@ -42,15 +43,15 @@ public class BaseArchPower extends AbstractArmsPower {
     }
 
     //造成伤害时，返回伤害数值
-    public void onAttack(AbstractCreature m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
-                new PoisonPower(m, AbstractDungeon.player, 2), 2, true, AbstractGameAction.AttackEffect.POISON));
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
+                new PoisonPower(target, AbstractDungeon.player, 2), 2, true, AbstractGameAction.AttackEffect.POISON));
     }
     @Override
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

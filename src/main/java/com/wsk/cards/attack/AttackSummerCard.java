@@ -31,7 +31,7 @@ public class AttackSummerCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int wskAttack = 5;
+    private static final int wskAttack = 6;
 
     public AttackSummerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -61,7 +61,7 @@ public class AttackSummerCard extends CustomCard {
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new UncharnelAction(true));
         } else {

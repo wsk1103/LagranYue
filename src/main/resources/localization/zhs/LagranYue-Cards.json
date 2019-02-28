@@ -21,11 +21,11 @@
   },
   "LagranYue:AttackSapphireCard": {
     "NAME": "蓝宝石的鄙视",
-    "DESCRIPTION": "造成 !D! 点伤害，并给予 2 层 死亡印记。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害，并给予 !M! 层 死亡印记。 起舞 "
   },
   "LagranYue:AttackEmeraldCard": {
     "NAME": "绿宝石的狂欢",
-    "DESCRIPTION": "造成 !D! 点伤害，获得一层 胜利契约 。 起舞 。 NL 消耗"
+    "DESCRIPTION": "造成 !D! 点伤害，获得 !M! 层 胜利契约 。 起舞 。 NL 消耗"
   },
   "LagranYue:AttackPurpleCard": {
     "NAME": "紫宝石的打击",
@@ -44,6 +44,41 @@
     "EXTENDED_DESCRIPTION": [
       "你的抽牌堆中没有 兵器 牌。"
     ]
+  },
+  "LagranYue:AttackLakeCard": {
+    "NAME": "无毁的湖光",
+    "DESCRIPTION": "造成 !D! 点伤害。 根据 力量 的层数追加伤害的次数。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 根据 力量 的层数追加伤害的次数。 起舞 "
+  },
+  "LagranYue:AttackKingCard": {
+    "NAME": "王之军势",
+    "DESCRIPTION": "造成 !D! 点伤害。 手中所有武器牌费用减1。 起舞 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有武器牌费用减为0。 起舞 。 NL 消耗 "
+  },
+  "LagranYue:AttackGoldCard": {
+    "NAME": "冀以锁系神明",
+    "DESCRIPTION": "造成 !D! 点伤害。 下回合获得 [E] 。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 下回合获得 [E]  [E] 。 起舞 "
+  },
+  "LagranYue:AttackRavagedCard": {
+    "NAME": "遥远的蹂躏制霸",
+    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 "
+  },
+  "LagranYue:AttackDevilCard": {
+    "NAME": "恶魔的咆哮",
+    "DESCRIPTION": "造成 !D! 点伤害。 给予自己和敌人 !M! 层 死亡印记 。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。给予敌人 !M! 层 死亡印记 。 起舞 "
+  },
+  "LagranYue:AttackKillerCard": {
+    "NAME": "宝石杀手",
+    "DESCRIPTION": "造成 !D! 点伤害。 翻倍自己的 胜利契约 层数 。 起舞 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。翻倍自己的 胜利契约 层数 。如果没有，则添加 !M! 层。 起舞 。 NL 消耗 "
+  },
+  "LagranYue:AttackFutureCard": {
+    "NAME": "过去和未来",
+    "DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 起舞 "
   },
 
 
@@ -73,8 +108,8 @@
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利誓约  。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利誓约  。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 "
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
@@ -104,12 +139,12 @@
   "LagranYue:PowerDreamCard": {
     "NAME": "远离尘世的理想",
     "DESCRIPTION": "每回合开始，选择获得 !M! 张被消耗的卡牌。 NL 虚无 ",
-    "UPGRADE_DESCRIPTION": " 每回合开始，选择获得 !M! 张被消耗的卡牌。"
+    "UPGRADE_DESCRIPTION": " 每回合开始，选择获得 !M! 张被消耗的卡牌，并且费用置为0。"
   },
   "LagranYue:PowerKingTreasureCard": {
     "NAME": "王之财宝",
-    "DESCRIPTION": "每打出3张 兵器 ，抽 !M! 张牌 。 NL 虚无 ",
-    "UPGRADE_DESCRIPTION": "每打出3张 兵器 ，获得 [E] 并抽 !M! 张牌。 NL 虚无 "
+    "DESCRIPTION": "每打出2张 兵器 ，抽 !M! 张牌 。 NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "每打出2张 兵器 ，获得 [E] 并抽 !M! 张牌。 NL 虚无 "
   },
   "LagranYue:PowerTwelveTrialsCard": {
     "NAME": "十二试炼",
@@ -180,7 +215,7 @@
   },
   "LagranYue:PrematureBurialCard": {
     "NAME": "过早的埋葬",
-    "DESCRIPTION": "受到 !M! 点伤害，选择获得一张被消耗的牌。"
+    "DESCRIPTION": "失去 !M! 点生命值，选择获得一张被消耗的牌。"
   },
   "LagranYue:MagicSkyrocketCard": {
     "NAME": "魔力暴涨",
@@ -200,7 +235,7 @@
   },
   "LagranYue:SapphirePrayerCard": {
     "NAME": "盛怒",
-    "DESCRIPTION": " 升级 所有手牌，每张 升级 的卡牌对自己造成 !M! 点伤害。 NL 消耗 "
+    "DESCRIPTION": "失去 !M! 点生命值， 升级 所有手牌。 NL 消耗 "
   },
   "LagranYue:EmeraldRemorseCard": {
     "NAME": "爱的累赘",

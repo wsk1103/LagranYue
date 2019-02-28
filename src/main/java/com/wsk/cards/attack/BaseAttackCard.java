@@ -100,7 +100,7 @@ public class BaseAttackCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 /*
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
         //给予power。ApplyPowerAction参数：执行者，给予者，具体的power(执行者，计数层数)，power层数。一般power层数和计数层数一致。

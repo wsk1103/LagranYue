@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,7 +31,7 @@ public class PowerRemoveArmorCard extends CustomCard {
     private static final String IMG = "cards/PowerRemoveArmorCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public PowerRemoveArmorCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -38,7 +39,7 @@ public class PowerRemoveArmorCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
     }
 
@@ -67,10 +68,10 @@ public class PowerRemoveArmorCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new RemoveArmorPowerUpgraded(abstractPlayer, 1), 1));
+                    new RemoveArmorPowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new RemoveArmorPower(abstractPlayer, 1), 1));
+                    new RemoveArmorPower(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,7 +42,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 3;
-        this.baseBlock = 8;
+        this.baseBlock = 12;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
@@ -55,6 +56,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
+            this.upgradeBlock(4);
             this.isInnate = true;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
@@ -63,16 +65,19 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        ChangeArmsUtil.setHasRings(false);
         ChangeArmsUtil.change(p);
         //获得格挡
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         //获得敏捷
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BlazingSevenRingsPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new BlazingSevenRingsPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //获得壁垒
         if (!p.hasPower(BarricadePower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
+            ChangeArmsUtil.setHasRings(true);
         }
     }
 

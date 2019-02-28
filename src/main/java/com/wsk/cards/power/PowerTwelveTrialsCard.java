@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,7 +40,7 @@ public class PowerTwelveTrialsCard extends CustomCard {
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.isEthereal = true;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
     }
 
@@ -65,9 +66,11 @@ public class PowerTwelveTrialsCard extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new TwelveTrialsPowerUpgraded(abstractPlayer, 1), 1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new TwelveTrialsPowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new TwelveTrialsPower(abstractPlayer, 1), 1));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new TwelveTrialsPower(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

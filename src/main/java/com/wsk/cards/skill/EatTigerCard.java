@@ -37,7 +37,7 @@ public class EatTigerCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
-        this.baseBlock = 6;
+        this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -60,7 +60,7 @@ public class EatTigerCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractMonster, p,
-                new WeakPower(abstractMonster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                new WeakPower(abstractMonster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

@@ -1,6 +1,7 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -44,16 +45,16 @@ public class VictorySwordPower extends BaseSwordPower {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] +  this.amount + DESCRIPTIONS[2]);
     }
 
-    //造成伤害时，返回伤害数值
-    public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
-        return super.atDamageFinalReceive(damage, damageType);
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        super.onAttack(info, damageAmount, target);
     }
 
     //触发时机：当玩家回合开始时触发。
     public void atStartOfTurn() {
         startEnd++;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new VictoryPower(AbstractDungeon.player, this.amount), this.amount));
+                new VictoryPower(AbstractDungeon.player, this.amount), this.amount, AbstractGameAction.AttackEffect.POISON));
         super.atStartOfTurn();
     }
 

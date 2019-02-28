@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,7 +31,7 @@ public class PowerBloodyTempleCard extends CustomCard {
     private static final String IMG = "cards/PowerBloodyTempleCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public PowerBloodyTempleCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -64,10 +65,10 @@ public class PowerBloodyTempleCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new BloodyTemplePowerUpgraded(abstractPlayer, this.magicNumber/2), this.magicNumber/2));
+                    new BloodyTemplePowerUpgraded(abstractPlayer, this.magicNumber/2), this.magicNumber/2, AbstractGameAction.AttackEffect.POISON));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber));
+                    new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

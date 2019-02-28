@@ -1,5 +1,6 @@
 package com.wsk.cards.skill;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +30,7 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
 
     private static final String IMG = "cards/SkillGaeBolgCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public SkillGaeBolgCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -51,7 +52,7 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(2);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
+            this.upgradeBaseCost(1);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
         }
     }
 
@@ -61,11 +62,11 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
         ChangeArmsUtil.change(abstractPlayer);
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
+                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //兵器：刺穿死棘之枪
         int platedArmor = 1;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new GaeBolgPower(abstractPlayer, this.magicNumber, platedArmor), this.magicNumber));
+                new GaeBolgPower(abstractPlayer, this.magicNumber, platedArmor), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

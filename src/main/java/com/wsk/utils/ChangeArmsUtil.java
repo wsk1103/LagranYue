@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.powers.*;
 import com.wsk.relics.EnkiduRelics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author wsk1103
  * @date 2019/2/25
@@ -14,43 +17,57 @@ import com.wsk.relics.EnkiduRelics;
  */
 public class ChangeArmsUtil {
 
+    //当连续2次使用炽天赋7圆环的时候，会直接移除所有的壁垒。
+    private static boolean hasRings = false;
+
+    //记录装备的兵器
+    private static int arms = 0;
+
     public static void change(AbstractPlayer p) {
         //1. 判断有没有双持这个能力
         boolean doubleArms = p.hasPower(DoubleArmsPower.POWER_ID);
         //如果拥有
         if (doubleArms) {
             //层数小于2，直接返回，表示可以继续装备
-            if (getArmsNum(p) <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
+            if (getArmsNum() <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
+                arms ++;
                 return;
             }
         }
         //移除所有装备
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, power.ID));
+                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, power.ID));
             }
         }
+        arms = 0;
+        arms ++;
     }
 
     //移除第一个兵器
     public static void changeOne(AbstractPlayer p) {
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, power.ID));
+                AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, power.ID));
                 break;
             }
         }
     }
 
     //获得装备的兵器的数量
-    public static int getArmsNum(AbstractPlayer p) {
-        int result = 0;
-        for (AbstractPower power : p.powers) {
-            if (power instanceof AbstractArmsPower) {
-                result ++;
-            }
-        }
-        return result;
+    public static int getArmsNum() {
+//        int result = 0;
+//        for (AbstractPower power : p.powers) {
+//            if (power instanceof AbstractArmsPower) {
+//                result ++;
+//            }
+//        }
+//        return result;
+        return arms;
+    }
+
+    public static void setArms(){
+        arms = 0;
     }
 
     public static boolean retain() {
@@ -59,6 +76,14 @@ public class ChangeArmsUtil {
             return true;
         }
         return false;
+    }
+
+    public static boolean isHasRings() {
+        return hasRings;
+    }
+
+    public static void setHasRings(boolean b) {
+        hasRings = b;
     }
 
 }

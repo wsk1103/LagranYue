@@ -47,7 +47,7 @@ public class DeathBolgPower extends BaseSpearPower {
         //给予被攻击者 2 层 死亡印记
         int sapphire = this.amount;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-                new ImprintPower(target, AbstractDungeon.player, sapphire), sapphire, true, AbstractGameAction.AttackEffect.NONE));
+                new ImprintPower(target, AbstractDungeon.player, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
         super.onAttack(info, damageAmount, target);
     }
 
@@ -55,7 +55,7 @@ public class DeathBolgPower extends BaseSpearPower {
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

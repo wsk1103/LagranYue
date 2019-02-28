@@ -1,6 +1,7 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -36,7 +37,7 @@ public class SapphirePrayerCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 7;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust =true;
     }
 
@@ -57,16 +58,23 @@ public class SapphirePrayerCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 2, AbstractGameAction.AttackEffect.POISON));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 3, AbstractGameAction.AttackEffect.POISON));
+        }
         //升级手中的卡牌
         CardGroup cardGroup = p.hand;
         for (AbstractCard c : cardGroup.group) {
+            if (c.cardID.equals(SapphirePrayerCard.ID)) {
+                continue;
+            }
             if (c.canUpgrade()) {
                 if (cardGroup.type == CardGroup.CardGroupType.HAND) {
                     c.superFlash();
                 }
                 c.upgrade();
                 c.applyPowers();
-                AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber));
             }
         }
     }

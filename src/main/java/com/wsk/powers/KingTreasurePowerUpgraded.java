@@ -20,7 +20,7 @@ public class KingTreasurePowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:KingTreasurePowerUpgraded";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "王之财宝+";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"每打出3张 兵器 ，获得1能量并抽1张牌。已打出","张兵器"};
+    public static final String[] DESCRIPTIONS = {"每打出2张 兵器 ，获得1能量并抽1张牌。已打出","张兵器"};
 
     private static final String IMG = "powers/w21.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -43,9 +43,10 @@ public class KingTreasurePowerUpgraded extends AbstractPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractArmsCard) {
+            this.flash();
             AbstractDungeon.player.addPower(new KingTreasurePowerUpgraded(this.owner, 1));
             int amount = this.owner.getPower(KingTreasurePowerUpgraded.POWER_ID).amount;
-            if (amount >= 3) {
+            if (amount >= 2) {
                 AbstractDungeon.actionManager.addToTop(new GainEnergyAction(1));
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, 1));
                 //重置为0

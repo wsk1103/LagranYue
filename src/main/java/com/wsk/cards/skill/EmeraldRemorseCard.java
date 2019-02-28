@@ -30,13 +30,13 @@ public class EmeraldRemorseCard extends CustomCard {
     private static final String IMG = "cards/EmeraldRemorseCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 1;//卡牌的费用。
 
     public EmeraldRemorseCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust =true;
     }
@@ -64,7 +64,7 @@ public class EmeraldRemorseCard extends CustomCard {
 
     //卡牌不能被打出
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (ChangeArmsUtil.getArmsNum(p) < 1) {
+        if (ChangeArmsUtil.getArmsNum() < 1) {
             //diy区。
             this.cantUseMessage = EXTENDED_DESCRIPTION[0];//卡牌不能被打出时所提示的文本。
             return false;

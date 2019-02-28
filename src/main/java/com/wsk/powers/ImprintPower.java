@@ -56,6 +56,7 @@ public class ImprintPower extends AbstractPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
+        this.flash();
         //回合结束的时候，层数减少1
         AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, ImprintPower.POWER_ID, 1));
     }

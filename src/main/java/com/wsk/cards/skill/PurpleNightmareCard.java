@@ -29,7 +29,7 @@ public class PurpleNightmareCard extends CustomCard {
     private static final String IMG = "cards/PurpleNightmareCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 1;//卡牌的费用。
 
     public PurpleNightmareCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -49,7 +49,7 @@ public class PurpleNightmareCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(1);
+            this.upgradeBaseCost(0);
         }
     }
 
@@ -58,11 +58,11 @@ public class PurpleNightmareCard extends CustomCard {
         if (m.hasPower(ImprintPower.POWER_ID)) {
             int num = m.getPower(ImprintPower.POWER_ID).amount;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new ImprintPower(m, p, num), num, true, AbstractGameAction.AttackEffect.NONE));
+                    new ImprintPower(m, p, num), num, true, AbstractGameAction.AttackEffect.POISON));
 
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new ImprintPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    new ImprintPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

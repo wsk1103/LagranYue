@@ -31,9 +31,9 @@ public class AttackEmeraldCard extends CustomCard {
 
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 3;//卡牌的费用。
 
-    private static final int wskAttack = 12;
+    private static final int wskAttack = 24;
 
     public AttackEmeraldCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -41,6 +41,7 @@ public class AttackEmeraldCard extends CustomCard {
                 CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
@@ -51,22 +52,24 @@ public class AttackEmeraldCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(5);//升级而增加的伤害。增加的是baseBlock
+            this.upgradeDamage(8);//升级而增加的伤害。增加的是baseBlock
 
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-        int victory = 1;
+        int victory = this.magicNumber;
         if (p.hasPower(VictoryPower.POWER_ID)) {
             AbstractPower power = p.getPower(VictoryPower.POWER_ID);
             if (power.amount >= 10) {
                 victory = 0;
+            } else if (power.amount == 9) {
+                victory = 1;
             }
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VictoryPower(p, victory), victory));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
     }//注：卡牌效果的diy区。
 

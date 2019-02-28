@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -65,9 +66,11 @@ public class PowerKingTreasureCard extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePowerUpgraded(abstractPlayer, 0), 0));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new KingTreasurePowerUpgraded(abstractPlayer, 0), 0, AbstractGameAction.AttackEffect.POISON));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, new KingTreasurePower(abstractPlayer, 0), 0));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new KingTreasurePower(abstractPlayer, 0), 0, AbstractGameAction.AttackEffect.POISON));
         }
     }
 

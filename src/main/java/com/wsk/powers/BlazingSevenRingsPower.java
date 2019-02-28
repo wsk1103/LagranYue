@@ -1,6 +1,7 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -63,10 +64,13 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
         if (!ChangeArmsUtil.retain()) {
             //移除敏捷
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
         //移除壁垒
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
+        if (ChangeArmsUtil.isHasRings()) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BarricadePower.POWER_ID));
+        }
+        ChangeArmsUtil.setHasRings(true);
 //        super.onRemove();
     }
 }

@@ -29,8 +29,6 @@ public class GanJiangMoYePower extends BaseSwordPower {
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
-    private int num = 1;
-
 
     public GanJiangMoYePower(AbstractCreature owner, int amount) {
         super(owner, amount);//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
@@ -50,10 +48,11 @@ public class GanJiangMoYePower extends BaseSwordPower {
 
     //每回合你使用的目标为敌人的牌都会被重复打出 M 次
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0) && num >= 1
-                && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY)
+        if ((!card.purgeOnUse) && (this.amount > 0)
+                && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY
+                || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY)
                 && (card.type == AbstractCard.CardType.ATTACK)) {
-            num --;
+            this.flash();
             for (int i = 0; i < this.amount; i++) {
                 AbstractMonster m = null;
                 if (action.target != null) {
@@ -77,13 +76,8 @@ public class GanJiangMoYePower extends BaseSwordPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        num = 1;
-    }
-
-    //造成伤害时，返回伤害数值
-    public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
-        return super.atDamageFinalReceive(damage, damageType);
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        super.onAttack(info, damageAmount, target);
     }
 
     @Override

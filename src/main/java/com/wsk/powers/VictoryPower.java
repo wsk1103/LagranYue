@@ -48,6 +48,5 @@ public class VictoryPower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
         //增加生命值
         AbstractDungeon.player.increaseMaxHp(this.amount, false);
-        super.onVictory();
     }
 }

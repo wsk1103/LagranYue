@@ -47,14 +47,14 @@ public class BaseSpearPower extends AbstractArmsPower {
         int vulnerable = 1;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
                 new VulnerablePower(target, vulnerable, false), vulnerable,
-                true, AbstractGameAction.AttackEffect.NONE));
+                true, AbstractGameAction.AttackEffect.POISON));
         super.onAttack(info, damageAmount, target);
     }
     @Override
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

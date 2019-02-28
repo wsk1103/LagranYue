@@ -1,6 +1,7 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,13 +31,13 @@ public class MultipleThornsCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int DEFEND = 6;
+    private static final int DEFEND = 7;
 
     public MultipleThornsCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = DEFEND;//基础格挡值，除升级以外无任何其他加成. this.block为有敏捷等加成的格挡值.
         this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
@@ -59,7 +60,7 @@ public class MultipleThornsCard extends CustomCard {
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }//注：卡牌效果的diy区。
 
     static {

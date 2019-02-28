@@ -1,6 +1,7 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -60,10 +61,10 @@ public class PowerGoldStartCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         if (upgraded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new GoldStartPowerUpgraded(abstractPlayer, 0), 0));
+                    new GoldStartPowerUpgraded(abstractPlayer, 0), 0, AbstractGameAction.AttackEffect.POISON));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new GoldStartPower(abstractPlayer, 0), 0));
+                    new GoldStartPower(abstractPlayer, 0), 0, AbstractGameAction.AttackEffect.POISON));
         }
     }
 
