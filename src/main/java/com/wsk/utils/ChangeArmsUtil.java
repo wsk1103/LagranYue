@@ -23,13 +23,14 @@ public class ChangeArmsUtil {
     private static int arms = 0;
 
     public static void change(AbstractCreature p) {
+        arms = getArmsNum();
         //1. 判断有没有双持这个能力
         boolean doubleArms = p.hasPower(DoubleArmsPower.POWER_ID);
         //如果拥有
         if (doubleArms) {
+            arms ++;
             //层数小于2，直接返回，表示可以继续装备
             if (getArmsNum() <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
-                arms ++;
                 return;
             }
         }
@@ -39,8 +40,7 @@ public class ChangeArmsUtil {
                 AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, power.ID));
             }
         }
-        arms = 0;
-        arms ++;
+        arms = 1;
     }
 
     //移除第一个兵器
@@ -48,6 +48,7 @@ public class ChangeArmsUtil {
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
                 AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, power.ID));
+                arms--;
                 break;
             }
         }
@@ -55,13 +56,6 @@ public class ChangeArmsUtil {
 
     //获得装备的兵器的数量
     public static int getArmsNum() {
-//        int result = 0;
-//        for (AbstractPower power : p.powers) {
-//            if (power instanceof AbstractArmsPower) {
-//                result ++;
-//            }
-//        }
-//        return result;
         return arms;
     }
 

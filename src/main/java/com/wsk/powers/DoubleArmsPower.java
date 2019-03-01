@@ -35,7 +35,7 @@ public class DoubleArmsPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount + 1) + DESCRIPTIONS[1] + ChangeArmsUtil.getArmsNum());
+        this.description = (DESCRIPTIONS[0] + (this.amount) + DESCRIPTIONS[1] + ChangeArmsUtil.getArmsNum());
     }
 
     @Override

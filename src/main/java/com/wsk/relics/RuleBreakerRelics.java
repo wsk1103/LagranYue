@@ -21,12 +21,12 @@ public class RuleBreakerRelics extends CustomRelic {
     public static final String DESCRIPTION = "在本次战斗中，一回合内，使用的第 N 张 #y兵器 牌将不会被 #y消耗 (N为3的倍数)";//遗物效果的文本描叙。
 
     public RuleBreakerRelics() {
-        super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.CLINK);
+        super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.CLINK);
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTION;
-    }//文本更新方法，当你修改了DESCRIPTION时，调用该方法。
+        return this.DESCRIPTIONS[0];
+    }
 
     public AbstractRelic makeCopy() {
         return new RuleBreakerRelics();

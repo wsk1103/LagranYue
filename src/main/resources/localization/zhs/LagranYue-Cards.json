@@ -177,8 +177,8 @@
   },
   "LagranYue:PowerDoubleArmsCard": {
     "NAME": "武器大师",
-    "DESCRIPTION": "装备 兵器 的数量上限增加 !M! 。 疲惫 ",
-    "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限增加 !M! 。 疲惫 "
+    "DESCRIPTION": "装备 兵器 的数量上限变为 !M! 。 疲惫 ",
+    "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限变为 !M! 。 疲惫 "
   },
   "LagranYue:BasePowerCard": {
     "NAME": "支持",

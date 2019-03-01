@@ -22,7 +22,7 @@ public class EnkiduRelics extends CustomRelic {
     //记录第一次保存第一次切换武器，当被使用过后，会被置为 false
     private static boolean once = true;
 
-    public static final String DESCRIPTION = "每次战斗仅一次，切换 #y兵器 的时候，保留第一次的增益效果。";//遗物效果的文本描叙。
+    public static final String DESCRIPTION = "每次战斗仅一次，切换 #y兵器 的时候，保留之前一把武器获得的力量/敏捷加成效果。";//遗物效果的文本描叙。
 
     public EnkiduRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.FLAT);
@@ -31,9 +31,10 @@ public class EnkiduRelics extends CustomRelic {
     //遗物种类：RelicTier.BOSS-boss遗物, RelicTier.COMMON-一般遗物, RelicTier.RARE-罕见遗物, RelicTier.SHOP-商店遗物, RelicTier.SPECIAL-事件遗物, RelicTier.STARTER-初始遗物, RelicTier.UNCOMMON-稀有遗物。
     //遗物音效：LandingSound.CLINK,LandingSound.FLAT,LandingSound.HEAVY,LandingSound.MAGICAL,LandingSound.SOLID  具体音效请到游戏内听。
 
+    @Override
     public String getUpdatedDescription() {
-        return DESCRIPTION;
-    }//文本更新方法，当你修改了DESCRIPTION时，调用该方法。
+        return this.DESCRIPTIONS[0];
+    }
 
     public AbstractRelic makeCopy() {
         return new EnkiduRelics();

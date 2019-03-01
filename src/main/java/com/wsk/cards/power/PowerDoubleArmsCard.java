@@ -37,7 +37,7 @@ public class PowerDoubleArmsCard extends CustomCard {
                 CardType.POWER,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     public AbstractCard makeCopy() {

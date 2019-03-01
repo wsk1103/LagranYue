@@ -29,8 +29,8 @@ public class GungnirRelics extends CustomRelic {
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTION;
-    }//文本更新方法，当你修改了DESCRIPTION时，调用该方法。
+        return this.DESCRIPTIONS[0];
+    }
 
     public AbstractRelic makeCopy() {
         return new GungnirRelics();

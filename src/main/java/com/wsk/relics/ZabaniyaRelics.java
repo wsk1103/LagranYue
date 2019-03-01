@@ -24,13 +24,13 @@ public class ZabaniyaRelics extends CustomRelic {
     public static final String DESCRIPTION = "在一回合内，打出第3张兵器牌后，获得一层 #y缓冲 ";//遗物效果的文本描叙。
 
     public ZabaniyaRelics() {
-        super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.FLAT);
+        super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);
         //参数：ID-遗物Id，new Texture(Gdx.files.internal(IMG))-遗物图片，new Texture(Gdx.files.internal(OUTLINE))-遗物轮廓，RelicTier.BOSS-遗物种类，LandingSound.FLAT-遗物音效。
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTION;
-    }//文本更新方法，当你修改了DESCRIPTION时，调用该方法。
+        return this.DESCRIPTIONS[0];
+    }
 
     public AbstractRelic makeCopy() {
         return new ZabaniyaRelics();
