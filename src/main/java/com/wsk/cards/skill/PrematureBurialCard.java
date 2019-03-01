@@ -56,7 +56,7 @@ public class PrematureBurialCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         //失去生命值
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-        AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false));
+        AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false, false));
     }
 
     static {

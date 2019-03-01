@@ -2,13 +2,12 @@ package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
 import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
@@ -88,7 +87,8 @@ public class BaseDefendCard extends CustomCard {
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        ActionUtil.gainBlockAction(p, this.block);
+//        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

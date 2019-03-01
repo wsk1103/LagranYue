@@ -1,16 +1,12 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
@@ -58,9 +54,11 @@ public class EatTigerCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractMonster, p,
-                new WeakPower(abstractMonster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+//        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractMonster, p,
+//                new WeakPower(abstractMonster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+        ActionUtil.gainBlockAction(p, this.block);
+        ActionUtil.weakPower(p, abstractMonster, this.magicNumber);
     }
 
     static {

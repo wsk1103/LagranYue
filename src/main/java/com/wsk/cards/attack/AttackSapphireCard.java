@@ -2,7 +2,6 @@ package com.wsk.cards.attack;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.ImprintPower;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -58,7 +57,8 @@ public class AttackSapphireCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         int sapphire = this.magicNumber;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ImprintPower(m, p, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
+        ActionUtil.imprintPower(p, m, this.magicNumber);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ImprintPower(m, p, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
     }//注：卡牌效果的diy区。
 
     static {

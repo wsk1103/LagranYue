@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.RemoveArmorPower;
-import com.wsk.powers.RemoveArmorPowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -52,27 +51,23 @@ public class PowerRemoveArmorCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-//            this.upgradeBlock(defind * 2);//升级而增加的护甲。增加的是baseDamage
-//            this.upgradeDamage(wskAttack * 2);//升级而增加的伤害。增加的是baseBlock
-//            this.upgradeMagicNumber(1);//升级而增加的特殊值。增加的是baseMagicNumber
-//            this.upgradeBaseCost(3);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
             this.upgradeMagicNumber(2);//升级而增加的特殊值。增加的是baseMagicNumber
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-//            this.exhaust = false;//消耗属性。
-//            this.isInnate = false;//固有属性。
         }
     }
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new RemoveArmorPowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new RemoveArmorPower(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                new RemoveArmorPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        if (upgraded) {
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+//                    new RemoveArmorPowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
+//        } else {
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+//                    new RemoveArmorPower(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
+//        }
     }
 
     static {

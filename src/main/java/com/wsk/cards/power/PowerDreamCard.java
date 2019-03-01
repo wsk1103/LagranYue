@@ -53,15 +53,9 @@ public class PowerDreamCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-//            this.upgradeBlock(defind * 2);//升级而增加的护甲。增加的是baseDamage
-//            this.upgradeDamage(wskAttack * 2);//升级而增加的伤害。增加的是baseBlock
-//            this.upgradeMagicNumber(1);//升级而增加的特殊值。增加的是baseMagicNumber
-//            this.upgradeBaseCost(3);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
             this.isEthereal = false;//虚无属性。
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-//            this.exhaust = false;//消耗属性。
-//            this.isInnate = false;//固有属性。
         }
     }
 

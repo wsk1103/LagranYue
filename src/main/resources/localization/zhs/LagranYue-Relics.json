@@ -3,7 +3,7 @@
     "NAME": "天之锁",
     "FLAVOR": "上天已经为你打开了一扇窗！",
     "DESCRIPTIONS": [
-      "每次战斗仅一次，切换 #y兵器 的时候，保留第一次的增益效果。"
+      "每次战斗仅一次，切换 #y兵器 的时候，保留之前武器获得的力量/敏捷加成效果。"
     ]
   },
   "LagranYue:GungnirRelics": {
@@ -17,7 +17,7 @@
     "NAME": "万符必将破戒",
     "FLAVOR": "此魔术武器是背叛之魔女神性的具现化。",
     "DESCRIPTIONS": [
-      "在本次战斗中，一回合内，使用的第 N 张 #y兵器 牌将不会被 #y消耗 (N为3的倍数)"
+      "在本次战斗中，使用的第 N 张 #y兵器 牌将不会被 #y消耗 (N为3的倍数)"
     ]
   },
   "LagranYue:UnlimitedBladeWorksRelics": {

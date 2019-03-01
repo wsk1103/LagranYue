@@ -7,5 +7,16 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
  * @date 2019/2/26
  * @desc 武器能力
  */
-public abstract class AbstractArmsPower extends AbstractPower {
+public abstract class AbstractArmsPower extends AbstractPower implements Cloneable {
+
+    public Object clone() {
+        AbstractArmsPower power = null;
+        try {
+            power = (AbstractArmsPower) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return power;
+    }
+
 }

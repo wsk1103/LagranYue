@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
@@ -59,8 +59,9 @@ public class RoseCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new StrengthPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+//                new StrengthPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        ActionUtil.strengthPower(p, this.magicNumber);
         if (upgraded) {
             //人工制品
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
@@ -68,7 +69,7 @@ public class RoseCard extends CustomCard {
         }
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-        c.modifyCostForTurn(this.magicNumber * -3);
+        c.modifyCostForTurn(-c.cost);
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
     }
 

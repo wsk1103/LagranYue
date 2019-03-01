@@ -2,13 +2,12 @@ package com.wsk.utils;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.wsk.powers.*;
+import com.wsk.powers.AbstractArmsPower;
+import com.wsk.powers.DoubleArmsPower;
 import com.wsk.relics.EnkiduRelics;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author wsk1103
@@ -23,7 +22,7 @@ public class ChangeArmsUtil {
     //记录装备的兵器
     private static int arms = 0;
 
-    public static void change(AbstractPlayer p) {
+    public static void change(AbstractCreature p) {
         //1. 判断有没有双持这个能力
         boolean doubleArms = p.hasPower(DoubleArmsPower.POWER_ID);
         //如果拥有

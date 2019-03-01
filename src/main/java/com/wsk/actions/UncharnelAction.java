@@ -20,12 +20,14 @@ import java.util.Iterator;
 public class UncharnelAction extends AbstractGameAction {
     private AbstractPlayer p;
     private final boolean upgrade;
+    private final boolean costToZero;
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private ArrayList<AbstractCard> exhumes = new ArrayList<>();
 
-    public UncharnelAction(boolean upgrade) {
+    public UncharnelAction(boolean costToZero, boolean upgrade) {
         this.upgrade = upgrade;
+        this.costToZero = costToZero;
         this.setValues(this.p = AbstractDungeon.player, AbstractDungeon.player, this.amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -38,12 +40,13 @@ public class UncharnelAction extends AbstractGameAction {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (iterator = AbstractDungeon.gridSelectScreen.selectedCards.iterator(); iterator.hasNext(); abstractCard.unhover()) {
                     abstractCard = iterator.next();
-
                     this.p.hand.addToRandomSpot(abstractCard);
                     this.p.exhaustPile.removeCard(abstractCard);
-                    if (this.upgrade) {
-//                        abstractCard.upgrade();
+                    if (this.costToZero) {
                         abstractCard.modifyCostForTurn(-abstractCard.cost);
+                    }
+                    if (this.upgrade && abstractCard.canUpgrade()) {
+                        abstractCard.upgrade();
                     }
                 }
 
@@ -69,11 +72,13 @@ public class UncharnelAction extends AbstractGameAction {
             AbstractCard topCard = this.p.exhaustPile.getTopCard();
             topCard.unfadeOut();
 
-            this.p.hand.addToRandomSpot(topCard);
             this.p.exhaustPile.removeCard(topCard);
-            if (this.upgrade) {
-//                topCard.upgrade();
+            this.p.hand.addToRandomSpot(topCard);
+            if (this.costToZero) {
                 topCard.modifyCostForTurn(-topCard.cost);
+            }
+            if (this.upgrade && topCard.canUpgrade()) {
+                topCard.upgrade();
             }
             (topCard).unhover();
             (topCard).fadingOut = false;
@@ -87,9 +92,7 @@ public class UncharnelAction extends AbstractGameAction {
                 abstractCard.unhover();
                 abstractCard.unfadeOut();
             }
-
             Iterator<AbstractCard> cardIterator = this.p.exhaustPile.group.iterator();
-
             while (true) {
                 AbstractCard card;
                 do {
@@ -100,7 +103,6 @@ public class UncharnelAction extends AbstractGameAction {
                             this.isDone = true;
                             return;
                         }
-
                         AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, TEXT[0], false);
                         this.tickDuration();
                         return;

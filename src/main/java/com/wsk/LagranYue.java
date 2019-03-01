@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.Keyword;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
 import com.wsk.cards.skill.*;

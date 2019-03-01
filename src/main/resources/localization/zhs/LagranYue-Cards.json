@@ -34,8 +34,8 @@
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "那年夏天的宝石梦",
-    "DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌，并且费用降低为0。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌。 起舞 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌，并且费用降低为0。 起舞 。 NL 消耗 "
   },
   "LagranYue:AttackTopazCard": {
     "NAME": "黄宝石的呼唤",
@@ -62,8 +62,8 @@
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "遥远的蹂躏制霸",
-    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。 NL  消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。 NL  消耗 "
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "恶魔的咆哮",
@@ -100,11 +100,11 @@
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。攻击时，获得1 多层护甲 。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，获得 !M! 多层护甲 。 NL 消耗 "
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。攻击时，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 "
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
@@ -113,7 +113,7 @@
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。攻击时，恢复该攻击卡的数值的1/4的生命值。 NL 消耗 "
+    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。使用攻击卡牌后，恢复该攻击卡的数值的1/4的生命值。 NL 消耗 "
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
@@ -121,8 +121,8 @@
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点 力量 。攻击时，给予被攻击者 !M! 层 虚弱。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 获得 兵器  弩 。获得 !M! 点 力量 。攻击时，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
+    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 获得 兵器  弩 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",

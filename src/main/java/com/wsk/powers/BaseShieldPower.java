@@ -1,13 +1,11 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -27,6 +25,8 @@ public class BaseShieldPower extends AbstractArmsPower {
     private static final String IMG = "powers/w15.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
+    BaseShieldPower(){}
+
     public BaseShieldPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
@@ -34,26 +34,38 @@ public class BaseShieldPower extends AbstractArmsPower {
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
-        this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        this.type = POWER_TYPE;
+        hasArms(owner);
         updateDescription();
+    }
+
+    private void hasArms (AbstractCreature p) {
+        ActionUtil.dexterityPower(p, amount);
     }
 
     public void updateDescription() {
         this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+            ActionUtil.gainBlockAction(AbstractDungeon.player, 2);
+        }
+    }
+
 
     //触发时机：当玩家攻击时。
-    @Override
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 2));
-        super.onAttack(info, damageAmount, target);
-    }
+//    @Override
+//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+//        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 2));
+//    }
     @Override
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.dexterityPower(owner, -this.amount);
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+//                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

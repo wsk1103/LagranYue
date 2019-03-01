@@ -39,7 +39,7 @@ public class DreamPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         for (int i = 0; i < this.amount; i++) {
-            AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false));
+            AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false, false));
         }
     }
 }

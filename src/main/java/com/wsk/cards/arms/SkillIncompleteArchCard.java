@@ -1,4 +1,4 @@
-package com.wsk.cards.skill;
+package com.wsk.cards.arms;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -8,10 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.wsk.cards.AbstractSwordCard;
+import com.wsk.cards.AbstractArchCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.BaseSwordPower;
+import com.wsk.powers.BaseArchPower;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -20,20 +19,20 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 一句话说明
  */
-public class SkillBrokenSwordCard extends AbstractSwordCard {
-    public static final String ID = "LagranYue:SkillBrokenSwordCard";//卡牌在游戏中的id
+public class SkillIncompleteArchCard extends AbstractArchCard {
+    public static final String ID = "LagranYue:SkillIncompleteArchCard";//卡牌在游戏中的id
     private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/SkillBrokenSwordCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/SkillIncompleteArchCard.png";//卡牌牌面的图片路径。
 
     private static final int COST = 2;//卡牌的费用。
 
 
-    public SkillBrokenSwordCard() {
+    public SkillIncompleteArchCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
@@ -45,7 +44,7 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
     }
 
     public AbstractCard makeCopy() {
-        return new SkillBrokenSwordCard();
+        return new SkillIncompleteArchCard();
     }
 
     @Override
@@ -59,9 +58,10 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ChangeArmsUtil.change(p);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BaseSwordPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new BaseArchPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

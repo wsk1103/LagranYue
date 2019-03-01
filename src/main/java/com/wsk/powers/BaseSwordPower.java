@@ -1,14 +1,12 @@
 package com.wsk.powers;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -28,6 +26,9 @@ public class BaseSwordPower extends AbstractArmsPower {
 
     String basePower = " 剑 。";
 
+    BaseSwordPower() {
+    }
+
     public BaseSwordPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.name = NAME;
         this.ID = POWER_ID;
@@ -35,28 +36,57 @@ public class BaseSwordPower extends AbstractArmsPower {
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
-        this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        this.type = POWER_TYPE;
+        hasArms();
         updateDescription();
+    }
+
+    private void hasArms() {
+        ActionUtil.strengthPower(owner, amount);
     }
 
     public void updateDescription() {
         this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
-    //触发时机：当玩家攻击时。
     @Override
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        int vulnerable = 1;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-                new WeakPower(target, vulnerable, false), vulnerable,
-                true, AbstractGameAction.AttackEffect.POISON));
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+            if (card.target == AbstractCard.CardTarget.ALL
+                    || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
+                if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                    flash();
+                    for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                        if ((!m.isDead) && (!m.isDying)) {
+                            ActionUtil.weakPower(AbstractDungeon.player, m, 1);
+                        }
+                    }
+                }
+            } else {
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+                ActionUtil.weakPower(AbstractDungeon.player, m, 1);
+            }
+        }
     }
+
+//    //触发时机：当玩家攻击时。
+//    @Override
+//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+//        int vulnerable = 1;
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
+//                new WeakPower(target, vulnerable, false), vulnerable,
+//                true, AbstractGameAction.AttackEffect.POISON));
+//    }
 
     @Override
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.strengthPower(owner, -amount);
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+//                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

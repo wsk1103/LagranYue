@@ -2,7 +2,6 @@ package com.wsk.cards.attack;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,8 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.ImprintPower;
 import com.wsk.powers.VictoryPower;
 import com.wsk.utils.CommonUtil;
 
@@ -74,16 +73,19 @@ public class AttackKillerCard extends CustomCard {
         }
         if (upgraded) {
             if (num == 0) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                        new VictoryPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                ActionUtil.victoryPower(p, this.magicNumber);
+//                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+//                        new VictoryPower(p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
             } else {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                        new VictoryPower(p, num), num, true, AbstractGameAction.AttackEffect.NONE));
+                ActionUtil.victoryPower(p, num);
+//                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+//                        new VictoryPower(p, num), num, true, AbstractGameAction.AttackEffect.POISON));
             }
         } else {
             if (num > 0) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                        new VictoryPower(p, num), num, true, AbstractGameAction.AttackEffect.NONE));
+                ActionUtil.victoryPower(p, num);
+//                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+//                        new VictoryPower(p, num), num, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
     }//注：卡牌效果的diy区。

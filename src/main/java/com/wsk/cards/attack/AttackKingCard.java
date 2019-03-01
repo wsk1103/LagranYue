@@ -25,6 +25,7 @@ public class AttackKingCard extends CustomCard {
     private static final String NAME /*= "来自WSK的攻击"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
+    private static final String UPGRADED_DESCRIPTION;
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackKingCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
@@ -51,6 +52,8 @@ public class AttackKingCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 
@@ -64,7 +67,7 @@ public class AttackKingCard extends CustomCard {
             if (cardGroup.type == CardGroup.CardGroupType.HAND) {
                 c.superFlash();
             }
-            c.upgrade();
+//            c.upgrade();
             c.applyPowers();
             if (upgraded) {
                 if (c instanceof AbstractArmsCard) {
@@ -93,7 +96,7 @@ public class AttackKingCard extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
-//        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
 }

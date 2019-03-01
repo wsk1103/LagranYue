@@ -67,7 +67,7 @@ public class PhysicalFitnessCard extends CustomCard {
                 //设置保留
                 c.retain = true;
                 if (upgraded) {
-                    c.modifyCostForTurn(this.magicNumber * -3);
+                    c.modifyCostForTurn(-c.cost);
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));
                 break;

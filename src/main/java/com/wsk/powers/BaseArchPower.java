@@ -3,11 +3,13 @@ package com.wsk.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -27,7 +29,7 @@ public class BaseArchPower extends AbstractArmsPower {
 
     String basePower = " 弩 。";
 
-    public BaseArchPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+    public BaseArchPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -35,18 +37,55 @@ public class BaseArchPower extends AbstractArmsPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        hasArms();
         updateDescription();
+    }
+
+    BaseArchPower() {
+    }
+
+    private void hasArms(){
+        ActionUtil.strengthPower(owner, amount);
     }
 
     public void updateDescription() {
         this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
-    //造成伤害时，返回伤害数值
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-                new PoisonPower(target, AbstractDungeon.player, 2), 2, true, AbstractGameAction.AttackEffect.POISON));
+    @Override
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+            if (card.target == AbstractCard.CardTarget.ALL
+                    || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
+                if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                    flash();
+                    for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                        if ((!m.isDead) && (!m.isDying)) {
+                            ActionUtil.poisonPower(AbstractDungeon.player, m, 2);
+                        }
+                    }
+                }
+            } else {
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+                ActionUtil.poisonPower(AbstractDungeon.player, m, 2);
+            }
+        }
+//        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+//            AbstractMonster m = null;
+//            if (action.target != null) {
+//                m = (AbstractMonster) action.target;
+//            }
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
+//                    new PoisonPower(m, AbstractDungeon.player, 2), 2, true, AbstractGameAction.AttackEffect.POISON));
+//        }
     }
+
+    //    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+//
+//    }
     @Override
     public void onRemove() {
         if (!ChangeArmsUtil.retain()) {

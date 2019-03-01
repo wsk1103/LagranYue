@@ -18,35 +18,35 @@
       "起舞"
     ],
     "PROPERNAME": "起舞",
-    "DESCRIPTION": "根据装备兵器的类型，给予攻击效果加成。 NL 剑：攻击时，给予1层 虚弱 。 NL 弩：攻击时，给予2层 中毒 。 NL 盾：攻击时,获得2点 格挡 。 NL 枪：攻击时，给予1层 易伤 。"
+    "DESCRIPTION": "根据装备兵器的类型，给予攻击效果加成。 NL 剑：使用攻击卡牌后，给予1层 虚弱 。 NL 弩：使用攻击卡牌后，给予2层 中毒 。 NL 盾：使用攻击卡牌后，获得2点 格挡 。 NL 枪：使用攻击卡牌后，给予1层 易伤 。"
   },
   {
     "NAMES": [
       "剑"
     ],
     "PROPERNAME": "剑",
-    "DESCRIPTION": "攻击时，给予1层 虚弱 "
+    "DESCRIPTION": "使用攻击卡牌后，给予1层 虚弱 "
   },
   {
     "NAMES": [
       "弩"
     ],
     "PROPERNAME": "弩",
-    "DESCRIPTION": "攻击时，给予2层 中毒 "
+    "DESCRIPTION": "使用攻击卡牌后，给予2层 中毒 "
   },
   {
     "NAMES": [
       "盾"
     ],
     "PROPERNAME": "盾",
-    "DESCRIPTION": "攻击时,获得2点 格挡 "
+    "DESCRIPTION": "使用攻击卡牌后，获得2点 格挡 "
   },
   {
     "NAMES": [
       "枪"
     ],
     "PROPERNAME": "枪",
-    "DESCRIPTION": "攻击时，给予1层 易伤 "
+    "DESCRIPTION": "使用攻击卡牌后，给予1层 易伤 "
   },
   {
     "NAMES": [

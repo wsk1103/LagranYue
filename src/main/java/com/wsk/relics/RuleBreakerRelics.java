@@ -47,11 +47,18 @@ public class RuleBreakerRelics extends CustomRelic {
 
     //触发时机：在玩家回合开始时。
     public void atTurnStart() {
-        this.counter = 0;
+//        this.counter = 0;
     }
+
+//    @Override
+//    public void atBattleStart() {
+//        this.flash();
+//        this.counter = 0;
+//    }
 
     //触发时机：每一场战斗
     public void atPreBattle() {
+        this.flash();
         this.counter = 0;
     }
 

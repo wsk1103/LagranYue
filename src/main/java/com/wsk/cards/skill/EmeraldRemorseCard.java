@@ -4,11 +4,9 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.ChangeArmsUtil;
 import com.wsk.utils.CommonUtil;
@@ -58,8 +56,10 @@ public class EmeraldRemorseCard extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
         ChangeArmsUtil.changeOne(p);
-        AbstractDungeon.player.addPower(new StrengthPower(AbstractDungeon.player, this.magicNumber));
-        AbstractDungeon.player.addPower(new DexterityPower(AbstractDungeon.player, this.magicNumber));
+        ActionUtil.dexterityPower(p, this.magicNumber);
+        ActionUtil.strengthPower(p, this.magicNumber);
+//        AbstractDungeon.player.addPower(new StrengthPower(AbstractDungeon.player, this.magicNumber));
+//        AbstractDungeon.player.addPower(new DexterityPower(AbstractDungeon.player, this.magicNumber));
     }
 
     //卡牌不能被打出

@@ -10,28 +10,28 @@
     "NAME": "兵器：断剑",
     "DESCRIPTIONS": [
       "获得 兵器 剑 。获得",
-      " 点力量。造成的攻击伤害 + 2。"
+      " 点力量。使用攻击卡牌时，给予1层虚弱。"
     ]
   },
   "LagranYue:BaseSpearPower": {
     "NAME": "兵器：竹枪",
     "DESCRIPTIONS": [
       "获得 兵器 枪 。获得  ",
-      " 点力量。 攻击时，给予1层易伤"
+      " 点力量。 使用攻击卡牌时，给予1层易伤"
     ]
   },
   "LagranYue:BaseArchPower": {
     "NAME": "兵器：残弩",
     "DESCRIPTIONS": [
       "获得",
-      "点力量。攻击时，给予2层 中毒"
+      "点力量。使用攻击卡牌时，给予2层 中毒"
     ]
   },
   "LagranYue:BaseShieldPower": {
     "NAME": "兵器：破盾",
     "DESCRIPTIONS": [
       "获得",
-      "点敏捷。当玩家攻击时,获得2点格挡"
+      "点敏捷。使用攻击卡牌时,获得2点格挡"
     ]
   },
   "LagranYue:GaeBolgPower": {

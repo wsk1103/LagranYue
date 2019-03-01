@@ -1,14 +1,12 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.ImprintPower;
 import com.wsk.utils.CommonUtil;
@@ -57,12 +55,14 @@ public class PurpleNightmareCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.hasPower(ImprintPower.POWER_ID)) {
             int num = m.getPower(ImprintPower.POWER_ID).amount;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new ImprintPower(m, p, num), num, true, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.imprintPower(p, m, num);
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+//                    new ImprintPower(m, p, num), num, true, AbstractGameAction.AttackEffect.POISON));
 
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
-                    new ImprintPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.imprintPower(p, m, this.magicNumber);
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
+//                    new ImprintPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
         }
     }
 
