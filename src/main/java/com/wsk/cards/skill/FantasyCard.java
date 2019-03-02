@@ -1,18 +1,11 @@
 package com.wsk.cards.skill;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.SlowPower;
-import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
@@ -41,6 +34,7 @@ public class FantasyCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 9;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
@@ -60,18 +54,19 @@ public class FantasyCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         ActionUtil.gainBlockAction(p, this.block);
-        //给予所有敌人 缓慢
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(p,
-                new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p,
-                            new SlowPower(monster, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
-                }
-            }
-        }
+        ActionUtil.forgingAction(p, this.magicNumber, this.magicNumber);
+//        //给予所有敌人 缓慢
+//        AbstractDungeon.actionManager.addToBottom(new VFXAction(p,
+//                new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));
+//        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+//            flash();
+//            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+//                if ((!monster.isDead) && (!monster.isDying)) {
+//                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p,
+//                            new SlowPower(monster, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
+//                }
+//            }
+//        }
     }
 
     static {

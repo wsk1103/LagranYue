@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractSwordCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.VictorySwordPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.VictorySwordPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -59,13 +56,16 @@ public class SkillVictorySwordCard extends AbstractSwordCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        ChangeArmsUtil.change(abstractPlayer);
+//        ArmsUtil.addOrChangArms(abstractPlayer);
 
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
 //                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //兵器：誓约胜利之剑
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new VictorySwordPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        VictorySwordPower power = new VictorySwordPower(abstractPlayer, this.magicNumber);
+        ArmsUtil.addOrChangArms(abstractPlayer, power);
+//        ActionUtil.strengthPower(abstractPlayer, this.magicNumber);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+//                power, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

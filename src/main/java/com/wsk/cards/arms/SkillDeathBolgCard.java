@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractSpearCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.DeathBolgPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.DeathBolgPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -58,12 +55,14 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         //先为自己增加2点力量
-        ChangeArmsUtil.change(abstractPlayer);
+//        ArmsUtil.addOrChangArms(abstractPlayer);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
 //                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //兵器：突穿死翔之枪
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new DeathBolgPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        DeathBolgPower power = new DeathBolgPower(abstractPlayer, this.magicNumber);
+        ArmsUtil.addOrChangArms(abstractPlayer, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,power
+//                , this.magicNumber, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

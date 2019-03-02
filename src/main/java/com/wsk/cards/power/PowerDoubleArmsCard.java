@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.DoubleArmsPower;
+import com.wsk.powers.base.DoubleArmsPower;
 import com.wsk.utils.CommonUtil;
 
 /**

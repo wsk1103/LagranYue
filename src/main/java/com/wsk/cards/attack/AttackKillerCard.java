@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.VictoryPower;
+import com.wsk.powers.base.VictoryPower;
 import com.wsk.utils.CommonUtil;
 
 /**

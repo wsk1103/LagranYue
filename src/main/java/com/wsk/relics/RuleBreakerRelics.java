@@ -15,8 +15,8 @@ import com.wsk.utils.CommonUtil;
  */
 public class RuleBreakerRelics extends CustomRelic {
     public static final String ID = "LagranYue:RuleBreakerRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
-    public static final String IMG = "relics/w35.png";//遗物图片路径
-    public static final String OUTLINE = "relics/w36.png";//遗物外轮廓路径
+    public static final String IMG = "relics/w43.png";//遗物图片路径
+    public static final String OUTLINE = "relics/w44.png";//遗物外轮廓路径
 
     public static final String DESCRIPTION = "在本次战斗中，一回合内，使用的第 N 张 #y兵器 牌将不会被 #y消耗 (N为3的倍数)";//遗物效果的文本描叙。
 

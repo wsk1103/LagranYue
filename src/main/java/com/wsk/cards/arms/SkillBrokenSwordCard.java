@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractSwordCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.BaseSwordPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.BaseSwordPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -57,11 +54,14 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ChangeArmsUtil.change(p);
+//        ArmsUtil.addOrChangArms(p);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new BaseSwordPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        BaseSwordPower power = new BaseSwordPower(p, this.magicNumber);
+        ArmsUtil.addOrChangArms(p, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,power
+//                , this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        ActionUtil.strengthPower(p, this.magicNumber);
     }
 
     static {

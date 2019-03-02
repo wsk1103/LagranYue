@@ -1,6 +1,7 @@
 package com.wsk;
 
 import basemod.BaseMod;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -56,6 +57,12 @@ public class LagranYue implements PostInitializeSubscriber,
     private static final String SKILL_CARD_PORTRAIT = "1024/bg_skill_slimebound.png";
     private static final String POWER_CARD_PORTRAIT = "1024/bg_power_slimebound.png";
     private static final String ENERGY_ORB_PORTRAIT = "1024/card_slimebound_orb.png";
+
+    private CustomUnlockBundle unlocks0;
+    private CustomUnlockBundle unlocks1;
+    private CustomUnlockBundle unlocks2;
+    private CustomUnlockBundle unlocks3;
+    private CustomUnlockBundle unlocks4;
 
 
     public LagranYue() {
@@ -143,14 +150,13 @@ public class LagranYue implements PostInitializeSubscriber,
     @Override
     public void receiveEditRelics() {
         logger.info("=========================正在加载新的遗物内容=========================");
-
-//        BaseMod.addRelicToCustomPool(new 遗物类名(), AbstractCardEnum.makeBySky);
+        BaseMod.addRelicToCustomPool(new DarkRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new EnkiduRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new GungnirRelics(), AbstractCardEnum.LagranYue);
+        BaseMod.addRelicToCustomPool(new LuEnRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new RuleBreakerRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new UnlimitedBladeWorksRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new ZabaniyaRelics(), AbstractCardEnum.LagranYue);
-        //null位置对应参数：AbstractCardEnum.BLACK.toString()
         logger.info("=========================加载新的遗物内容成功=========================");
     }
 
@@ -159,9 +165,14 @@ public class LagranYue implements PostInitializeSubscriber,
     public void receiveEditCards() {
         logger.info("=========================正在加载新的卡牌内容=========================");
 
+
+        BaseMod.addCard(new LifeForgingCard());
+
+        BaseMod.addCard(new AttackAerCard());
         BaseMod.addCard(new AttackBetterCard());
         BaseMod.addCard(new AttackDevilCard());
         BaseMod.addCard(new AttackEmeraldCard());
+        BaseMod.addCard(new AttackFaithCard());
         BaseMod.addCard(new AttackFireCard());
         BaseMod.addCard(new AttackFutureCard());
         BaseMod.addCard(new AttackGoldCard());
@@ -175,6 +186,7 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addCard(new AttackSapphireCard());
         BaseMod.addCard(new AttackSummerCard());
         BaseMod.addCard(new AttackTopazCard());
+        BaseMod.addCard(new AttackWaltzCard());
         BaseMod.addCard(new BaseAttackCard());
 
         BaseMod.addCard(new BasePowerCard());
@@ -182,8 +194,10 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addCard(new PowerDarkTempleCard());
         BaseMod.addCard(new PowerDoubleArmsCard());
         BaseMod.addCard(new PowerDreamCard());
+        BaseMod.addCard(new PowerFurnaceCard());
         BaseMod.addCard(new PowerGoldStartCard());
         BaseMod.addCard(new PowerKingTreasureCard());
+        BaseMod.addCard(new PowerMaxArmsPliesCard());
         BaseMod.addCard(new PowerRemoveArmorCard());
         BaseMod.addCard(new PowerTwelveTrialsCard());
         BaseMod.addCard(new PowerWindKingEnchantmentCard());
@@ -194,8 +208,12 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addCard(new EatTigerCard());
         BaseMod.addCard(new EmeraldRemorseCard());
         BaseMod.addCard(new FantasyCard());
+        BaseMod.addCard(new ForgingCard());
+        BaseMod.addCard(new GoldForgingCard());
+        BaseMod.addCard(new LifeForgingCard());
         BaseMod.addCard(new MagicSkyrocketCard());
         BaseMod.addCard(new MultipleThornsCard());
+        BaseMod.addCard(new OneKingCard());
         BaseMod.addCard(new PhysicalFitnessCard());
 //        BaseMod.addCard(new PolyBeamCard());
         BaseMod.addCard(new PrematureBurialCard());
@@ -204,6 +222,8 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addCard(new RoseCard());
         BaseMod.addCard(new RubyDefendCard());
         BaseMod.addCard(new SapphirePrayerCard());
+
+
         BaseMod.addCard(new SkillBlazingSevenRingsCard());
         BaseMod.addCard(new SkillBrokenShieldCard());
         BaseMod.addCard(new SkillBrokenSwordCard());
@@ -216,8 +236,21 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addCard(new SkillKadeboSwordCard());
         BaseMod.addCard(new SkillVictorySwordCard());
         BaseMod.addCard(new SkillWoodSpearCard());
+
+        BaseMod.addCard(new AttackLuEnCard());
+        BaseMod.addCard(new DefendLuEnCard());
+        BaseMod.addCard(new ForgingLuEnCard());
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
+
+        unlocks0 = new CustomUnlockBundle(
+                OneKingCard.ID, PowerKingTreasureCard.ID, AttackLakeCard.ID);
+
+        unlocks1 = new CustomUnlockBundle(
+                SkillKadeboSwordCard.ID, AttackSummerCard.ID, SkillBlazingSevenRingsCard.ID);
+
+        unlocks3 = new CustomUnlockBundle(
+                AttackFaithCard.ID, PowerFurnaceCard.ID, PowerDreamCard.ID);
 
         logger.info("=========================加载新的卡牌内容成功=========================");
     }

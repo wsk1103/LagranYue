@@ -15,8 +15,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.PolyBeamAgainPower;
-import com.wsk.powers.PolyBeamAgainPowerUpgraded;
+import com.wsk.powers.base.PolyBeamAgainPower;
+import com.wsk.powers.base.PolyBeamAgainPowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**

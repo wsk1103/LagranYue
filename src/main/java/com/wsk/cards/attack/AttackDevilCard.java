@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.ImprintPower;
+import com.wsk.powers.base.ImprintPower;
 import com.wsk.utils.CommonUtil;
 
 /**

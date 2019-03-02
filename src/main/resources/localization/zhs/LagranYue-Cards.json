@@ -52,8 +52,8 @@
   },
   "LagranYue:AttackKingCard": {
     "NAME": "王之军势",
-    "DESCRIPTION": "造成 !D! 点伤害。 手中所有武器牌费用减1。 起舞 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有武器牌费用减为0。 起舞 。 NL 消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减1。 起舞 。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减为0。 起舞 。 NL 消耗 "
   },
   "LagranYue:AttackGoldCard": {
     "NAME": "冀以锁系神明",
@@ -80,59 +80,82 @@
     "DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 起舞 ",
     "UPGRADE_DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 起舞 "
   },
+  "LagranYue:AttackWaltzCard": {
+    "NAME": "爱的华尔兹",
+    "DESCRIPTION": "造成 !D! 点伤害N次（N=装备的兵器数量），最少1次。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害N次（N=装备的兵器层数之和），最少1次。  起舞 "
+  },
+  "LagranYue:AttackFaithCard": {
+    "NAME": "最终信仰",
+    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的兵器数量之和），最少1次。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的所有兵器层数之和），最少1次。 NL 消耗 "
+  },
+  "LagranYue:AttackAerCard": {
+    "NAME": "阿尔托利亚",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL 起舞 。如果消费 [E] [E] ，执行 !M! 次 锻造 。 起舞 ",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害X+1次。 NL 起舞 。如果消费 [E] ，执行 !M! 次 锻造 。 起舞 "
+  },
+  "LagranYue:AttackLuEnCard": {
+    "NAME": "卢恩符文·攻",
+    "DESCRIPTION": "造成 !M! 倍当前所有 兵器 层数之和的伤害 。 NL 消耗 。 起舞 。 残缺 "
+  },
+  "LagranYue:AttackCarnivalCard": {
+    "NAME": "幻想嘉年华·攻",
+    "DESCRIPTION": "造成 !M! 倍当前所有 兵器 层数之和的伤害 。 NL 消耗 。 起舞 。 残缺 "
+  },
 
 
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillWoodSpearCard": {
     "NAME": "兵器：竹枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  枪 。获得 !M! 点 力量 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillIncompleteArchCard": {
     "NAME": "兵器：残弩",
-    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点 力量 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  弩 。获得 !M! 点 力量 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": "获得 兵器  盾 。获得 !M! 点 敏捷 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  盾 。获得 !M! 点 敏捷 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，获得 !M! 多层护甲 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，获得 !M! 多层护甲 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": "获得 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 死亡印记 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。使用攻击卡牌后，恢复该攻击卡的数值的1/4的生命值。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。使用攻击卡牌后，恢复该攻击卡的数值的 !M! /4的生命值。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": "获得 兵器  剑 。获得 !M! 点 力量 。每回合你使用的第一张目标为敌人的攻击牌会被重复打出 !M! 次。 NL 消耗 "
+    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。每回合你使用的第1张目标为敌人的攻击牌会被重复打出 !M! 次。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 兵器  弩 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 获得 兵器  弩 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱 , !M! 层 易伤 。 NL 消耗"
+    "DESCRIPTION": "获得 !M! 层 兵器  弩 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 获得 !M! 层 兵器  弩 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": "获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗"
+    "DESCRIPTION": "获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 !M! 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
-    "DESCRIPTION": "获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 !M! 点 荆棘  。 NL 消耗",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 !M! 点 荆棘  。 NL 消耗"
+    "DESCRIPTION": "获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 !M! 点 荆棘  。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 !M! 点 荆棘  。 NL 消耗 。 NL 升华 。"
   },
 
 
@@ -188,6 +211,16 @@
     "NAME": "风王的结界",
     "DESCRIPTION": "获得 !B!  格挡  。接下来的4个回合内，每回合开始获得4 格挡  ",
     "UPGRADE_DESCRIPTION": "获得 !B!  格挡 。每回合开始获得获得4 格挡  "
+  },
+  "LagranYue:PowerFurnaceCard": {
+    "NAME": "熔炉",
+    "DESCRIPTION": "每回合开始，第1件兵器获得 !M! 次 锻造 。  NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "每回合开始，第1件兵器获得 !M! 次 锻造 。"
+  },
+  "LagranYue:PowerMaxArmsPliesCard": {
+    "NAME": "锻造大师",
+    "DESCRIPTION": " 兵器 层数的上限增加 !M! 。 NL 虚无 ",
+    "UPGRADE_DESCRIPTION": " 兵器 层数的上限增加 !M! 。"
   },
 
 
@@ -252,8 +285,42 @@
     "NAME": "双生花",
     "DESCRIPTION": "选择一张牌，在手牌中加入它的复制品。 NL 消耗"
   },
+  "LagranYue:LifeForgingCard": {
+    "NAME": "玩命锻造",
+    "DESCRIPTION": "第1件 兵器  锻造 X次。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": " 锻造 X+1次。 NL 消耗  "
+  },
+  "LagranYue:GoldForgingCard": {
+    "NAME": "黄金之锚",
+    "DESCRIPTION": "第1件 兵器  锻造 翻倍。 NL 消耗 "
+  },
+  "LagranYue:FoxForgingCard": {
+    "NAME": "狐狸出嫁",
+    "DESCRIPTION": "平均分配所有  兵器  的层数。 NL 消耗  ",
+    "UPGRADE_DESCRIPTION": " 平均分配所有  兵器  的层数，然后所有 兵器 的层数增加1。 NL 消耗 "
+  },
+  "LagranYue:ForgingCard": {
+    "NAME": "急速锻造",
+    "DESCRIPTION": " 锻造 第1件 兵器 ,自身获得 !M! 层虚弱。"
+  },
+  "LagranYue:OneKingCard": {
+    "NAME": "国王一座",
+    "DESCRIPTION": "移除第 !M! 件 兵器 之后的所有 兵器 ，然后将移除的 兵器 的总层数 锻造 到第 !M! 件 兵器 ，最少锻造1次。 NL 消耗  "
+  },
+  "LagranYue:DefendCarnivalCard": {
+    "NAME": "幻想嘉年华·守",
+    "DESCRIPTION": "获得 !M! 倍当前所有 兵器 的层数之和的 格挡 。NL 消耗  "
+  },
+  "LagranYue:DefendLuEnCard": {
+    "NAME": "卢恩符文·守",
+    "DESCRIPTION": "获得 !M! 倍当前所有 兵器 的层数之和的 格挡 。NL 消耗  。 残缺 "
+  },
+  "LagranYue:ForgingLuEnCard": {
+    "NAME": "卢恩符文·造",
+    "DESCRIPTION": " 锻造 第1件 兵器 。NL 消耗  。 残缺 "
+  },
   "LagranYue:FantasyCard": {
     "NAME": "镜花水月",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 给予所有敌人 缓慢 。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 锻造  第1件 兵器 。 NL 消耗 "
   }
 }

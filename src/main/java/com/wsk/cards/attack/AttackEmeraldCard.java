@@ -2,7 +2,6 @@ package com.wsk.cards.attack;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,9 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.VictoryPower;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -59,16 +57,17 @@ public class AttackEmeraldCard extends CustomCard {
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-        int victory = this.magicNumber;
-        if (p.hasPower(VictoryPower.POWER_ID)) {
-            AbstractPower power = p.getPower(VictoryPower.POWER_ID);
-            if (power.amount >= 10) {
-                victory = 0;
-            } else if (power.amount == 9) {
-                victory = 1;
-            }
-        }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VictoryPower(p, victory), victory));
+//        int victory = this.magicNumber;
+//        if (p.hasPower(VictoryPower.POWER_ID)) {
+//            AbstractPower power = p.getPower(VictoryPower.POWER_ID);
+//            if (power.amount >= 10) {
+//                victory = 0;
+//            } else if (power.amount == 9) {
+//                victory = 1;
+//            }
+//        }
+        ActionUtil.victoryPower(p, this.magicNumber);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VictoryPower(p, victory), victory));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
     }//注：卡牌效果的diy区。

@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractSwordCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.KadeboSwordPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.KadeboSwordPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -58,12 +55,15 @@ public class SkillKadeboSwordCard extends AbstractSwordCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        ChangeArmsUtil.change(abstractPlayer);
+//        ArmsUtil.addOrChangArms(abstractPlayer);
 
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
 //                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new KadeboSwordPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        KadeboSwordPower power = new KadeboSwordPower(abstractPlayer, this.magicNumber);
+        ArmsUtil.addOrChangArms(abstractPlayer, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+//                power, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        ActionUtil.strengthPower(abstractPlayer, this.magicNumber);
     }
 
     static {

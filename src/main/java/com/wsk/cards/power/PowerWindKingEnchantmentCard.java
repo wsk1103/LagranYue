@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.WindKingEnchantmentPower;
-import com.wsk.powers.WindKingEnchantmentPowerUpgraded;
+import com.wsk.powers.base.WindKingEnchantmentPower;
+import com.wsk.powers.base.WindKingEnchantmentPowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**

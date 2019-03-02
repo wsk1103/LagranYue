@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractSpearCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.GaeBolgPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.GaeBolgPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -36,7 +33,7 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
@@ -58,13 +55,16 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         //先为自己增加2点力量
-        ChangeArmsUtil.change(abstractPlayer);
+//        ArmsUtil.addOrChangArms(abstractPlayer);
 
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
 //                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //兵器：刺穿死棘之枪
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new GaeBolgPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        GaeBolgPower power = new GaeBolgPower(abstractPlayer, this.magicNumber);
+        ArmsUtil.addOrChangArms(abstractPlayer, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer, power
+//                , this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        ActionUtil.strengthPower(abstractPlayer, this.magicNumber);
     }
 
     static {

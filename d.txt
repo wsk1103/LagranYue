@@ -1,0 +1,26 @@
+SLASH_HEAVY   =  √ 弯刀
+
+BLUNT_LIGHT   =   小 *
+
+BLUNT_HEAVY =  大 *
+
+SLASH_DIAGONAL     /
+
+
+SLASH_HORIZONTAL    -
+
+
+SLASH_VERTICAL     |
+
+SMASH    /
+
+
+NONE   散开的*
+
+SHIELD  一个盾牌下来。
+
+
+POISON   图案标
+
+
+FIRE      火

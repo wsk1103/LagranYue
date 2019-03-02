@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractSpearCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.BaseSpearPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.BaseSpearPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -57,10 +54,12 @@ public class SkillWoodSpearCard extends AbstractSpearCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ChangeArmsUtil.change(p);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BaseSpearPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        BaseSpearPower power = new BaseSpearPower(p, this.magicNumber);
+        ArmsUtil.addOrChangArms(p, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, power, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        ActionUtil.strengthPower(p, this.magicNumber);
     }
 
     static {

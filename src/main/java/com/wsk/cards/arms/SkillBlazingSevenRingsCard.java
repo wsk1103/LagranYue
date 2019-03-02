@@ -1,17 +1,15 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractShieldCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.BlazingSevenRingsPower;
+import com.wsk.powers.arms.BlazingSevenRingsPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -38,7 +36,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 1;
         this.baseBlock = 12;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
@@ -64,9 +62,20 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //获得格挡
         ActionUtil.gainBlockAction(p, this.block);
+        BlazingSevenRingsPower power = new BlazingSevenRingsPower(p, this.magicNumber);
+        ArmsUtil.addOrChangArms(p, power);
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new BlazingSevenRingsPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,power
+//                , this.magicNumber/3, AbstractGameAction.AttackEffect.POISON));
+//        ArmsUtil.setHasRings(false);
+////        ArmsUtil.addOrChangArms(p, this, amount);
+//        //获得敏捷
+//        ActionUtil.dexterityPower(p, this.magicNumber);
+//        //获得壁垒
+//        if (!p.hasPower(BarricadePower.POWER_ID)) {
+//            ActionUtil.barricadePower(p);
+//            ArmsUtil.setHasRings(true);
+//        }
     }
 
     static {

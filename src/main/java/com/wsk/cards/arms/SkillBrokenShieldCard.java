@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractShieldCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.BaseShieldPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.BaseShieldPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -57,10 +54,13 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ChangeArmsUtil.change(p);
+//        ArmsUtil.addOrChangArms(p);
         //获得能力
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new BaseShieldPower(p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        BaseShieldPower power = new BaseShieldPower(p, this.magicNumber);
+        ArmsUtil.addOrChangArms(p, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,power
+//                , this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        ActionUtil.dexterityPower(p, this.magicNumber);
     }
 
     static {

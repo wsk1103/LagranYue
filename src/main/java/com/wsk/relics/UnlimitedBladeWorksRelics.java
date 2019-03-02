@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.cards.AbstractArmsCard;
-import com.wsk.powers.DoubleArmsPower;
+import com.wsk.powers.base.DoubleArmsPower;
 import com.wsk.utils.CommonUtil;
 
 import java.util.Random;

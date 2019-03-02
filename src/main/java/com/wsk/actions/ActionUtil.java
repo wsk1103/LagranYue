@@ -6,9 +6,10 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
-import com.wsk.powers.ImprintPower;
-import com.wsk.powers.NextEnergizedPower;
-import com.wsk.powers.VictoryPower;
+import com.wsk.powers.arms.AbstractArmsPower;
+import com.wsk.powers.base.ImprintPower;
+import com.wsk.powers.base.NextEnergizedPower;
+import com.wsk.powers.base.VictoryPower;
 
 /**
  * @author wsk1103
@@ -44,7 +45,7 @@ public class ActionUtil {
     //改变力量
     public static void strengthPower(AbstractCreature from, int amount) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(from, from,
-                new StrengthPower(from, amount), amount, AbstractGameAction.AttackEffect.POISON));
+                new StrengthPower(from, amount), amount));
     }
 
     //获得敏捷
@@ -83,13 +84,30 @@ public class ActionUtil {
 
     //获得胜利契约
     public static void victoryPower(AbstractCreature p, int amount) {
+        if (amount > 10) {
+            amount = 10;
+        }
+        if (p.hasPower(VictoryPower.POWER_ID)) {
+            int a = p.getPower(VictoryPower.POWER_ID).amount;
+            if (a >= 10) {
+                amount = 0;
+            } else if (a + amount > 10) {
+                amount = 10 - a;
+            }
+        }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new VictoryPower(p, amount), amount, true, AbstractGameAction.AttackEffect.POISON));
     }
 
     //锻造
-    public static void forgingAction(AbstractCreature from, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ForgingAction(from, amount));
+    public static void forgingAction(AbstractCreature from, int armsNo, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new ForgingAction(from, armsNo, amount));
+    }
+
+    //获取 兵器
+    public static void addArms(AbstractCreature p, AbstractArmsPower armsPower) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, armsPower, armsPower.amount));
+        armsPower.hasArms();
     }
 
 }

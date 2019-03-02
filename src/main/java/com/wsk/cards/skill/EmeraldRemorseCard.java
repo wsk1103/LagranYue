@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -55,7 +55,7 @@ public class EmeraldRemorseCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        ChangeArmsUtil.changeOne(p);
+        ArmsUtil.removeOnce(p, this.magicNumber);
         ActionUtil.dexterityPower(p, this.magicNumber);
         ActionUtil.strengthPower(p, this.magicNumber);
 //        AbstractDungeon.player.addPower(new StrengthPower(AbstractDungeon.player, this.magicNumber));
@@ -64,7 +64,7 @@ public class EmeraldRemorseCard extends CustomCard {
 
     //卡牌不能被打出
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (ChangeArmsUtil.getArmsNum() < 1) {
+        if (ArmsUtil.getArmsNum() < 1) {
             //diy区。
             this.cantUseMessage = EXTENDED_DESCRIPTION[0];//卡牌不能被打出时所提示的文本。
             return false;

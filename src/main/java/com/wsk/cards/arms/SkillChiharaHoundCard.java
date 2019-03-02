@@ -1,17 +1,14 @@
 package com.wsk.cards.arms;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractArchCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.ChiharaHoundPower;
-import com.wsk.utils.ChangeArmsUtil;
+import com.wsk.powers.arms.ChiharaHoundPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -51,6 +48,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
+            this.upgradeBaseCost(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }
@@ -58,12 +56,15 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        ChangeArmsUtil.change(abstractPlayer);
+//        ArmsUtil.addOrChangArms(abstractPlayer);
 
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
 //                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new ChiharaHoundPower(abstractPlayer, this.magicNumber, upgraded), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        ChiharaHoundPower power = new ChiharaHoundPower(abstractPlayer, this.magicNumber);
+        ArmsUtil.addOrChangArms(abstractPlayer, power);
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,power
+//                , this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+//        ActionUtil.strengthPower(abstractPlayer, this.magicNumber);
     }
 
     static {

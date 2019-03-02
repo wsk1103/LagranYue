@@ -25,6 +25,8 @@ import com.wsk.utils.CommonUtil;
 
 import java.util.ArrayList;
 
+import static basemod.DevConsole.logger;
+
 /**
  * @author wsk1103
  * @date 2019/2/14
@@ -32,6 +34,7 @@ import java.util.ArrayList;
  */
 public class LagranYueCharacter extends CustomPlayer {
     private static final int ENERGY_PER_TURN = 3;//角色的初始能量值。
+//    private static final int ENERGY_PER_TURN = 15;//角色的初始能量值。
     private static final String[] orbTextures = {"LagranYue/char/orb/layer1.png",
             "LagranYue/char/orb/layer2.png",
             "LagranYue/char/orb/layer3.png",
@@ -76,6 +79,7 @@ public class LagranYueCharacter extends CustomPlayer {
 
     //添加初始牌组
     public ArrayList<String> getStartingDeck() {
+        logger.info(LagranYueCharacter.class.getName() + "初始化初始卡组------start");
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(BaseAttackCard.ID);
         retVal.add(BaseAttackCard.ID);
@@ -90,6 +94,21 @@ public class LagranYueCharacter extends CustomPlayer {
         retVal.add(BasePowerCard.ID);
         retVal.add(SkillWoodSpearCard.ID);
 
+//        retVal.add(AttackAerCard.ID);
+//        retVal.add(AttackFaithCard.ID);
+//        retVal.add(AttackWaltzCard.ID);
+//
+//        retVal.add(PowerFurnaceCard.ID);
+//        retVal.add(PowerMaxArmsPliesCard.ID);
+//        retVal.add(PowerFurnaceCard.ID);
+//        retVal.add(PowerMaxArmsPliesCard.ID);
+//
+//        retVal.add(ForgingCard.ID);
+//        retVal.add(GoldForgingCard.ID);
+//        retVal.add(LifeForgingCard.ID);
+//        retVal.add(OneKingCard.ID);
+
+
 //        retVal.add(AttackDevilCard.ID);
 //        retVal.add(AttackFutureCard.ID);
 //        retVal.add(AttackGoldCard.ID);
@@ -97,8 +116,6 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(AttackKingCard.ID);
 //        retVal.add(AttackLakeCard.ID);
 //        retVal.add(AttackRavagedCard.ID);
-//        retVal.add(PowerDoubleArmsCard.ID);
-//        retVal.add(SapphirePrayerCard.ID);
 //        retVal.add(AttackEmeraldCard.ID);
 //        retVal.add(AttackFireCard.ID);
 //        retVal.add(AttackIceCard.ID);
@@ -111,16 +128,13 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(PowerBloodyTempleCard.ID);
 //        retVal.add(PowerDarkTempleCard.ID);
 //        retVal.add(PowerDoubleArmsCard.ID);
-//        retVal.add(PowerDoubleArmsCard.ID);
-//        retVal.add(PowerDoubleArmsCard.ID);
-//        retVal.add(PowerDoubleArmsCard.ID);
 //        retVal.add(PowerDreamCard.ID);
 //        retVal.add(PowerGoldStartCard.ID);
 //        retVal.add(PowerKingTreasureCard.ID);
 //        retVal.add(PowerRemoveArmorCard.ID);
 //        retVal.add(PowerTwelveTrialsCard.ID);
 //        retVal.add(PowerWindKingEnchantmentCard.ID);
-
+//
 //        retVal.add(BaseDefendCard.ID);
 //        retVal.add(BraveTemperamentCard.ID);
 //        retVal.add(DefendBetterCard.ID);
@@ -136,8 +150,8 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(RoseCard.ID);
 //        retVal.add(RubyDefendCard.ID);
 //        retVal.add(SapphirePrayerCard.ID);
-
-
+//
+//
 //        retVal.add(SkillBlazingSevenRingsCard.ID);
 //        retVal.add(SkillBrokenShieldCard.ID);
 //        retVal.add(SkillBrokenSwordCard.ID);
@@ -150,6 +164,8 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(SkillKadeboSwordCard.ID);
 //        retVal.add(SkillVictorySwordCard.ID);
 //        retVal.add(SkillWoodSpearCard.ID);
+
+        logger.info(LagranYueCharacter.class.getName() + "初始化初始卡组----success");
         return retVal;
     }
 
@@ -157,6 +173,8 @@ public class LagranYueCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(EnkiduRelics.ID);
+//        retVal.add(LuEnRelics.ID);
+//        retVal.add(DarkRelics.ID);
         UnlockTracker.markRelicAsSeen(EnkiduRelics.ID);
         return retVal;
     }
@@ -164,9 +182,11 @@ public class LagranYueCharacter extends CustomPlayer {
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
         final int currentHp = 75;//初始拥有血量
+//        final int currentHp = 575;//初始拥有血量
         final int maxHp = currentHp;//初始最大血量
         final int maxOrbs = 0;//球球数
         final int gold = 99;//初始金币数量
+//        final int cardDraw = 10;//每回合抽牌数量
         final int cardDraw = 5;//每回合抽牌数量
         return new CharSelectInfo("拉格朗·月", "致力于成为武器大师的拉格朗·月，将要踏平这座高楼！\n" +
                 "将使用拉格朗日中值定理选择平衡。-----Make In China",

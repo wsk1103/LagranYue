@@ -10,8 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.KingTreasurePower;
-import com.wsk.powers.KingTreasurePowerUpgraded;
+import com.wsk.powers.base.KingTreasurePower;
+import com.wsk.powers.base.KingTreasurePowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**
