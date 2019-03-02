@@ -71,7 +71,7 @@ public class ForgingAction extends AbstractGameAction {
         } else if (amount + armsNum > maxNum) {
             amount = maxNum - armsNum;
         } else if (amount < 0) {
-            amount = 0;
+            return false;
         }
         AbstractArmsPower newPower = null;
         try {

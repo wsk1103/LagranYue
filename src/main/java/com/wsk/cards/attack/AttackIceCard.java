@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -36,7 +37,7 @@ public class AttackIceCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         this.baseDamage = 6;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseBlock = 4;
+        this.baseBlock = 5;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
@@ -61,6 +62,7 @@ public class AttackIceCard extends CustomCard {
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         ActionUtil.gainBlockAction(p, this.block);
+        ArmsUtil.setTemporaryArms(true);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。
     static {

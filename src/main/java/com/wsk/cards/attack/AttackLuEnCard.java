@@ -2,7 +2,7 @@ package com.wsk.cards.attack;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,6 +50,7 @@ public class AttackLuEnCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
+            this.upgradeMagicNumber(1);
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 
@@ -57,8 +58,11 @@ public class AttackLuEnCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
         int num = ArmsUtil.currentAllArmsNum() * this.magicNumber;
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, num, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+//        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+//                new DamageInfo(p, num, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
+                DamageInfo.createDamageMatrix(num, true),
+                DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
     }//注：卡牌效果的diy区。
 
     static {

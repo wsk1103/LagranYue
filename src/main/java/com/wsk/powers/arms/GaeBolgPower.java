@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ArmsUtil;
@@ -21,11 +22,13 @@ public class GaeBolgPower extends BaseSpearPower {
     public static final String NAME = "兵器：刺穿死棘之枪";//能力的名称。
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
-    public static final String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌后，获得", "多层护甲 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌后，获得", "层金属化 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w1.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
+
+    private static int metallicizePowerNum = 0;
 
     public GaeBolgPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -49,8 +52,9 @@ public class GaeBolgPower extends BaseSpearPower {
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+            metallicizePowerNum += this.amount;
             //获得多层护甲
-            ActionUtil.platedArmorPower(owner, amount);
+            ActionUtil.metallicizePower(owner, amount);
 //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                    new PlatedArmorPower(AbstractDungeon.player, amount), amount, AbstractGameAction.AttackEffect.POISON));
         }
@@ -73,6 +77,17 @@ public class GaeBolgPower extends BaseSpearPower {
                     new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
         }
 //        //所有多层护甲
+        //移除金属化
+        if (owner.hasPower(MetallicizePower.POWER_ID)) {
+            int temp = owner.getPower(MetallicizePower.POWER_ID).amount;
+            if (temp < metallicizePowerNum) {
+                ActionUtil.removePower(owner, MetallicizePower.POWER_ID);
+            }
+            else {
+                ActionUtil.metallicizePower(owner, -metallicizePowerNum);
+            }
+            metallicizePowerNum = 0;
+        }
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                new PlatedArmorPower(AbstractDungeon.player, -power.amount), -power.amount));
 //        super.onRemove();

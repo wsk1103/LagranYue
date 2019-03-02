@@ -4,6 +4,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.actions.ActionUtil;
+import com.wsk.powers.arms.AbstractArmsPower;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -37,7 +39,18 @@ public class FurnacePower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         this.flash();
-        ActionUtil.forgingAction(owner, 1, amount);
+        int temp = 0;
+        for (AbstractPower power : owner.powers) {
+            if (power instanceof AbstractArmsPower) {
+                int num = power.amount;
+                temp ++;
+                if (num < ArmsUtil.currentMaxArmsPlies()) {
+                    ActionUtil.forgingAction(owner, temp, amount);
+                    break;
+                }
+            }
+        }
+//        ActionUtil.forgingAction(owner, 1, amount);
     }
 }
 

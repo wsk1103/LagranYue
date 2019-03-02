@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -55,6 +56,7 @@ public class DefendBetterCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         ActionUtil.gainBlockAction(p, this.block);
+        ArmsUtil.setTemporaryArms(true);
     }//注：卡牌效果的diy区。
 
     static {

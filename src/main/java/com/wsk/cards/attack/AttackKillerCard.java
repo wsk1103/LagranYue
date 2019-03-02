@@ -32,14 +32,12 @@ public class AttackKillerCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int wskAttack = 6;
-
     public AttackKillerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
-        this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
+        this.baseDamage = 8;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
@@ -53,7 +51,7 @@ public class AttackKillerCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(2);
+            this.upgradeDamage(4);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

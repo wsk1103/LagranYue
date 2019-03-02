@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -32,7 +33,7 @@ public class AttackKingCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 12;
+    private static final int wskAttack = 14;
 
     public AttackKingCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -52,6 +53,7 @@ public class AttackKingCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
+            this.upgradeDamage(4);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }
@@ -89,6 +91,7 @@ public class AttackKingCard extends CustomCard {
                 }
             }
         }
+        ArmsUtil.setTemporaryArms(true);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。
 

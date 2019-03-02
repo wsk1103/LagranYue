@@ -45,11 +45,11 @@ public class ExplosiveArmorPower extends BaseShieldPower {
     public void hasArms(){
 //        ArmsUtil.addOrChangArms(owner, this, this.amount);
         ActionUtil.dexterityPower(owner, amount);
-        ActionUtil.thornsPower(owner, amount);
+        ActionUtil.thornsPower(owner, amount * 3);
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 3 + DESCRIPTIONS[2]);
     }
 
 //    @Override
@@ -72,10 +72,11 @@ public class ExplosiveArmorPower extends BaseShieldPower {
         AbstractPower power = AbstractDungeon.player.getPower(ThornsPower.POWER_ID);
         int thornsNum = power.amount - this.amount;
         if (thornsNum <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ThornsPower.POWER_ID));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ThornsPower.POWER_ID));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                        new ThornsPower(AbstractDungeon.player, -this.amount), -this.amount));
+            ActionUtil.thornsPower(owner, -this.amount * 3);
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+//                        new ThornsPower(AbstractDungeon.player, -this.amount * 3), -this.amount * 3));
         }
 //        super.onRemove();
     }

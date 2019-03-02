@@ -1,12 +1,11 @@
 package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.utils.CommonUtil;
 
@@ -43,7 +42,8 @@ public class TwelveTrialsPower extends AbstractPower {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractArmsCard) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
+            ActionUtil.gainBlockAction(owner, amount);
+//            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.amount));
         }
     }
 }

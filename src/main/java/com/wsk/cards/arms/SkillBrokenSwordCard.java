@@ -26,7 +26,7 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
 
     private static final String IMG = "cards/SkillBrokenSwordCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 1;//卡牌的费用。
 
 
     public SkillBrokenSwordCard() {
@@ -48,7 +48,7 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(1);
+            this.upgradeBaseCost(0);
         }
     }
 

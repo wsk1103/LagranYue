@@ -29,7 +29,7 @@ public class PowerMaxArmsPliesCard extends CustomCard {
     private static final String IMG = "cards/PowerMaxArmsPliesCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 2;//卡牌的费用。
 
     public PowerMaxArmsPliesCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -38,7 +38,7 @@ public class PowerMaxArmsPliesCard extends CustomCard {
                 CardRarity.RARE, CardTarget.SELF);
         this.isEthereal = true;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
     }
 
@@ -52,7 +52,7 @@ public class PowerMaxArmsPliesCard extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
 //            this.isEthereal = false;//虚无属性。
-            this.upgradeBaseCost(2);
+            this.upgradeBaseCost(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

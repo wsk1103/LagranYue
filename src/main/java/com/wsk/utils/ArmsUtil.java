@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.actions.ForgingAction;
 import com.wsk.powers.arms.AbstractArmsPower;
+import com.wsk.powers.base.ChaosPower;
 import com.wsk.powers.base.DoubleArmsPower;
 import com.wsk.powers.base.MaxArmsPliesPower;
 import com.wsk.relics.EnkiduRelics;
@@ -25,12 +26,24 @@ public class ArmsUtil {
     //记录装备的兵器
     private static int arms = 0;
 
+    //临时使装备兵器的数量+1
+    private static boolean temporaryArms = false;
+
     //装备兵器
-    public static boolean addOrChangArms(AbstractCreature p, AbstractArmsPower armsPower) {
+    public static void addOrChangArms(AbstractCreature p, AbstractArmsPower armsPower) {
+
         if (areYouHasArmsPower(armsPower)) {
             //使用相同兵器后，增加相应的层数
-            return ForgingAction.addArmsNum(armsPower, armsPower.amount);
+            ForgingAction.addArmsNum(armsPower, armsPower.amount);
+            setTemporaryArms(false);
+            return;
 //            return false;
+        }
+        if (isTemporaryArms()) {
+            arms++;
+            ActionUtil.addArms(p, armsPower);
+            setTemporaryArms(false);
+            return;
         }
         arms = getArmsNum();
         //1. 判断有没有双持这个能力
@@ -41,7 +54,7 @@ public class ArmsUtil {
             //层数小于2，直接返回，表示可以继续装备
             if (getArmsNum() <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
                 ActionUtil.addArms(p, armsPower);
-                return true;
+                return;
             }
         }
         removeAllArms();
@@ -49,7 +62,6 @@ public class ArmsUtil {
 //        armsPower.hasArms();
         ActionUtil.addArms(p, armsPower);
         arms = 1;
-        return true;
     }
 
     //移除所有武器
@@ -64,6 +76,7 @@ public class ArmsUtil {
 
     //判断是否拥有该兵器
     private static boolean areYouHasArmsPower(AbstractArmsPower arms) {
+
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
                 boolean eq = power.ID.equals(arms.ID);
@@ -85,7 +98,7 @@ public class ArmsUtil {
                     arms--;
                     break;
                 }
-                temp ++;
+                temp++;
             }
         }
     }
@@ -99,7 +112,7 @@ public class ArmsUtil {
                     AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, power.ID));
                     arms--;
                 }
-                temp ++;
+                temp++;
             }
         }
     }
@@ -109,7 +122,7 @@ public class ArmsUtil {
         int temp = 1;
         for (AbstractPower power : AbstractDungeon.player.powers) {
             if (power instanceof AbstractArmsPower) {
-                if (temp == i){
+                if (temp == i) {
                     return power.amount;
                 } else {
                     temp++;
@@ -131,7 +144,7 @@ public class ArmsUtil {
     }
 
     //第i件兵器之后所有层数之和
-    public static int currentArmsNum(int i){
+    public static int currentArmsNum(int i) {
         int temp = 1;
         int result = 0;
         for (AbstractPower power : AbstractDungeon.player.powers) {
@@ -139,7 +152,7 @@ public class ArmsUtil {
                 if (i < temp) {
                     result += power.amount;
                 }
-                temp ++;
+                temp++;
             }
         }
         return result;
@@ -160,9 +173,9 @@ public class ArmsUtil {
     //当前角色的武器最大层数
     public static int currentMaxArmsPlies() {
         if (AbstractDungeon.player.hasPower(MaxArmsPliesPower.POWER_ID)) {
-            return 5 + AbstractDungeon.player.getPower(MaxArmsPliesPower.POWER_ID).amount;
+            return 3 + AbstractDungeon.player.getPower(MaxArmsPliesPower.POWER_ID).amount;
         }
-        return 5;
+        return 3;
     }
 
     //获得装备的兵器的数量
@@ -190,4 +203,18 @@ public class ArmsUtil {
         hasRings = b;
     }
 
+    public static boolean isTemporaryArms() {
+        return temporaryArms;
+    }
+
+    public static void setTemporaryArms(boolean temporaryArms) {
+        ArmsUtil.temporaryArms = temporaryArms;
+        if (temporaryArms) {
+            if (!AbstractDungeon.player.hasPower(ChaosPower.POWER_ID)) {
+                ActionUtil.addPower(AbstractDungeon.player, new ChaosPower(AbstractDungeon.player, 0));
+            }
+        } else {
+            ActionUtil.removePower(AbstractDungeon.player, ChaosPower.POWER_ID);
+        }
+    }
 }

@@ -1,12 +1,9 @@
 package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.DarkTemplePowerAction;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -18,7 +15,7 @@ public class DarkTemplePower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:DarkTemplePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "自我封印·暗黑神殿";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"每回合开始给予所有敌人", "层 死亡印记。"};
+    public static final String[] DESCRIPTIONS = {"每回合开始获得", "张0费的 卢恩符文·守 或 卢恩符文·造 。然后随机获得1层 虚弱 ， 易伤 ， 脆弱 "};
 
     private static final String IMG = "powers/w24.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -40,12 +37,13 @@ public class DarkTemplePower extends AbstractPower {
 
     public void atStartOfTurn() {
         flash();
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if ((!m.isDead) && (!m.isDying)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this.owner,
-                        new ImprintPower(m, this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.POISON));
-            }
-        }
+//        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+//            if ((!m.isDead) && (!m.isDying)) {
+//                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this.owner,
+//                        new ImprintPower(m, this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.POISON));
+//            }
+//        }
+        DarkTemplePowerAction.action(owner, amount, false);
     }
 
 }

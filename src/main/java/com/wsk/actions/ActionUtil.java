@@ -3,6 +3,7 @@ package com.wsk.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
@@ -65,16 +66,33 @@ public class ActionUtil {
                 true, AbstractGameAction.AttackEffect.POISON));
     }
 
+    //脆弱
+    public static void frailPower(AbstractCreature from, AbstractCreature to, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(to, from,
+                new FrailPower(to, amount, false), amount,
+                true));
+    }
+
     //获得荆棘
     public static void thornsPower(AbstractCreature p, int amount) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ThornsPower(p, amount), amount, AbstractGameAction.AttackEffect.POISON));
+                new ThornsPower(p, amount), amount));
     }
 
     //获得多层护甲
     public static void platedArmorPower(AbstractCreature p, int amount) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new PlatedArmorPower(p, amount), amount, AbstractGameAction.AttackEffect.POISON));
+                new PlatedArmorPower(p, amount), amount));
+    }
+
+    //获得金金属化
+    public static void metallicizePower(AbstractCreature p, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MetallicizePower(p, amount), amount));
+    }
+
+    //直接移除能力
+    public static void removePower(AbstractCreature p, String powerId) {
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, powerId));
     }
 
     //下回合抽牌
@@ -108,6 +126,16 @@ public class ActionUtil {
     public static void addArms(AbstractCreature p, AbstractArmsPower armsPower) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, armsPower, armsPower.amount));
         armsPower.hasArms();
+    }
+
+    //添加能力
+    public static void addPower(AbstractCreature p, AbstractPower power) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, power, power.amount));
+    }
+
+    //移除能力
+    public static void removePower(AbstractCreature p, AbstractPower power) {
+
     }
 
 }

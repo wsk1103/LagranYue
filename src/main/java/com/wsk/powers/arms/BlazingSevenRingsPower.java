@@ -49,7 +49,7 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + (this.amount) + DESCRIPTIONS[1] + (this.amount) + "。");
+        this.description = (super.basePower + DESCRIPTIONS[0] + (this.amount) + DESCRIPTIONS[1] + (this.amount * 3) + "。");
     }
 
 //    @Override
@@ -63,10 +63,10 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
 
     //触发时机：当玩家被攻击时，返回伤害数值，可用来修改伤害数值。info.可调用伤害信息。
     public int onAttacked(DamageInfo info, int damageAmount) {//参数：info-伤害信息，damageAmount-伤害数值
-        if (damageAmount <= this.amount) {
+        if (damageAmount <= this.amount * 3) {
             damageAmount = 0;
         } else {
-            damageAmount -= this.amount;
+            damageAmount -= this.amount * 3;
         }
         return damageAmount;
     }

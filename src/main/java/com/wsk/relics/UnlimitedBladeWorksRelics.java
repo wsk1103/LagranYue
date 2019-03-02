@@ -25,7 +25,7 @@ public class UnlimitedBladeWorksRelics extends CustomRelic {
 
     private Random r = new Random();
 
-    public static final String DESCRIPTION = "在本场战斗，每当使用 #y兵器 卡牌的时候，获得1层 #y能力:武器大师 的概率 + 1%。基础0%，最大5%";//遗物效果的文本描叙。
+    public static final String DESCRIPTION = "在本场战斗，每当使用 #y兵器 卡牌的时候，获得1层 #y武器大师 的概率 + 1%。基础0%，最大5%";//遗物效果的文本描叙。
 
     public UnlimitedBladeWorksRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.BOSS, LandingSound.HEAVY);

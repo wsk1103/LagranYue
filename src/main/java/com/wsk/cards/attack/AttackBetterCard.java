@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -49,6 +50,7 @@ public class AttackBetterCard extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeDamage(4);//升级而增加的伤害。增加的是baseBlock
+            this.upgradeBaseCost(0);
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 
@@ -56,6 +58,7 @@ public class AttackBetterCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        ArmsUtil.setTemporaryArms(true);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。
 

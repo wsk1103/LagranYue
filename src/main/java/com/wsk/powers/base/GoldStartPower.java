@@ -19,7 +19,7 @@ public class GoldStartPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:GoldStartPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "天地开辟乖离之星";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"每打出3张 兵器 ，消除所有负面状态。已经打出", "张兵器"};
+    public static final String[] DESCRIPTIONS = {"每打出2张 兵器 ，消除所有负面状态。已经打出", "张兵器"};
 
     private static final String IMG = "powers/w25.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -45,7 +45,7 @@ public class GoldStartPower extends AbstractPower {
             this.flash();
             AbstractDungeon.player.addPower(new GoldStartPower(this.owner, 1));
             int amount = this.owner.getPower(GoldStartPower.POWER_ID).amount;
-            if (amount >= 3) {
+            if (amount >= 2) {
                 //消除所有负面状态
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this.owner));
                 //重置为0

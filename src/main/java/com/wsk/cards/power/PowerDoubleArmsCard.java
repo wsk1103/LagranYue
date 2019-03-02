@@ -37,7 +37,7 @@ public class PowerDoubleArmsCard extends CustomCard {
                 CardType.POWER,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public AbstractCard makeCopy() {
@@ -57,7 +57,7 @@ public class PowerDoubleArmsCard extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new DoubleArmsPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+                new DoubleArmsPower(abstractPlayer, this.magicNumber + 1), this.magicNumber + 1, AbstractGameAction.AttackEffect.POISON));
     }
 
     static {

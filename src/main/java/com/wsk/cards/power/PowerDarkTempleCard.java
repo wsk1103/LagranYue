@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.base.DarkTemplePower;
+import com.wsk.powers.base.DarkTemplePowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -64,15 +65,15 @@ public class PowerDarkTempleCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new DarkTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-//        if (upgraded) {
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-//                    new DarkTemplePowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
-//        } else {
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-//                    new DarkTemplePower(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
-//        }
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+//                new DarkTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new DarkTemplePowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new DarkTemplePower(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
+        }
     }
 
     static {

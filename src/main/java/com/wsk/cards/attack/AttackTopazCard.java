@@ -33,7 +33,7 @@ public class AttackTopazCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 9;
+    private static final int wskAttack = 12;
 
     public AttackTopazCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

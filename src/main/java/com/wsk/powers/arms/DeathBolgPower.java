@@ -1,14 +1,11 @@
 package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
@@ -46,18 +43,19 @@ public class DeathBolgPower extends BaseSpearPower {
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 2 + DESCRIPTIONS[2]);
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+            int imprintPower = amount * 2;
             if (card.target == AbstractCard.CardTarget.ALL
                     || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
                 if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                     flash();
                     for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                         if ((!m.isDead) && (!m.isDying)) {
-                            ActionUtil.imprintPower(AbstractDungeon.player, m, this.amount);
+                            ActionUtil.imprintPower(AbstractDungeon.player, m, imprintPower);
                         }
                     }
                 }
@@ -66,7 +64,7 @@ public class DeathBolgPower extends BaseSpearPower {
                 if (action.target != null) {
                     m = (AbstractMonster) action.target;
                 }
-                ActionUtil.imprintPower(AbstractDungeon.player, m, this.amount);
+                ActionUtil.imprintPower(AbstractDungeon.player, m, imprintPower);
             }
         }
 //        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
@@ -94,8 +92,9 @@ public class DeathBolgPower extends BaseSpearPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.strengthPower(owner, -amount);
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+//                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
 //        super.onRemove();
     }

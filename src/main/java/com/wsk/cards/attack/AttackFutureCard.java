@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -63,6 +64,7 @@ public class AttackFutureCard extends CustomCard {
         int atk = Math.abs(draw - exhaust);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
                 new DamageInfo(p, atk, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        ArmsUtil.setTemporaryArms(true);
     }//注：卡牌效果的diy区。
 
     static {

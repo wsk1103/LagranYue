@@ -2,7 +2,6 @@ package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -77,7 +76,8 @@ public class VictorySwordPower extends BaseSwordPower {
             int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
             if (num - startEnd <= 0) {
                 //如果层数不够减，直接移除能力
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
+                ActionUtil.removePower(owner,VictoryPower.POWER_ID);
+//                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
             } else {
                 ActionUtil.victoryPower(owner, -startEnd);
 //                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,

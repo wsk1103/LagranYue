@@ -1,10 +1,9 @@
 package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.BloodyTemplePowerAction;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -16,7 +15,7 @@ public class BloodyTemplePower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:BloodyTemplePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "他者封印·鲜血神殿";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"每回合结束恢复", "点生命值。"};
+    public static final String[] DESCRIPTIONS = {"每回合开始获得", "张0费的 卢恩符文·攻 。然后随机获得1层 虚弱 ， 易伤 ， 脆弱 。"};
 
     private static final String IMG = "powers/w26.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -40,6 +39,8 @@ public class BloodyTemplePower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         //恢复生命值
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
+//        AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
+        BloodyTemplePowerAction.action(owner, amount, false);
+
     }
 }

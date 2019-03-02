@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.UncharnelAction;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -57,6 +58,7 @@ public class PrematureBurialCard extends CustomCard {
         //失去生命值
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false, false));
+        ArmsUtil.setTemporaryArms(true);
     }
 
     static {

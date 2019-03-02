@@ -52,6 +52,7 @@ public class PhysicalFitnessCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
+            this.upgradeBlock(4);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

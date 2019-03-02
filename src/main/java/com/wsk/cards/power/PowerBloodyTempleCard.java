@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.base.BloodyTemplePower;
+import com.wsk.powers.base.BloodyTemplePowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -36,7 +37,7 @@ public class PowerBloodyTempleCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.POWER,
                 AbstractCardEnum.LagranYue,
-                CardRarity.RARE, CardTarget.SELF);
+                CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isEthereal = true;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.magicNumber = this.baseMagicNumber = 1;
@@ -62,15 +63,15 @@ public class PowerBloodyTempleCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-//        if (upgraded) {
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-//                    new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-//        } else {
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-//                    new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-//        }
+//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+//                new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new BloodyTemplePowerUpgraded(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
+                    new BloodyTemplePower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+        }
     }
 
     static {

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -30,7 +31,7 @@ public class AttackLakeCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 5;
+    private static final int wskAttack = 7;
 
     public AttackLakeCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -73,6 +74,7 @@ public class AttackLakeCard extends CustomCard {
                 }
             }
         }
+        ArmsUtil.setTemporaryArms(true);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。
 

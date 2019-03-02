@@ -1,13 +1,11 @@
 package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
@@ -39,11 +37,11 @@ public class ChiharaHoundPower extends BaseArchPower {
 
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, amount * 3);
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount * 3 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
     }
 
 //    @Override
@@ -98,7 +96,9 @@ public class ChiharaHoundPower extends BaseArchPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount));
+            ActionUtil.strengthPower(owner, -this.amount * 3);
+//            AbstractDungeon.actionManager.addToBottom(
+//                    new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount * 3));
         }
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
