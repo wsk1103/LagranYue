@@ -57,7 +57,8 @@ public class AttackBetterCard extends CustomCard {
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         ArmsUtil.setTemporaryArms(true);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
+import com.wsk.cards.AbstractArmsCard;
 import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -23,12 +24,13 @@ public class GanJiangMoYePower extends BaseSwordPower {
     public static final String POWER_ID = "LagranYue:GanJiangMoYePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：干将莫邪";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的第1张目标为敌人的攻击牌会被重复打出", "次。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的第1张目标为敌人的攻击牌(非兵器牌)会被重复打出", "次。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w7.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
+    private static boolean action = true;
 
     public GanJiangMoYePower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -41,7 +43,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
         updateDescription();
     }
 
-    public void hasArms(){
+    public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);
     }
@@ -52,31 +54,39 @@ public class GanJiangMoYePower extends BaseSwordPower {
 
     //每回合你使用的目标为敌人的牌都会被重复打出 M 次
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && (this.amount > 0)
-                && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY
-                || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY)
-                && (card.type == AbstractCard.CardType.ATTACK)) {
-            this.flash();
-            for (int i = 0; i < this.amount; i++) {
-                AbstractMonster m = null;
-                if (action.target != null) {
-                    m = (AbstractMonster) action.target;
-                }
-                AbstractCard tmp = card.makeSameInstanceOf();
-                AbstractDungeon.player.limbo.addToBottom(tmp);
-                tmp.current_x = card.current_x;
-                tmp.current_y = card.current_y;
-                tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-                tmp.target_y = (Settings.HEIGHT / 2.0F);
-                tmp.freeToPlayOnce = true;
+        if (GanJiangMoYePower.action) {
+            if ((!card.purgeOnUse) && (this.amount > 0)
+                    && (card.target == AbstractCard.CardTarget.ENEMY || card.target == AbstractCard.CardTarget.ALL_ENEMY
+                    || card.target == AbstractCard.CardTarget.SELF_AND_ENEMY)
+                    && (card.type == AbstractCard.CardType.ATTACK && !(card instanceof AbstractArmsCard))) {
+                this.flash();
+                for (int i = 0; i < this.amount; i++) {
+                    AbstractMonster m = null;
+                    if (action.target != null) {
+                        m = (AbstractMonster) action.target;
+                    }
+                    AbstractCard tmp = card.makeSameInstanceOf();
+                    AbstractDungeon.player.limbo.addToBottom(tmp);
+                    tmp.current_x = card.current_x;
+                    tmp.current_y = card.current_y;
+                    tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+                    tmp.target_y = (Settings.HEIGHT / 2.0F);
+                    tmp.freeToPlayOnce = true;
 
-                if (m != null) {
-                    tmp.calculateCardDamage(m);
+                    if (m != null) {
+                        tmp.calculateCardDamage(m);
+                    }
+                    tmp.purgeOnUse = true;
+                    AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
                 }
-                tmp.purgeOnUse = true;
-                AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
+                GanJiangMoYePower.action = false;
             }
         }
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        GanJiangMoYePower.action = true;
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {

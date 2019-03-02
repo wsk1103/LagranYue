@@ -107,55 +107,55 @@
 
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
-    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 断剑 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillWoodSpearCard": {
     "NAME": "兵器：竹枪",
-    "DESCRIPTION": "获得 !M! 层 兵器  枪 。获得 !M! 点 力量 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 枪 。获得 !M! 层 竹枪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillIncompleteArchCard": {
     "NAME": "兵器：残弩",
-    "DESCRIPTION": "获得 !M! 层 兵器  弩 。获得 !M! 点 力量 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 弩 。获得 !M! 层 残弩 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": "获得 !M! 层 兵器  盾 。获得 !M! 点 敏捷 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 枪盾。获得 !M! 层 破盾 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": "获得 !M! 层 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，获得 !M! 层 金属化 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 枪 。获得 !M! 层 刺穿死棘之枪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": "获得 !M! 层 兵器  枪 。获得 !M! 点 力量 。使用攻击卡牌后，给予被攻击者 2 层 死亡印记 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 枪 。获得 !M! 层 突穿死翔之枪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。每回合开始，获得 !M! 点  胜利契约 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 誓约胜利之剑 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。兵器： 剑 。获得 !M! 层 誓约胜利之剑 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。使用攻击卡牌后，恢复造成伤害的 !M! /4的生命值。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 喋血卡波剑 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": "获得 !M! 层 兵器  剑 。获得 !M! 点 力量 。每回合你使用的第1张目标为敌人的攻击牌会被重复打出 !M! 次。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 干将莫邪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "获得 !M! 层 兵器  弩 。获得 3 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 获得 !M! 层 兵器  弩 。获得 3 点 力量 。使用攻击卡牌后，给予被攻击者 !M! 层 虚弱 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 弩 。获得 !M! 层 赤原猎犬 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 获得 !M! 层 赤原猎犬 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": "获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 3 。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 壁垒 。受到的伤害减少 3 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 盾 。获得 !M! 层 炽天覆七重圆环 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。兵器： 盾 。获得 !M! 层 兵器 炽天覆七重圆环 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
-    "DESCRIPTION": "获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 3 点 荆棘  。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 固有 。获得 !M! 层 兵器  盾 。获得 !B!  格挡 。获得 !M! 点 敏捷 。获得 3 点 荆棘  。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": "兵器： 盾 。获得 !M! 层 炸裂装甲 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。属性： 盾 。获得 !M! 层 炸裂装甲 。 获得 !B!  格挡 。 NL 消耗 。 NL 升华 。"
   },
 
 
