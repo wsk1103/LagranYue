@@ -92,7 +92,9 @@ public class ActionUtil {
 
     //直接移除能力
     public static void removePower(AbstractCreature p, String powerId) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, powerId));
+        if (p.hasPower(powerId)) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, powerId));
+        }
     }
 
     //下回合抽牌
@@ -135,7 +137,7 @@ public class ActionUtil {
 
     //移除能力
     public static void removePower(AbstractCreature p, AbstractPower power) {
-
+        removePower(p, power.ID);
     }
 
 }
