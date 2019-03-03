@@ -15,15 +15,15 @@ Now, I am developing.
 
 ```
 {
-   "modid": "LagranYue",
-   "name": "拉格朗·月",
-   "author_list": ["sky"],
-   "description": "角色：武器大师·拉格朗·月，包含47张卡片，5件遗物。\n GitHub源码：https://github.com/wsk1103/LagranYue",
-   "dependencies": ["basemod"],
-   "version": "1.0.1",
-   "sts_version": "02-28-2019",
-   "mts_version": "3.6.0"
- }
+  "modid": "LagranYue",
+  "name": "拉格朗·月",
+  "author_list": ["sky"],
+  "description": "角色：武器大师·拉格朗·月，包含66张卡片，7件遗物。\n GitHub源码：https://github.com/wsk1103/LagranYue",
+  "dependencies": ["basemod"],
+  "version": "1.2.4",
+  "sts_version": "03-03-2019",
+  "mts_version": "3.6.0"
+}
  ```
 
 借鉴史莱姆MOD

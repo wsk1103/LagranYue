@@ -88,6 +88,17 @@ public class ArmsUtil {
         return false;
     }
 
+    //判断第i层兵器层数是否达到该上限
+    public static boolean areMaxArmsPlies(int i) {
+        if (i > getArmsNum()) {
+            return true;
+        }
+        int once = onceArmsPlies(i);
+        int currentAll = currentMaxArmsPlies();
+        boolean result = once >= currentAll;
+        return  result;
+    }
+
     //移除第i个兵器
     public static void removeOnce(AbstractPlayer p, int i) {
         int temp = 1;
@@ -160,13 +171,6 @@ public class ArmsUtil {
 
     //当前兵器总层数
     public static int currentAllArmsNum() {
-//        int result = 0;
-//        for (AbstractPower power : AbstractDungeon.player.powers) {
-//            if (power instanceof AbstractArmsPower) {
-//                result += power.amount;
-//            }
-//        }
-//        return result;
         return currentArmsNum(0);
     }
 

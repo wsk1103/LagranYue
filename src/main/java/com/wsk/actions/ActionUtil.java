@@ -11,6 +11,7 @@ import com.wsk.powers.arms.AbstractArmsPower;
 import com.wsk.powers.base.ImprintPower;
 import com.wsk.powers.base.NextEnergizedPower;
 import com.wsk.powers.base.VictoryPower;
+import com.wsk.utils.ArmsUtil;
 
 /**
  * @author wsk1103
@@ -121,7 +122,23 @@ public class ActionUtil {
 
     //锻造
     public static void forgingAction(AbstractCreature from, int armsNo, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ForgingAction(from, armsNo, amount));
+//        int temp = 0;
+//        for (AbstractPower power : from.powers) {
+//            if (power instanceof AbstractArmsPower) {
+//                int num = power.amount;
+//                temp ++;
+//                if (num < ArmsUtil.currentMaxArmsPlies()) {
+//                    ActionUtil.forgingAction(from, temp, amount);
+//                    break;
+//                }
+//            }
+//        }
+        for (int i = armsNo; i <= ArmsUtil.getArmsNum(); i++) {
+            if (!ArmsUtil.areMaxArmsPlies(i)) {
+                AbstractDungeon.actionManager.addToBottom(new ForgingAction(from, i, amount));
+                break;
+            }
+        }
     }
 
     //获取 兵器

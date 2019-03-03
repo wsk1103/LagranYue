@@ -43,22 +43,8 @@ public class ForgingAction extends AbstractGameAction {
                     addArmsNum((AbstractArmsPower) power, amount);
                     break;
                 }
-//                AbstractArmsPower newPower;
-//                newPower = (AbstractArmsPower) ((AbstractArmsPower) power).clone();
-//                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-//                        newPower, amount, AttackEffect.POISON));
-//                break;
             }
         }
-//        for (int i = 0; i < p.powers.size(); i++) {
-//            AbstractPower power = p.powers.get(i);
-//            if (power instanceof AbstractArmsPower) {
-//                if (armsNo == i) {
-//                    addArmsNum((AbstractArmsPower) power, amount);
-//                    break;
-//                }
-//            }
-//        }
         this.isDone = true;
         tickDuration();
     }

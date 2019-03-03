@@ -46,7 +46,7 @@ public class KadeboSwordPower extends BaseSwordPower {
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (this.amount + "/4") + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (this.amount + "/6") + DESCRIPTIONS[2]);
     }
 
     //触发时机：当玩家攻击时。info.可调用伤害信息。
@@ -55,7 +55,7 @@ public class KadeboSwordPower extends BaseSwordPower {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
             //恢复生命值
-            AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, damageAmount * this.amount / 4));
+            AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, damageAmount * this.amount / 6));
         }
     }
 

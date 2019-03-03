@@ -93,6 +93,7 @@ public class LagranYueCharacter extends CustomPlayer {
 
         retVal.add(AttackTopazCard.ID);
         retVal.add(SkillBrokenSwordCard.ID);
+
 //        retVal.add(SkillWoodSpearCard.ID);
 
 //        retVal.add(AttackAerCard.ID);
@@ -108,8 +109,8 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(GoldForgingCard.ID);
 //        retVal.add(LifeForgingCard.ID);
 //        retVal.add(OneKingCard.ID);
-
-
+//
+//
 //        retVal.add(AttackDevilCard.ID);
 //        retVal.add(AttackFutureCard.ID);
 //        retVal.add(AttackGoldCard.ID);
@@ -124,7 +125,7 @@ public class LagranYueCharacter extends CustomPlayer {
 //        retVal.add(AttackRubyCard.ID);
 //        retVal.add(AttackTopazCard.ID);
 //        retVal.add(BaseAttackCard.ID);
-
+//
 //        retVal.add(BasePowerCard.ID);
 //        retVal.add(PowerBloodyTempleCard.ID);
 //        retVal.add(PowerDarkTempleCard.ID);

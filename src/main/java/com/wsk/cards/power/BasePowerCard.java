@@ -81,6 +81,7 @@ public class BasePowerCard extends CustomCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         ActionUtil.strengthPower(abstractPlayer, this.magicNumber);
+        ActionUtil.forgingAction(abstractPlayer, 1, this.magicNumber);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
 //                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber));
     }

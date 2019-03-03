@@ -205,7 +205,7 @@
   },
   "LagranYue:BasePowerCard": {
     "NAME": "支持",
-    "DESCRIPTION": "获得 !M! 点  力量 。"
+    "DESCRIPTION": "获得 !M! 点  力量 。 锻造  !M! 次"
   },
   "LagranYue:PowerWindKingEnchantmentCard": {
     "NAME": "风王的结界",
@@ -214,8 +214,8 @@
   },
   "LagranYue:PowerFurnaceCard": {
     "NAME": "熔炉",
-    "DESCRIPTION": "每回合开始， 锻造 层数未达上限的1件 兵器  !M! 次。  NL 虚无 ",
-    "UPGRADE_DESCRIPTION": "每回合开始， 锻造 层数未达上限的1件 兵器  !M! 次。"
+    "DESCRIPTION": "每回合开始， 锻造 1件 兵器  !M! 次。  NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "每回合开始， 锻造 1件 兵器  !M! 次。"
   },
   "LagranYue:PowerMaxArmsPliesCard": {
     "NAME": "锻造大师",
@@ -287,12 +287,12 @@
   },
   "LagranYue:LifeForgingCard": {
     "NAME": "阿尔贡锻造",
-    "DESCRIPTION": "第1件 兵器  锻造 X次。 NL 消耗 ",
+    "DESCRIPTION": " 锻造 X次。 NL 消耗 ",
     "UPGRADE_DESCRIPTION": " 锻造 X+1次。 NL 消耗  "
   },
   "LagranYue:GoldForgingCard": {
     "NAME": "黄金之锚",
-    "DESCRIPTION": "第1件 兵器  锻造 翻倍。 NL 消耗 "
+    "DESCRIPTION": " 锻造 翻倍。 NL 消耗 "
   },
   "LagranYue:FoxForgingCard": {
     "NAME": "狐狸出嫁",
@@ -301,7 +301,7 @@
   },
   "LagranYue:ForgingCard": {
     "NAME": "急速锻造",
-    "DESCRIPTION": " 锻造 第1件 兵器 ,自身获得 !M! 层虚弱。"
+    "DESCRIPTION": " 锻造 ,自身获得 !M! 层虚弱。"
   },
   "LagranYue:OneKingCard": {
     "NAME": "国王一座",
@@ -317,10 +317,10 @@
   },
   "LagranYue:ForgingLuEnCard": {
     "NAME": "卢恩符文·造",
-    "DESCRIPTION": " 锻造 第1件 兵器  !M! 次。NL 消耗  。 残缺 "
+    "DESCRIPTION": " 锻造  !M! 次。NL 消耗  。 残缺 "
   },
   "LagranYue:FantasyCard": {
     "NAME": "镜花水月",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 锻造  第1件 兵器 。 NL 消耗 "
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 锻造  。 NL 消耗 "
   }
 }
