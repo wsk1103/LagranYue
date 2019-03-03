@@ -80,7 +80,7 @@ public class GaeBolgPower extends BaseSpearPower {
         //移除金属化
         if (owner.hasPower(MetallicizePower.POWER_ID)) {
             int temp = owner.getPower(MetallicizePower.POWER_ID).amount;
-            if (temp < metallicizePowerNum) {
+            if (temp <= metallicizePowerNum) {
                 ActionUtil.removePower(owner, MetallicizePower.POWER_ID);
             }
             else {
