@@ -3,6 +3,7 @@ package com.wsk.powers.base;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -14,7 +15,7 @@ public class ChaosPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:ChaosPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "混沌";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"临时使装备兵器的上限+1，装备兵器后消失。"};
+    public static final String[] DESCRIPTIONS = {"临时使装备兵器的上限+1，装备兵器后消失。只能同时拥有1层混沌。回合结束时失去该能力。"};
 
     private static final String IMG = "powers/w30-2.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -33,4 +34,9 @@ public class ChaosPower extends AbstractPower {
         this.description = (DESCRIPTIONS[0]);
     }
 
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        this.flash();
+        ActionUtil.removePower(owner, this);
+    }
 }
