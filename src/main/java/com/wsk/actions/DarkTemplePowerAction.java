@@ -1,7 +1,7 @@
 package com.wsk.actions;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.wsk.cards.skill.DefendLuEnCard;
 import com.wsk.cards.skill.ForgingLuEnCard;
 
@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class DarkTemplePowerAction {
 
-    public static void action(AbstractCreature owner, int amount, boolean upgraded) {
+    public static void action(AbstractPlayer owner, int amount, boolean upgraded) {
         Random random = new Random();
         for (int i = 0; i < amount; i++) {
             CustomCard card;
@@ -26,7 +26,7 @@ public class DarkTemplePowerAction {
             if (upgraded) {
                 card.upgrade();
             }
-            BloodyTemplePowerAction.RandomDebuffToSelf(owner, card);
+            BloodyTemplePowerAction.cardAddToHand(owner, card);
 
         }
 

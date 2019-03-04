@@ -107,55 +107,55 @@
 
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
-    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 断剑 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 剑 。获得 !M! 层 断剑 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillWoodSpearCard": {
     "NAME": "兵器：竹枪",
-    "DESCRIPTION": "兵器： 枪 。获得 !M! 层 竹枪 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 枪 。获得 !M! 层 竹枪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillIncompleteArchCard": {
     "NAME": "兵器：残弩",
-    "DESCRIPTION": "兵器： 弩 。获得 !M! 层 残弩 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 弩 。获得 !M! 层 残弩 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": "兵器： 枪盾。获得 !M! 层 破盾 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 盾。获得 !M! 层 破盾 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": "兵器： 枪 。获得 !M! 层 刺穿死棘之枪 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 枪 。获得 !M! 层 刺穿死棘之枪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": "兵器： 枪 。获得 !M! 层 突穿死翔之枪 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 枪 。获得 !M! 层 突穿死翔之枪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 誓约胜利之剑 。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 固有 。兵器： 剑 。获得 !M! 层 誓约胜利之剑 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 剑 。获得 !M! 层 誓约胜利之剑 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器 ： 剑 。获得 !M! 层 誓约胜利之剑 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 喋血卡波剑 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 剑 。获得 !M! 层 喋血卡波剑 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": "兵器： 剑 。获得 !M! 层 干将莫邪 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 剑 。获得 !M! 层 干将莫邪 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": "兵器： 弩 。获得 !M! 层 赤原猎犬 。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 获得 !M! 层 赤原猎犬 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 弩 。获得 !M! 层 赤原猎犬 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 兵器 ： 弩 。获得 !M! 层 赤原猎犬 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": "兵器： 盾 。获得 !M! 层 炽天覆七重圆环 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 固有 。兵器： 盾 。获得 !M! 层 兵器 炽天覆七重圆环 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 盾 。获得 !M! 层 炽天覆七重圆环 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器 ： 盾 。获得 !M! 层 兵器 炽天覆七重圆环 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。"
   },
   "LagranYue:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
-    "DESCRIPTION": "兵器： 盾 。获得 !M! 层 炸裂装甲 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。",
-    "UPGRADE_DESCRIPTION": " 固有 。属性： 盾 。获得 !M! 层 炸裂装甲 。 获得 !B!  格挡 。 NL 消耗 。 NL 升华 。"
+    "DESCRIPTION": " 兵器 ： 盾 。获得 !M! 层 炸裂装甲 。获得 !B!  格挡 。 NL 消耗 。 NL 升华 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器： 盾 。获得 !M! 层 炸裂装甲 。 获得 !B!  格挡 。 NL 消耗 。 NL 升华 。"
   },
 
 
@@ -176,8 +176,8 @@
   },
   "LagranYue:PowerDarkTempleCard": {
     "NAME": "自我封印·暗黑神殿",
-    "DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-守 或 卢恩符文-造 。然后随机获得1层 虚弱 ， 易伤 ， 脆弱 。 NL 虚无 ",
-    "UPGRADE_DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-守+ 或 卢恩符文-造+ 。然后随机获得1层 虚弱 ， 易伤 ， 脆弱 。 NL 虚无 "
+    "DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-守 或 卢恩符文-造 。 NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-守+ 或 卢恩符文-造+ 。 NL 虚无 "
   },
   "LagranYue:PowerGoldStartCard": {
     "NAME": "天地开辟乖离之星",
@@ -190,8 +190,8 @@
   },
   "LagranYue:PowerBloodyTempleCard": {
     "NAME": "他者封印·鲜血神殿",
-    "DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-攻 。然后随机获得1层 虚弱 ， 易伤 ， 脆弱 。 NL 虚无 ",
-    "UPGRADE_DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-攻+ 。然后随机获得1层 虚弱 ， 易伤 ， 脆弱 。 NL 虚无 "
+    "DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-攻 。 NL 虚无 ",
+    "UPGRADE_DESCRIPTION": "每回合开始获得1张0费的 卢恩符文-攻+ 。 NL 虚无 "
   },
   "LagranYue:PowerRemoveArmorCard": {
     "NAME": "卡路里的顺劈",
@@ -200,8 +200,8 @@
   },
   "LagranYue:PowerDoubleArmsCard": {
     "NAME": "武器大师",
-    "DESCRIPTION": "装备 兵器 的数量上限增加 !M! 。 疲惫 ",
-    "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限增加 !M! 。 疲惫 "
+    "DESCRIPTION": "装备 兵器 的数量上限增加 !M! 。当数量达到上限后，新装备的兵器将替换移除第1件 兵器 。",
+    "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限增加 !M! 。当数量达到上限后，新装备的兵器将替换移除第1件 兵器 。"
   },
   "LagranYue:BasePowerCard": {
     "NAME": "支持",

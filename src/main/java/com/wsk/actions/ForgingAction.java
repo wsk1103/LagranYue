@@ -35,8 +35,8 @@ public class ForgingAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        int temp = 0;
         for (AbstractPower power : p.powers) {
-            int temp = 0;
             if (power instanceof AbstractArmsPower) {
                 temp ++;
                 if (temp == armsNo) {

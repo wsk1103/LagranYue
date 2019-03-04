@@ -5,8 +5,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.wsk.cards.AbstractArmsCard;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -49,10 +49,13 @@ public class EnkiduRelics extends CustomRelic {
         }
     }//触发时机：当一张卡被打出且卡牌效果生效前。
 
-    public void onEnterRoom(final AbstractRoom room) {//参数：room-进入的房间。
+    @Override
+    public void onVictory() {
         //重置
         EnkiduRelics.once = true;
-    }//触发时机：当玩家进入房间时。(参考永恒羽毛)
+        ArmsUtil.setArms();
+    }
+
 
     public static boolean getOnce(){
         return once;

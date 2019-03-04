@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LagranYue.iml" filepath="$PROJECT_DIR$/LagranYue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LagranYue.iml" filepath="$PROJECT_DIR$/.idea/LagranYue.iml" />
     </modules>
   </component>
 </project>

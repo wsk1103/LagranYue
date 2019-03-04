@@ -47,21 +47,33 @@ public class ArmsUtil {
         }
         arms = getArmsNum();
         //1. 判断有没有双持这个能力
-        boolean doubleArms = p.hasPower(DoubleArmsPower.POWER_ID);
         //如果拥有
-        if (doubleArms) {
-            arms++;
-            //层数小于2，直接返回，表示可以继续装备
-            if (getArmsNum() <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
-                ActionUtil.addArms(p, armsPower);
-                return;
+//        if (doubleArms) {
+        //层数小于2，直接返回，表示可以继续装备
+//            if (getArmsNum() <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
+////                ActionUtil.addArms(p, armsPower);
+////                return;
+//            } else {
+//                //移除第一件兵器
+//                ArmsUtil.removeOnce((AbstractPlayer) p, 1);
+//            }
+        if (getArmsNum() > getMaxArmsNum()) {
+            //移除前几把超过兵器数量上限的兵器。
+            for (int i = 0; i <= getArmsNum() - getMaxArmsNum(); i++) {
+                //每次移除第一件兵器
+                ArmsUtil.removeOnce((AbstractPlayer) p, 1);
+//                }
             }
+        } else if (getArmsNum() == getMaxArmsNum()) {
+            //移除第一件兵器
+            ArmsUtil.removeOnce((AbstractPlayer) p, 1);
         }
-        removeAllArms();
+//            removeAllArms();
+//            arms = 0;
+        arms++;
+        ActionUtil.addArms(p, armsPower);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, armsPower, armsPower.amount));
 //        armsPower.hasArms();
-        ActionUtil.addArms(p, armsPower);
-        arms = 1;
     }
 
     //移除所有武器
@@ -96,7 +108,7 @@ public class ArmsUtil {
         int once = onceArmsPlies(i);
         int currentAll = currentMaxArmsPlies();
         boolean result = once >= currentAll;
-        return  result;
+        return result;
     }
 
     //移除第i个兵器
@@ -185,6 +197,15 @@ public class ArmsUtil {
     //获得装备的兵器的数量
     public static int getArmsNum() {
         return arms;
+    }
+
+    //当前角色装备兵器数量的上限
+    public static int getMaxArmsNum() {
+        boolean doubleArms = AbstractDungeon.player.hasPower(DoubleArmsPower.POWER_ID);
+        if (doubleArms) {
+            return 1 + AbstractDungeon.player.getPower(DoubleArmsPower.POWER_ID).amount;
+        }
+        return 1;
     }
 
     public static void setArms() {
