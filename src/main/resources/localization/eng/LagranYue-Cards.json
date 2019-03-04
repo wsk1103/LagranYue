@@ -21,7 +21,7 @@
   },
   "LagranYue:AttackSapphireCard": {
     "NAME": "Sapphire Contempt",
-    "DESCRIPTION": "Deal !D! damage, and apply !M! TheImprintOfDeath . Dancing "
+    "DESCRIPTION": "Deal !D! damage, and apply !M! ImprintOfDeath . Dancing "
   },
   "LagranYue:AttackEmeraldCard": {
     "NAME": "Emerald Carnival",
@@ -62,17 +62,17 @@
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "Via Expugnatio",
-    "DESCRIPTION": "Deal !D! damage. Double the enemy's TheImprintOfDeath layer. Dancing . NL  Exhaust ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Double the enemy's TheImprintOfDeath layer. Dancing . NL  Exhaust "
+    "DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . NL  Exhaust ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . NL  Exhaust "
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "Devil's Roar",
-    "DESCRIPTION": "Deal !D! damage. Gain and apply !M!  TheImprintOfDeath . Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage.Apply !M!  TheImprintOfDeath . Dancing "
+    "DESCRIPTION": "Deal !D! damage. Gain and apply !M!  ImprintOfDeath . Dancing ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Apply !M!  ImprintOfDeath . Dancing "
   },
   "LagranYue:AttackKillerCard": {
     "NAME": "Gem Killer",
-    "DESCRIPTION": "Deal !D! damage. Double Mine TheContractOfVictory . Dancing . NL Exhaust ",
+    "DESCRIPTION": "Deal !D! damage. Double mine TheContractOfVictory . Dancing . NL Exhaust ",
     "UPGRADE_DESCRIPTION": "Deal !D! damage.Double Mine TheContractOfVictory .If the TheContractOfVictory number is 0, gain !M! . Dancing . NL Exhaust "
   },
   "LagranYue:AttackFutureCard": {
@@ -82,13 +82,13 @@
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "Waltz of Love",
-    "DESCRIPTION": "Deal !D! damage N times（N=sum of  Weapon ）, at least 1 times. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage N times（N=sum of  Weapon `s layer）, at least 1 times.  Dancing "
+    "DESCRIPTION": "Deal !D! damage N times, N=sum of  Weapon , at least 1 times. Dancing ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage N times, N=sum of  Weapon `s layer, at least 1 times.  Dancing "
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "Ultimate Belief",
-    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory .（N=sum of  Weapon ）, at least 1 times. NL Exhaust ",
-    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory .（N=sum of  Weapon `s layer）, at least 1 times. NL Exhaust "
+    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory ,N=sum of  Weapon , at least 1 times. NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory . N=sum of  Weapon `s layer , at least 1 times. NL Exhaust "
   },
   "LagranYue:AttackAerCard": {
     "NAME": "Aer",
@@ -106,83 +106,83 @@
 
 
   "LagranYue:SkillBrokenSwordCard": {
-    "NAME": "Weapon：BrokenSword",
-    "DESCRIPTION": " Weapon ： Sword .Gain !M!  BrokenSword . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, BrokenSword",
+    "DESCRIPTION": " Weapon ,  Sword .Gain !M!  BrokenSword . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillWoodSpearCard": {
-    "NAME": "Weapon：BrokenSpear",
-    "DESCRIPTION": " Weapon ： Spear .Gain !M! BrokenSpear . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, BrokenSpear",
+    "DESCRIPTION": " Weapon ,  Spear .Gain !M! BrokenSpear . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillIncompleteArchCard": {
-    "NAME": "Weapon：BrokenCrossbow",
-    "DESCRIPTION": " Weapon ： Crossbow .Gain !M! BrokenCrossbow . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, BrokenCrossbow",
+    "DESCRIPTION": " Weapon ,  Crossbow .Gain !M! BrokenCrossbow . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillBrokenShieldCard": {
-    "NAME": "Weapon：BrokenShield",
-    "DESCRIPTION": " Weapon ： Shield.Gain !M! BrokenShield . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, BrokenShield",
+    "DESCRIPTION": " Weapon ,  Shield.Gain !M! BrokenShield . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillGaeBolgCard": {
-    "NAME": "Weapon：GaeBolgBolg",
-    "DESCRIPTION": " Weapon ： Spear .Gain !M! GaeBolgBolg . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, GaeBolgBolg",
+    "DESCRIPTION": " Weapon ,  Spear .Gain !M! GaeBolgBolg . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillDeathBolgCard": {
-    "NAME": "Weapon：GaeBolg",
-    "DESCRIPTION": " Weapon ： Spear .Gain !M! GaeBolg . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, GaeBolg",
+    "DESCRIPTION": " Weapon ,  Spear .Gain !M! GaeBolg . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillVictorySwordCard": {
-    "NAME": "Weapon：Excalibur",
-    "DESCRIPTION": " Weapon ： Sword .Gain !M! Excalibur . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon ： Sword .Gain !M! Excalibur . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, Excalibur",
+    "DESCRIPTION": " Weapon ,  Sword .Gain !M! Excalibur . NL Exhaust . NL Sublimation .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Sword .Gain !M! Excalibur . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillKadeboSwordCard": {
-    "NAME": "Weapon：BloodthirstySword",
-    "DESCRIPTION": " Weapon ： Sword .Gain !M! BloodthirstySword . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, BloodthirstySword",
+    "DESCRIPTION": " Weapon ,  Sword .Gain !M! BloodthirstySword . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
-    "NAME": "Weapon：GanJiangMoYe",
-    "DESCRIPTION": " Weapon ： Sword .Gain !M! GanJiangMoYe . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, GanJiangMoYe",
+    "DESCRIPTION": " Weapon ,  Sword .Gain !M! GanJiangMoYe . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillChiharaHoundCard": {
-    "NAME": "Weapon：Hrunting",
-    "DESCRIPTION": " Weapon ： Crossbow .Gain !M! Hrunting . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Weapon ： Crossbow .Gain !M! Hrunting . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, Hrunting",
+    "DESCRIPTION": " Weapon ,  Crossbow .Gain !M! Hrunting . NL Exhaust . NL Sublimation .",
+    "UPGRADE_DESCRIPTION": " Weapon ,  Crossbow .Gain !M! Hrunting . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
-    "NAME": "Weapon：RhoAias",
-    "DESCRIPTION": " Weapon ： Shield .Gain !M! RhoAias .Gain !B! Block . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon ： Shield .Gain !M! Weapon RhoAias .Gain !B! Block . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, RhoAias",
+    "DESCRIPTION": " Weapon ,  Shield .Gain !M! RhoAias .Gain !B! Block . NL Exhaust . NL Sublimation .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Shield .Gain !M! Weapon RhoAias .Gain !B! Block . NL Exhaust . NL Sublimation ."
   },
   "LagranYue:SkillExplosiveArmorCard": {
-    "NAME": "Weapon：ExplosiveArmor",
-    "DESCRIPTION": " Weapon ： Shield .Gain !M! ExplosiveArmor .Gain !B! Block . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon： Shield .Gain !M! ExplosiveArmor . Gain !B! Block . NL Exhaust . NL Sublimation ."
+    "NAME": "Weapon, ExplosiveArmor",
+    "DESCRIPTION": " Weapon ,  Shield .Gain !M! ExplosiveArmor .Gain !B! Block . NL Exhaust . NL Sublimation .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon,  Shield .Gain !M! ExplosiveArmor . Gain !B! Block . NL Exhaust . NL Sublimation ."
   },
 
 
   "LagranYue:PowerDreamCard": {
     "NAME": "Avalon",
     "DESCRIPTION": "Start every turn, Choose to get !M! Exhaust's card. NL Ethereal ",
-    "UPGRADE_DESCRIPTION": " Start every turn, Choose to get !M! Exhaust's card, the make the cost to 0."
+    "UPGRADE_DESCRIPTION": " Start every turn, Choose to get !M! Exhaust's card, then make the cost to 0."
   },
   "LagranYue:PowerKingTreasureCard": {
     "NAME": "Gate of Babylon",
-    "DESCRIPTION": "Two Weapons per dozen, draw !M! card . NL Ethereal ",
-    "UPGRADE_DESCRIPTION": "Two Weapons per dozen, gain [E] and draw !M! card .. NL Ethereal "
+    "DESCRIPTION": "Two Weapon per dozen, draw !M! card . NL Ethereal ",
+    "UPGRADE_DESCRIPTION": "Two Weapon per dozen, gain [E] and draw !M! card . NL Ethereal "
   },
   "LagranYue:PowerTwelveTrialsCard": {
     "NAME": "God Hand",
-    "DESCRIPTION": "One Weapons per dozen, gain !M! Block . NL Ethereal ",
-    "UPGRADE_DESCRIPTION": "One Weapons per dozen, gain !M! Block ."
+    "DESCRIPTION": "One Weapon per dozen, gain !M! Block . NL Ethereal ",
+    "UPGRADE_DESCRIPTION": "One Weapon per dozen, gain !M! Block ."
   },
   "LagranYue:PowerDarkTempleCard": {
     "NAME": "Breaker Gorgon",
-    "DESCRIPTION": "Start every turn, gain !M! LuEnRune-Defend or LuEnRune-Forging . NL Ethereal ",
-    "UPGRADE_DESCRIPTION": "Start every turn, gain !M! LuEnRune-Defend+ or LuEnRune-Forging+ . NL Ethereal "
+    "DESCRIPTION": "Start every turn, gain !M! LuEnRuneDefend or LuEnRuneForging . NL Ethereal ",
+    "UPGRADE_DESCRIPTION": "Start every turn, gain !M! LuEnRuneDefend+ or LuEnRuneForging+ . NL Ethereal "
   },
   "LagranYue:PowerGoldStartCard": {
     "NAME": "EA Enuma Elish",
-    "DESCRIPTION": "Two Weapons per dozen, remove all DeBuff.",
-    "UPGRADE_DESCRIPTION": "One Weapons per dozen, remove all DeBuff."
+    "DESCRIPTION": "Two Weapon per dozen, remove all DeBuff.",
+    "UPGRADE_DESCRIPTION": "One Weapon per dozen, remove all DeBuff."
   },
   "LagranYue:ALeechingTouch": {
     "NAME": "Unlimited Blade Works",
@@ -190,18 +190,18 @@
   },
   "LagranYue:PowerBloodyTempleCard": {
     "NAME": "Blood Fort Andromeda",
-    "DESCRIPTION": "Start every turn, gain !M!  LuEnRune-Attack . NL Ethereal ",
-    "UPGRADE_DESCRIPTION": "Start every turn, gain !M!  LuEnRune-Attack+ . NL Ethereal "
+    "DESCRIPTION": "Start every turn, gain !M!  LuEnRuneAttack . NL Ethereal ",
+    "UPGRADE_DESCRIPTION": "Start every turn, gain !M!  LuEnRuneAttack+ . NL Ethereal "
   },
   "LagranYue:PowerRemoveArmorCard": {
     "NAME": "Calorie Smooth",
-    "DESCRIPTION": "One Weapons per dozen, deal !D! damage to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "One Weapons per dozen, deal !D! damage to ALL enemies."
+    "DESCRIPTION": "One Weapon per dozen, deal !D! damage to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "One Weapon per dozen, deal !D! damage to ALL enemies."
   },
   "LagranYue:PowerDoubleArmsCard": {
     "NAME": "Weapon Master",
-    "DESCRIPTION": "The maximum number of equipped Weapons is increased !M! .",
-    "UPGRADE_DESCRIPTION": " Innate .The maximum number of equipped Weapons is increased !M! ."
+    "DESCRIPTION": "The maximum number of equipped Weapon is increased !M! .",
+    "UPGRADE_DESCRIPTION": " Innate .The maximum number of equipped Weapon is increased !M! ."
   },
   "LagranYue:BasePowerCard": {
     "NAME": "Support",
@@ -279,7 +279,7 @@
   },
   "LagranYue:PurpleNightmareCard": {
     "NAME": "Purple Nightmare",
-    "DESCRIPTION": "Double the enemy's TheImprintOfDeath .If enemy does not have TheImprintOfDeath, apply !M! TheImprintOfDeath . NL Exhaust "
+    "DESCRIPTION": "Double the enemy's ImprintOfDeath .If enemy does not have ImprintOfDeath, apply !M! ImprintOfDeath . NL Exhaust "
   },
   "LagranYue:ProjectionCard": {
     "NAME": "Twin Flowers",
@@ -305,7 +305,7 @@
   },
   "LagranYue:OneKingCard": {
     "NAME": "Apocrypha",
-    "DESCRIPTION": "Remove all Weapon after the first Weapon , then the total number of Weapons that will be removed Forging to the first Weapon, at least 1 Forging times . NL Exhaust  "
+    "DESCRIPTION": "Remove all Weapon after the first Weapon , then the total number of Weapon that will be removed Forging to the first Weapon, at least 1 Forging times . NL Exhaust  "
   },
   "LagranYue:DefendCarnivalCard": {
     "NAME": "幻想嘉年华",

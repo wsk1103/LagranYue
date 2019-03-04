@@ -22,11 +22,11 @@ public class CommonUtil {
     public static String getLanguage() {
         String language;
         switch (Settings.language) {
-            case ENG:
-                language = "eng";
+            case ZHS:
+                language = "zhs";
                 break;
             default:
-                language = "zhs";
+                language = "eng";
         }
         return language;
     }

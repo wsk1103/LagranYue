@@ -1,262 +1,262 @@
 {
   "LagranYue:ModRitualPower": {
-    "NAME": "来自WSK的祝福",
+    "NAME": "WSK",
     "DESCRIPTIONS": [
-      "回合开始时，获得 ",
-      " 点 力量 。"
+      "Start every turn, Gain  ",
+      " Strength ."
     ]
   },
   "LagranYue:BaseSwordPower": {
-    "NAME": "兵器：断剑",
+    "NAME": "Weapon BrokenSword",
     "DESCRIPTIONS": [
-      "获得",
-      " 点力量。"
+      "Gain ",
+      " Strength."
     ]
   },
   "LagranYue:BaseSpearPower": {
-    "NAME": "兵器：竹枪",
+    "NAME": "Weapon BrokenSpear",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量。"
+      "Gain ",
+      " Strength."
     ]
   },
   "LagranYue:BaseArchPower": {
-    "NAME": "兵器：残弩",
+    "NAME": "Weapon BrokenCrossbow",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量。"
+      "Gain ",
+      " Strength."
     ]
   },
   "LagranYue:BaseShieldPower": {
-    "NAME": "兵器：破盾",
+    "NAME": "Weapon BrokenShield",
     "DESCRIPTIONS": [
-      "获得",
-      "点敏捷。"
+      "Gain ",
+      " Dexterity."
     ]
   },
   "LagranYue:GaeBolgPower": {
-    "NAME": "兵器：刺穿死棘之枪",
+    "NAME": "Weapon GaeBolg",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量，打出攻击卡牌后，获得",
-      "层金属化 。"
+      "Gain ",
+      " Strength, Each GaeBolg gain ",
+      " Metalization after using attack card ."
     ]
   },
   "LagranYue:DeathBolgPower": {
-    "NAME": "兵器：突穿死翔之枪",
+    "NAME": "Weapon GaeBolg",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量，打出攻击卡牌后，给予被攻击者",
-      "层 死亡印记 。"
+      "Gain ",
+      " Strength, Each GaeBolgBolg apply ",
+      " *2 ImprintOfDeath after using attack card."
     ]
   },
   "LagranYue:VictorySwordPower": {
-    "NAME": "兵器：誓约胜利之剑",
+    "NAME": "Weapon Excalibur",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量。每回合开始，获得",
-      "点 胜利誓约 。"
+      "Gain ",
+      " Strength.Start every turn, gain ",
+      " TheContractOfVictory ."
     ]
   },
   "LagranYue:KadeboSwordPower": {
-    "NAME": "兵器：喋血卡波剑",
+    "NAME": "Weapon BloodthirstySword",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量。攻击时，恢复该攻击卡的数值的",
-      "倍生命值。"
+      "Gain ",
+      " Strength.After using attack card, Restores the damage ",
+      " times the health."
     ]
   },
   "LagranYue:GanJiangMoYePower": {
-    "NAME": "兵器：干将莫邪",
+    "NAME": "Weapon GanJiangMoYe",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量。每回合你使用的第1张目标为敌人的攻击牌(非兵器牌)会被重复打出",
-      "次。"
+      "Gain ",
+      " Strength.The first target you use each round is the enemy's attack card will be repeated ",
+      " times."
     ]
   },
   "LagranYue:ChiharaHoundPower": {
-    "NAME": "兵器：赤原猎犬",
+    "NAME": "Weapon Hrunting",
     "DESCRIPTIONS": [
-      "获得",
-      "点力量。攻击后，给予被攻击者",
-      "层 虚弱 。"
+      "Gain 3*",
+      " Strength.Apply ",
+      " Weak after using attack card ."
     ]
   },
   "LagranYue:BlazingSevenRingsPower": {
-    "NAME": "兵器：炽天覆七重圆环",
+    "NAME": "Weapon RhoAias",
     "DESCRIPTIONS": [
-      "获得",
-      "点敏捷。获得 壁垒 。受到的伤害减少"
+      "Gain ",
+      " Dexterity.Gain Barricade.Damage reduced "
     ]
   },
   "LagranYue:ExplosiveArmorPower": {
-    "NAME": "兵器：炸裂装甲",
+    "NAME": "Weapon ExplosiveArmor",
     "DESCRIPTIONS": [
-      "增加",
-      "点敏捷。增加",
-      "点荆棘。"
+      "Gain ",
+      " Dexterity.Gain 3*",
+      " Thorns."
     ]
   },
   "LagranYue:DreamPower": {
-    "NAME": "远离尘世的理想",
+    "NAME": "Avalon",
     "DESCRIPTIONS": [
-      "每回合开始，选择获得",
-      "张被消耗的卡牌。"
+      "Start every turn, Choose to get ",
+      " Exhaust's card."
     ]
   },
   "LagranYue:DreamPowerUpgraded": {
-    "NAME": "远离尘世的理想+",
+    "NAME": "Avalon+",
     "DESCRIPTIONS": [
-      "每回合开始，选择获得",
-      "张被消耗的卡牌，并且费用置为0。"
+      "Start every turn, Choose to get ",
+      " Exhaust's card, then make the cost to 0"
     ]
   },
   "LagranYue:FurnacePower": {
-    "NAME": "熔炉+",
+    "NAME": "Furnace",
     "DESCRIPTIONS": [
-      "每回合开始，兵器获得",
-      "次 锻造 "
+      "Start every turn, Forging ",
+      " times "
     ]
   },
   "LagranYue:KingTreasurePower": {
-    "NAME": "王之财宝",
+    "NAME": "Gate of Babylon",
     "DESCRIPTIONS": [
-      "每打出2张 兵器 ，抽1张牌。已打出",
-      "张兵器"
+      "Two Weapon per dozen, draw 1 card.Now user ",
+      " Weapon."
     ]
   },
   "LagranYue:KingTreasurePowerUpgraded": {
-    "NAME": "王之财宝+",
+    "NAME": "Gate of Babylon+",
     "DESCRIPTIONS": [
-      "每打出2张 兵器 ，获得1能量并抽1张牌。已打出",
-      "张兵器"
+      "Two Weapon per dozen, gain 1 e and draw 1 card.Now user ",
+      " Weapon."
     ]
   },
   "LagranYue:MaxArmsPliesPower": {
-    "NAME": "锻造大师",
+    "NAME": "Forging Master",
     "DESCRIPTIONS": [
-      " 兵器 层数的上限增加",
-      "，目前上限:"
+      "The upper limit of the Weapon layer is increased ",
+      " , now the upper limit is :"
     ]
   },
   "LagranYue:NextEnergizedPower": {
-    "NAME": "冲刺",
+    "NAME": "Running",
     "DESCRIPTIONS": [
-      "下回合获得",
-      "能量"
+      "Next turn gain ",
+      " energy"
     ]
   },
   "LagranYue:TwelveTrialsPower": {
-    "NAME": "十二试炼",
+    "NAME": "God Hand",
     "DESCRIPTIONS": [
-      "每打出1张 兵器 ，获得",
-      "点格挡。"
+      "One Weapon per dozen, gain ",
+      " Block."
     ]
   },
   "LagranYue:TwelveTrialsPowerUpgraded": {
-    "NAME": "十二试炼+",
+    "NAME": "God Hand+",
     "DESCRIPTIONS": [
-      "每打出1张 兵器 ，获得",
-      "点格挡。"
+      "One Weapon per dozen, gain ",
+      " Block."
     ]
   },
   "LagranYue:DarkTemplePower": {
-    "NAME": "自我封印·暗黑神殿",
+    "NAME": "Breaker Gorgon",
     "DESCRIPTIONS": [
-      "每回合开始获得",
-      "张0费的 卢恩符文·守 或 卢恩符文·造 。"
+      "Start every turn, Gain ",
+      " LuEnRuneDefend or LuEnRuneForging."
     ]
   },
   "LagranYue:DarkTemplePowerUpgraded": {
-    "NAME": "自我封印·暗黑神殿+",
+    "NAME": "Breaker Gorgon+",
     "DESCRIPTIONS": [
-      "每回合开始获得",
-      "张0费的 卢恩符文+·守 或 卢恩符文+·造 。"
+      "Start every turn, Gain ",
+      " LuEnRuneDefend+ or LuEnRuneForging+."
     ]
   },
   "LagranYue:GoldStartPower": {
-    "NAME": "天地开辟乖离之星",
+    "NAME": "EA Enuma Elish",
     "DESCRIPTIONS": [
-      "每打出2张 兵器 ，消除所有负面状态。已经打出",
-      "张兵器"
+      "Two Weapon per dozen, remove all DeBuff.Now use ",
+      " Weapon."
     ]
   },
   "LagranYue:GoldStartPowerUpgraded": {
-    "NAME": "天地开辟乖离之星+",
+    "NAME": "EA Enuma Elish+",
     "DESCRIPTIONS": [
-      "每打出1张 兵器 ，消除所有负面状态。已经打出",
-      "张兵器"
+      "One Weapon per dozen, remove all DeBuff.Now use ",
+      " Weapon."
     ]
   },
   "LagranYue:ImprintPower": {
-    "NAME": "死亡印记",
+    "NAME": "ImprintOfDeath",
     "DESCRIPTIONS": [
-      "造成伤害增加",
-      "点。每回合结束时，层数减少1。当回合开始时，如果层数大于10，给予50点固定伤害。然后移除所有印记。"
+      "The next attack deal ",
+      " damage.1 ImprintOfDeath is removed at end of turn.When the turn starts, if the ImprintOfDeath`s layer is greater than 10, give 50 fixed damage. Then remove all the ImprintOfDeath."
     ]
   },
   "LagranYue:BloodyTemplePower": {
-    "NAME": "他者封印·鲜血神殿",
+    "NAME": "Blood Fort Andromeda",
     "DESCRIPTIONS": [
-      "每回合开始获得",
-      "张0费的 卢恩符文·攻 。"
+      "Start every turn, Gain ",
+      " LuEnRuneAttack ."
     ]
   },
   "LagranYue:BloodyTemplePowerUpgraded": {
-    "NAME": "他者封印·鲜血神殿+",
+    "NAME": "Blood Fort Andromeda+",
     "DESCRIPTIONS": [
-      "每回合开始获得",
-      "张0费的 卢恩符文·攻+ 。"
+      "Start every turn, Gain ",
+      " LuEnRuneAttack+ ."
     ]
   },
   "LagranYue:ChaosPower": {
-    "NAME": "混沌",
+    "NAME": "Chaos",
     "DESCRIPTIONS": [
-      "临时使装备兵器的上限+1，装备兵器后消失。只能同时拥有1层混沌。回合结束时失去该能力。"
+      "Temporarily make the upper limit of equipment Weapon +1, disappeared after being equipped with Weapon.Can only have 1 layer of Chaos at the same time. Lose this ability at the end of the round."
     ]
   },
   "LagranYue:RemoveArmorPower": {
-    "NAME": "卡路里的顺劈",
+    "NAME": "Calorie Smooth",
     "DESCRIPTIONS": [
-      "每打出1张 兵器 牌，对所有敌人造成",
-      "点伤害。"
+      "One Weapon per dozen, deal ",
+      " damage to ALL enemies."
     ]
   },
   "LagranYue:RemoveArmorPowerUpgraded": {
-    "NAME": "卡路里的顺劈+",
+    "NAME": "Calorie Smooth+",
     "DESCRIPTIONS": [
-      "每打出1张 兵器 牌，对所有敌人造成",
-      "点伤害。"
+      "One Weapon per dozen, deal ",
+      " damage to ALL enemies."
     ]
   },
   "LagranYue:DoubleArmsPower": {
-    "NAME": "武器大师",
+    "NAME": "Weapon Master",
     "DESCRIPTIONS": [
-      "装备 兵器 的数量上限变为",
-      "。已装备数量:"
+      "The maximum number of equipped Weapon is becoming ",
+      " .Now,the number of equipped Weapon is "
     ]
   },
   "LagranYue:VictoryPower": {
-    "NAME": "胜利契约",
+    "NAME": "TheContractOfVictory",
     "DESCRIPTIONS": [
-      "战斗结束后，恢复",
-      "点生命值，增加",
-      "点最大生命值。层数最大值为10。"
+      "At the end of the battle, add ",
+      " HP, and add ",
+      " maximum health.But the max of TheContractOfVictory is 10."
     ]
   },
   "LagranYue:WindKingEnchantmentPower": {
-    "NAME": "风王的结界",
+    "NAME": "Invisible Air",
     "DESCRIPTIONS": [
-      "接下来的4个回合内，每回合开始获得",
-      "格挡 ，已经过了",
-      "回合"
+      "In the next 4 turn,start every turn, gain ",
+      " Block .Now ",
+      " turn have passed"
     ]
   },
   "LagranYue:WindKingEnchantmentPowerUpgraded": {
-    "NAME": "风王的结界+",
+    "NAME": "Invisible Air+",
     "DESCRIPTIONS": [
-      "每回合开始获得",
-      "格挡 "
+      "Start every turn, gain ",
+      " Block. "
     ]
   }
 }

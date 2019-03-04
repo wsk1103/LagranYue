@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.*;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
@@ -21,6 +22,7 @@ import com.wsk.relics.*;
 import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
+import java.util.TreeMap;
 
 import static basemod.DevConsole.logger;
 
@@ -36,7 +38,7 @@ public class LagranYue implements PostInitializeSubscriber,
         EditKeywordsSubscriber {
     //以上继承6个接口，来注入人物mod所需的全部类。其中包括：Cards(卡牌)、Power(能力)、Action(动作)、relics(遗物)、KeyWord(关键字)、Character(角色)。更多接口可详参basemod。
 
-    private static final String MODNAME = "拉格朗·月";//Mod名称。
+    private static final String MODNAME = "Lagran Yue";//Mod名称。
     private static final String AUTHOR = "wsk1103";//mod作者。
     private static final String DESCRIPTION = "v1.0\n Make by Sky.";//Mod描叙，随便写。
     private static final Color COLOR = CardHelper.getColor(76, 151, 226);//mod人物对应的颜色。getColor所需的三个参数分别对应颜色的三个色相R、G、U。查找色相请打开系统自带画图，编辑颜色窗口，右下角的RGU三栏。（仅以Win10的自带画图为例）
@@ -105,7 +107,6 @@ public class LagranYue implements PostInitializeSubscriber,
     @Override
     public void receivePostInitialize() {
 
-//        UIStrings configStrings = CardCrawlGame.languagePack.getUIString("SkyTestConfigMenuText");
         Texture badgeTexture = new Texture(CommonUtil.getResourcePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, null);
         logger.info("Done loading badge Image and mod options");
@@ -116,29 +117,9 @@ public class LagranYue implements PostInitializeSubscriber,
         logger.info("========================正在注入Mod人物信息========================");
 
         logger.info("add " + CharacterEnum.LagranYueCharacter.toString());
-//        logger.info("add " +SlimeboundEnum.SLIMEBOUND.toString());
-        //null位置对应参数：CharacterEnum.CharacterName.toString()
-        //需要新建一个CharacterEnum类import后使用。代码如下：
-        //@SpireEnum
-        //public static AbstractPlayer.PlayerClass CharacterName; CharacterName为你的角色对应的英文名称
-//        SlimeboundCharacter exampleModCharacter = new SlimeboundCharacter("Test", SlimeboundEnum.SLIMEBOUND);
         LagranYueCharacter exampleModCharacter = new LagranYueCharacter("Test", CharacterEnum.LagranYueCharacter);
         BaseMod.addCharacter(exampleModCharacter, CommonUtil.getResourcePath("charSelect/LagranYue.png"),
                 CommonUtil.getResourcePath("charSelect/portrait.png"), CharacterEnum.LagranYueCharacter);
-
-/*        BaseMod.addCharacter(
-                null, "Mod人物名称", "CharacterName class string",
-                //null位置对应参数：CharacterName.class
-                //需要新建一个CharacterName类import后使用，该类负责管理人物的各类初始信息，如初始卡组、初始遗物、人物描叙等。
-                //代码过长，无法展示，请详参群内的ModBaseCharacter.java-人物模板。
-
-                null, "Mod人物名称", "角色选择界面对应的摁扭图标", "人物选择界面的背景图片",
-                //null位置对应参数：AbstractCardEnum.BLACK.toString()
-                //详细解释同该类第50行。
-
-                null);
-        //null位置对应参数CharacterEnum.CharacterName.toString()
-        //详细解释同该类第84行。*/
 
         logger.info("========================注入Mod人物信息成功========================");
     }
@@ -291,22 +272,20 @@ public class LagranYue implements PostInitializeSubscriber,
     public void receiveEditKeywords() {
         logger.info("==========================正在注入新的关键字==========================");
 
-//        BaseMod.addKeyword(new String[]{"关键字", "关键字"}, "关键字描叙");
-//        BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-        //文本描叙需要使用到关键字时，请将关键字格式前后加一个空格。
-        //例： DESCRIPTION = "这个位置有一个 关键字 需要体现。";
         final Gson gson = new Gson();
         String language = CommonUtil.getLanguage();
         logger.info("begin editing strings");
         final String json = Gdx.files.internal("localization/" + language + "/LagranYue-Keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
         final Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
-            for (final Keyword keyword : keywords) {
+            logger.info("keywords size:" + keywords.length);
+            for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(keyword.NAMES, keyword.DESCRIPTION);
             }
+        } else {
+            logger.info("keywords is null");
         }
+        TreeMap<String, String> treeMap = GameDictionary.keywords;
         logger.info("==========================注入新的关键字成功==========================");
     }
-
-
 }

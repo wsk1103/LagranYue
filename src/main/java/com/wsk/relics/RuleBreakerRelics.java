@@ -36,11 +36,12 @@ public class RuleBreakerRelics extends CustomRelic {
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if (c instanceof AbstractArmsCard) {
             this.counter++;
-            if (this.counter % 3 == 0)
+            if (this.counter % 3 == 0) {
                 if (!c.purgeOnUse && action.exhaustCard) {
                     action.exhaustCard = false;
                     this.flash();
                 }
+            }
         }
 
     }

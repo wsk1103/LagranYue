@@ -17,7 +17,7 @@
     "NAME": "RuleBreaker",
     "FLAVOR": "This magic weapon is the embodiment of the goddess of betrayal.",
     "DESCRIPTIONS": [
-      "In this battle, the N # y weapon plate used will not be exhausted (multiples of N to 3)."
+      "In this battle, the N #yWeapon plate used will not be exhausted (multiples of N to 3)."
     ]
   },
   "LagranYue:UnlimitedBladeWorksRelics": {
@@ -38,7 +38,7 @@
     "NAME": "LuEnRune",
     "FLAVOR": "Learned the Rune of Lune magic which is popular in Nordic, and will be protected by Rune of Lune magic.",
     "DESCRIPTIONS": [
-      "In this battle, for each #yWeapon played, 8% got a zero-cost #yLuEnRune-Attack , 8% got a zero-cost #yLuEnRune-Defend and 8% got a zero-cost #yLuEnRune-Forging ."
+      "In this battle, for each #yWeapon played, 8% got a zero-cost #yLuEnRuneAttack , 8% got a zero-cost #yLuEnRuneDefend and 8% got a zero-cost #yLuEnRuneForging ."
     ]
   },
   "LagranYue:ZabaniyaRelics": {
