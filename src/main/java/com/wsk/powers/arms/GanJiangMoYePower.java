@@ -111,4 +111,8 @@ public class GanJiangMoYePower extends BaseSwordPower {
 //        super.onRemove();
     }
 
+    @Override
+    public void onVictory() {
+        GanJiangMoYePower.action = true;
+    }
 }
