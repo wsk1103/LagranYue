@@ -28,7 +28,10 @@ public class PolyBeamAgainPowerUpgraded extends AbstractPower {
 
 
     public PolyBeamAgainPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount, AbstractCard card) {
-        this.name = NAME;
+this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.card = card;

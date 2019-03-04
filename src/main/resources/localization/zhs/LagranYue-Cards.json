@@ -200,8 +200,8 @@
   },
   "LagranYue:PowerDoubleArmsCard": {
     "NAME": "武器大师",
-    "DESCRIPTION": "装备 兵器 的数量上限增加 !M! 。当数量达到上限后，新装备的兵器将替换移除第1件 兵器 。",
-    "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限增加 !M! 。当数量达到上限后，新装备的兵器将替换移除第1件 兵器 。"
+    "DESCRIPTION": "装备 兵器 的数量上限增加 !M! 。",
+    "UPGRADE_DESCRIPTION": " 固有 。装备 兵器 的数量上限增加 !M! 。"
   },
   "LagranYue:BasePowerCard": {
     "NAME": "支持",
@@ -313,11 +313,11 @@
   },
   "LagranYue:DefendLuEnCard": {
     "NAME": "卢恩符文·守",
-    "DESCRIPTION": "获得 !M! 倍当前所有 兵器 的层数之和的 格挡 。NL 消耗  。 残缺 "
+    "DESCRIPTION": "获得 !M! 倍当前所有 兵器 的层数之和的 格挡 。NL 消耗  。  "
   },
   "LagranYue:ForgingLuEnCard": {
     "NAME": "卢恩符文·造",
-    "DESCRIPTION": " 锻造  !M! 次。NL 消耗  。 残缺 "
+    "DESCRIPTION": " 锻造  !M! 次。NL 消耗  。  "
   },
   "LagranYue:FantasyCard": {
     "NAME": "镜花水月",

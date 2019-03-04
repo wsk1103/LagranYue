@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -22,7 +23,7 @@ public class GaeBolgPower extends BaseSpearPower {
     public static final String NAME = "兵器：刺穿死棘之枪";//能力的名称。
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
-    public static final String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌后，获得", "层金属化 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌后，获得", "层金属化 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w1.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
@@ -31,8 +32,11 @@ public class GaeBolgPower extends BaseSpearPower {
     private static int metallicizePowerNum = 0;
 
     public GaeBolgPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
         this.ID = POWER_ID;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));

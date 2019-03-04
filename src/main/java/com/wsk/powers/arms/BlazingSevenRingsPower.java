@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.wsk.actions.ActionUtil;
@@ -21,14 +22,17 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
     public static final String POWER_ID = "LagranYue:BlazingSevenRingsPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：炽天覆七重圆环";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点敏捷。获得 壁垒 。受到的伤害减少"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点敏捷。获得 壁垒 。受到的伤害减少"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w16.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public BlazingSevenRingsPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
         this.ID = POWER_ID;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
@@ -81,7 +85,7 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
         }
         //移除壁垒
 //        if (ArmsUtil.isHasRings()) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, BarricadePower.POWER_ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, BarricadePower.POWER_ID));
 //        }
 //        ArmsUtil.setHasRings(true);
 //        super.onRemove();

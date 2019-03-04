@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -20,7 +21,7 @@ import com.wsk.utils.CommonUtil;
 public class ImprintPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:ImprintPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "死亡印记";//能力的名称。
-    public static final String[] DESCRIPTIONS = {"造成伤害增加","点。每回合结束时，层数减少1。当回合开始时，如果层数大于10，给予50点固定伤害。然后移除所有印记。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"造成伤害增加","点。每回合结束时，层数减少1。当回合开始时，如果层数大于10，给予50点固定伤害。然后移除所有印记。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w19.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
@@ -29,8 +30,11 @@ public class ImprintPower extends AbstractPower {
     private AbstractCreature source;
 
     public ImprintPower(AbstractCreature owner, AbstractCreature source, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
-        this.name = NAME;
         this.ID = POWER_ID;
+        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));

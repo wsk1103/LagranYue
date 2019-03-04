@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
@@ -19,7 +20,7 @@ public class BaseSwordPower extends AbstractArmsPower {
     public static final String POWER_ID = "LagranYue:BaseSwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：断剑";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w4.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -29,9 +30,13 @@ public class BaseSwordPower extends AbstractArmsPower {
     BaseSwordPower() {
     }
 
-    public BaseSwordPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
-        this.name = NAME;
+    public BaseSwordPower(AbstractCreature owner, int amount) {
+
         this.ID = POWER_ID;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));

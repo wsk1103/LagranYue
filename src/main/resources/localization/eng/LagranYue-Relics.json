@@ -1,0 +1,51 @@
+{
+  "LagranYue:EnkiduRelics": {
+    "NAME": "Enkidu",
+    "FLAVOR": "God has opened a window for you!",
+    "DESCRIPTIONS": [
+      "Only once for each battle, when you switch #yWeapons, retain the Strength/Dexterity bonus effect of the previous #yWeapon. Removing the relic will result in an incredible bug."
+    ]
+  },
+  "LagranYue:GungnirRelics": {
+    "NAME": "Gungnir",
+    "FLAVOR": "let me tell you. . . .",
+    "DESCRIPTIONS": [
+      "In this battle, whenever the #yWeapon is exhausted, the probability of the next one not being exhausted is +1%. The base value is 0%. Maximum 10%"
+    ]
+  },
+  "LagranYue:RuleBreakerRelics": {
+    "NAME": "RuleBreaker",
+    "FLAVOR": "This magic weapon is the embodiment of the goddess of betrayal.",
+    "DESCRIPTIONS": [
+      "In this battle, the N # y weapon plate used will not be exhausted (multiples of N to 3)."
+    ]
+  },
+  "LagranYue:UnlimitedBladeWorksRelics": {
+    "NAME": "UnlimitedBladeWorks",
+    "FLAVOR": "As a master of weapons, it has the inherent boundaries ability, which is a kind of supreme yearning for weapons.",
+    "DESCRIPTIONS": [
+      "In this battle, whenever you use the #yWeapon card, you get the probability of a #yWeaponMaster + 1%. Base 0%, maximum 5%"
+    ]
+  },
+  "LagranYue:DarkRelics": {
+    "NAME": "Dark",
+    "FLAVOR": "When you gaze at the abyss, the abyss gazes at you.",
+    "DESCRIPTIONS": [
+      "In this battle, every 10 attack cards are played, #yForging "
+    ]
+  },
+  "LagranYue:LuEnRelics": {
+    "NAME": "LuEnRune",
+    "FLAVOR": "Learned the Rune of Lune magic which is popular in Nordic, and will be protected by Rune of Lune magic.",
+    "DESCRIPTIONS": [
+      "In this battle, for each #yWeapon played, 8% got a zero-cost #yLuEnRune-Attack , 8% got a zero-cost #yLuEnRune-Defend and 8% got a zero-cost #yLuEnRune-Forging ."
+    ]
+  },
+  "LagranYue:ZabaniyaRelics": {
+    "NAME": "Zabaniya",
+    "FLAVOR": "The wrist of curse from darkness. Satan's hand is good at protecting himself.",
+    "DESCRIPTIONS": [
+      "In one round, after playing the third weapon card, gain #yBuffer ."
+    ]
+  }
+}

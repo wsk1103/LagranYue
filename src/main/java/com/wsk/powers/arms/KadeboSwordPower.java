@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
@@ -22,15 +23,18 @@ public class KadeboSwordPower extends BaseSwordPower {
     public static final String POWER_ID = "LagranYue:KadeboSwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：喋血卡波剑";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量。攻击时，恢复该攻击卡的数值的", "倍生命值。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点力量。攻击时，恢复该攻击卡的数值的", "倍生命值。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w6.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public KadeboSwordPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
         this.ID = POWER_ID;
+        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));

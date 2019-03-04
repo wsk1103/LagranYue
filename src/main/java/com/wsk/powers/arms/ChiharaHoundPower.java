@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
@@ -19,14 +20,17 @@ public class ChiharaHoundPower extends BaseArchPower {
     public static final String POWER_ID = "LagranYue:ChiharaHoundPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：赤原猎犬";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量。攻击后，给予被攻击者", "层 虚弱 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点力量。攻击后，给予被攻击者", "层 虚弱 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 
     private static final String IMG = "powers/w10.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public ChiharaHoundPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
         this.ID = POWER_ID;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
@@ -44,21 +48,6 @@ public class ChiharaHoundPower extends BaseArchPower {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount * 3 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
     }
 
-//    @Override
-//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-////        super.onAttack(info, damageAmount, target);
-//        //虚弱
-//        ActionUtil.weakPower(owner, target, amount);
-////        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-////                new WeakPower(target, this.amount, false), this.amount, true, AbstractGameAction.AttackEffect.POISON));
-//        if (update) {
-//            //易伤
-//            ActionUtil.vulnerablePower(owner, target, amount);
-////            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-////                    new VulnerablePower(target, this.amount, false), this.amount,
-////                    true, AbstractGameAction.AttackEffect.POISON));
-//        }
-//    }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {

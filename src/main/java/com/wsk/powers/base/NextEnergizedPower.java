@@ -2,6 +2,7 @@ package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.utils.CommonUtil;
@@ -17,12 +18,15 @@ public class NextEnergizedPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/w21.png";
 
-    public static final String[] DESCRIPTIONS = {"下回合获得", "能量"};
+    public static String[] DESCRIPTIONS = {"下回合获得", "能量"};
 
 
     public NextEnergizedPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
         this.ID = POWER_ID;
+        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));

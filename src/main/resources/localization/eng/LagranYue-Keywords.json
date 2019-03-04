@@ -1,0 +1,212 @@
+[
+  {
+    "NAMES": [
+      "Weapon"
+    ],
+    "PROPERNAME": "Weapon",
+    "DESCRIPTION": "When using a Weapon card with the name attached, will get the attribute provided by the card.The upper limit of Weapons`s layer is 3, and the maximum number of equipment is 1."
+  },
+  {
+    "NAMES": [
+      "Sublimation"
+    ],
+    "PROPERNAME": "Sublimation",
+    "DESCRIPTION": "When using a Weapon card with a new name, if you already have a Weapon, increase the corresponding number of layers; otherwise, replace the attribute provided by the weapon before removing it."
+  },
+  {
+    "NAMES": [
+      "Exhausted"
+    ],
+    "PROPERNAME": "Exhausted",
+    "DESCRIPTION": "When the number of weapons reaches the upper limit, the next time you use a card with a weapon attached to it, it will replace the attribute provided by all previous weapons."
+  },
+  {
+    "NAMES": [
+      "Dancing"
+    ],
+    "PROPERNAME": "Dancing",
+    "DESCRIPTION": "According to the type of Weapon, the attack effect is added. NL Sword:Apply 1 Weak after using AttackCard. NL Crossbow:Apply 2 poison after using AttackCard NL Shield:Gain 2 Block after using AttackCard NL Spear:Apply 1 Vulnerable after using AttackCard"
+  },
+  {
+    "NAMES": [
+      "Sword"
+    ],
+    "PROPERNAME": "Sword",
+    "DESCRIPTION": "Apply 1 Weak after using AttackCard"
+  },
+  {
+    "NAMES": [
+      "BrokenSword"
+    ],
+    "PROPERNAME": "BrokenSword",
+    "DESCRIPTION": "Gain 1 more Strength per BrokenSword . "
+  },
+  {
+    "NAMES": [
+      "GanJiangMoYe"
+    ],
+    "PROPERNAME": "GanJiangMoYe",
+    "DESCRIPTION": "Gain 1 more Strength per GanJiangMoYe .The first target you use each round is the enemy's attack card will be repeated N times.(N=Number of layers of GanJiangMoYe)"
+  },
+  {
+    "NAMES": [
+      "BloodthirstySword"
+    ],
+    "PROPERNAME": "BloodthirstySword",
+    "DESCRIPTION": ".Gain 1 more Strength per BloodthirstySword .After using attack card，Restores the damage N/6 times the health.(N=Number of layers of BloodthirstySword)"
+  },
+  {
+    "NAMES": [
+      "Excalibur"
+    ],
+    "PROPERNAME": "Excalibur",
+    "DESCRIPTION": ".Gain 1 more Strength per Excalibur .Start every turn, gain N TheContractOfVictory.(N=Number of layers of Excalibur)"
+  },
+  {
+    "NAMES": [
+      "Crossbow"
+    ],
+    "PROPERNAME": "Crossbow",
+    "DESCRIPTION": "Apply 2 poison after using AttackCard"
+  },
+  {
+    "NAMES": [
+      "BrokenCrossbow"
+    ],
+    "PROPERNAME": "BrokenCrossbow",
+    "DESCRIPTION": "Gain 1 more Strength per BrokenCrossbow ."
+  },
+  {
+    "NAMES": [
+      "Hrunting"
+    ],
+    "PROPERNAME": "Hrunting",
+    "DESCRIPTION": "Gain 3 more Strength per Hrunting .Apply N Weak after using attack card.(N=Number of layers of Hrunting)"
+  },
+  {
+    "NAMES": [
+      "Shield"
+    ],
+    "PROPERNAME": "Shield",
+    "DESCRIPTION": "Gain 2 block after using AttackCard"
+  },
+  {
+    "NAMES": [
+      "BrokenShield"
+    ],
+    "PROPERNAME": "BrokenShield",
+    "DESCRIPTION": "Gain 1 more Dexterity per BrokenShield ."
+  },
+  {
+    "NAMES": [
+      "ExplosiveArmor"
+    ],
+    "PROPERNAME": "ExplosiveArmor",
+    "DESCRIPTION": "Gain 1 more Dexterity per ExplosiveArmor .Gain 3 more Thorns per ExplosiveArmor."
+  },
+  {
+    "NAMES": [
+      "RhoAias"
+    ],
+    "PROPERNAME": "RhoAias",
+    "DESCRIPTION": "Gain 1 more Dexterity per RhoAias .Gain Barricade. Each RhoAias reduce 3 damage"
+  },
+  {
+    "NAMES": [
+      "Spear"
+    ],
+    "PROPERNAME": "Spear",
+    "DESCRIPTION": "Apply 1 Vulnerable after using AttackCard"
+  },
+  {
+    "NAMES": [
+      "BrokenSpear"
+    ],
+    "PROPERNAME": "BrokenSpear",
+    "DESCRIPTION": "Gain 1 more Strength per BrokenSpear ."
+  },
+  {
+    "NAMES": [
+      "GaeBolg"
+    ],
+    "PROPERNAME": "GaeBolg",
+    "DESCRIPTION": "Gain 1 more Strength per GaeBolg .Each GaeBolg apply 2 TheImprintOfDeath after using attack card."
+  },
+  {
+    "NAMES": [
+      "GaeBolgBolg"
+    ],
+    "PROPERNAME": "GaeBolgBolg",
+    "DESCRIPTION": "Gain 1 more Strength per GaeBolgBolg .Gain 1 per Metalization per GaeBolgBolg."
+  },
+  {
+    "NAMES": [
+      "TheContractOfVictory"
+    ],
+    "PROPERNAME": "TheContractOfVictory",
+    "DESCRIPTION": "At the end of the battle.Each TheContractOfVictory adds 1 health response and maximum health.But the max of TheContractOfVictory is 10."
+  },
+  {
+    "NAMES": [
+      "Forging"
+    ],
+    "PROPERNAME": "Forging",
+    "DESCRIPTION": "The number of Weapon` layer add 1.If the first Weapon` layer reach the upper limit, make the second  Weapon` layer add 1...."
+  },
+  {
+    "NAMES": [
+      "Incomplete"
+    ],
+    "PROPERNAME": "Incomplete",
+    "DESCRIPTION": "When you upgrade the card, you won't get any results."
+  },
+  {
+    "NAMES": [
+      "WeaponMaster"
+    ],
+    "PROPERNAME": "WeaponMaster",
+    "DESCRIPTION": "Equip the upper limit of Weapon +1."
+  },
+  {
+    "NAMES": [
+      "Chaos"
+    ],
+    "PROPERNAME": "Chaos",
+    "DESCRIPTION": "Temporarily make the upper limit of equipment Weapon +1，disappeared after being equipped with Weapon.Can only have 1 layer of Chaos at the same time. Lose this ability at the end of the round."
+  },
+  {
+    "NAMES": [
+      "LuEnRune-Attack",
+      "LuEnRune-Attack+",
+      "LuEnRune·Attack",
+      "LuEnRune·Attack+"
+    ],
+    "PROPERNAME": "LuEnRune·Attack",
+    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing . "
+  },
+  {
+    "NAMES": [
+      "LuEnRune-Defend",
+      "LuEnRune-Defend+",
+      "LuEnRune·Defend",
+      "LuEnRune·Defend+"
+    ],
+    "PROPERNAME": "LuEnRune·Defend",
+    "DESCRIPTION": "Gain the block of M times the sum of all current Weapon layers.Exhaust  . "
+  },
+  {
+    "NAMES": [
+      "LuEnRune-Forging",
+      "LuEnRune-Forging+"
+    ],
+    "PROPERNAME": "LuEnRune-Build",
+    "DESCRIPTION": " Forging .Exhaust  . "
+  },
+  {
+    "NAMES": [
+      "TheImprintOfDeath"
+    ],
+    "PROPERNAME": "TheImprintOfDeath",
+    "DESCRIPTION": "The next attack deals 1 more damage per TheImprintOfDeath.One of TheImprintOfDeath is removed at end of turn.When the turn starts, if the TheImprintOfDeath`s layer is greater than 10, give 50 fixed damage. Then remove all the TheImprintOfDeath."
+  }
+]

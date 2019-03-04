@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.wsk.cards.arms.SkillBrokenSwordCard;
@@ -49,6 +50,10 @@ public class LagranYueCharacter extends CustomPlayer {
     //战斗界面左下角的能量图标组，详参压缩包内img文件夹内容。
     //也是战斗界面左下角的能量图标的一部分，详参压缩包内img文件夹内容。
     private static final String orbVfx = "LagranYue/char/orb/vfx.png";
+
+    private static final CharacterStrings charStrings;
+    public static final String NAME;
+    public static final String DESCRIPTION;
 
     private static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
@@ -190,15 +195,14 @@ public class LagranYueCharacter extends CustomPlayer {
         final int gold = 99;//初始金币数量
 //        final int cardDraw = 10;//每回合抽牌数量
         final int cardDraw = 5;//每回合抽牌数量
-        return new CharSelectInfo("拉格朗·月", "致力于成为武器大师的拉格朗·月，将要踏平这座高楼！\n" +
-                "将使用拉格朗日中值定理选择平衡。-----Make In China",
+        return new CharSelectInfo(NAME, DESCRIPTION,
                 currentHp, maxHp, maxOrbs, gold, cardDraw,
                 this, getStartingRelics(), getStartingDeck(), false);
     }
 
     @Override
     public String getTitle(AbstractPlayer.PlayerClass playerClass) {
-        return "拉格朗·月";
+        return NAME;
     }
 
     @Override
@@ -244,17 +248,17 @@ public class LagranYueCharacter extends CustomPlayer {
 
     @Override
     public String getLocalizedCharacterName() {
-        return "拉格朗·月";
+        return NAME;
     }
 
     @Override
     public AbstractPlayer newInstance() {
-        return new LagranYueCharacter("拉格朗·月", CharacterEnum.LagranYueCharacter);
+        return new LagranYueCharacter(NAME, CharacterEnum.LagranYueCharacter);
     }
 
     @Override
     public String getSpireHeartText() {
-        return "getSpireHeartText";
+        return charStrings.TEXT[1];
     }
 
     @Override
@@ -276,4 +280,13 @@ public class LagranYueCharacter extends CustomPlayer {
     public String getVampireText() {
         return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[5];
     }
+
+
+    static {
+        charStrings = CardCrawlGame.languagePack.getCharacterString("LagranYue");
+        NAME = charStrings.NAMES[0];
+        DESCRIPTION = charStrings.TEXT[0];
+
+    }
+
 }

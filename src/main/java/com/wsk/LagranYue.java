@@ -9,10 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.Keyword;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.localization.*;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
@@ -269,6 +266,8 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
         String cardStrings = Gdx.files.internal("localization/" + language + "/LagranYue-Cards.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+        String charStrings = Gdx.files.internal("localization/" + language + "/LagranYue-Characters.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
 /*        String monsterStrings = Gdx.files.internal("localization/" + language + "/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
         String potionStrings = Gdx.files.internal("localization/" + language + "/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
@@ -279,8 +278,6 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
         String modStrings = Gdx.files.internal("localization/" + language + "/Slimebound-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RunModStrings.class, modStrings);
-        String charStrings = Gdx.files.internal("localization/" + language + "/Slimebound-CharacterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
         String UIStrings = Gdx.files.internal("localization/" + language + "/Slimebound-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(UIStrings.class, UIStrings);*/
 

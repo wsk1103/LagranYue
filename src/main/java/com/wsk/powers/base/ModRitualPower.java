@@ -25,7 +25,10 @@ public class ModRitualPower extends AbstractPower {
 
     public ModRitualPower(AbstractCreature owner, int strAmt) {
 
-        this.name = NAME;
+this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
 
         this.ID = POWER_ID;
         this.amount = strAmt;

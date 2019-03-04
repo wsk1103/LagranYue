@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -22,17 +23,20 @@ public class BaseSpearPower extends AbstractArmsPower {
     public static final String POWER_ID = "LagranYue:BaseSpearPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：竹枪";//能力的名称。
 
-    public static final String[] DESCRIPTIONS = {"获得", "点力量。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS/* = {"获得", "点力量。"}*/;//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
     String basePower = " 枪 。";
     private static final String IMG = "powers/w2.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
-    BaseSpearPower(){
+    BaseSpearPower() {
     }
 
-    public BaseSpearPower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
-        this.name = NAME;
+    public BaseSpearPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
@@ -41,7 +45,7 @@ public class BaseSpearPower extends AbstractArmsPower {
         updateDescription();
     }
 
-    public void hasArms(){
+    public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);
     }
