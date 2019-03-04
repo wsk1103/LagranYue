@@ -43,11 +43,11 @@ public class LuEnRelics extends CustomRelic {
         if (c instanceof AbstractArmsCard) {
             int temp = random.nextInt(100);
             CustomCard card = null;
-            if (temp < 8) {
+            if (temp < 20) {
                 card = new AttackLuEnCard();
-            } else if (temp < 16) {
+            } else if (temp < 40) {
                 card = new DefendLuEnCard();
-            } else if (temp < 24) {
+            } else if (temp < 60) {
                 card = new ForgingLuEnCard();
             }
             if (card != null) {

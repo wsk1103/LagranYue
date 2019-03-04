@@ -40,7 +40,7 @@ public class ZabaniyaRelics extends CustomRelic {
     public void onUseCard(final AbstractCard card, final UseCardAction useCardAction) {
         if (card instanceof AbstractArmsCard) {
             this.counter ++;
-            if (counter >= 3) {
+            if (counter >= 2) {
                 this.flash();
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new BufferPower(AbstractDungeon.player, 1), 1));

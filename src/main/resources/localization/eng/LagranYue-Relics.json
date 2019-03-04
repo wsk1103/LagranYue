@@ -10,42 +10,66 @@
     "NAME": "Gungnir",
     "FLAVOR": "let me tell you. . . .",
     "DESCRIPTIONS": [
-      "In this battle, whenever the #yWeapon is exhausted, the probability of the next one not being exhausted is +1%. The base value is 0%. Maximum 10%"
+      "In this battle, whenever the #yWeapon is exhausted, the probability of the next one not being exhausted is +1%. The base value is 10%. Maximum 50%"
     ]
   },
   "LagranYue:RuleBreakerRelics": {
     "NAME": "RuleBreaker",
     "FLAVOR": "This magic weapon is the embodiment of the goddess of betrayal.",
     "DESCRIPTIONS": [
-      "In this battle, the N #yWeapon plate used will not be exhausted (multiples of N to 3)."
+      "In this battle, the N #yWeapon plate used will not be used twice (multiples of N to 3)."
     ]
   },
   "LagranYue:UnlimitedBladeWorksRelics": {
     "NAME": "UnlimitedBladeWorks",
     "FLAVOR": "As a master of weapons, it has the inherent boundaries ability, which is a kind of supreme yearning for weapons.",
     "DESCRIPTIONS": [
-      "In this battle, whenever you use the #yWeapon card, you get the probability of a #yWeaponMaster + 1%. Base 0%, maximum 5%"
+      "In this battle, whenever you use the #yWeapon card, you get the probability of a #yWeaponMaster + 1%. Base 10%, maximum 20%"
     ]
   },
   "LagranYue:DarkRelics": {
     "NAME": "Dark",
     "FLAVOR": "When you gaze at the abyss, the abyss gazes at you.",
     "DESCRIPTIONS": [
-      "In this battle, every 10 attack cards are played, #yForging "
+      "In this battle, every 7 attack cards are played, #yForging "
     ]
   },
   "LagranYue:LuEnRelics": {
     "NAME": "LuEnRune",
     "FLAVOR": "Learned the Rune of Lune magic which is popular in Nordic, and will be protected by Rune of Lune magic.",
     "DESCRIPTIONS": [
-      "In this battle, for each #yWeapon played, 8% got a zero-cost #yLuEnRuneAttack , 8% got a zero-cost #yLuEnRuneDefend and 8% got a zero-cost #yLuEnRuneForging ."
+      "In this battle, for each #yWeapon played, 20% got a zero-cost #yLuEnRuneAttack , 20% got a zero-cost #yLuEnRuneDefend and 20% got a zero-cost #yLuEnRuneForging ."
     ]
   },
   "LagranYue:ZabaniyaRelics": {
     "NAME": "Zabaniya",
     "FLAVOR": "The wrist of curse from darkness. Satan's hand is good at protecting himself.",
     "DESCRIPTIONS": [
-      "In one round, after playing the third weapon card, gain #yBuffer ."
+      "In one round, after playing the second weapon card, gain #yBuffer ."
+    ]
+  },
+  "LagranYue:OveredgeRelics": {
+    "NAME": "Overedge",
+    "FLAVOR": "Go left or right...",
+    "DESCRIPTIONS": [
+      "If no #yWeapon have been used in this turn，gain [E] next turn."
+    ]
+  },
+  "LagranYue:LuEnSwordRelics": {
+    "NAME": "LuEnSwor",
+    "FLAVOR": "If you learn the LuEn Magic which is popular in Nordic countries, you will get the true biography of LuEn Magic.",
+    "DESCRIPTIONS": [
+      "At turn start，deal the number of #yWeapon fix damage to ALL enemies."
+    ]
+  },
+  "LagranYue:BrokenPhantasmRelics": {
+    "NAME": "BrokenPhantasm",
+    "FLAVOR": "Destroy the treasure and instantly boost its power by exploding it.",
+    "DESCRIPTIONS": [
+      " at the start of your turn. You cannot play more than #b",
+      " #yWeapon cards per turn.",
+      "Gain [E]",
+      "I can only play up to NL #r"
     ]
   }
 }

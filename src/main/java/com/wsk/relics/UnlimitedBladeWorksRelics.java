@@ -43,11 +43,11 @@ public class UnlimitedBladeWorksRelics extends CustomRelic {
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if (c instanceof AbstractArmsCard) {
             this.flash();
-            if (this.counter < 5) {
+            if (this.counter < 10) {
                 this.counter++;
             }
             int i = r.nextInt(100) + 1;
-            if (i <= this.counter) {
+            if (i <= this.counter + 10) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                         new DoubleArmsPower(AbstractDungeon.player, 1), 1));
             }

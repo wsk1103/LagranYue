@@ -40,11 +40,12 @@ public class GungnirRelics extends CustomRelic {
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if (c instanceof AbstractArmsCard) {
             int i = r.nextInt(100) + 1;
-            if (i <= this.counter)
+            if (i <= this.counter + 20) {
                 if (!c.purgeOnUse && action.exhaustCard) {
                     action.exhaustCard = false;
                     this.flash();
                 }
+            }
         }
 
     }
@@ -52,7 +53,7 @@ public class GungnirRelics extends CustomRelic {
     //触发时机：当你消耗一张 卡牌时。(参考卡戍之灰)
     public void onExhaust(final AbstractCard card) {
         if (card instanceof AbstractArmsCard) {
-            if (this.counter < 10) {
+            if (this.counter < 30) {
                 this.counter += 1;
                 this.flash();
             }

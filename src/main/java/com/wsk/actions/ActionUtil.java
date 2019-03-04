@@ -3,6 +3,7 @@ package com.wsk.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -150,6 +151,11 @@ public class ActionUtil {
     //添加能力
     public static void addPower(AbstractCreature p, AbstractPower power) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, power, power.amount));
+    }
+
+    //添加能力
+    public static void gainEnerg(int amount) {
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
     }
 
     //移除能力

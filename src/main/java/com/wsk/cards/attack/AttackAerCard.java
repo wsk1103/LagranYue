@@ -63,11 +63,11 @@ public class AttackAerCard extends CustomCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        if (this.energyOnUse > 2) {
+        if (this.energyOnUse >= 2) {
             froging = true;
         }
         if (upgraded) {
-            if (this.energyOnUse > 1) {
+            if (this.energyOnUse >= 1) {
                 froging = true;
             }
             this.energyOnUse++;

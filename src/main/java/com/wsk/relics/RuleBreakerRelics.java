@@ -4,7 +4,9 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.utils.CommonUtil;
 
@@ -37,8 +39,9 @@ public class RuleBreakerRelics extends CustomRelic {
         if (c instanceof AbstractArmsCard) {
             this.counter++;
             if (this.counter % 3 == 0) {
-                if (!c.purgeOnUse && action.exhaustCard) {
-                    action.exhaustCard = false;
+                if (!c.purgeOnUse) {
+                    ActionUtil.forgingAction(AbstractDungeon.player, 1, 1);
+//                    action.exhaustCard = false;
                     this.flash();
                 }
             }

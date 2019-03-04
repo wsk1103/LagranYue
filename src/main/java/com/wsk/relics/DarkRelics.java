@@ -34,7 +34,7 @@ public class DarkRelics extends CustomRelic {
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if (c.type == AbstractCard.CardType.ATTACK) {
             this.counter++;
-            if (counter >= 10) {
+            if (counter >= 7) {
                 this.counter = 0;
                 ActionUtil.forgingAction(AbstractDungeon.player, 1, 1);
             }
