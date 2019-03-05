@@ -66,6 +66,11 @@ public class BrokenPhantasmRelics extends CustomRelic {
     }
 
     @Override
+    public void onPlayerEndTurn() {
+        this.counter = 0;
+    }
+
+    @Override
     public void onVictory() {
         this.counter = 0;
     }
