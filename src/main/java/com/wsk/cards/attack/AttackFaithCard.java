@@ -28,7 +28,7 @@ public class AttackFaithCard extends CustomCard {
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackFaithCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 1;//卡牌的费用。
+    private static final int COST = 0;//卡牌的费用。
 
     private static final int wskAttack = 14;
 
@@ -49,7 +49,7 @@ public class AttackFaithCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(3);//升级而增加的伤害。增加的是baseBlock
+            this.upgradeDamage(6);//升级而增加的伤害。增加的是baseBlock
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

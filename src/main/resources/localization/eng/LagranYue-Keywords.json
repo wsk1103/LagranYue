@@ -11,7 +11,7 @@
       "sublimation"
     ],
     "PROPERNAME": "Sublimation",
-    "DESCRIPTION": "When using a Weapon card with a new name, if you already have a Weapon, increase the corresponding number of layers; otherwise, replace the attribute provided by the weapon before removing it."
+    "DESCRIPTION": "When using a Weapon card with name, choose: if you already have a Weapon, increase the corresponding number of layers; otherwise, replace the attribute provided by the weapon before removing it;Or deal damage/gain block."
   },
   {
     "NAMES": [

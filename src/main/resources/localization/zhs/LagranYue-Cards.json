@@ -132,7 +132,7 @@
     "DESCRIPTION": " 兵器 ： 盾 。 升华 ：获得 !M! 层 破盾 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 破盾 。",
-      "对所有敌人造成 !D! 伤害。"
+      "获得 !B!  格挡 。"
     ]
   },
   "LagranYue:SkillGaeBolgCard": {

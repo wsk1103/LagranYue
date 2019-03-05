@@ -105,7 +105,7 @@
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "Weapon, BrokenSword",
-    "DESCRIPTION": " Weapon ,  Sword .Gain !M!  BrokenSword . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M!  BrokenSword . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M!  BrokenSword .",
       "Deal !D! damage to ALL enemies."
@@ -113,7 +113,7 @@
   },
   "LagranYue:SkillWoodSpearCard": {
     "NAME": "Weapon, BrokenSpear",
-    "DESCRIPTION": " Weapon ,  Spear .Gain !M! BrokenSpear . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Spear . Sublimation ,Gain !M! BrokenSpear . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BrokenSpear .",
       "Deal !D! damage to ALL enemies."
@@ -121,7 +121,7 @@
   },
   "LagranYue:SkillIncompleteArchCard": {
     "NAME": "Weapon, BrokenCrossbow",
-    "DESCRIPTION": " Weapon ,  Crossbow .Gain !M! BrokenCrossbow . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Crossbow . Sublimation ,Gain !M! BrokenCrossbow . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BrokenCrossbow .",
       "Deal !D! damage to ALL enemies."
@@ -129,7 +129,7 @@
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "Weapon, BrokenShield",
-    "DESCRIPTION": " Weapon ,  Shield.Gain !M! BrokenShield . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Shield. Sublimation ,Gain !M! BrokenShield . Or Gain !B! Block . NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BrokenShield .",
       "Gain !B! Block ."
@@ -137,7 +137,7 @@
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "Weapon, GaeBolgBolg",
-    "DESCRIPTION": " Weapon ,  Spear .Gain !M! GaeBolgBolg . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Spear . Sublimation ,Gain !M! GaeBolgBolg . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! GaeBolgBolg .",
       "Deal !D! damage to ALL enemies."
@@ -145,7 +145,7 @@
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "Weapon, GaeBolg",
-    "DESCRIPTION": " Weapon ,  Spear .Gain !M! GaeBolg . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Spear . Sublimation ,Gain !M! GaeBolg . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! GaeBolg .",
       "Deal !D! damage to ALL enemies."
@@ -153,8 +153,8 @@
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "Weapon, Excalibur",
-    "DESCRIPTION": " Weapon ,  Sword .Gain !M! Excalibur . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Sword .Gain !M! Excalibur . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M! Excalibur . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Sword . Sublimation ,Gain !M! Excalibur . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Sword .Gain !M! Excalibur .",
       "Deal !D! damage to ALL enemies."
@@ -162,7 +162,7 @@
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "Weapon, BloodthirstySword",
-    "DESCRIPTION": " Weapon ,  Sword .Gain !M! BloodthirstySword . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M! BloodthirstySword . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BloodthirstySword .",
       "Deal !D! damage to ALL enemies."
@@ -170,7 +170,7 @@
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "Weapon, GanJiangMoYe",
-    "DESCRIPTION": " Weapon ,  Sword .Gain !M! GanJiangMoYe . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M! GanJiangMoYe . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! GanJiangMoYe .",
       "Deal !D! damage to ALL enemies."
@@ -178,8 +178,8 @@
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "Weapon, Hrunting",
-    "DESCRIPTION": " Weapon ,  Crossbow .Gain !M! Hrunting . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Weapon ,  Crossbow .Gain !M! Hrunting . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Crossbow . Sublimation ,Gain !M! Hrunting . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Weapon ,  Crossbow . Sublimation ,Gain !M! Hrunting . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! Hrunting .",
       "Deal !D! damage to ALL enemies."
@@ -187,8 +187,8 @@
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "Weapon, RhoAias",
-    "DESCRIPTION": " Weapon ,  Shield .Gain !M! RhoAias .Gain !B! Block . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Shield .Gain !M! Weapon RhoAias .Gain !B! Block . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Shield . Sublimation ,Gain !M! RhoAias . Or Gain !B! Block . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Shield . Sublimation ,Gain !M! Weapon RhoAias . Or Gain !B! Block . NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! RhoAias .",
       "Gain !B! Block."
@@ -196,8 +196,8 @@
   },
   "LagranYue:SkillExplosiveArmorCard": {
     "NAME": "Weapon, ExplosiveArmor",
-    "DESCRIPTION": " Weapon ,  Shield .Gain !M! ExplosiveArmor .Gain !B! Block . NL Exhaust . NL Sublimation .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon,  Shield .Gain !M! ExplosiveArmor . Gain !B! Block . NL Exhaust . NL Sublimation .",
+    "DESCRIPTION": " Weapon ,  Shield . Sublimation ,Gain !M! ExplosiveArmor . Or Gain !B! Block . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon,  Shield . Sublimation ,Gain !M! ExplosiveArmor .  Or Gain !B! Block . NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! ExplosiveArmor .",
       "Gain !B! Block ."
