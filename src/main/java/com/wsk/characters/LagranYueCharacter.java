@@ -14,14 +14,13 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.wsk.cards.arms.SkillBrokenSwordCard;
 import com.wsk.cards.attack.AttackTopazCard;
 import com.wsk.cards.attack.BaseAttackCard;
 import com.wsk.cards.skill.BaseDefendCard;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
-import com.wsk.relics.*;
+import com.wsk.relics.EnkiduRelics;
 import com.wsk.utils.CommonUtil;
 
 import java.util.ArrayList;
@@ -180,16 +179,16 @@ public class LagranYueCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(EnkiduRelics.ID);
-        retVal.add(BrokenPhantasmRelics.ID);
-        retVal.add(LuEnSwordRelics.ID);
-        retVal.add(OveredgeRelics.ID);
-        retVal.add(LuEnRelics.ID);
-        retVal.add(DarkRelics.ID);
-        retVal.add(GungnirRelics.ID);
-        retVal.add(RuleBreakerRelics.ID);
-        retVal.add(UnlimitedBladeWorksRelics.ID);
-        retVal.add(ZabaniyaRelics.ID);
-        UnlockTracker.markRelicAsSeen(EnkiduRelics.ID);
+//        retVal.add(BrokenPhantasmRelics.ID);
+//        retVal.add(LuEnSwordRelics.ID);
+//        retVal.add(OveredgeRelics.ID);
+//        retVal.add(LuEnRelics.ID);
+//        retVal.add(DarkRelics.ID);
+//        retVal.add(GungnirRelics.ID);
+//        retVal.add(RuleBreakerRelics.ID);
+//        retVal.add(UnlimitedBladeWorksRelics.ID);
+//        retVal.add(ZabaniyaRelics.ID);
+//        UnlockTracker.markRelicAsSeen(EnkiduRelics.ID);
         return retVal;
     }
 
