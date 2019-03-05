@@ -68,7 +68,9 @@ public class LifeForgingCard extends CustomCard {
             this.energyOnUse += 2;
             p.getRelic(ChemicalX.ID).flash();
         }
-        ActionUtil.forgingAction(p, 1, this.energyOnUse);
+        for (int i = 0; i < energyOnUse; i++) {
+            ActionUtil.forgingAction(p, 1, 1);
+        }
         p.energy.use(EnergyPanel.totalCount);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
     }//注：卡牌效果的diy区。

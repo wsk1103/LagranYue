@@ -17,7 +17,7 @@
     "NAME": "万符必将破戒",
     "FLAVOR": "此魔术武器是背叛之魔女神性的具现化。",
     "DESCRIPTIONS": [
-      "在本次战斗中，使用的第 N 张 #y兵器 将会被打出2次 (N为3的倍数)"
+      "在本次战斗中，使用的第 N 张 #y兵器 将会执行一次 #y锻造 (N为3的倍数)"
     ]
   },
   "LagranYue:UnlimitedBladeWorksRelics": {

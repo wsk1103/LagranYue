@@ -221,6 +221,8 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addCard(new AttackLuEnCard());
         BaseMod.addCard(new DefendLuEnCard());
         BaseMod.addCard(new ForgingLuEnCard());
+
+        BaseMod.addCard(new TestChooseCard());
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
 

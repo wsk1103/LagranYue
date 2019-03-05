@@ -1,11 +1,16 @@
 package com.wsk.cards.arms;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ChooseAction;
 import com.wsk.cards.AbstractArchCard;
+import com.wsk.helps.LogHelper;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.powers.arms.ChiharaHoundPower;
 import com.wsk.utils.ArmsUtil;
@@ -22,6 +27,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
 
     private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
     private static final String UPGRADED_DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
+    public static final String[] EXTENDED_DESCRIPTION;
 
     private static final CardStrings cardStrings;
 
@@ -31,13 +37,16 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
 
     public SkillChiharaHoundCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
-                CardType.SKILL,
+                CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
-                CardRarity.UNCOMMON, CardTarget.SELF);
+                CardRarity.UNCOMMON, CardTarget.ALL);
         this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+        this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
+        this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
+        this.baseDamage = 12;
     }
 
     public AbstractCard makeCopy() {
@@ -56,15 +65,27 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-//        ArmsUtil.addOrChangArms(abstractPlayer);
+//        ChiharaHoundPower power = new ChiharaHoundPower(abstractPlayer, this.magicNumber);
+//        ArmsUtil.addOrChangArms(abstractPlayer, power);
+        AbstractDungeon.actionManager.addToBottom(new ChooseAction(this, this.getChooseCardGroup()));
+    }
 
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-//                new StrengthPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-        ChiharaHoundPower power = new ChiharaHoundPower(abstractPlayer, this.magicNumber);
-        ArmsUtil.addOrChangArms(abstractPlayer, power);
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,power
-//                , this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-//        ActionUtil.strengthPower(abstractPlayer, this.magicNumber);
+    @Override
+    public void choose(int num) {
+        this.applyPowers();
+        if (num == 0) {
+            ChiharaHoundPower power = new ChiharaHoundPower(AbstractDungeon.player, this.magicNumber);
+            ArmsUtil.addOrChangArms(AbstractDungeon.player, power);
+        } else {
+            if (num != 1) {
+                LogHelper.logger.info("choose card error...........");
+                return;
+            }
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn,
+                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
+
     }
 
     static {
@@ -72,6 +93,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
 }
