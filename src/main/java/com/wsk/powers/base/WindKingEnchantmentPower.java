@@ -46,7 +46,7 @@ public class WindKingEnchantmentPower extends AbstractPower {
     public void atStartOfTurn() {
         this.flash();
         if (this.amount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, 8));
             //层数-1
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, WindKingEnchantmentPower.POWER_ID, 1));
         }

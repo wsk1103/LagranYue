@@ -34,8 +34,8 @@
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "那年夏天的宝石梦",
-    "DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌。 起舞 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌，并且费用降低为0。 起舞 。 NL 消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌。 起舞 。 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌，并且费用降低为0。 起舞 。 "
   },
   "LagranYue:AttackTopazCard": {
     "NAME": "黄宝石的呼唤",
@@ -52,8 +52,8 @@
   },
   "LagranYue:AttackKingCard": {
     "NAME": "王之军势",
-    "DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减1。 起舞 。 NL 消耗 。 NL 混沌 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减为0。 起舞 。 NL 消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减1。 起舞 。 NL 混沌 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减为0。 起舞 。 NL 混沌 。"
   },
   "LagranYue:AttackGoldCard": {
     "NAME": "冀以锁系神明",
@@ -62,8 +62,8 @@
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "遥远的蹂躏制霸",
-    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。 NL  消耗 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。 NL  消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。"
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "恶魔的咆哮",
@@ -87,8 +87,8 @@
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "最终信仰",
-    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的兵器数量之和），最少1次。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的所有兵器层数之和），最少1次。 NL 消耗 "
+    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的兵器数量之和），最少1次。",
+    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的所有兵器层数之和），最少1次。"
   },
   "LagranYue:AttackAerCard": {
     "NAME": "阿尔托利亚",
@@ -129,7 +129,7 @@
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": " 兵器 ： 盾 。 升华 ：获得 !M! 层 破盾 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 ： 盾 。 升华 ：获得 !M! 层 破盾 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 破盾 。",
       "获得 !B!  格挡 。"
@@ -253,8 +253,8 @@
   },
   "LagranYue:PowerWindKingEnchantmentCard": {
     "NAME": "风王的结界",
-    "DESCRIPTION": "获得 !B!  格挡  。接下来的4个回合内，每回合开始获得4 格挡  ",
-    "UPGRADE_DESCRIPTION": "获得 !B!  格挡 。每回合开始获得获得4 格挡  "
+    "DESCRIPTION": "获得 !B!  格挡  。接下来的4个回合内，每回合开始获得8 格挡  ",
+    "UPGRADE_DESCRIPTION": "获得 !B!  格挡 。每回合开始获得获得8 格挡  "
   },
   "LagranYue:PowerFurnaceCard": {
     "NAME": "熔炉",
@@ -285,8 +285,8 @@
   },
   "LagranYue:PhysicalFitnessCard": {
     "NAME": "强身健体",
-    "DESCRIPTION": "获得 !B!  格挡 ，从卡牌中随机获得一张兵器牌，并保留该牌。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "获得 !B!  格挡 ，从卡牌中随机获得一张兵器牌，并且费用减为0，保留该牌。 NL 消耗"
+    "DESCRIPTION": "获得 !B!  格挡 ，从卡牌中随机获得一张兵器牌，并保留该牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B!  格挡 ，从卡牌中随机获得一张兵器牌，并且费用减为0，保留该牌。"
   },
   "LagranYue:PrematureBurialCard": {
     "NAME": "过早的埋葬",
@@ -298,7 +298,7 @@
   },
   "LagranYue:BraveTemperamentCard": {
     "NAME": "勇者的气质",
-    "DESCRIPTION": "当前回合内，使目前手中所有兵器卡牌费用减为0。 NL 消耗 。 NL 混沌 。"
+    "DESCRIPTION": "当前回合内，使目前手中所有兵器卡牌费用减为0。 NL 混沌 。"
   },
   "LagranYue:EatTigerCard": {
     "NAME": "自信回头",
@@ -314,14 +314,14 @@
   },
   "LagranYue:EmeraldRemorseCard": {
     "NAME": "爱的累赘",
-    "DESCRIPTION": "移除一个 兵器， 获得 !M! 点 力量 和 !M! 点 敏捷 。 NL 消耗 ",
+    "DESCRIPTION": "移除一个 兵器， 获得 !M! 点 力量 和 !M! 点 敏捷 。",
     "EXTENDED_DESCRIPTION": [
       "目前没有 兵器 。"
     ]
   },
   "LagranYue:PurpleNightmareCard": {
     "NAME": "紫的噩梦",
-    "DESCRIPTION": "翻倍敌人身上的 死亡印记 ，如果没有，给予 !M! 层。 NL 消耗 "
+    "DESCRIPTION": "翻倍敌人身上的 死亡印记 ，如果没有，给予 !M! 层。"
   },
   "LagranYue:ProjectionCard": {
     "NAME": "双生花",
@@ -329,12 +329,12 @@
   },
   "LagranYue:LifeForgingCard": {
     "NAME": "阿尔贡锻造",
-    "DESCRIPTION": " 锻造 X次。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": " 锻造 X+1次。 NL 消耗  "
+    "DESCRIPTION": " 锻造 X次。 ",
+    "UPGRADE_DESCRIPTION": " 锻造 X+1次。"
   },
   "LagranYue:GoldForgingCard": {
     "NAME": "黄金之锚",
-    "DESCRIPTION": " 锻造 翻倍。 NL 消耗 "
+    "DESCRIPTION": " 锻造 翻倍。"
   },
   "LagranYue:FoxForgingCard": {
     "NAME": "狐狸出嫁",
@@ -363,7 +363,7 @@
   },
   "LagranYue:FantasyCard": {
     "NAME": "镜花水月",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 锻造  。 NL 消耗 "
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 锻造  。"
   },
   "LagranYue:TestChooseCard": {
     "NAME": "预备",

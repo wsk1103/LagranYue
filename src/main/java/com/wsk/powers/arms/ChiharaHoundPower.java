@@ -89,9 +89,6 @@ public class ChiharaHoundPower extends BaseArchPower {
 //            AbstractDungeon.actionManager.addToBottom(
 //                    new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount * 3));
         }
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-//        super.onRemove();
     }
 
 }

@@ -37,7 +37,7 @@ public class AttackKillerCard extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
         //上一行为继承basemod的CustomCard类里的构造方法。五个参数（ID、NAME、IMG、COST、DESCRIPTION）为上方已声明出的变量，如果不在上方声明，可以在此处对应位置直接填写内容。
-        this.baseDamage = 8;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
+        this.baseDamage = 9;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行

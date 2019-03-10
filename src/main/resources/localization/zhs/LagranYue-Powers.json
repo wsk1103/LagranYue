@@ -232,7 +232,7 @@
   "LagranYue:DoubleArmsPower": {
     "NAME": "武器大师",
     "DESCRIPTIONS": [
-      "装备 兵器 的数量上限变为",
+      "装备 兵器 的数量上限为",
       "。已装备数量:"
     ]
   },

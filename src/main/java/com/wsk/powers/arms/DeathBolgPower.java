@@ -42,7 +42,6 @@ public class DeathBolgPower extends BaseSpearPower {
     }
 
     public void hasArms() {
-//        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);
     }
 
@@ -71,35 +70,14 @@ public class DeathBolgPower extends BaseSpearPower {
                 ActionUtil.imprintPower(AbstractDungeon.player, m, imprintPower);
             }
         }
-//        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
-//            AbstractMonster m = null;
-//            if (action.target != null) {
-//                m = (AbstractMonster) action.target;
-//            }
-//            //给予被攻击者 2 层 死亡印记
-//            int sapphire = this.amount;
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
-//                    new ImprintPower(m, AbstractDungeon.player, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
-//        }
         super.onAfterUseCard(card, action);
     }
 
-//    @Override
-//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-//        //给予被攻击者 2 层 死亡印记
-//        int sapphire = this.amount;
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
-//                new ImprintPower(target, AbstractDungeon.player, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
-//        super.onAttack(info, damageAmount, target);
-//    }
 
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
             ActionUtil.strengthPower(owner, -amount);
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }
-//        super.onRemove();
     }
 }

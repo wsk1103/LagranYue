@@ -31,7 +31,7 @@ public class AttackSapphireCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 12;
+    private static final int wskAttack = 15;
 
     public AttackSapphireCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -56,7 +56,6 @@ public class AttackSapphireCard extends CustomCard {
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        int sapphire = this.magicNumber;
         ActionUtil.imprintPower(p, m, this.magicNumber);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new ImprintPower(m, p, sapphire), sapphire, true, AbstractGameAction.AttackEffect.POISON));
     }//注：卡牌效果的diy区。

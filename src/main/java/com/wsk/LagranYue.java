@@ -8,9 +8,11 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
@@ -18,10 +20,13 @@ import com.wsk.cards.skill.*;
 import com.wsk.characters.LagranYueCharacter;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
+import com.wsk.patches.TestRewardPatch;
 import com.wsk.relics.*;
+import com.wsk.reward.TestReward;
 import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.TreeMap;
 
 import static basemod.DevConsole.logger;
@@ -62,6 +67,8 @@ public class LagranYue implements PostInitializeSubscriber,
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
+
+    public static final ArrayList<AbstractCard> ALL_CARS = new ArrayList<>();
 
 
     public LagranYue() {
@@ -110,6 +117,14 @@ public class LagranYue implements PostInitializeSubscriber,
         Texture badgeTexture = new Texture(CommonUtil.getResourcePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, null);
         logger.info("Done loading badge Image and mod options");
+
+        BaseMod.registerCustomReward(
+                TestRewardPatch.LagranYue,
+                // this handles what to do when this quest type is loaded.
+                (rewardSave) -> new TestReward(rewardSave.amount),
+                // this handles what to do when this quest type is saved.
+                (customReward) -> new RewardSave(customReward.type.toString(), null, ((TestReward) customReward).amount, 0));
+        logger.info("======BaseMod.registerCustomReward======");
     }
 
     @Override
@@ -144,85 +159,151 @@ public class LagranYue implements PostInitializeSubscriber,
     //负责注入你所编辑好的卡牌。
     @Override
     public void receiveEditCards() {
-        logger.info("=========================正在加载新的卡牌内容=========================");
 
 
         BaseMod.addCard(new LifeForgingCard());
+        ALL_CARS.add(new LifeForgingCard());
 
         BaseMod.addCard(new AttackAerCard());
+        ALL_CARS.add(new AttackAerCard());
         BaseMod.addCard(new AttackBetterCard());
+        ALL_CARS.add(new AttackBetterCard());
         BaseMod.addCard(new AttackDevilCard());
+        ALL_CARS.add(new AttackDevilCard());
         BaseMod.addCard(new AttackEmeraldCard());
+        ALL_CARS.add(new AttackEmeraldCard());
         BaseMod.addCard(new AttackFaithCard());
+        ALL_CARS.add(new AttackFaithCard());
         BaseMod.addCard(new AttackFireCard());
+        ALL_CARS.add(new AttackFireCard());
         BaseMod.addCard(new AttackFutureCard());
+        ALL_CARS.add(new AttackFutureCard());
         BaseMod.addCard(new AttackGoldCard());
+        ALL_CARS.add(new AttackGoldCard());
         BaseMod.addCard(new AttackIceCard());
+        ALL_CARS.add(new AttackIceCard());
         BaseMod.addCard(new AttackKillerCard());
+        ALL_CARS.add(new AttackKillerCard());
         BaseMod.addCard(new AttackKingCard());
+        ALL_CARS.add(new AttackKingCard());
         BaseMod.addCard(new AttackLakeCard());
+        ALL_CARS.add(new AttackLakeCard());
         BaseMod.addCard(new AttackPurpleCard());
+        ALL_CARS.add(new AttackPurpleCard());
         BaseMod.addCard(new AttackRavagedCard());
+        ALL_CARS.add(new AttackRavagedCard());
         BaseMod.addCard(new AttackRubyCard());
+        ALL_CARS.add(new AttackRubyCard());
         BaseMod.addCard(new AttackSapphireCard());
+        ALL_CARS.add(new AttackSapphireCard());
         BaseMod.addCard(new AttackSummerCard());
+        ALL_CARS.add(new AttackSummerCard());
         BaseMod.addCard(new AttackTopazCard());
+        ALL_CARS.add(new AttackTopazCard());
         BaseMod.addCard(new AttackWaltzCard());
+        ALL_CARS.add(new AttackWaltzCard());
         BaseMod.addCard(new BaseAttackCard());
+        ALL_CARS.add(new BaseAttackCard());
 
         BaseMod.addCard(new BasePowerCard());
+        ALL_CARS.add(new BasePowerCard());
         BaseMod.addCard(new PowerBloodyTempleCard());
+        ALL_CARS.add(new PowerBloodyTempleCard());
         BaseMod.addCard(new PowerDarkTempleCard());
+        ALL_CARS.add(new PowerDarkTempleCard());
         BaseMod.addCard(new PowerDoubleArmsCard());
+        ALL_CARS.add(new PowerDoubleArmsCard());
         BaseMod.addCard(new PowerDreamCard());
+        ALL_CARS.add(new PowerDreamCard());
         BaseMod.addCard(new PowerFurnaceCard());
+        ALL_CARS.add(new PowerFurnaceCard());
         BaseMod.addCard(new PowerGoldStartCard());
+        ALL_CARS.add(new PowerGoldStartCard());
         BaseMod.addCard(new PowerKingTreasureCard());
+        ALL_CARS.add(new PowerKingTreasureCard());
         BaseMod.addCard(new PowerMaxArmsPliesCard());
+        ALL_CARS.add(new PowerMaxArmsPliesCard());
         BaseMod.addCard(new PowerRemoveArmorCard());
+        ALL_CARS.add(new PowerRemoveArmorCard());
         BaseMod.addCard(new PowerTwelveTrialsCard());
+        ALL_CARS.add(new PowerTwelveTrialsCard());
         BaseMod.addCard(new PowerWindKingEnchantmentCard());
+        ALL_CARS.add(new PowerWindKingEnchantmentCard());
 
         BaseMod.addCard(new BaseDefendCard());
+        ALL_CARS.add(new BaseDefendCard());
         BaseMod.addCard(new BraveTemperamentCard());
+        ALL_CARS.add(new BraveTemperamentCard());
         BaseMod.addCard(new DefendBetterCard());
+        ALL_CARS.add(new DefendBetterCard());
         BaseMod.addCard(new EatTigerCard());
+        ALL_CARS.add(new EatTigerCard());
         BaseMod.addCard(new EmeraldRemorseCard());
+        ALL_CARS.add(new EmeraldRemorseCard());
         BaseMod.addCard(new FantasyCard());
+        ALL_CARS.add(new FantasyCard());
         BaseMod.addCard(new ForgingCard());
+        ALL_CARS.add(new ForgingCard());
         BaseMod.addCard(new GoldForgingCard());
+        ALL_CARS.add(new GoldForgingCard());
         BaseMod.addCard(new LifeForgingCard());
+        ALL_CARS.add(new LifeForgingCard());
         BaseMod.addCard(new MagicSkyrocketCard());
+        ALL_CARS.add(new MagicSkyrocketCard());
         BaseMod.addCard(new MultipleThornsCard());
+        ALL_CARS.add(new MultipleThornsCard());
         BaseMod.addCard(new OneKingCard());
+        ALL_CARS.add(new OneKingCard());
         BaseMod.addCard(new PhysicalFitnessCard());
-//        BaseMod.addCard(new PolyBeamCard());
+        ALL_CARS.add(new PhysicalFitnessCard());
         BaseMod.addCard(new PrematureBurialCard());
+        ALL_CARS.add(new PrematureBurialCard());
         BaseMod.addCard(new ProjectionCard());
+        ALL_CARS.add(new ProjectionCard());
         BaseMod.addCard(new PurpleNightmareCard());
+        ALL_CARS.add(new PurpleNightmareCard());
         BaseMod.addCard(new RoseCard());
+        ALL_CARS.add(new RoseCard());
         BaseMod.addCard(new RubyDefendCard());
+        ALL_CARS.add(new RubyDefendCard());
         BaseMod.addCard(new SapphirePrayerCard());
+        ALL_CARS.add(new SapphirePrayerCard());
 
 
         BaseMod.addCard(new SkillBlazingSevenRingsCard());
+        ALL_CARS.add(new SkillBlazingSevenRingsCard());
         BaseMod.addCard(new SkillBrokenShieldCard());
+        ALL_CARS.add(new SkillBrokenShieldCard());
         BaseMod.addCard(new SkillBrokenSwordCard());
+        ALL_CARS.add(new SkillBrokenSwordCard());
         BaseMod.addCard(new SkillChiharaHoundCard());
+        ALL_CARS.add(new SkillChiharaHoundCard());
         BaseMod.addCard(new SkillDeathBolgCard());
+        ALL_CARS.add(new SkillDeathBolgCard());
         BaseMod.addCard(new SkillExplosiveArmorCard());
+        ALL_CARS.add(new SkillExplosiveArmorCard());
         BaseMod.addCard(new SkillGaeBolgCard());
+        ALL_CARS.add(new SkillGaeBolgCard());
         BaseMod.addCard(new SkillGanJiangMoYeSwordCard());
+        ALL_CARS.add(new SkillGanJiangMoYeSwordCard());
         BaseMod.addCard(new SkillIncompleteArchCard());
+        ALL_CARS.add(new SkillIncompleteArchCard());
         BaseMod.addCard(new SkillKadeboSwordCard());
+        ALL_CARS.add(new SkillKadeboSwordCard());
         BaseMod.addCard(new SkillVictorySwordCard());
+        ALL_CARS.add(new SkillVictorySwordCard());
         BaseMod.addCard(new SkillWoodSpearCard());
+        ALL_CARS.add(new SkillWoodSpearCard());
 
         BaseMod.addCard(new AttackLuEnCard());
+        ALL_CARS.add(new AttackLuEnCard());
         BaseMod.addCard(new DefendLuEnCard());
+        ALL_CARS.add(new DefendLuEnCard());
         BaseMod.addCard(new ForgingLuEnCard());
+        ALL_CARS.add(new ForgingLuEnCard());
 
         BaseMod.addCard(new TestChooseCard());
+        ALL_CARS.add(new TestChooseCard());
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
 
@@ -235,13 +316,11 @@ public class LagranYue implements PostInitializeSubscriber,
         unlocks3 = new CustomUnlockBundle(
                 AttackFaithCard.ID, PowerFurnaceCard.ID, PowerDreamCard.ID);
 
-        logger.info("=========================加载新的卡牌内容成功=========================");
     }
 
     //负责加载你编辑好的文本信息。,例如卡牌说明，遗物说明等等
     @Override
     public void receiveEditStrings() {
-        logger.info("=========================正在加载遗物文本信息=========================");
 
         String language = CommonUtil.getLanguage();
 
@@ -269,7 +348,6 @@ public class LagranYue implements PostInitializeSubscriber,
 
         logger.info("done editing strings");
 
-        logger.info("=========================加载遗物文本信息成功========================");
     }
 
     //负责加载关键字。

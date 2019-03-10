@@ -32,7 +32,7 @@ public class AttackLakeCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 7;
+    private static final int wskAttack = 14;
 
     public AttackLakeCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

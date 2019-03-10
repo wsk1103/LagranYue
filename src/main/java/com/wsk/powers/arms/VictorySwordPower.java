@@ -75,20 +75,16 @@ public class VictorySwordPower extends BaseSwordPower {
         if (!ArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                     new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-        }
-        if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
-            int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
-            if (num - startEnd <= 0) {
-                //如果层数不够减，直接移除能力
-                ActionUtil.removePower(owner,VictoryPower.POWER_ID);
-//                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VictoryPower.POWER_ID));
-            } else {
-                ActionUtil.victoryPower(owner, -startEnd);
-//                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                            new VictoryPower(AbstractDungeon.player, -startEnd), -startEnd));
+            if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
+                int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
+                if (num - startEnd <= 0) {
+                    //如果层数不够减，直接移除能力
+                    ActionUtil.removePower(owner,VictoryPower.POWER_ID);
+                } else {
+                    ActionUtil.victoryPower(owner, -startEnd);
+                }
+                startEnd = 0;
             }
         }
-        startEnd = 0;
-//        super.onRemove();
     }
 }

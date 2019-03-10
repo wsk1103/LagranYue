@@ -34,8 +34,8 @@
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "The Gem Dream of that Summer",
-    "DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile. Dancing . NL Exhaust ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile, then make the cost to 0. Dancing . NL Exhaust "
+    "DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile. Dancing . ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile, then make the cost to 0. Dancing . "
   },
   "LagranYue:AttackTopazCard": {
     "NAME": "Call of YellowGems",
@@ -52,8 +52,8 @@
   },
   "LagranYue:AttackKingCard": {
     "NAME": "Ionioi Hetairoi",
-    "DESCRIPTION": "Deal !D! damage. All Weapon card cost in hand are reduced by 1. Dancing . NL Exhaust . NL Chaos .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Reduce the cost of all Weapon cards in your hand to 0. Dancing . NL Exhaust "
+    "DESCRIPTION": "Deal !D! damage. All Weapon card cost in hand are reduced by 1. Dancing . NL Chaos .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Reduce the cost of all Weapon cards in your hand to 0. Dancing . NL Chaos ."
   },
   "LagranYue:AttackGoldCard": {
     "NAME": "Enuma Elish",
@@ -62,8 +62,8 @@
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "Via Expugnatio",
-    "DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . NL  Exhaust ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . NL  Exhaust "
+    "DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . "
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "Devil's Roar",
@@ -87,8 +87,8 @@
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "Ultimate Belief",
-    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory ,N=sum of  Weapon , at least 1 times. NL Exhaust ",
-    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory . N=sum of  Weapon `s layer , at least 1 times. NL Exhaust "
+    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory ,N=sum of  Weapon , at least 1 times.",
+    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory . N=sum of  Weapon `s layer , at least 1 times."
   },
   "LagranYue:AttackAerCard": {
     "NAME": "Aer",
@@ -285,8 +285,8 @@
   },
   "LagranYue:PhysicalFitnessCard": {
     "NAME": "Durandal",
-    "DESCRIPTION": "Gain !B! Block . Get a Weapon card randomly from the draw card, and make it Retain. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block , Get a Weapon card randomly from the draw card, then make the cost to 0 and Retain. NL Exhaust"
+    "DESCRIPTION": "Gain !B! Block . Get a Weapon card randomly from the draw card, and make it Retain.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block , Get a Weapon card randomly from the draw card, then make the cost to 0 and Retain."
   },
   "LagranYue:PrematureBurialCard": {
     "NAME": "Premature Burial",
@@ -298,7 +298,7 @@
   },
   "LagranYue:BraveTemperamentCard": {
     "NAME": "Brave Temperament",
-    "DESCRIPTION": "Reduce the cost of all Weapon cards in hand to 0 in the current turn. NL Exhaust . NL Chaos ."
+    "DESCRIPTION": "Reduce the cost of all Weapon cards in hand to 0 in the current turn. NL Chaos ."
   },
   "LagranYue:EatTigerCard": {
     "NAME": "Self-Confidence",
@@ -314,14 +314,14 @@
   },
   "LagranYue:EmeraldRemorseCard": {
     "NAME": "The Burden of Love",
-    "DESCRIPTION": "remove first Weapon,  gain !M! Strength and !M! Dexterity . NL Exhaust ",
+    "DESCRIPTION": "remove first Weapon,  gain !M! Strength and !M! Dexterity .",
     "EXTENDED_DESCRIPTION": [
       "Now you have not Weapon ."
     ]
   },
   "LagranYue:PurpleNightmareCard": {
     "NAME": "Purple Nightmare",
-    "DESCRIPTION": "Double the enemy's ImprintOfDeath .If enemy does not have ImprintOfDeath, apply !M! ImprintOfDeath . NL Exhaust "
+    "DESCRIPTION": "Double the enemy's ImprintOfDeath .If enemy does not have ImprintOfDeath, apply !M! ImprintOfDeath ."
   },
   "LagranYue:ProjectionCard": {
     "NAME": "Twin Flowers",
@@ -329,12 +329,12 @@
   },
   "LagranYue:LifeForgingCard": {
     "NAME": "Excalibur Image",
-    "DESCRIPTION": " Forging X times. NL Exhaust ",
-    "UPGRADE_DESCRIPTION": " Forging X+1 times. NL Exhaust  "
+    "DESCRIPTION": " Forging X times.",
+    "UPGRADE_DESCRIPTION": " Forging X+1 times."
   },
   "LagranYue:GoldForgingCard": {
     "NAME": "Gold Anchor",
-    "DESCRIPTION": "Double Forging . NL Exhaust "
+    "DESCRIPTION": "Double Forging ."
   },
   "LagranYue:FoxForgingCard": {
     "NAME": "狐狸出嫁",
@@ -363,7 +363,7 @@
   },
   "LagranYue:FantasyCard": {
     "NAME": "Mirror Flower Water Month",
-    "DESCRIPTION": "Gain !B! Block . NL Forging  . NL Exhaust "
+    "DESCRIPTION": "Gain !B! Block . NL Forging  ."
   },
   "LagranYue:TestChooseCard": {
     "NAME": "Ready",

@@ -38,8 +38,8 @@ public class PhysicalFitnessCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = 12;
-        this.exhaust = true;
+        this.baseBlock = 14;
+        this.exhaust = false;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

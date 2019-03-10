@@ -56,11 +56,6 @@ public class ExplosiveArmorPower extends BaseShieldPower {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 3 + DESCRIPTIONS[2]);
     }
 
-//    @Override
-//    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-//        super.onAttack(info, damageAmount, target);
-//    }
-
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
     }
@@ -71,17 +66,14 @@ public class ExplosiveArmorPower extends BaseShieldPower {
             //移除敏捷
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                     new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+            //移除荆棘
+            AbstractPower power = AbstractDungeon.player.getPower(ThornsPower.POWER_ID);
+            int thornsNum = power.amount - this.amount;
+            if (thornsNum <= 0) {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ThornsPower.POWER_ID));
+            } else {
+                ActionUtil.thornsPower(owner, -this.amount * 3);
+            }
         }
-        //移除荆棘
-        AbstractPower power = AbstractDungeon.player.getPower(ThornsPower.POWER_ID);
-        int thornsNum = power.amount - this.amount;
-        if (thornsNum <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ThornsPower.POWER_ID));
-        } else {
-            ActionUtil.thornsPower(owner, -this.amount * 3);
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                        new ThornsPower(AbstractDungeon.player, -this.amount * 3), -this.amount * 3));
-        }
-//        super.onRemove();
     }
 }

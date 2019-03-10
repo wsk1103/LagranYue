@@ -7,7 +7,7 @@
     <version>1.0.1</version>
     <packaging>jar</packaging>
     <name>LagranYue</name>
-    <description></description>
+    <description>LagranYue</description>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>

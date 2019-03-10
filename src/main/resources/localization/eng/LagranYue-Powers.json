@@ -232,7 +232,7 @@
   "LagranYue:DoubleArmsPower": {
     "NAME": "Weapon Master",
     "DESCRIPTIONS": [
-      "The maximum number of equipped Weapon is becoming ",
+      "The maximum number of equipped Weapon is ",
       " .Now,the number of equipped Weapon is "
     ]
   },

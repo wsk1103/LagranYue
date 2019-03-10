@@ -80,14 +80,8 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
         if (!ArmsUtil.retain()) {
             //移除敏捷
             ActionUtil.dexterityPower(owner, -this.amount);
-//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                    new DexterityPower(AbstractDungeon.player, -this.amount * 3), -this.amount * 3, AbstractGameAction.AttackEffect.POISON));
+            //移除壁垒
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, BarricadePower.POWER_ID));
         }
-        //移除壁垒
-//        if (ArmsUtil.isHasRings()) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, BarricadePower.POWER_ID));
-//        }
-//        ArmsUtil.setHasRings(true);
-//        super.onRemove();
     }
 }

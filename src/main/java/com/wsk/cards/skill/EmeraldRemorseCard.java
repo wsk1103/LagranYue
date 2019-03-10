@@ -36,7 +36,7 @@ public class EmeraldRemorseCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.exhaust =true;
+        this.exhaust =false;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。

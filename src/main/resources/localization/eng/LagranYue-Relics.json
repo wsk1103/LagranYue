@@ -3,7 +3,7 @@
     "NAME": "Enkidu",
     "FLAVOR": "God has opened a window for you!",
     "DESCRIPTIONS": [
-      "Only once for each battle, when you switch #yWeapons, retain the Strength/Dexterity bonus effect of the previous #yWeapon. Removing the relic will result in an incredible bug."
+      "Only once for each battle, when you use the second #yWeapons , retain the effect of the first #yWeapon ."
     ]
   },
   "LagranYue:GungnirRelics": {

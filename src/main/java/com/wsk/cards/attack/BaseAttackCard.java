@@ -133,6 +133,14 @@ public class BaseAttackCard extends CustomCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+//        if (m != null) {
+//            AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
+//        }
+//
+//        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
+//        SpriteBatch sb = new SpriteBatch();
+//        sb.setColor(Color.WHITE);
+//        sb.draw(Load.bg5.getTexture(), Load.bg5.offsetX * Settings.scale, Load.bg5.offsetY * Settings.scale + AbstractDungeon.sceneOffsetY, 0.0F, 0.0F, (float) Load.bg5.packedWidth, (float) Load.bg5.packedHeight, Settings.scale, Settings.scale, 0.0F, Load.bg5.getRegionX(), Load.bg5.getRegionY(), Load.bg5.getRegionWidth(), Load.bg5.getRegionHeight(), false, false);
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 /*

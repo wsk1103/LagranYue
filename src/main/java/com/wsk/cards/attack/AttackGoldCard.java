@@ -31,7 +31,7 @@ public class AttackGoldCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int wskAttack = 8;
+    private static final int wskAttack = 9;
 
     public AttackGoldCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

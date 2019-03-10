@@ -27,7 +27,7 @@ public class PurpleNightmareCard extends CustomCard {
     private static final String IMG = "cards/PurpleNightmareCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 1;//卡牌的费用。
+    private static final int COST = 0;//卡牌的费用。
 
     public PurpleNightmareCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -35,7 +35,7 @@ public class PurpleNightmareCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
+        this.exhaust = false;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。

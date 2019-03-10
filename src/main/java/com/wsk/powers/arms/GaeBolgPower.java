@@ -75,26 +75,21 @@ public class GaeBolgPower extends BaseSpearPower {
 
     @Override
     public void onRemove() {
-//        AbstractPower power = AbstractDungeon.player.getPower(PlatedArmorPower.POWER_ID);
         if (!ArmsUtil.retain()) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                     new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-        }
-//        //所有多层护甲
-        //移除金属化
-        if (owner.hasPower(MetallicizePower.POWER_ID)) {
-            int temp = owner.getPower(MetallicizePower.POWER_ID).amount;
-            if (temp <= metallicizePowerNum) {
-                ActionUtil.removePower(owner, MetallicizePower.POWER_ID);
+            //移除金属化
+            if (owner.hasPower(MetallicizePower.POWER_ID)) {
+                int temp = owner.getPower(MetallicizePower.POWER_ID).amount;
+                if (temp <= metallicizePowerNum) {
+                    ActionUtil.removePower(owner, MetallicizePower.POWER_ID);
+                }
+                else {
+                    ActionUtil.metallicizePower(owner, -metallicizePowerNum);
+                }
+                metallicizePowerNum = 0;
             }
-            else {
-                ActionUtil.metallicizePower(owner, -metallicizePowerNum);
-            }
-            metallicizePowerNum = 0;
         }
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-//                new PlatedArmorPower(AbstractDungeon.player, -power.amount), -power.amount));
-//        super.onRemove();
     }
 }
 

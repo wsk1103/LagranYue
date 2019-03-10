@@ -1,5 +1,7 @@
 package com.wsk.utils;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -20,9 +22,6 @@ import com.wsk.relics.EnkiduRelics;
  */
 public class ArmsUtil {
 
-    //当连续2次使用炽天赋7圆环的时候，会直接移除所有的壁垒。
-    private static boolean hasRings = false;
-
     //记录装备的兵器
     private static int arms = 0;
 
@@ -31,6 +30,11 @@ public class ArmsUtil {
 
     //装备兵器
     public static void addOrChangArms(AbstractCreature p, AbstractArmsPower armsPower) {
+
+        if (!p.hasPower(DoubleArmsPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new DoubleArmsPower(p, 0), 0, AbstractGameAction.AttackEffect.POISON));
+        }
 
         if (areYouHasArmsPower(armsPower)) {
             //使用相同兵器后，增加相应的层数
@@ -46,34 +50,18 @@ public class ArmsUtil {
             return;
         }
         arms = getArmsNum();
-        //1. 判断有没有双持这个能力
-        //如果拥有
-//        if (doubleArms) {
-        //层数小于2，直接返回，表示可以继续装备
-//            if (getArmsNum() <= p.getPower(DoubleArmsPower.POWER_ID).amount) {
-////                ActionUtil.addArms(p, armsPower);
-////                return;
-//            } else {
-//                //移除第一件兵器
-//                ArmsUtil.removeOnce((AbstractPlayer) p, 1);
-//            }
         if (getArmsNum() > getMaxArmsNum()) {
             //移除前几把超过兵器数量上限的兵器。
             for (int i = 0; i <= getArmsNum() - getMaxArmsNum(); i++) {
                 //每次移除第一件兵器
                 ArmsUtil.removeOnce((AbstractPlayer) p, 1);
-//                }
             }
         } else if (getArmsNum() == getMaxArmsNum()) {
             //移除第一件兵器
             ArmsUtil.removeOnce((AbstractPlayer) p, 1);
         }
-//            removeAllArms();
-//            arms = 0;
         arms++;
         ActionUtil.addArms(p, armsPower);
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, armsPower, armsPower.amount));
-//        armsPower.hasArms();
     }
 
     //移除所有武器
@@ -213,19 +201,14 @@ public class ArmsUtil {
     }
 
     public static boolean retain() {
-        if (EnkiduRelics.getOnce()) {
-            EnkiduRelics.setOnce();
-            return true;
+        if (AbstractDungeon.player.hasRelic(EnkiduRelics.ID)) {
+            return AbstractDungeon.player.getRelic(EnkiduRelics.ID).counter >= 0;
         }
+//        if (EnkiduRelics.getOnce()) {
+//            EnkiduRelics.setOnce();
+//            return true;
+//        }
         return false;
-    }
-
-    public static boolean isHasRings() {
-        return hasRings;
-    }
-
-    public static void setHasRings(boolean b) {
-        hasRings = b;
     }
 
     public static boolean isTemporaryArms() {

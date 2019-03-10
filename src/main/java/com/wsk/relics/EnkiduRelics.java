@@ -2,10 +2,14 @@ package com.wsk.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.cards.AbstractArmsCard;
+import com.wsk.powers.base.DoubleArmsPower;
 import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
@@ -15,21 +19,19 @@ import com.wsk.utils.CommonUtil;
  * @desc 天之锁, 切换兵器的时候，保留第一次的增益效果.
  */
 public class EnkiduRelics extends CustomRelic {
-    public static final String ID = "LagranYue:EnkiduRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
-    public static final String IMG = "relics/w31.png";//遗物图片路径
-    public static final String OUTLINE = "relics/w32.png";//遗物外轮廓路径
+    public static final String ID = "LagranYue:EnkiduRelics";
+    public static final String IMG = "relics/w31.png";
+    public static final String OUTLINE = "relics/w32.png";
 
-    //记录第一次保存第一次切换武器，当被使用过后，会被置为 false
-    private static boolean once = true;
+//    //记录第一次保存第一次切换武器，当被使用过后，会被置为 false
+//    private static boolean once = true;
 
-    public static final String DESCRIPTION = "每次战斗仅一次，切换 #y兵器 的时候，保留之前一把武器获得的力量/敏捷加成效果。";//遗物效果的文本描叙。
+    public static final String DESCRIPTION = "每次战斗仅一次，切换 #y兵器 的时候，保留之前一把武器获得的力量/敏捷加成效果。";
 
     public EnkiduRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.FLAT);
-        //参数：ID-遗物Id，new Texture(Gdx.files.internal(IMG))-遗物图片，new Texture(Gdx.files.internal(OUTLINE))-遗物轮廓，RelicTier.BOSS-遗物种类，LandingSound.FLAT-遗物音效。
+        this.counter = 2;
     }
-    //遗物种类：RelicTier.BOSS-boss遗物, RelicTier.COMMON-一般遗物, RelicTier.RARE-罕见遗物, RelicTier.SHOP-商店遗物, RelicTier.SPECIAL-事件遗物, RelicTier.STARTER-初始遗物, RelicTier.UNCOMMON-稀有遗物。
-    //遗物音效：LandingSound.CLINK,LandingSound.FLAT,LandingSound.HEAVY,LandingSound.MAGICAL,LandingSound.SOLID  具体音效请到游戏内听。
 
     @Override
     public String getUpdatedDescription() {
@@ -40,28 +42,37 @@ public class EnkiduRelics extends CustomRelic {
         return new EnkiduRelics();
     }//复制该遗物信息的方法。
 
+    @Override
     public void onPlayCard(final AbstractCard c, final AbstractMonster m) {//参数：c-使用的卡牌，m-目标敌人。
         if (c instanceof AbstractArmsCard) {
-            if (once) {
-                //如果该遗物还有效果，闪烁一下.
+            if (counter == 1) {
                 this.flash();
             }
+            //如果该遗物还有效果，闪烁一下.
+            counter--;
         }
     }//触发时机：当一张卡被打出且卡牌效果生效前。
 
     @Override
+    public void atBattleStart() {
+        counter = 2;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new DoubleArmsPower(AbstractDungeon.player, 0), 0, AbstractGameAction.AttackEffect.POISON));
+    }
+
+    @Override
     public void onVictory() {
         //重置
-        EnkiduRelics.once = true;
+//        EnkiduRelics.once = true;
         ArmsUtil.setArms();
     }
 
 
-    public static boolean getOnce(){
-        return once;
-    }
-
-    public static void setOnce() {
-        once = false;
-    }
+//    public static boolean getOnce(){
+//        return once;
+//    }
+//
+//    public static void setOnce() {
+//        once = false;
+//    }
 }
