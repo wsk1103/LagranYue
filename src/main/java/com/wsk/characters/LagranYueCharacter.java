@@ -36,7 +36,7 @@ import java.util.Random;
 public class LagranYueCharacter extends CustomPlayer {
     private static final int ENERGY_PER_TURN = 3;//角色的初始能量值。
     //    private static final int ENERGY_PER_TURN = 15;//角色的初始能量值。
-    private static final String[] orbTextures = {"LagranYue/char/orb/layer1.png",
+    private static final String[] ORB_TEXTURES = {"LagranYue/char/orb/layer1.png",
             "LagranYue/char/orb/layer2.png",
             "LagranYue/char/orb/layer3.png",
             "LagranYue/char/orb/layer4.png",
@@ -49,16 +49,16 @@ public class LagranYueCharacter extends CustomPlayer {
             "LagranYue/char/orb/layer5d.png"};
     //战斗界面左下角的能量图标组，详参压缩包内img文件夹内容。
     //也是战斗界面左下角的能量图标的一部分，详参压缩包内img文件夹内容。
-    private static final String orbVfx = "LagranYue/char/orb/vfx.png";
+    private static final String ORB_VFX = "LagranYue/char/orb/vfx.png";
 
-    private static final CharacterStrings charStrings;
+    private static final CharacterStrings CHAR_STRINGS;
     public static final String NAME;
     public static final String DESCRIPTION;
 
     private static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
     public LagranYueCharacter(String name, AbstractPlayer.PlayerClass setClass) {
-        super(name, setClass, orbTextures, orbVfx,
+        super(name, setClass, ORB_TEXTURES, ORB_VFX,
                 CommonUtil.getResourcePath("LagranYue.g3dj")/* 人物角色立绘动画文件路径*/,
                 "LagranYue|idle"/*人物角色立绘图片名*/);
         //人物角色立绘动画文件路径  格式："img/char/CharacterName/CharacterName_md.g3dj"。g3dj文件决定人物动画。
@@ -312,7 +312,7 @@ public class LagranYueCharacter extends CustomPlayer {
 
     @Override
     public String getSpireHeartText() {
-        return charStrings.TEXT[1];
+        return CHAR_STRINGS.TEXT[1];
     }
 
     @Override
@@ -337,9 +337,9 @@ public class LagranYueCharacter extends CustomPlayer {
 
 
     static {
-        charStrings = CardCrawlGame.languagePack.getCharacterString("LagranYue");
-        NAME = charStrings.NAMES[0];
-        DESCRIPTION = charStrings.TEXT[0];
+        CHAR_STRINGS = CardCrawlGame.languagePack.getCharacterString("LagranYue");
+        NAME = CHAR_STRINGS.NAMES[0];
+        DESCRIPTION = CHAR_STRINGS.TEXT[0];
 
     }
 
