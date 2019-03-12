@@ -27,22 +27,18 @@ public class AttackEmeraldCard extends CustomCard {
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackEmeraldCard.png";//卡牌牌面的图片路径。
 
-    //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
     private static final int COST = 3;//卡牌的费用。
-
-    private static final int wskAttack = 24;
 
     public AttackEmeraldCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF_AND_ENEMY);
-        this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.baseDamage = 27;
+        this.exhaust = true;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
-    //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
     public AbstractCard makeCopy() {
         return new AttackEmeraldCard();
     }
@@ -57,17 +53,7 @@ public class AttackEmeraldCard extends CustomCard {
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-//        int victory = this.magicNumber;
-//        if (p.hasPower(VictoryPower.POWER_ID)) {
-//            AbstractPower power = p.getPower(VictoryPower.POWER_ID);
-//            if (power.amount >= 10) {
-//                victory = 0;
-//            } else if (power.amount == 9) {
-//                victory = 1;
-//            }
-//        }
         ActionUtil.victoryPower(p, this.magicNumber);
-//        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VictoryPower(p, victory), victory));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
     }//注：卡牌效果的diy区。
