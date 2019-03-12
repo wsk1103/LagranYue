@@ -20,15 +20,15 @@ import com.wsk.utils.CommonUtil;
  * @desc 绿宝石的狂欢
  */
 public class AttackEmeraldCard extends CustomCard {
-    public static final String ID = "LagranYue:AttackEmeraldCard";//卡牌在游戏中的id
-    private static final String NAME /*= "来自WSK的攻击"*/;//卡牌显示的名称
+    public static final String ID = "LagranYue:AttackEmeraldCard";
+    private static final String NAME ;
 
-    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION;
     private static final CardStrings cardStrings;
-    private static final String IMG = "cards/AttackEmeraldCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/AttackEmeraldCard.png";
 
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 3;
 
     public AttackEmeraldCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -46,8 +46,7 @@ public class AttackEmeraldCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(8);//升级而增加的伤害。增加的是baseBlock
-
+            this.upgradeDamage(8);
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 
