@@ -50,7 +50,6 @@ public class AttackEmeraldCard extends CustomCard {
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 
-    //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         ActionUtil.victoryPower(p, this.magicNumber);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
