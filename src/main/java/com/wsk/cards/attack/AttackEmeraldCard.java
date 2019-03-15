@@ -45,7 +45,7 @@ public class AttackEmeraldCard extends CustomCard {
 
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeDamage(8);
         }
     }
@@ -55,7 +55,7 @@ public class AttackEmeraldCard extends CustomCard {
         ActionUtil.victoryPower(p, this.magicNumber);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
-    }//注：卡牌效果的diy区。
+    }
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
