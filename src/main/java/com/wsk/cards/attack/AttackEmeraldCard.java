@@ -24,7 +24,7 @@ public class AttackEmeraldCard extends CustomCard {
     private static final String NAME ;
 
     private static final String DESCRIPTION;
-    private static final CardStrings cardStrings;
+    private static final CardStrings CARD_STRINGS;
     private static final String IMG = "cards/AttackEmeraldCard.png";
 
 
@@ -39,10 +39,12 @@ public class AttackEmeraldCard extends CustomCard {
         this.magicNumber = this.baseMagicNumber = 3;
     }
 
+    @Override
     public AbstractCard makeCopy() {
         return new AttackEmeraldCard();
     }
 
+    @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
@@ -58,10 +60,10 @@ public class AttackEmeraldCard extends CustomCard {
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-//        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = CARD_STRINGS.NAME;
+        DESCRIPTION = CARD_STRINGS.DESCRIPTION;
+//        UPGRADED_DESCRIPTION = CARD_STRINGS.UPGRADE_DESCRIPTION;
     }
 
 }
