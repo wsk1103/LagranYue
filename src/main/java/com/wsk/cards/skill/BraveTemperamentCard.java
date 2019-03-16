@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -62,7 +61,6 @@ public class BraveTemperamentCard extends CustomCard {
                 }
             }
         }
-        ArmsUtil.setTemporaryArms(true);
     }
 
     static {

@@ -5,7 +5,7 @@
   },
   "LagranYue:AttackBetterCard": {
     "NAME": "The Better Strike",
-    "DESCRIPTION": "Deal !D! damage. Dancing . NL Chaos ."
+    "DESCRIPTION": "Deal !D! damage. Dancing ."
   },
   "LagranYue:AttackFireCard": {
     "NAME": "The Fire of Initiation",
@@ -48,12 +48,12 @@
   "LagranYue:AttackLakeCard": {
     "NAME": "Aroundight",
     "DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength . Dancing . NL Chaos .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength . Dancing "
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength . Dancing . NL Chaos ."
   },
   "LagranYue:AttackKingCard": {
     "NAME": "Ionioi Hetairoi",
-    "DESCRIPTION": "Deal !D! damage. All Weapon card cost in hand are reduced by 1. Dancing . NL Chaos .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Reduce the cost of all Weapon cards in your hand to 0. Dancing . NL Chaos ."
+    "DESCRIPTION": "Deal !D! damage. All Weapon card cost in hand are reduced by 1. Dancing .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Reduce the cost of all Weapon cards in your hand to 0. Dancing ."
   },
   "LagranYue:AttackGoldCard": {
     "NAME": "Enuma Elish",
@@ -97,7 +97,7 @@
   },
   "LagranYue:AttackLuEnCard": {
     "NAME": "LuEnRune·Attack",
-    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing . "
+    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing .  NL Ethereal "
   },
   "LagranYue:AttackCarnivalCard": {
     "NAME": "幻想嘉年华·攻",
@@ -276,7 +276,7 @@
   },
   "LagranYue:DefendBetterCard": {
     "NAME": "Better Defend",
-    "DESCRIPTION": "Gain !B! Block . NL Chaos ."
+    "DESCRIPTION": "Gain !B! Block ."
   },
   "LagranYue:RoseCard": {
     "NAME": "ALL Angry",
@@ -298,7 +298,7 @@
   },
   "LagranYue:BraveTemperamentCard": {
     "NAME": "Brave Temperament",
-    "DESCRIPTION": "Reduce the cost of all Weapon cards in hand to 0 in the current turn. NL Chaos ."
+    "DESCRIPTION": "Reduce the cost of all Weapon cards in hand to 0 in the current turn."
   },
   "LagranYue:EatTigerCard": {
     "NAME": "Self-Confidence",
@@ -351,19 +351,19 @@
   },
   "LagranYue:DefendCarnivalCard": {
     "NAME": "幻想嘉年华",
-    "DESCRIPTION": "获得 !M! 倍当前所有 Weapon 的层数之和的 格挡 .NL Exhaust  "
+    "DESCRIPTION": "获得 !M! 倍当前所有 Weapon 的层数之和的 格挡 . NL Exhaust  "
   },
   "LagranYue:DefendLuEnCard": {
     "NAME": "LuEnRune-Defend",
-    "DESCRIPTION": "Gain the Block of M times the sum of all current Weapon layers .NL Exhaust  .  "
+    "DESCRIPTION": "Gain the Block of M times the sum of all current Weapon layers . NL Exhaust  . NL Ethereal "
   },
   "LagranYue:ForgingLuEnCard": {
     "NAME": "LuEnRune-Forging",
-    "DESCRIPTION": " Forging  !M! 次.NL Exhaust  .  "
+    "DESCRIPTION": " Forging  !M! 次. NL Exhaust  . NL Ethereal "
   },
   "LagranYue:FantasyCard": {
     "NAME": "Mirror Flower Water Month",
-    "DESCRIPTION": "Gain !B! Block . NL Forging  ."
+    "DESCRIPTION": "Gain !B! Block ."
   },
   "LagranYue:TestChooseCard": {
     "NAME": "Ready",

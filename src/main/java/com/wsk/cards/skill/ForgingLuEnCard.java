@@ -34,6 +34,7 @@ public class ForgingLuEnCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.SPECIAL, CardTarget.SELF);
         this.exhaust = true;
+        this.isEthereal = true;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

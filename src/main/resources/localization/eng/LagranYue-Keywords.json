@@ -175,7 +175,7 @@
       "luenruneattack+"
     ],
     "PROPERNAME": "luenrune·attack",
-    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing . "
+    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing . Ethereal"
   },
   {
     "NAMES": [
@@ -185,7 +185,7 @@
       "luenrunedefend+"
     ],
     "PROPERNAME": "luenrune·defend",
-    "DESCRIPTION": "Gain the block of M times the sum of all current Weapon layers.Exhaust  . "
+    "DESCRIPTION": "Gain the block of M times the sum of all current Weapon layers.Exhaust  . Ethereal"
   },
   {
     "NAMES": [
@@ -193,7 +193,7 @@
       "luenruneforging+"
     ],
     "PROPERNAME": ", luenrune-Build",
-    "DESCRIPTION": " Forging .Exhaust  . "
+    "DESCRIPTION": " Forging .Exhaust  . Ethereal"
   },
   {
     "NAMES": [

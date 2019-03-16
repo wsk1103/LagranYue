@@ -53,21 +53,7 @@ public class FantasyCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         ActionUtil.gainBlockAction(p, this.block);
-        ActionUtil.forgingAction(p, this.magicNumber, this.magicNumber);
-//        //给予所有敌人 缓慢
-//        AbstractDungeon.actionManager.addToBottom(new VFXAction(p,
-//                new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));
-//        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-//            flash();
-//            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-//                if ((!monster.isDead) && (!monster.isDying)) {
-//                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p,
-//                            new SlowPower(monster, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
-//                }
-//            }
-//        }
     }
 
     static {

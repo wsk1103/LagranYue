@@ -41,7 +41,7 @@ public class BloodyTemplePower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         //恢复生命值
         this.flash();
 //        AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));

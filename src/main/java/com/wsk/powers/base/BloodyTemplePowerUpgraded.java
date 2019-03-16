@@ -40,7 +40,7 @@ public class BloodyTemplePowerUpgraded extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         //恢复生命值
         this.flash();
         BloodyTemplePowerAction.action((AbstractPlayer) owner, amount, true);

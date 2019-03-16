@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -59,8 +58,7 @@ public class AttackBetterCard extends CustomCard {
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        ArmsUtil.setTemporaryArms(true);
-//        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+//        ArmsUtil.setTemporaryArms(true);
     }//注：卡牌效果的diy区。
 
     static {
