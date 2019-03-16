@@ -51,7 +51,7 @@ public class AttackEmeraldCard extends CustomCard {
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
+    public void use(AbstractPlayer p, AbstractMonster m) {
         ActionUtil.victoryPower(p, this.magicNumber);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
