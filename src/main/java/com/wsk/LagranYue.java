@@ -109,7 +109,9 @@ public class LagranYue implements PostInitializeSubscriber,
         logger.info("===========================角色Mod初始化成功===========================");
     }
 
-    //ModTheSpire正常启动mod后，在主界面里多出一项Mods选项来显示启用的Mod信息。以上部分为填写被显示的信息。
+    /**
+     * ModTheSpire正常启动mod后，在主界面里多出一项Mods选项来显示启用的Mod信息。以上部分为填写被显示的信息。
+     */
     @Override
     public void receivePostInitialize() {
 
