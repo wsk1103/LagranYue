@@ -152,7 +152,9 @@ public class LagranYue implements PostInitializeSubscriber,
         logger.info("=========================加载新的遗物内容成功=========================");
     }
 
-    //负责注入你所编辑好的卡牌。
+    /**
+     * 负责注入你所编辑好的卡牌。
+     */
     @Override
     public void receiveEditCards() {
 
