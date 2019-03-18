@@ -58,6 +58,7 @@ public class EnkiduRelics extends CustomRelic {
         counter = 2;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new DoubleArmsPower(AbstractDungeon.player, 0), 0, AbstractGameAction.AttackEffect.POISON));
+
     }
 
     @Override

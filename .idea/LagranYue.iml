@@ -11,7 +11,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.56" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: com.megacrit.cardcrawl:slaythespire:051">
         <CLASSES>

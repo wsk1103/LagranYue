@@ -10,7 +10,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.wsk.cards.arms.*;
@@ -27,7 +26,6 @@ import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.TreeMap;
 
 import static basemod.DevConsole.logger;
 
@@ -353,11 +351,8 @@ public class LagranYue implements PostInitializeSubscriber,
     //负责加载关键字。
     @Override
     public void receiveEditKeywords() {
-        logger.info("==========================正在注入新的关键字==========================");
-
         final Gson gson = new Gson();
         String language = CommonUtil.getLanguage();
-        logger.info("begin editing strings");
         final String json = Gdx.files.internal("localization/" + language + "/LagranYue-Keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
         final Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
@@ -368,7 +363,5 @@ public class LagranYue implements PostInitializeSubscriber,
         } else {
             logger.info("keywords is null");
         }
-        TreeMap<String, String> treeMap = GameDictionary.keywords;
-        logger.info("==========================注入新的关键字成功==========================");
     }
 }
