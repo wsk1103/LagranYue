@@ -38,6 +38,7 @@ public class EnkiduRelics extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
+    @Override
     public AbstractRelic makeCopy() {
         return new EnkiduRelics();
     }//复制该遗物信息的方法。
