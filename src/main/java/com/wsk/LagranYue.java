@@ -11,7 +11,6 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
@@ -19,9 +18,7 @@ import com.wsk.cards.skill.*;
 import com.wsk.characters.LagranYueCharacter;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
-import com.wsk.patches.TestRewardPatch;
 import com.wsk.relics.*;
-import com.wsk.reward.TestReward;
 import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
@@ -59,12 +56,6 @@ public class LagranYue implements PostInitializeSubscriber,
     private static final String SKILL_CARD_PORTRAIT = "1024/bg_skill_slimebound.png";
     private static final String POWER_CARD_PORTRAIT = "1024/bg_power_slimebound.png";
     private static final String ENERGY_ORB_PORTRAIT = "1024/card_slimebound_orb.png";
-
-    private CustomUnlockBundle unlocks0;
-    private CustomUnlockBundle unlocks1;
-    private CustomUnlockBundle unlocks2;
-    private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
 
     public static final ArrayList<AbstractCard> ALL_CARS = new ArrayList<>();
 
@@ -108,20 +99,12 @@ public class LagranYue implements PostInitializeSubscriber,
     }
 
     //ModTheSpire正常启动mod后，在主界面里多出一项Mods选项来显示启用的Mod信息。以上部分为填写被显示的信息。
-    @SuppressWarnings("deprecation")
     @Override
     public void receivePostInitialize() {
 
         Texture badgeTexture = new Texture(CommonUtil.getResourcePath("badge.png"));
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, null);
         logger.info("Done loading badge Image and mod options");
-
-        BaseMod.registerCustomReward(
-                TestRewardPatch.LagranYue,
-                // this handles what to do when this quest type is loaded.
-                (rewardSave) -> new TestReward(rewardSave.amount),
-                // this handles what to do when this quest type is saved.
-                (customReward) -> new RewardSave(customReward.type.toString(), null, ((TestReward) customReward).amount, 0));
         logger.info("======BaseMod.registerCustomReward======");
     }
 
@@ -305,13 +288,13 @@ public class LagranYue implements PostInitializeSubscriber,
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
 
-        unlocks0 = new CustomUnlockBundle(
+        CustomUnlockBundle unlocks0 = new CustomUnlockBundle(
                 OneKingCard.ID, PowerKingTreasureCard.ID, AttackLakeCard.ID);
 
-        unlocks1 = new CustomUnlockBundle(
+        CustomUnlockBundle unlocks1 = new CustomUnlockBundle(
                 SkillKadeboSwordCard.ID, AttackSummerCard.ID, SkillBlazingSevenRingsCard.ID);
 
-        unlocks3 = new CustomUnlockBundle(
+        CustomUnlockBundle unlocks3 = new CustomUnlockBundle(
                 AttackFaithCard.ID, PowerFurnaceCard.ID, PowerDreamCard.ID);
 
     }
