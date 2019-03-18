@@ -133,7 +133,9 @@ public class LagranYue implements PostInitializeSubscriber,
         logger.info("========================注入Mod人物信息成功========================");
     }
 
-    //负责注入你所编辑好的遗物。
+    /**
+     * 负责注入你所编辑好的遗物。
+     */
     @Override
     public void receiveEditRelics() {
         logger.info("=========================正在加载新的遗物内容=========================");
