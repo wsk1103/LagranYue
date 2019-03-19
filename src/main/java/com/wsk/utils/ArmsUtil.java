@@ -22,7 +22,9 @@ import com.wsk.relics.EnkiduRelics;
  */
 public class ArmsUtil {
 
-    //记录装备的兵器
+    /**
+     * 记录装备的兵器
+     */
     private static int arms = 0;
 
     //临时使装备兵器的数量+1
