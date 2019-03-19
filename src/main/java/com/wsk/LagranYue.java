@@ -284,7 +284,9 @@ public class LagranYue implements PostInitializeSubscriber,
 
     }
 
-    //负责加载关键字。
+    /**
+     * 负责加载关键字。
+     */
     @Override
     public void receiveEditKeywords() {
         final Gson gson = new Gson();
