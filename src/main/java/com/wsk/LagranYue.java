@@ -149,7 +149,7 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addRelicToCustomPool(new BrokenPhantasmRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new LuEnSwordRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new OveredgeRelics(), AbstractCardEnum.LagranYue);
-        logger.info("=========================加载新的遗物内容成功=========================");
+        logger.info("=========================加载新的遗容成功=========================");
     }
 
     /**
@@ -250,7 +250,9 @@ public class LagranYue implements PostInitializeSubscriber,
 
     }
 
-    //负责加载你编辑好的文本信息。,例如卡牌说明，遗物说明等等
+    /**
+     * 负责加载你编辑好的文本信息。,例如卡牌说明，遗物说明等等
+     */
     @Override
     public void receiveEditStrings() {
 
