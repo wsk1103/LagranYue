@@ -27,7 +27,9 @@ public class ArmsUtil {
      */
     private static int arms = 0;
 
-    //临时使装备兵器的数量+1
+    /**
+     * 临时使装备兵器的数量+1
+     */
     private static boolean temporaryArms = false;
 
     //装备兵器
@@ -43,7 +45,6 @@ public class ArmsUtil {
             ForgingAction.addArmsNum(armsPower, armsPower.amount);
             setTemporaryArms(false);
             return;
-//            return false;
         }
         if (isTemporaryArms()) {
             arms++;
