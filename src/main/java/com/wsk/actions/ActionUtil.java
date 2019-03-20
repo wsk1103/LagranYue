@@ -1,10 +1,7 @@
 package com.wsk.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
@@ -154,13 +151,73 @@ public class ActionUtil {
     }
 
     //添加能力
-    public static void gainEnerg(int amount) {
+    public static void gainEnergy(int amount) {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
     }
 
     //移除能力
     public static void removePower(AbstractCreature p, AbstractPower power) {
         removePower(p, power.ID);
+    }
+
+    /**
+     * 减少能力的层数
+     * @param p 拥有者
+     * @param power 能力
+     * @param amount 层数
+     */
+    public static void reducePower(AbstractCreature p, AbstractPower power, int amount){
+        reducePower(p, power.ID, amount);
+    }
+
+    /**
+     * 减少能力的层数
+     * @param p 拥有者
+     * @param power 能力
+     * @param amount 层数
+     */
+    public static void reducePower(AbstractCreature p, String power, int amount){
+        AbstractPower playerP = p.getPower(power);
+        if (playerP != null) {
+            int i = playerP.amount;
+            if (i <= amount) {
+                removePower(p, power);
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, power, amount));
+            }
+        }
+    }
+
+    public static void addPower(AbstractCreature p, AbstractPower power, int amount) {
+        power.amount = amount;
+        addPower(p, power);
+    }
+
+    /**
+     * 失去生命值
+     * @param p 失去者
+     * @param amount 多少
+     */
+    public static void loseHP(AbstractCreature p, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, amount, AbstractGameAction.AttackEffect.SMASH));
+    }
+
+    /**
+     * 添加缓冲
+     * @param p 对象
+     * @param amount 数量
+     */
+    public static void buffAction(AbstractCreature p, int amount) {
+        addPower(p, new BufferPower(p, amount));
+    }
+
+    /**
+     * 抽牌
+     * @param p 对象
+     * @param amount 数量
+     */
+    public static void drawCard(AbstractCreature p, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, amount));
     }
 
 }

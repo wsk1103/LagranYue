@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 一句话说明
  */
-public class BlazingSevenRingsPower extends BaseShieldPower {
+public class BlazingSevenRingsPower extends AbstractShieldPower {
     public static final String POWER_ID = "LagranYue:BlazingSevenRingsPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：炽天覆七重圆环";//能力的名称。
 
@@ -40,6 +40,7 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms() {
 //        ArmsUtil.setHasRings(false);
 //        ArmsUtil.addOrChangArms(p, this, amount);
@@ -61,6 +62,7 @@ public class BlazingSevenRingsPower extends BaseShieldPower {
 //        super.onAttack(info, damageAmount, target);
 //    }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
     }

@@ -49,7 +49,7 @@ public class OveredgeRelics extends CustomRelic {
     @Override
     public void atTurnStart() {
         if (!isUsedArms) {
-            ActionUtil.gainEnerg(1);
+            ActionUtil.gainEnergy(1);
         }
         isUsedArms = false;
     }

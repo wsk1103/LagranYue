@@ -1,6 +1,7 @@
 package com.wsk;
 
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -13,11 +14,13 @@ import com.megacrit.cardcrawl.localization.*;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
+import com.wsk.cards.proficiency.*;
 import com.wsk.cards.skill.*;
 import com.wsk.characters.LagranYueCharacter;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
 import com.wsk.relics.*;
+import com.wsk.relics.share.*;
 import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
@@ -149,6 +152,22 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addRelicToCustomPool(new BrokenPhantasmRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new LuEnSwordRelics(), AbstractCardEnum.LagranYue);
         BaseMod.addRelicToCustomPool(new OveredgeRelics(), AbstractCardEnum.LagranYue);
+        BaseMod.addRelicToCustomPool(new ArmsProficiencyRelics(), AbstractCardEnum.LagranYue);
+
+        BaseMod.addRelic(new ContractPerformanceRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new GuidanceLightRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new GuideDeadRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new ImprintInheritanceRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new MagicReflectiveArmorRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new MoonMirrorShieldRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new NewUniverseRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new RandomDrawCardRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new RareGoldArmorRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new ReturningEmperorRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new SoulBurningRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new SpringFairyRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new WskJewelryRelic(), RelicType.SHARED);
+
         logger.info("=========================加载新的遗容成功=========================");
     }
 
@@ -232,6 +251,23 @@ public class LagranYue implements PostInitializeSubscriber,
         ALL_CARS.add(new ForgingLuEnCard());
 
         ALL_CARS.add(new TestChooseCard());
+
+        ALL_CARS.add(new AttackCrowCrossbowCard());
+        ALL_CARS.add(new AttackDegenerateCard());
+        ALL_CARS.add(new AttackDivineGuidanceCard());
+        ALL_CARS.add(new AttackEnchantmentCard());
+        ALL_CARS.add(new AttackGalacticZeroCard());
+        ALL_CARS.add(new AttackGodArchCard());
+        ALL_CARS.add(new AttackGodSpearCard());
+        ALL_CARS.add(new AttackGodSwordCard());
+        ALL_CARS.add(new AttackMagicMoonCard());
+        ALL_CARS.add(new AttackMagicStarsCard());
+        ALL_CARS.add(new AttackMagicSwordCard());
+        ALL_CARS.add(new SkillDisasterEquipmentCard());
+        ALL_CARS.add(new SkillEightFeetJadeCard());
+        ALL_CARS.add(new SkillHeartWaterCard());
+        ALL_CARS.add(new SkillLegendPaladinCard());
+        ALL_CARS.add(new SkillLiberationCard());
         //加入卡牌格式:BaseMod.addCard(new 卡牌类名());
         //解锁卡牌格式:UnlockTracker.unlockCard("卡牌Id");
 

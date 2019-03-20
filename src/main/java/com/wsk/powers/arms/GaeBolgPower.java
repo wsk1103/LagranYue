@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/25
  * @desc 兵器：刺穿死棘之枪
  */
-public class GaeBolgPower extends BaseSpearPower {
+public class GaeBolgPower extends AbstractSpearPower {
     public static final String POWER_ID = "LagranYue:GaeBolgPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：刺穿死棘之枪";//能力的名称。
 
@@ -45,6 +45,7 @@ public class GaeBolgPower extends BaseSpearPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);
@@ -54,6 +55,7 @@ public class GaeBolgPower extends BaseSpearPower {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
     }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             metallicizePowerNum += this.amount;

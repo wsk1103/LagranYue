@@ -3,14 +3,13 @@ package com.wsk.powers.base;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -50,6 +49,7 @@ public class ImprintPower extends AbstractPower {
     }
 
     //造成伤害时，返回伤害数值
+    @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
         if (damageType == DamageInfo.DamageType.NORMAL) {
             return damage + this.amount;
@@ -61,16 +61,17 @@ public class ImprintPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
         //回合结束的时候，层数减少1
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, ImprintPower.POWER_ID, 1));
+        ActionUtil.reducePower(owner, this, 1);
     }
 
     //触发时机：当回合开始时触发。
+    @Override
     public void atStartOfTurn() {
         if (this.amount >= 10) {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flashWithoutSound();
                 AbstractDungeon.actionManager.addToBottom(new LoseHPAction(this.owner, this.source, 50, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, ImprintPower.POWER_ID));
+                ActionUtil.removePower(owner, this);
             }
         }
     }

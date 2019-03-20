@@ -1,24 +1,27 @@
 package com.wsk.powers.arms;
 
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.patches.ArmsEnum;
 
 /**
  * @author wsk1103
  * @date 2019/2/26
  * @desc 武器能力
  */
-public abstract class AbstractArmsPower extends AbstractPower implements Cloneable {
+public abstract class AbstractArmsPower extends AbstractPower {
 
+    /**
+     * 兵器类型
+     */
+    public ArmsEnum arms;
+
+    /**
+     * 获得兵器的时候，给予的增益效果.
+     */
     public abstract void hasArms();
 
-    public Object clone() {
-        AbstractArmsPower power = null;
-        try {
-            power = (AbstractArmsPower) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return power;
+    AbstractArmsPower(ArmsEnum arms){
+        this.arms = arms;
     }
 
 }

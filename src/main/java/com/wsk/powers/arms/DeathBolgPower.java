@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/25
  * @desc 一句话说明
  */
-public class DeathBolgPower extends BaseSpearPower {
+public class DeathBolgPower extends AbstractSpearPower {
     public static final String POWER_ID = "LagranYue:DeathBolgPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：突穿死翔之枪";//能力的名称。
 
@@ -41,6 +41,7 @@ public class DeathBolgPower extends BaseSpearPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms() {
         ActionUtil.strengthPower(owner, amount);
     }
@@ -49,6 +50,7 @@ public class DeathBolgPower extends BaseSpearPower {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 2 + DESCRIPTIONS[2]);
     }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             int imprintPower = amount * 2;

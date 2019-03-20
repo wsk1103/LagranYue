@@ -71,5 +71,113 @@
       "在每回合开始时获得 [E] 。",
       "我只能打出最多 NL #r"
     ]
+  },
+  "LagranYue:ArmsProficiencyRelics": {
+    "NAME": "斗魂",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      " #y技能点 。目前情况，弩技能点：",
+      "盾技能点：",
+      "枪技能点：",
+      "剑技能点："
+    ]
+  },
+  "LagranYue:RandomDrawCardRelic": {
+    "NAME": "活化石",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "每次战斗开始，重新排序抽牌卡堆。目的是每次SL之后，让抽到的卡牌都不一样。"
+    ]
+  },
+  "LagranYue:ImprintInheritanceRelic": {
+    "NAME": "继承之印",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "拾起该遗物时，存储1件已经获得的遗物（无法获得初始遗物）。下1局开始会获得该遗物。"
+    ]
+  },
+  "LagranYue:MagicReflectiveArmorRelic": {
+    "NAME": "魔法反射装甲",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "打出 #b10 张牌后，获得1层 #y缓冲 。"
+    ]
+  },
+  "LagranYue:ContractPerformanceRelic": {
+    "NAME": "契约的履行",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "在每回合开始时获得 [E] 。但是受到的攻击伤害增加2。"
+    ]
+  },
+  "LagranYue:ReturningEmperorRelic": {
+    "NAME": "再临的帝王",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "每过 #b3 回合，将自己的第1个DeBuff转移到第1个敌人身上。"
+    ]
+  },
+  "LagranYue:GuideDeadRelic": {
+    "NAME": "死灵魔导书",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #y壁垒 ， 但获得的 #y格挡 减少2。"
+    ]
+  },
+  "LagranYue:SoulBurningRelic": {
+    "NAME": "灵魂燃烧阵",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "在每回合开始时获得 [E] 。但当回复生命值时，恢复值减1。"
+    ]
+  },
+  "LagranYue:NewUniverseRelic": {
+    "NAME": "简易新宇宙",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "当主动弃牌时，抽1张牌，并获得 [E] 。"
+    ]
+  },
+  "LagranYue:RareGoldArmorRelic": {
+    "NAME": "稀有黄金装甲",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "当在1个回合内造成的伤害超过 #b40 ，那么奖励品的卡牌中，额外获得1张 #y金卡 。"
+    ]
+  },
+  "LagranYue:MoonMirrorShieldRelic": {
+    "NAME": "月镜盾",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得能力： #y月镜盾 。"
+    ]
+  },
+  "LagranYue:SpringFairyRelic": {
+    "NAME": "泉之精灵",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得能力： #y泉之精灵 。"
+    ]
+  },
+  "LagranYue:GuidanceLightRelic": {
+    "NAME": "光之引导",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "在每回合开始时减少 [E] 。 #y消耗 类的卡牌打出后将不再被消耗。"
+    ]
+  },
+  "LagranYue:MagePowerRelic": {
+    "NAME": "魔导师之力",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "在每回合开始时获得 [E] 。抽牌数减少1。"
+    ]
+  },
+  "LagranYue:WskJewelryRelic": {
+    "NAME": "与夺的首饰",
+    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "DESCRIPTIONS": [
+      "每回合开始时，随机使1个Buff/DeBuff增加1层。"
+    ]
   }
 }

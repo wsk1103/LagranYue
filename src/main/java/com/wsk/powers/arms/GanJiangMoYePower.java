@@ -21,7 +21,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 兵器：干将莫邪
  */
-public class GanJiangMoYePower extends BaseSwordPower {
+public class GanJiangMoYePower extends AbstractSwordPower {
     public static final String POWER_ID = "LagranYue:GanJiangMoYePower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：干将莫邪";//能力的名称。
 
@@ -35,7 +35,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
 
     public GanJiangMoYePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 //        this.name = NAME;
@@ -47,6 +47,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);
@@ -57,6 +58,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
     }
 
     //每回合你使用的目标为敌人的牌都会被重复打出 M 次
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (GanJiangMoYePower.action) {
             if ((!card.purgeOnUse) && (this.amount > 0)
@@ -93,6 +95,7 @@ public class GanJiangMoYePower extends BaseSwordPower {
         GanJiangMoYePower.action = true;
     }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
     }

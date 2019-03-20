@@ -39,7 +39,7 @@ public class SapphirePrayerCard extends CustomCard {
                 CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust =true;
+        this.exhaust = true;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
@@ -59,11 +59,7 @@ public class SapphirePrayerCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 2, AbstractGameAction.AttackEffect.POISON));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 3, AbstractGameAction.AttackEffect.POISON));
-        }
+        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         //升级手中的卡牌
         CardGroup cardGroup = p.hand;
         for (AbstractCard c : cardGroup.group) {

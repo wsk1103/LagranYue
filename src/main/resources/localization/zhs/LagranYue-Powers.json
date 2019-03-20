@@ -258,5 +258,89 @@
       "每回合开始获得",
       "格挡 "
     ]
+  },
+  "LagranYue:AerialAcePower": {
+    "NAME": "燕返",
+    "DESCRIPTIONS": [
+      "持续",
+      "个回合，获得格挡翻倍。"
+    ]
+  },
+  "LagranYue:DistortionPower": {
+    "NAME": "失真",
+    "DESCRIPTIONS": [
+      "造成的所有类型的伤害增加"
+    ]
+  },
+  "LagranYue:DivinityPower": {
+    "NAME": "神性",
+    "DESCRIPTIONS": [
+      "战斗胜利后，额外获得",
+      "个遗物。"
+    ]
+  },
+  "LagranYue:GoldRatePower": {
+    "NAME": "黄金率",
+    "DESCRIPTIONS": [
+      "造成伤害时，获得该伤害的",
+      "/6倍金钱。"
+    ]
+  },
+  "LagranYue:MagicEyePower": {
+    "NAME": "魔眼",
+    "DESCRIPTIONS": [
+      "战斗胜利后，额外获得",
+      "张金卡。"
+    ]
+  },
+  "LagranYue:MagicPower": {
+    "NAME": "魔术",
+    "DESCRIPTIONS": [
+      "战斗胜利后，额外获得",
+      "瓶药。"
+    ]
+  },
+  "LagranYue:MindPower": {
+    "NAME": "心眼",
+    "DESCRIPTIONS": [
+      "当卡牌被消耗时，获得 ",
+      "能量。"
+    ]
+  },
+  "LagranYue:PermeationPower": {
+    "NAME": "透化",
+    "DESCRIPTIONS": [
+      "受到所有类型的伤害时，额外受到当前生命值",
+      "%的生命流失。"
+    ]
+  },
+  "LagranYue:ProtectionArrowsPower": {
+    "NAME": "避矢之加护",
+    "DESCRIPTIONS": [
+      "被攻击时，自动打出弃牌堆最上面的卡牌",
+      "次。"
+    ]
+  },
+  "LagranYue:WindShelterPower": {
+    "NAME": "避风的加护",
+    "DESCRIPTIONS": [
+      "被攻击时，自动打出抽牌堆最上面的卡牌",
+      "次。"
+    ]
+  },
+  "LagranYue:MoonMirrorShieldPower": {
+    "NAME": "月镜盾",
+    "DESCRIPTIONS": [
+      "蓝卡造成的伤害或者获得的格挡增加",
+      "，白卡造成的伤害或者获得的格挡减少"
+    ]
+  },
+  "LagranYue:SpringFairyPower": {
+    "NAME": "泉之精灵",
+    "DESCRIPTIONS": [
+      "金卡造成的伤害或者获得的格挡",
+      "倍，白卡造成的伤害或者获得的格挡减少",
+      "/2。"
+    ]
   }
 }

@@ -206,9 +206,142 @@
   },
   {
     "NAMES": [
+      "亖"
+    ],
+    "PROPERNAME": "亖",
+    "DESCRIPTION": "装备的兵器数量。"
+  },
+  {
+    "NAMES": [
+      "兀"
+    ],
+    "PROPERNAME": "兀",
+    "DESCRIPTION": "装备的兵器层数之和。"
+  },
+  {
+    "NAMES": [
+      "技能点"
+    ],
+    "PROPERNAME": "技能点",
+    "DESCRIPTION": "当装备兵器后，使用卡牌会积累相应的技能点。白卡：0.2点，蓝卡：0.4点，金卡：1点。某些卡牌需要技能点才能发动。"
+  },
+  {
+    "NAMES": [
+      "剑技"
+    ],
+    "PROPERNAME": "剑技",
+    "DESCRIPTION": "消耗相应的技能点后才能使用。"
+  },
+  {
+    "NAMES": [
+      "枪技"
+    ],
+    "PROPERNAME": "枪技",
+    "DESCRIPTION": "消耗相应的技能点后才能使用。"
+  },
+  {
+    "NAMES": [
+      "弩技"
+    ],
+    "PROPERNAME": "弩技",
+    "DESCRIPTION": "消耗相应的技能点后才能使用。"
+  },
+  {
+    "NAMES": [
+      "盾技"
+    ],
+    "PROPERNAME": "盾技",
+    "DESCRIPTION": "消耗相应的技能点后才能使用。"
+  },
+  {
+    "NAMES": [
+      "黄金率"
+    ],
+    "PROPERNAME": "黄金率",
+    "DESCRIPTION": "造成伤害时，获得该伤害的1/6倍金钱。"
+  },
+  {
+    "NAMES": [
+      "心眼"
+    ],
+    "PROPERNAME": "心眼",
+    "DESCRIPTION": "当卡牌被消耗时，获得 [E] 。"
+  },
+  {
+    "NAMES": [
+      "避风的加护"
+    ],
+    "PROPERNAME": "避风的加护",
+    "DESCRIPTION": "被攻击时，自动打出抽牌堆最上面的卡牌1次。"
+  },
+  {
+    "NAMES": [
+      "避矢之加护"
+    ],
+    "PROPERNAME": "避矢之加护",
+    "DESCRIPTION": "被攻击时，自动打出弃牌堆最上面的卡牌1次。"
+  },
+  {
+    "NAMES": [
+      "失真"
+    ],
+    "PROPERNAME": "失真",
+    "DESCRIPTION": "造成的所有类型的伤害增加5。"
+  },
+  {
+    "NAMES": [
+      "神性"
+    ],
+    "PROPERNAME": "神性",
+    "DESCRIPTION": "战斗胜利后，额外获得1个遗物。"
+  },
+  {
+    "NAMES": [
+      "燕返"
+    ],
+    "PROPERNAME": "燕返",
+    "DESCRIPTION": "持续3个回合，获得格挡翻倍。"
+  },
+  {
+    "NAMES": [
+      "透化"
+    ],
+    "PROPERNAME": "透化",
+    "DESCRIPTION": "受到所有类型的伤害时，额外受到当前生命值5%的生命流失。"
+  },
+  {
+    "NAMES": [
+      "魔术"
+    ],
+    "PROPERNAME": "魔术",
+    "DESCRIPTION": "战斗胜利后，额外获得1瓶药。"
+  },
+  {
+    "NAMES": [
+      "魔眼"
+    ],
+    "PROPERNAME": "魔眼",
+    "DESCRIPTION": "战斗胜利后，额外获得1张金卡。"
+  },
+  {
+    "NAMES": [
       "死亡印记"
     ],
     "PROPERNAME": "死亡印记",
     "DESCRIPTION": "造成的伤害增加死亡印记的层数。每回合结束时，层数减少1。当回合开始时，如果层数大于10，给予50点固定伤害。然后移除所有印记。"
+  },
+  {
+    "NAMES": [
+      "月镜盾"
+    ],
+    "PROPERNAME": "月镜盾",
+    "DESCRIPTION": "蓝卡造成的伤害或者获得的格挡增加3，白卡造成的伤害或者获得的格挡减少3。"
+  },
+  {
+    "NAMES": [
+      "泉之精灵"
+    ],
+    "PROPERNAME": "泉之精灵",
+    "DESCRIPTION": "金卡造成的伤害或者获得的格挡2倍，白卡造成的伤害或者获得的格挡减少1/2。"
   }
 ]

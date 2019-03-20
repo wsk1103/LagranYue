@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 兵器：赤原猎犬
  */
-public class ChiharaHoundPower extends BaseArchPower {
+public class ChiharaHoundPower extends AbstractArchPower {
     public static final String POWER_ID = "LagranYue:ChiharaHoundPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：赤原猎犬";//能力的名称。
 
@@ -39,16 +39,18 @@ public class ChiharaHoundPower extends BaseArchPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms() {
-//        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount * 3);
     }
 
+    @Override
     public void updateDescription() {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount * 3 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
     }
 
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             if (card.target == AbstractCard.CardTarget.ALL
@@ -75,12 +77,6 @@ public class ChiharaHoundPower extends BaseArchPower {
         }
         super.onAfterUseCard(card, action);
     }
-
-//    //造成伤害时，返回伤害数值
-//    public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
-//        super.atDamageFinalReceive(abstractMonster, damage, damageType);
-//        return damage;
-//    }
 
     @Override
     public void onRemove() {

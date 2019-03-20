@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/26
  * @desc 兵器：誓约胜利之剑
  */
-public class VictorySwordPower extends BaseSwordPower {
+public class VictorySwordPower extends AbstractSwordPower {
     public static final String POWER_ID = "LagranYue:VictorySwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：誓约胜利之剑";//能力的名称。
 
@@ -45,6 +45,7 @@ public class VictorySwordPower extends BaseSwordPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms(){
 //        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);

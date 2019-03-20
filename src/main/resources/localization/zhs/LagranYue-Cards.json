@@ -82,13 +82,13 @@
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "爱的华尔兹",
-    "DESCRIPTION": "造成 !D! 点伤害N次（N=装备的兵器数量），最少1次。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害N次（N=装备的兵器层数之和），最少1次。  起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害 亖 次，最少1次。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 兀 次，最少1次。 起舞 "
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "最终信仰",
-    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的兵器数量之和），最少1次。",
-    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害N次。获得N层 胜利契约 。（N=移除的所有兵器层数之和），最少1次。"
+    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 亖 次。获得 亖 层 胜利契约 。最少1次。",
+    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 M 次。获得 兀 层 胜利契约 。最少1次。"
   },
   "LagranYue:AttackAerCard": {
     "NAME": "阿尔托利亚",
@@ -102,6 +102,61 @@
   "LagranYue:AttackCarnivalCard": {
     "NAME": "幻想嘉年华·攻",
     "DESCRIPTION": "造成 !M! 倍当前所有 兵器 层数之和的伤害 。 NL 消耗 。 起舞 。 "
+  },
+  "LagranYue:AttackMagicMoonCard": {
+    "NAME": "魔月之剑刃",
+    "DESCRIPTION": " 剑技 ：1。 造成 !D! 点伤害 !M! 次。 起舞 。",
+    "EXTENDED_DESCRIPTION": [
+      "兵器熟练度不够。"
+    ]
+  },
+  "LagranYue:AttackDivineGuidanceCard": {
+    "NAME": "玻璃之神引",
+    "DESCRIPTION": " 剑技 ：2。 造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
+  },
+  "LagranYue:AttackMagicSwordCard": {
+    "NAME": "一击神剑",
+    "DESCRIPTION": " 剑技 ：3。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+  },
+  "LagranYue:AttackGodSwordCard": {
+    "NAME": "八汰神剑",
+    "DESCRIPTION": " 剑技 ：3。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 剑技 ：3。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+  },
+  "LagranYue:AttackDegenerateCard": {
+    "NAME": "堕落",
+    "DESCRIPTION": " 枪技 ：1。对所有敌人造成 !D! 点伤害。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 枪技 ：1。对所有敌人造成 !D! 点伤害。 起舞 。"
+  },
+  "LagranYue:AttackEnchantmentCard": {
+    "NAME": "魅惑",
+    "DESCRIPTION": " 枪技 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 枪技 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。"
+  },
+  "LagranYue:AttackGodSpearCard": {
+    "NAME": "驭龙团的神枪",
+    "DESCRIPTION": " 枪技 ：3。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 枪技 ：3。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+  },
+  "LagranYue:AttackGalacticZeroCard": {
+    "NAME": "银河零式",
+    "DESCRIPTION": " 枪技 ：3。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 枪技 ：3。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。"
+  },
+  "LagranYue:AttackCrowCrossbowCard": {
+    "NAME": "展翼鸦弩弓",
+    "DESCRIPTION": " 弩技 ：1。造成 !D! 点伤害 !M! 次。给予1层 透化 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 弩技 ：1。造成 !D! 点伤害 !M! 次。给予1层 透化 。 起舞 。"
+  },
+  "LagranYue:AttackMagicStarsCard": {
+    "NAME": "戏法明星魔法花冠",
+    "DESCRIPTION": " 弩技 ：2。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 弩技 ：2。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。 起舞 。"
+  },
+  "LagranYue:AttackGodArchCard": {
+    "NAME": "神明弩体",
+    "DESCRIPTION": " 弩技 ：3。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 弩技 ：3。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
@@ -374,5 +429,30 @@
       "抽 3 张牌。",
       "获得 [E] [E] [E] 。"
     ]
+  },
+  "LagranYue:SkillLiberationCard": {
+    "NAME": "宝玉的解放",
+    "DESCRIPTION": " 盾技 ：1。获得 !B! 点 格挡  !M! 次。获得1层 燕返 。",
+    "UPGRADE_DESCRIPTION": " 盾技 ：1。获得 !B! 点 格挡  !M! 次。获得1层 燕返 。"
+  },
+  "LagranYue:SkillEightFeetJadeCard": {
+    "NAME": "八尺勾玉",
+    "DESCRIPTION": " 盾技 ：2。获得 !B! 点 格挡  !M! 次。获得1层 避矢之加护 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 盾技 ：2。获得 !B! 点格挡 !M! 次。获得1层 避矢之加护 。 NL 保留 。"
+  },
+  "LagranYue:SkillHeartWaterCard": {
+    "NAME": "明镜止水之心",
+    "DESCRIPTION": " 盾技 ：2。获得 !B! 点 格挡  !M! 次。获得1层 魔眼 。 NL 消耗 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 盾技 ：2。获得 !B! 点 格挡  !M! 次。获得1层 魔眼 。 NL 消耗 。 NL 保留 。"
+  },
+  "LagranYue:SkillLegendPaladinCard": {
+    "NAME": "圣骑士传说的终幕",
+    "DESCRIPTION": " 盾技 ：3。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。获得1层 神性 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 盾技 ：3。获得 !B! 点 格挡  !M! 次。额外造成 兀 次。获得1层 神性 。 NL 消耗 。"
+  },
+  "LagranYue:SkillDisasterEquipmentCard": {
+    "NAME": "灾祸的装备品",
+    "DESCRIPTION": " 盾技 ：3。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。获得1层 避风的加护 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 盾技 ：3。获得 !B! 点 格挡 !M! 次。额外造成 兀 次。获得1层 避风的加护 。 NL 保留 。"
   }
 }

@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/2/25
  * @desc 一句话说明
  */
-public class ExplosiveArmorPower extends BaseShieldPower {
+public class ExplosiveArmorPower extends AbstractShieldPower {
     public static final String POWER_ID = "LagranYue:ExplosiveArmorPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "兵器：炸裂装甲";//能力的名称。
 
@@ -46,6 +46,7 @@ public class ExplosiveArmorPower extends BaseShieldPower {
         updateDescription();
     }
 
+    @Override
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, this.amount);
         ActionUtil.dexterityPower(owner, amount);
@@ -56,6 +57,7 @@ public class ExplosiveArmorPower extends BaseShieldPower {
         this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 3 + DESCRIPTIONS[2]);
     }
 
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
     }
