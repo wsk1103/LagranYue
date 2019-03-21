@@ -2,7 +2,7 @@
   "modid": "LagranYue",
   "name": "拉格朗·月",
   "author_list": ["sky"],
-  "description": "角色：武器大师·拉格朗·月，包含91张卡片，26件遗物。\n1包含件特殊遗物：使用该遗物，当SL后，初始的抽牌顺序会发生随机变化。\n GitHub源码：https://github.com/wsk1103/LagranYue ",
+  "description": "角色：武器大师·拉格朗·月，包含91张卡片，26件遗物。\nCharacter:Weapon Master-LagranYue, it has 91 cards and 26 relics.\n包含1件特殊遗物：使用该遗物，当SL后，初始的抽牌顺序会发生随机变化。\nIt has an especial relic:After S/L, the initial drawing order will change randomly.\n GitHub：https://github.com/wsk1103/LagranYue ",
   "dependencies": ["basemod"],
   "version": "1.4.0",
   "sts_version": "03-03-2019",
