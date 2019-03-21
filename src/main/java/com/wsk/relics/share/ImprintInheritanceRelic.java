@@ -3,6 +3,7 @@ package com.wsk.relics.share;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.utils.CommonUtil;
 
@@ -24,13 +25,15 @@ public class ImprintInheritanceRelic extends CustomRelic {
     public static final String OUTLINE = "relics/r6.png";
     public static final String FILEPATH = "saves/ImprintInheritanceRelic.autosave";
 
+    private String name = "";
+
     public ImprintInheritanceRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + DESCRIPTIONS[1] + name;
     }
 
     @Override
@@ -51,6 +54,8 @@ public class ImprintInheritanceRelic extends CustomRelic {
             AbstractRelic relic = relics.get(i);
             if (relic.tier != RelicTier.STARTER && !relic.relicId.equals(ID)) {
                 randomRelic = relic.getClass().getName();
+                name = relic.name;
+                updateTip();
                 break;
             }
         }
@@ -83,5 +88,12 @@ public class ImprintInheritanceRelic extends CustomRelic {
         } else {
             System.out.println("ImprintInheritanceRelic file not!");
         }
+    }
+
+    private void updateTip() {
+        this.description = getUpdatedDescription();
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
     }
 }
