@@ -74,7 +74,7 @@
   },
   "LagranYue:ArmsProficiencyRelics": {
     "NAME": "Skill Point",
-    "FLAVOR": "技能点系统,6666....",
+    "FLAVOR": "Skill Point System,it`s so good....",
     "DESCRIPTIONS": [
       " #ySkillPoint .Current situation,\nArchPoint:",
       "\nShieldPoint:",
@@ -84,14 +84,14 @@
   },
   "LagranYue:RandomDrawCardRelic": {
     "NAME": "If I could do it again",
-    "FLAVOR": "要是能重来,我要选李白.",
+    "FLAVOR": "If I can come back, I will choose Li Bai.",
     "DESCRIPTIONS": [
       "At the beginning of each battle, rearrange the stack of draw cards. The aim is to draw different cards after each Save and Load."
     ]
   },
   "LagranYue:ImprintInheritanceRelic": {
     "NAME": "Imprint of Inheritance",
-    "FLAVOR": "越渴望见面然后发现,中间隔着那十年",
+    "FLAVOR": "The more eager I am to meet, the more I find that there are ten years between us.",
     "DESCRIPTIONS": [
       "When the relic is picked up,Store #b1 pieces of relics that have been acquired (start relics cannot be obtained). The relic will be acquired in the next inning.",
       "Stored relics:"
@@ -99,84 +99,84 @@
   },
   "LagranYue:MagicReflectiveArmorRelic": {
     "NAME": "Magic Reflective Armor",
-    "FLAVOR": "流水很清楚,惜花这个责任",
+    "FLAVOR": "The running water is very clear, cherish the responsibility of flower.",
     "DESCRIPTIONS": [
       "After playing #b10 cards, gain #b1 layer #ybuffer."
     ]
   },
   "LagranYue:ContractPerformanceRelic": {
     "NAME": "Performance of Contract",
-    "FLAVOR": "掉眼泪时用笑掩过,怕人看破,顾虑好多",
+    "FLAVOR": "When you shed tears, you hide them with laughter. You are afraid of being seen through. You have a lot of worries.",
     "DESCRIPTIONS": [
       "Gain [E] at the beginning of each turn.But attack damage increased #b2 ."
     ]
   },
   "LagranYue:ReturningEmperorRelic": {
     "NAME": "The Returning Emperor",
-    "FLAVOR": "得不到的永远在骚动,被偏爱的都有恃无恐",
+    "FLAVOR": "What you can't get is always in turmoil, and those who are favored are fearless.",
     "DESCRIPTIONS": [
       "Every #b3 turn, transfer your #bfirst DeBuff to the #bfirst enemy."
     ]
   },
   "LagranYue:GuideDeadRelic": {
     "NAME": "Guide to the Dead",
-    "FLAVOR": "玫瑰的红容易受伤的梦,握在手中却流失于指缝",
+    "FLAVOR": "Rose's red dream, which is easy to hurt, is lost in the fingertips when it is held in the hand",
     "DESCRIPTIONS": [
       "At the beginning of the battle, you gain #ybarriers, but when the enemy's #yblock is broken, you lose #b5% of your current maximum life."
     ]
   },
   "LagranYue:SoulBurningRelic": {
     "NAME": "Soul Burning Array",
-    "FLAVOR": "将宝具破坏,并通过将其爆炸来瞬间提升威力.",
+    "FLAVOR": "I told all the lies, and you all believed them.",
     "DESCRIPTIONS": [
       "Gain [E] at the beginning of each turn. But when health is restored, the restore value is reduced by #b1 ."
     ]
   },
   "LagranYue:NewUniverseRelic": {
     "NAME": "A Simple New Universe",
-    "FLAVOR": "要拥有必先懂失去怎接受",
+    "FLAVOR": "To have must know how to accept loss.",
     "DESCRIPTIONS": [
       "When abandoning the card voluntarily, draw #b1 card and gain [E] ."
     ]
   },
   "LagranYue:RareGoldArmorRelic": {
     "NAME": "Rare Gold Armor",
-    "FLAVOR": "湿了多少眼眶,才能知道伤感是爱的遗产",
+    "FLAVOR": "How many eyes are wet to know that sadness is the legacy of love.",
     "DESCRIPTIONS": [
       "When the damage is more than #b40 in #b1 turn, an additional rare card will be awarded in the reward."
     ]
   },
   "LagranYue:MoonMirrorShieldRelic": {
     "NAME": "Shield of Moon and Mirror",
-    "FLAVOR": "你会不会忽然的出现,在街角的咖啡店",
+    "FLAVOR": "Would you pop up at the corner cafe?",
     "DESCRIPTIONS": [
       "At the beginning of the battle,gain power #yMoonMirrorShield ."
     ]
   },
   "LagranYue:SpringFairyRelic": {
     "NAME": "Fairy of the Spring",
-    "FLAVOR": "人来人往",
+    "FLAVOR": "After climbing mountains and mountains, love is haunted.",
     "DESCRIPTIONS": [
       "At the beginning of the battle,gain power #yFairyOfSpring ."
     ]
   },
   "LagranYue:GuidanceLightRelic": {
     "NAME": "Guidance of light",
-    "FLAVOR": "茫茫人生好象荒野,如孩儿能伏于爸爸的肩膊",
+    "FLAVOR": "Life is like a wilderness, like a child on his father's shoulder.",
     "DESCRIPTIONS": [
       "Reduce [E] at the beginning of each turn. Expended cards will no longer be expended after playing."
     ]
   },
   "LagranYue:MagePowerRelic": {
     "NAME": "Mage Power",
-    "FLAVOR": "有梦就有蓝天,相信就能看见",
+    "FLAVOR": "If you have a dream, you will have a blue sky. Believe that you can see it.",
     "DESCRIPTIONS": [
       "Gain [E] at the beginning of each turn.Decrease the number of draw cards by #b1 ."
     ]
   },
   "LagranYue:WskJewelryRelic": {
     "NAME": "Evil Jewelry",
-    "FLAVOR": "明年今日.别要再失眠",
+    "FLAVOR": "Today next year. Don't lose sleep again",
     "DESCRIPTIONS": [
       "At the beginning of each turn,random increase of #b1 #gBuff/DeBuff by #b1 layer."
     ]

@@ -127,7 +127,7 @@
   },
   "LagranYue:SoulBurningRelic": {
     "NAME": "灵魂燃烧阵",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "我说了所有的谎，你全都相信。",
     "DESCRIPTIONS": [
       "在每回合开始时获得 [E] 。但当回复生命值时，恢复值减 #b1 。"
     ]
@@ -155,7 +155,7 @@
   },
   "LagranYue:SpringFairyRelic": {
     "NAME": "泉之精灵",
-    "FLAVOR": "人来人往",
+    "FLAVOR": "翻山越岭之后，爱却神出鬼没",
     "DESCRIPTIONS": [
       "战斗开始时，获得能力 #y泉之精灵 。"
     ]
