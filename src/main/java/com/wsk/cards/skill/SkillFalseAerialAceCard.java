@@ -24,7 +24,7 @@ public class SkillFalseAerialAceCard extends CustomCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/FantasyCard.png";
+    private static final String IMG = "cards/SkillFalseAerialAceCard.png";
 
     private static final int COST = 1;
 

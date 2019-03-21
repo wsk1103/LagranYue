@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
 public class SpringFairyPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:SpringFairyPower";
 
-    private static final String IMG = "powers/w26.png";
+    private static final String IMG = "powers/12.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     private AbstractCard card;

@@ -17,7 +17,7 @@ public class DistortionPower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
 
-    private static final String IMG = "powers/w26.png";
+    private static final String IMG = "powers/2.png";
     private static PowerType POWER_TYPE = PowerType.DEBUFF;
 
 

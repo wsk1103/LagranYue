@@ -23,7 +23,7 @@ public class SkillDevilKissCard extends CustomCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/FantasyCard.png";
+    private static final String IMG = "cards/SkillDevilKissCard.png";
 
     private static final int COST = 0;
 

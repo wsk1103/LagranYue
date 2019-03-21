@@ -14,8 +14,8 @@ import com.wsk.utils.CommonUtil;
 public class SoulBurningRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:SoulBurningRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r15.png";
+    public static final String OUTLINE = "relics/r16.png";
 
     public SoulBurningRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.BOSS, LandingSound.FLAT);

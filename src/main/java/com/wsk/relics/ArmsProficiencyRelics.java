@@ -20,8 +20,8 @@ import com.wsk.utils.CommonUtil;
  */
 public final class ArmsProficiencyRelics extends CustomRelic {
     public static final String ID = "LagranYue:ArmsProficiencyRelics";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+    public static final String IMG = "relics/r1.png";
+    public static final String OUTLINE = "relics/r2.png";
 
     private float arch = 0F;
     private float shield = 0F;

@@ -17,8 +17,8 @@ import com.wsk.utils.CommonUtil;
 public class GuidanceLightRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:GuidanceLightRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r25.png";
+    public static final String OUTLINE = "relics/r26.png";
 
     public GuidanceLightRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.COMMON, LandingSound.FLAT);

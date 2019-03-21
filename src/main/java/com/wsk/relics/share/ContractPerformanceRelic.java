@@ -16,8 +16,8 @@ import com.wsk.utils.CommonUtil;
 public class ContractPerformanceRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:ContractPerformanceRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r9.png";
+    public static final String OUTLINE = "relics/r10.png";
 
     public ContractPerformanceRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.BOSS, LandingSound.FLAT);

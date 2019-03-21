@@ -42,7 +42,7 @@ public class AttackGodSwordCard extends AbstractProfSwordCard {
     /**
      * 卡牌牌面的图片路径。
      */
-    private static final String IMG = "cards/BaseAttackCard.png";
+    private static final String IMG = "cards/AttackGodSwordCard.png";
 
     /**
      * 卡牌的费用。

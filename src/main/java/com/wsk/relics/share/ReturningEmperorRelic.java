@@ -19,8 +19,8 @@ import java.util.ArrayList;
 public class ReturningEmperorRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:ReturningEmperorRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r11.png";
+    public static final String OUTLINE = "relics/r12.png";
 
     public ReturningEmperorRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);

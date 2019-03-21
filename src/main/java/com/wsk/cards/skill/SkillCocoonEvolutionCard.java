@@ -28,7 +28,7 @@ public class SkillCocoonEvolutionCard extends CustomCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/FantasyCard.png";
+    private static final String IMG = "cards/SkillCocoonEvolutionCard.png";
 
     private static final int COST = 0;
 

@@ -39,7 +39,7 @@ public class AttackGalacticZeroCard extends AbstractProfSpearCard {
     /**
      * 卡牌牌面的图片路径。
      */
-    private static final String IMG = "cards/BaseAttackCard.png";
+    private static final String IMG = "cards/AttackGalacticZeroCard.png";
 
     /**
      * 卡牌的费用。

@@ -40,7 +40,7 @@ public class AttackCrowCrossbowCard extends AbstractProfArchCard {
     /**
      * 卡牌牌面的图片路径。
      */
-    private static final String IMG = "cards/BaseAttackCard.png";
+    private static final String IMG = "cards/AttackCrowCrossbowCard.png";
 
     /**
      * 卡牌的费用。

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 public class ImprintInheritanceRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:ImprintInheritanceRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+    public static final String IMG = "relics/r5.png";
+    public static final String OUTLINE = "relics/r6.png";
     public static final String FILEPATH = "saves/ImprintInheritanceRelic.autosave";
 
     public ImprintInheritanceRelic() {

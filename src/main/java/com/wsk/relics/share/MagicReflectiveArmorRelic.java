@@ -17,8 +17,8 @@ import com.wsk.utils.CommonUtil;
 public class MagicReflectiveArmorRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:MagicReflectiveArmorRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r7.png";
+    public static final String OUTLINE = "relics/r8.png";
 
     public MagicReflectiveArmorRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.COMMON, LandingSound.FLAT);

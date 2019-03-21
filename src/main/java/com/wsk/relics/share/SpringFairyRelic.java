@@ -16,8 +16,8 @@ import com.wsk.utils.CommonUtil;
 public class SpringFairyRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:SpringFairyRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r23.png";
+    public static final String OUTLINE = "relics/r24.png";
 
     public SpringFairyRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.FLAT);

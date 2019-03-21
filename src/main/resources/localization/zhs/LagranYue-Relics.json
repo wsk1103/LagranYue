@@ -83,7 +83,7 @@
     ]
   },
   "LagranYue:RandomDrawCardRelic": {
-    "NAME": "活化石",
+    "NAME": "要是能重来",
     "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
     "DESCRIPTIONS": [
       "每次战斗开始，重新排序抽牌卡堆。目的是每次SL之后，让抽到的卡牌都不一样。"

@@ -26,7 +26,7 @@ public class AttackCellGodCard extends CustomCard {
 
     private static final String DESCRIPTION;
     private static final CardStrings cardStrings;
-    private static final String IMG = "cards/AttackBetterCard.png";
+    private static final String IMG = "cards/AttackCellGodCard.png";
 
     private static final int COST = 0;
 

@@ -18,8 +18,8 @@ import com.wsk.utils.CommonUtil;
 public class RareGoldArmorRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:RareGoldArmorRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r19.png";
+    public static final String OUTLINE = "relics/r20.png";
 
     private boolean more = false;
 

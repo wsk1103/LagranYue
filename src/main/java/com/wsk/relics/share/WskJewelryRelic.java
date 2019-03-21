@@ -19,8 +19,8 @@ import java.util.Random;
 public class WskJewelryRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:WskJewelryRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r29.png";
+    public static final String OUTLINE = "relics/r30.png";
 
     public WskJewelryRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);

@@ -16,8 +16,8 @@ import com.wsk.utils.CommonUtil;
 public class MoonMirrorShieldRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:MoonMirrorShieldRelic";
-    public static final String IMG = "relics/w35.png";
-    public static final String OUTLINE = "relics/w36.png";
+public static final String IMG = "relics/r21.png";
+    public static final String OUTLINE = "relics/r22.png";
 
     public MoonMirrorShieldRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.FLAT);

@@ -17,7 +17,7 @@ public class AerialAcePower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
 
-    private static final String IMG = "powers/w26.png";
+    private static final String IMG = "powers/1.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
 

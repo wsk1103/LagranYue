@@ -18,7 +18,7 @@ public class DivinityPower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
 
-    private static final String IMG = "powers/w26.png";
+    private static final String IMG = "powers/3.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
 

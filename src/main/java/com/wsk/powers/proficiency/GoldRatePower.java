@@ -18,7 +18,7 @@ public class GoldRatePower extends AbstractPower {
 
     public static String[] DESCRIPTIONS;
 
-    private static final String IMG = "powers/w26.png";
+    private static final String IMG = "powers/4.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
     public GoldRatePower(AbstractCreature owner, int amount) {
