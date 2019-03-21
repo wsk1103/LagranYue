@@ -42,7 +42,7 @@ public class MagicReflectiveArmorRelic extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         if (counter >= 9) {
             ActionUtil.buffAction(AbstractDungeon.player, 1);
             counter = 0;

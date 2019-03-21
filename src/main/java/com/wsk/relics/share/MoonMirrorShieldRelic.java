@@ -36,6 +36,7 @@ public class MoonMirrorShieldRelic extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         flash();
         ActionUtil.addPower(AbstractDungeon.player, new MoonMirrorShieldPower(AbstractDungeon.player, 1));
     }

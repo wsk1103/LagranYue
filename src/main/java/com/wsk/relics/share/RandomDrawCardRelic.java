@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class RandomDrawCardRelic extends CustomRelic {
     @Override
     public void atPreBattle() {
         flash();
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         AbstractPlayer player = AbstractDungeon.player;
         if (null != player) {
             ArrayList<AbstractCard> cards = player.drawPile.group;

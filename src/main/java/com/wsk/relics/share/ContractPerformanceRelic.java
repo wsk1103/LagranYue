@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -35,6 +36,7 @@ public class ContractPerformanceRelic extends CustomRelic {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         flash();
         if (info.type == DamageInfo.DamageType.NORMAL) {
             damageAmount += 2;

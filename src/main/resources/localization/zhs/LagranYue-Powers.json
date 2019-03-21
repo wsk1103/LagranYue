@@ -269,7 +269,7 @@
   "LagranYue:DistortionPower": {
     "NAME": "失真",
     "DESCRIPTIONS": [
-      "造成的所有类型的伤害增加"
+      "受到的所有类型的伤害增加"
     ]
   },
   "LagranYue:DivinityPower": {

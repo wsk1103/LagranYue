@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -36,6 +37,7 @@ public class GuidanceLightRelic extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction action) {
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         if (targetCard.exhaust) {
             action.exhaustCard = false;
         }

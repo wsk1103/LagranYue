@@ -180,10 +180,13 @@ public class LagranYue implements PostInitializeSubscriber,
         ALL_CARS.add(new LifeForgingCard());
         ALL_CARS.add(new AttackAerCard());
         ALL_CARS.add(new AttackBetterCard());
+        ALL_CARS.add(new AttackCellGodCard());
         ALL_CARS.add(new AttackDevilCard());
         ALL_CARS.add(new AttackEmeraldCard());
+        ALL_CARS.add(new AttackEngravingRoseCard());
         ALL_CARS.add(new AttackFaithCard());
         ALL_CARS.add(new AttackFireCard());
+        ALL_CARS.add(new AttackFlintCard());
         ALL_CARS.add(new AttackFutureCard());
         ALL_CARS.add(new AttackGoldCard());
         ALL_CARS.add(new AttackIceCard());
@@ -231,7 +234,12 @@ public class LagranYue implements PostInitializeSubscriber,
         ALL_CARS.add(new RoseCard());
         ALL_CARS.add(new RubyDefendCard());
         ALL_CARS.add(new SapphirePrayerCard());
-
+        ALL_CARS.add(new SkillCocoonEvolutionCard());
+        ALL_CARS.add(new SkillDeadlyBloomCard());
+        ALL_CARS.add(new SkillDevilKissCard());
+        ALL_CARS.add(new SkillDistortionCard());
+        ALL_CARS.add(new SkillFalseAerialAceCard());
+        ALL_CARS.add(new SkillTestamentCard());
 
         ALL_CARS.add(new SkillBlazingSevenRingsCard());
         ALL_CARS.add(new SkillBrokenShieldCard());

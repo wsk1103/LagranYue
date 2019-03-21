@@ -37,6 +37,7 @@ public class NewUniverseRelic extends CustomRelic {
 
     @Override
     public void onManualDiscard() {
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         flash();
         ActionUtil.gainEnergy(1);
         ActionUtil.drawCard(AbstractDungeon.player, 1);

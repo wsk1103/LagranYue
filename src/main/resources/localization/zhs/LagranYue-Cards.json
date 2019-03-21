@@ -7,6 +7,18 @@
     "NAME": "加强版的打击",
     "DESCRIPTION": "造成 !D! 点伤害。 起舞 。"
   },
+  "LagranYue:AttackEngravingRoseCard": {
+    "NAME": "蔷薇的刻印",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 起舞 。"
+  },
+  "LagranYue:AttackFlintCard": {
+    "NAME": "燧石攻击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 起舞 。"
+  },
+  "LagranYue:AttackCellGodCard": {
+    "NAME": "神明八胞",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。给予1层 透化 。可以被多次 升级 。 起舞 。"
+  },
   "LagranYue:AttackFireCard": {
     "NAME": "进击的火焰",
     "DESCRIPTION": "攻击所有敌人，造成 !D! 点伤害。 起舞 。 NL 混沌 。"
@@ -125,8 +137,8 @@
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "堕落",
-    "DESCRIPTION": " 枪技 ：1。对所有敌人造成 !D! 点伤害。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 枪技 ：1。对所有敌人造成 !D! 点伤害。 起舞 。"
+    "DESCRIPTION": " 枪技 ：1。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 枪技 ：1。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。"
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "魅惑",
@@ -418,7 +430,7 @@
   },
   "LagranYue:FantasyCard": {
     "NAME": "镜花水月",
-    "DESCRIPTION": "获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 混沌 。"
   },
   "LagranYue:TestChooseCard": {
     "NAME": "预备",
@@ -430,10 +442,35 @@
       "获得 [E] [E] [E] 。"
     ]
   },
+  "LagranYue:SkillFalseAerialAceCard": {
+    "NAME": "燕返",
+    "DESCRIPTION": "获得 !B! 点 格挡 。获得 !M! 层 燕返 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。获得 !M! 层 燕返 。"
+  },
+  "LagranYue:SkillDeadlyBloomCard": {
+    "NAME": "死亡绽放",
+    "DESCRIPTION": "获得 !B! 点 格挡 。给予 !M! 层 死亡印记 。"
+  },
+  "LagranYue:SkillTestamentCard": {
+    "NAME": "遗言的假面",
+    "DESCRIPTION": "获得 !B! 点 格挡  !M! 次。"
+  },
+  "LagranYue:SkillDevilKissCard": {
+    "NAME": "恶魔之吻",
+    "DESCRIPTION": "获得 !B! 点 格挡  !M! 次。"
+  },
+  "LagranYue:SkillDistortionCard": {
+    "NAME": "失真",
+    "DESCRIPTION": "获得 !B! 点 格挡 。给予 !M! 层 失真 。"
+  },
+  "LagranYue:SkillCocoonEvolutionCard": {
+    "NAME": "超进化之茧",
+    "DESCRIPTION": "获得 !B! 点 格挡 。所有 技能点 增加 !M! 。"
+  },
   "LagranYue:SkillLiberationCard": {
     "NAME": "宝玉的解放",
-    "DESCRIPTION": " 盾技 ：1。获得 !B! 点 格挡  !M! 次。获得1层 燕返 。",
-    "UPGRADE_DESCRIPTION": " 盾技 ：1。获得 !B! 点 格挡  !M! 次。获得1层 燕返 。"
+    "DESCRIPTION": " 盾技 ：1。获得 !B! 点 格挡  !M! 次。获得3层 燕返 。",
+    "UPGRADE_DESCRIPTION": " 盾技 ：1。获得 !B! 点 格挡  !M! 次。获得3层 燕返 。"
   },
   "LagranYue:SkillEightFeetJadeCard": {
     "NAME": "八尺勾玉",

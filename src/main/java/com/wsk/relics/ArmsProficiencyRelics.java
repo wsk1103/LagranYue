@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.wsk.actions.ActionUtil;
 import com.wsk.cards.proficiency.AbstractProficiencyCard;
 import com.wsk.powers.arms.AbstractArmsPower;
 import com.wsk.utils.CommonUtil;
@@ -17,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/3/20
  * @description 技能点系统
  */
-public class ArmsProficiencyRelics extends CustomRelic {
+public final class ArmsProficiencyRelics extends CustomRelic {
     public static final String ID = "LagranYue:ArmsProficiencyRelics";
     public static final String IMG = "relics/w35.png";
     public static final String OUTLINE = "relics/w36.png";
@@ -48,6 +49,8 @@ public class ArmsProficiencyRelics extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard c, UseCardAction action) {
+
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
 
         reduce(c);
 
@@ -100,7 +103,7 @@ public class ArmsProficiencyRelics extends CustomRelic {
         use();
     }
 
-    private void use() {
+    public void use() {
         this.description = getUpdatedDescription();
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));

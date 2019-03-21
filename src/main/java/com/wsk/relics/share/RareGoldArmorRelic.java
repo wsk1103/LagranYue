@@ -4,7 +4,9 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.wsk.actions.ActionUtil;
 import com.wsk.reward.CombatRewardScreenPatch;
 import com.wsk.utils.CommonUtil;
 
@@ -39,6 +41,7 @@ public class RareGoldArmorRelic extends CustomRelic {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
         flash();
         if (info.type == DamageInfo.DamageType.NORMAL) {
             counter += damageAmount;

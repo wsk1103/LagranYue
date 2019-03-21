@@ -58,7 +58,7 @@ public class AttackGodSpearCard extends AbstractProfSpearCard {
                 CardTarget.ENEMY);
         this.proficiency = 3;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 8;
+        this.baseDamage = 10;
         this.magicNumber = this.baseMagicNumber = 5;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
@@ -87,9 +87,9 @@ public class AttackGodSpearCard extends AbstractProfSpearCard {
             //升级名称。必带。
             this.upgradeName();
 
-//            this.upgradeDamage(2);
+            this.upgradeDamage(5);
 
-            this.upgradeMagicNumber(3);
+//            this.upgradeMagicNumber(3);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！

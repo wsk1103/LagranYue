@@ -16,10 +16,9 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.wsk.cards.arms.SkillBrokenSwordCard;
-import com.wsk.cards.attack.AttackTopazCard;
-import com.wsk.cards.attack.BaseAttackCard;
+import com.wsk.cards.attack.*;
 import com.wsk.cards.proficiency.*;
-import com.wsk.cards.skill.BaseDefendCard;
+import com.wsk.cards.skill.*;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
 import com.wsk.relics.ArmsProficiencyRelics;
@@ -111,6 +110,16 @@ public class LagranYueCharacter extends CustomPlayer {
         retVal.add(BaseDefendCard.ID);
         retVal.add(BaseDefendCard.ID);
         retVal.add(BaseDefendCard.ID);
+
+        retVal.add(AttackCellGodCard.ID);
+        retVal.add(AttackEngravingRoseCard.ID);
+        retVal.add(AttackFlintCard.ID);
+        retVal.add(SkillCocoonEvolutionCard.ID);
+        retVal.add(SkillDeadlyBloomCard.ID);
+        retVal.add(SkillDevilKissCard.ID);
+        retVal.add(SkillDistortionCard.ID);
+        retVal.add(SkillFalseAerialAceCard.ID);
+        retVal.add(SkillTestamentCard.ID);
 
         retVal.add(AttackTopazCard.ID);
         retVal.add(SkillBrokenSwordCard.ID);
