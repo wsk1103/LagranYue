@@ -109,6 +109,7 @@ public class AttackGodSwordCard extends AbstractProfSwordCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        ActionUtil.addPower(p, new DivinityPower(p, 1));
         int u;
         if (upgraded) {
             u = ArmsUtil.getArmsNum();
@@ -124,7 +125,6 @@ public class AttackGodSwordCard extends AbstractProfSwordCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
         }
-        ActionUtil.addPower(p, new DivinityPower(p, 1));
     }
 
     static {

@@ -37,12 +37,17 @@ public class MoonMirrorShieldPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount * 3 + DESCRIPTIONS[1] + amount * 3);
+        this.description = (DESCRIPTIONS[0] + this.amount * 3 + DESCRIPTIONS[1] + amount * 3 + DESCRIPTIONS[2]);
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         card = c;
+    }
+
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        this.card = card;
     }
 
     @Override
@@ -56,18 +61,23 @@ public class MoonMirrorShieldPower extends AbstractPower {
     }
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+    public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
         return sum(damage);
     }
 
     @Override
-    public int onPlayerGainedBlock(int blockAmount) {
+    public void onGainedBlock(float a) {
 
-        return (int) sum(blockAmount);
+    }
+
+    @Override
+    public float modifyBlock(float a) {
+        return sum(a);
     }
 
     private float sum(float a) {
         if (card != null) {
+            flash();
             if (card.rarity == AbstractCard.CardRarity.UNCOMMON) {
                 a += 3 * amount;
             } else if (card.rarity == AbstractCard.CardRarity.COMMON || card.rarity == AbstractCard.CardRarity.BASIC) {

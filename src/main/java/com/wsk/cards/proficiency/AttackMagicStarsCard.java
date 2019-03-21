@@ -119,7 +119,7 @@ public class AttackMagicStarsCard extends AbstractProfArchCard {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
                     new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SHIELD));
         }
-        ActionUtil.addPower(p, new DistortionPower(p, 1));
+        ActionUtil.addPower(p, m, new DistortionPower(m, 1));
     }
 
     static {

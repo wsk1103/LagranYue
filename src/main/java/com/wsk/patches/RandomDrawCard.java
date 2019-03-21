@@ -56,6 +56,8 @@ public class RandomDrawCard {
                     e.printStackTrace();
                 }
             }
+            //删除遗物
+            saveToNext.delete();
         }
 
         for (AbstractRelic relic : all) {

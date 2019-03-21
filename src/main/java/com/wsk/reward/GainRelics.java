@@ -2,7 +2,9 @@ package com.wsk.reward;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rewards.RewardItem;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -21,6 +23,17 @@ public class GainRelics {
             }
         }
         if (!hasRelic) {*/
+        return AbstractDungeon.returnRandomRelic(getRandomRelic());
+//        rewards.add(new RewardItem());
+        /*        }*/
+
+    }
+
+    public static void receiveRewards(ArrayList<RewardItem> rewards) {
+        rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(getRandomRelic())));
+    }
+
+    private static AbstractRelic.RelicTier getRandomRelic() {
         Random random = new Random();
         int r = random.nextInt(100);
         AbstractRelic.RelicTier tier = AbstractRelic.RelicTier.COMMON;
@@ -33,9 +46,6 @@ public class GainRelics {
         } else if (r >= 60) {
             tier = AbstractRelic.RelicTier.SHOP;
         }
-        return AbstractDungeon.returnRandomRelic(tier);
-//        rewards.add(new RewardItem());
-        /*        }*/
-
+        return tier;
     }
 }

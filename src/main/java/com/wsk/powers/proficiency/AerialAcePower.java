@@ -38,8 +38,8 @@ public class AerialAcePower extends AbstractPower {
     }
 
     @Override
-    public int onPlayerGainedBlock(int blockAmount) {
-        return blockAmount * 2;
+    public float modifyBlock(float blockAmount) {
+        return super.modifyBlock(blockAmount * 2);
     }
 
     @Override

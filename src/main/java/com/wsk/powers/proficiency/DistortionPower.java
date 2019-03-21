@@ -37,8 +37,13 @@ public class DistortionPower extends AbstractPower {
         this.description = (DESCRIPTIONS[0] + this.amount * 5);
     }
 
+//    @Override
+//    public float atDamageGive(float damage, DamageInfo.DamageType damageType) {
+//        return damage + this.amount * 5;
+//    }
+
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType damageType) {
+    public float atDamageFinalReceive(float damage, DamageInfo.DamageType type) {
         return damage + this.amount * 5;
     }
 }

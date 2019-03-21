@@ -24,7 +24,7 @@ public class ReturningEmperorRelic extends CustomRelic {
 
     public ReturningEmperorRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);
-        this.counter = -1;
+        this.counter = 0;
     }
 
     @Override
@@ -39,14 +39,13 @@ public class ReturningEmperorRelic extends CustomRelic {
 
     @Override
     public void onVictory() {
-        counter = -1;
+        counter = 0;
     }
 
     @Override
     public void atTurnStart() {
         flash();
-        counter++;
-        if (counter % 3 == 0) {
+        if (counter != 0 && counter % 3 == 0) {
             ArrayList<AbstractPower> powers = AbstractDungeon.player.powers;
             a:for (AbstractPower power : powers) {
                 if (power.type == AbstractPower.PowerType.DEBUFF) {
@@ -62,5 +61,7 @@ public class ReturningEmperorRelic extends CustomRelic {
                 }
             }
         }
+        counter++;
     }
+
 }

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.cards.proficiency.AbstractProficiencyCard;
@@ -32,7 +33,12 @@ public class ArmsProficiencyRelics extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + arch + "；\n" + DESCRIPTIONS[1] + shield + "；\n" + DESCRIPTIONS[2] + spear + "；\n" + DESCRIPTIONS[3] + sword;
+        String ar = String.format("%.1f", arch);
+        String sh = String.format("%.1f", shield);
+        String sp = String.format("%.1f", spear);
+        String sw = String.format("%.1f", sword);
+        return this.DESCRIPTIONS[0] + ar + DESCRIPTIONS[1]
+                + sh + DESCRIPTIONS[2] + sp + DESCRIPTIONS[3] + sw;
     }
 
     @Override
@@ -91,40 +97,66 @@ public class ArmsProficiencyRelics extends CustomRelic {
 
         }
         flash();
-        update();
+        use();
     }
 
+    private void use() {
+        this.description = getUpdatedDescription();
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
+    }
 
-    /**
-     * 触发时机：每一场战斗
-     */
     @Override
-    public void atPreBattle() {
-        this.flash();
+    public void onVictory() {
         setArch(0);
         setShield(0);
         setSpear(0);
         setSword(0);
+        use();
     }
 
     /**
      * 打出卡牌后，需要减少相应的技能点。
+     *
      * @param c 卡牌
      */
     private void reduce(AbstractCard c) {
         if (c instanceof AbstractProficiencyCard) {
+
+
             switch (((AbstractProficiencyCard) c).arms) {
                 case Arch:
-                    setArch(-((AbstractProficiencyCard) c).proficiency);
+                    float ar = arch - ((AbstractProficiencyCard) c).proficiency;
+                    if (ar <= 0) {
+                        setArch(0);
+                    } else {
+                        addArch(-((AbstractProficiencyCard) c).proficiency);
+                    }
                     break;
                 case Spear:
-                    setSpear(-((AbstractProficiencyCard) c).proficiency);
+                    float sp = spear - ((AbstractProficiencyCard) c).proficiency;
+                    if (sp <= 0) {
+                        setSpear(0);
+                    } else {
+                        addSpear(-((AbstractProficiencyCard) c).proficiency);
+                    }
                     break;
                 case Sword:
-                    setSword(-((AbstractProficiencyCard) c).proficiency);
+                    float sw = sword - ((AbstractProficiencyCard) c).proficiency;
+                    if (sw <= 0) {
+                        setSword(0);
+                    } else {
+                        addSword(-((AbstractProficiencyCard) c).proficiency);
+                    }
                     break;
                 case Shield:
-                    setShield(-((AbstractProficiencyCard) c).proficiency);
+                    float sh = spear - ((AbstractProficiencyCard) c).proficiency;
+                    if (sh <= 0) {
+                        setShield(0);
+                    } else {
+                        addShield(-((AbstractProficiencyCard) c).proficiency);
+                    }
                     break;
                 default:
                     break;
@@ -135,18 +167,30 @@ public class ArmsProficiencyRelics extends CustomRelic {
 
     public void addArch(float arch) {
         this.arch += arch;
+        if (this.arch < 0) {
+            this.arch = 0;
+        }
     }
 
     public void addShield(float a) {
         this.shield += a;
+        if (this.shield < 0) {
+            this.shield = 0;
+        }
     }
 
     public void addSpear(float b) {
         this.spear += b;
+        if (this.spear < 0) {
+            this.spear = 0;
+        }
     }
 
     public void addSword(float b) {
         this.sword += b;
+        if (this.sword < 0) {
+            this.sword = 0;
+        }
     }
 
     public float getArch() {
@@ -154,7 +198,7 @@ public class ArmsProficiencyRelics extends CustomRelic {
     }
 
     public void setArch(float i) {
-        this.arch = i;
+        this.arch = i > 0 ? i : 0;
     }
 
     public float getShield() {
@@ -162,7 +206,7 @@ public class ArmsProficiencyRelics extends CustomRelic {
     }
 
     public void setShield(float shield) {
-        this.shield = shield;
+        this.shield = shield > 0 ? shield : 0;
     }
 
     public float getSpear() {
@@ -170,7 +214,7 @@ public class ArmsProficiencyRelics extends CustomRelic {
     }
 
     public void setSpear(float spear) {
-        this.spear = spear;
+        this.spear = spear > 0 ? spear : 0;
     }
 
     public float getSword() {
@@ -178,6 +222,6 @@ public class ArmsProficiencyRelics extends CustomRelic {
     }
 
     public void setSword(float sword) {
-        this.sword = sword;
+        this.sword = sword > 0 ? sword : 0;
     }
 }

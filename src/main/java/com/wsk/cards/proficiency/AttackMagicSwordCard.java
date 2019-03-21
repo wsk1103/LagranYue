@@ -104,10 +104,10 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        ActionUtil.addPower(p, new DivinityPower(p, 1));
         for (int i = 0; i < this.magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         }
-        ActionUtil.addPower(p, new DivinityPower(p, 1));
     }
 
     static {

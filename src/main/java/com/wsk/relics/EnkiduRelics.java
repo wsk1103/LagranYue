@@ -29,7 +29,7 @@ public class EnkiduRelics extends CustomRelic {
     public static final String DESCRIPTION = "每次战斗仅一次，切换 #y兵器 的时候，保留之前一把武器获得的力量/敏捷加成效果。";
 
     public EnkiduRelics() {
-        super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.FLAT);
+        super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.COMMON, LandingSound.FLAT);
         this.counter = 2;
     }
 

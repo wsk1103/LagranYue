@@ -4,10 +4,8 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.wsk.actions.ActionUtil;
-import com.wsk.powers.proficiency.DivinityPower;
+import com.wsk.reward.CombatRewardScreenPatch;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -46,9 +44,14 @@ public class RareGoldArmorRelic extends CustomRelic {
             counter += damageAmount;
         }
         if (!more && counter >= 40) {
+            CombatRewardScreenPatch.magicEyePower ++;
             more = true;
-            ActionUtil.addPower(AbstractDungeon.player, new DivinityPower(AbstractDungeon.player, 1));
         }
+    }
+
+    @Override
+    public void atBattleStart() {
+        CombatRewardScreenPatch.magicEyePower = 0;
     }
 
     @Override

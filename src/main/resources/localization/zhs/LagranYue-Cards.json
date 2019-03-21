@@ -88,7 +88,7 @@
   "LagranYue:AttackFaithCard": {
     "NAME": "最终信仰",
     "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 亖 次。获得 亖 层 胜利契约 。最少1次。",
-    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 M 次。获得 兀 层 胜利契约 。最少1次。"
+    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 兀 次。获得 兀 层 胜利契约 。最少1次。"
   },
   "LagranYue:AttackAerCard": {
     "NAME": "阿尔托利亚",

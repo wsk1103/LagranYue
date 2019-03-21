@@ -105,6 +105,7 @@ public class SkillLegendPaladinCard extends AbstractProfShieldCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        ActionUtil.addPower(p, new DivinityPower(p, 1));
         int u;
         if (upgraded) {
             u = ArmsUtil.getArmsNum();
@@ -114,7 +115,6 @@ public class SkillLegendPaladinCard extends AbstractProfShieldCard {
         for (int i = 0; i < this.magicNumber + u; i++) {
             ActionUtil.gainBlockAction(p, this.block);
         }
-        ActionUtil.addPower(p, new DivinityPower(p, 1));
     }
 
     static {

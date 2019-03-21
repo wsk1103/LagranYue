@@ -14,7 +14,7 @@ import com.wsk.utils.CommonUtil;
  * @description 神性
  */
 public class DivinityPower extends AbstractPower {
-    public static final String POWER_ID = "LagranYue:divinityPower";
+    public static final String POWER_ID = "LagranYue:DivinityPower";
 
     public static String[] DESCRIPTIONS;
 

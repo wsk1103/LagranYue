@@ -2,6 +2,7 @@ package com.wsk.relics.share;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.actions.ActionUtil;
@@ -39,8 +40,7 @@ public class GuideDeadRelic extends CustomRelic {
     }
 
     @Override
-    public int onPlayerGainBlock(int blockAmount) {
-        flash();
-        return blockAmount - 2;
+    public void onBlockBroken(AbstractCreature m) {
+        ActionUtil.loseHP(AbstractDungeon.player, (int) (AbstractDungeon.player.maxHealth * 0.05));
     }
 }

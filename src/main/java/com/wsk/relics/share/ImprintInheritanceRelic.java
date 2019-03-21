@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.utils.CommonUtil;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class ImprintInheritanceRelic extends CustomRelic {
     public static final String ID = "LagranYue:ImprintInheritanceRelic";
     public static final String IMG = "relics/w35.png";
     public static final String OUTLINE = "relics/w36.png";
-    public static final String FILEPATH = "saves/ImprintInheritanceRelic.txt";
+    public static final String FILEPATH = "saves/ImprintInheritanceRelic.autosave";
 
     public ImprintInheritanceRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.FLAT);
@@ -46,9 +47,9 @@ public class ImprintInheritanceRelic extends CustomRelic {
             return;
         }
         String randomRelic = null;
-        for (int i = relics.size() - 1; i >= 0; i--) {
+        for (int i = relics.size() - 2; i >= 0; i--) {
             AbstractRelic relic = relics.get(i);
-            if (relic.tier != RelicTier.STARTER) {
+            if (relic.tier != RelicTier.STARTER && !relic.relicId.equals(ID)) {
                 randomRelic = relic.getClass().getName();
                 break;
             }
@@ -62,8 +63,9 @@ public class ImprintInheritanceRelic extends CustomRelic {
             if (!saveToNext.exists()) {
                 saveToNext.createNewFile();
             }
-            try (FileWriter fileWriter = new FileWriter(saveToNext.getName())) {
-                fileWriter.write(randomRelic);
+            try (BufferedWriter out = new BufferedWriter(new FileWriter(saveToNext))) {
+                out.write(randomRelic);
+                out.flush();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,10 +76,10 @@ public class ImprintInheritanceRelic extends CustomRelic {
 
     @Override
     public void onUnequip() {
-        File saveToNext = new File("saves/ImprintInheritanceRelic.txt");
+        File saveToNext = new File(FILEPATH);
         if (saveToNext.exists()) {
             saveToNext.delete();
-            System.out.println("ImprintInheritanceRelic save success!");
+            System.out.println("ImprintInheritanceRelic delete success!");
         } else {
             System.out.println("ImprintInheritanceRelic file not!");
         }

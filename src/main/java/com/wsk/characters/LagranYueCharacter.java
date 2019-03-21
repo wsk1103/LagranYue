@@ -23,7 +23,6 @@ import com.wsk.cards.skill.BaseDefendCard;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
 import com.wsk.relics.ArmsProficiencyRelics;
-import com.wsk.relics.EnkiduRelics;
 import com.wsk.relics.share.*;
 import com.wsk.utils.AllCards;
 import com.wsk.utils.CommonUtil;
@@ -243,9 +242,10 @@ public class LagranYueCharacter extends CustomPlayer {
     }
 
     //添加初始遗物
+    @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(EnkiduRelics.ID);
+//        retVal.add(EnkiduRelics.ID);
         retVal.add(ArmsProficiencyRelics.ID);
 
         retVal.add(ContractPerformanceRelic.ID);
@@ -259,7 +259,7 @@ public class LagranYueCharacter extends CustomPlayer {
         retVal.add(SoulBurningRelic.ID);
         retVal.add(SpringFairyRelic.ID);
         retVal.add(WskJewelryRelic.ID);
-        retVal.add(ImprintInheritanceRelic.ID);
+//        retVal.add(ImprintInheritanceRelic.ID);
 //        retVal.add(BrokenPhantasmRelics.ID);
 //        retVal.add(LuEnSwordRelics.ID);
 //        retVal.add(OveredgeRelics.ID);
@@ -275,8 +275,8 @@ public class LagranYueCharacter extends CustomPlayer {
 
     //在角色选择界面的一些描叙内容。
     public CharSelectInfo getLoadout() {
-        final int currentHp = 75;//初始拥有血量
-//        final int currentHp = 575;//初始拥有血量
+//        final int currentHp = 75;//初始拥有血量
+        final int currentHp = 575;//初始拥有血量
         final int maxHp = currentHp;//初始最大血量
         final int maxOrbs = 0;//球球数
         final int gold = 99;//初始金币数量

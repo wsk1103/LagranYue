@@ -114,7 +114,7 @@ public class AttackCrowCrossbowCard extends AbstractProfArchCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             }
         }
-        ActionUtil.addPower(p, new PermeationPower(p, 1));
+        ActionUtil.addPower(p, m, new PermeationPower(m, 1));
     }
 
     static {

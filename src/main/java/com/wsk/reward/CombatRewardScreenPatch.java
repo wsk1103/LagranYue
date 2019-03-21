@@ -17,7 +17,7 @@ public class CombatRewardScreenPatch {
 
     @SpireInsertPatch(locator = Locator.class)
     public static void insert(CombatRewardScreen instance) {
-//        //神性
+        //神性
 //        for (int i = 0; i < divinityPower; i++) {
 //            GainRelics.receiveRewards(instance.rewards);
 //            divinityPower = 0;

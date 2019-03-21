@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.powers.arms.AbstractArmsPower;
 import com.wsk.powers.base.ImprintPower;
 import com.wsk.powers.base.NextEnergizedPower;
@@ -151,6 +152,11 @@ public class ActionUtil {
     }
 
     //添加能力
+    public static void addPower(AbstractCreature s, AbstractCreature t, AbstractPower power) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(t, s, power, power.amount));
+    }
+
+    //添加能力
     public static void gainEnergy(int amount) {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
     }
@@ -218,6 +224,10 @@ public class ActionUtil {
      */
     public static void drawCard(AbstractCreature p, int amount) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, amount));
+    }
+
+    public static void relicAboveCreatureAction(AbstractCreature source, AbstractRelic relic) {
+        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(source, relic));
     }
 
 }

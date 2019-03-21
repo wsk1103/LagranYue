@@ -37,7 +37,11 @@ public class SpringFairyPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount + 1) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2]);
+        String a = "1/2";
+        if (amount >= 2) {
+            a = "1";
+        }
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + a + DESCRIPTIONS[2]);
     }
 
     @Override
@@ -51,26 +55,46 @@ public class SpringFairyPower extends AbstractPower {
     }
 
     @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        this.card = card;
+    }
+
+    @Override
     public void atStartOfTurn() {
         card = null;
     }
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
+    public float atDamageFinalGive(float damage, DamageInfo.DamageType type) {
         return sum(damage);
     }
 
     @Override
-    public int onPlayerGainedBlock(int blockAmount) {
-        return (int) sum(blockAmount);
+    public void onGainedBlock(float a) {
+
     }
 
+    @Override
+    public float modifyBlock(float a) {
+        return sum(a);
+    }
+
+    /*    @Override
+    public int onPlayerGainedBlock(float blockAmount) {
+        return super.onPlayerGainedBlock(sum(blockAmount));
+    }*/
+
+
     private float sum(float a) {
+        if (a <= 0) {
+            return a;
+        }
         if (card != null) {
+            flash();
             if (card.rarity == AbstractCard.CardRarity.RARE) {
                 a += a * amount;
             } else if (card.rarity == AbstractCard.CardRarity.COMMON || card.rarity == AbstractCard.CardRarity.BASIC) {
-                a -= a * amount;
+                a -= Math.floor(a / 2 * amount);
             }
         }
         return a >= 0 ? a : 0;
