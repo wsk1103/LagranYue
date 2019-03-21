@@ -2,13 +2,15 @@ package com.wsk.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.wsk.actions.ActionUtil;
 import com.wsk.cards.proficiency.AbstractProficiencyCard;
 import com.wsk.powers.arms.AbstractArmsPower;
 import com.wsk.utils.CommonUtil;
@@ -23,10 +25,11 @@ public final class ArmsProficiencyRelics extends CustomRelic {
     public static final String IMG = "relics/r1.png";
     public static final String OUTLINE = "relics/r2.png";
 
-    private float arch = 0F;
+/*    private float arch = 0F;
     private float shield = 0F;
     private float spear = 0F;
-    private float sword = 0F;
+    private float sword = 0F;*/
+    private float skillPoint = 0F;
 
     public ArmsProficiencyRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.CLINK);
@@ -34,12 +37,14 @@ public final class ArmsProficiencyRelics extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        String ar = String.format("%.1f", arch);
+/*        String ar = String.format("%.1f", arch);
         String sh = String.format("%.1f", shield);
         String sp = String.format("%.1f", spear);
         String sw = String.format("%.1f", sword);
         return this.DESCRIPTIONS[0] + ar + DESCRIPTIONS[1]
-                + sh + DESCRIPTIONS[2] + sp + DESCRIPTIONS[3] + sw;
+                + sh + DESCRIPTIONS[2] + sp + DESCRIPTIONS[3] + sw;*/
+        String skill = String.format("%.1f", skillPoint);
+        return this.DESCRIPTIONS[0] + skill;
     }
 
     @Override
@@ -48,59 +53,64 @@ public final class ArmsProficiencyRelics extends CustomRelic {
     }
 
     @Override
-    public void onUseCard(AbstractCard c, UseCardAction action) {
-
-        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
-
-        reduce(c);
-
-        float add = 0;
-        switch (c.rarity) {
-            case BASIC:
-                add = 0.2F;
-                break;
-            case SPECIAL:
-                add = 0.2F;
-                break;
-            case COMMON:
-                add = 0.2F;
-                break;
-            case UNCOMMON:
-                add = 0.4F;
-                break;
-            case RARE:
-                add = 1F;
-                break;
-            case CURSE:
-                break;
-            default:
-                break;
-        }
-        if (add != 0) {
-            for (AbstractPower power : AbstractDungeon.player.powers) {
-                if (power instanceof AbstractArmsPower) {
-                    switch (((AbstractArmsPower) power).arms) {
-                        case Arch:
-                            addArch(add);
-                            break;
-                        case Shield:
-                            addShield(add);
-                            break;
-                        case Spear:
-                            addSpear(add);
-                            break;
-                        case Sword:
-                            addSword(add);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-
-        }
+    public void atTurnStart() {
         flash();
-        use();
+//        float da = Math.max(arch, Math.max(shield, Math.max(sword, spear)));
+        int result = Math.round(skillPoint);
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(null,
+                DamageInfo.createDamageMatrix(result, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));
+
+    }
+
+    @Override
+    public void onUseCard(AbstractCard c, UseCardAction action) {
+        reduce(c);
+        for (AbstractPower power : AbstractDungeon.player.powers) {
+            if (power instanceof AbstractArmsPower) {
+                float add = 0;
+                switch (c.rarity) {
+                    case BASIC:
+                        add = 0.2F;
+                        break;
+                    case SPECIAL:
+                        add = 0.2F;
+                        break;
+                    case COMMON:
+                        add = 0.2F;
+                        break;
+                    case UNCOMMON:
+                        add = 0.4F;
+                        break;
+                    case RARE:
+                        add = 1F;
+                        break;
+                    case CURSE:
+                        break;
+                    default:
+                        break;
+                }
+                addSkillPoint(add);
+
+/*                switch (((AbstractArmsPower) power).arms) {
+                    case Arch:
+                        addArch(add);
+                        break;
+                    case Shield:
+                        addShield(add);
+                        break;
+                    case Spear:
+                        addSpear(add);
+                        break;
+                    case Sword:
+                        addSword(add);
+                        break;
+                    default:
+                        break;
+                }*/
+                flash();
+                use();
+            }
+        }
     }
 
     public void use() {
@@ -112,10 +122,11 @@ public final class ArmsProficiencyRelics extends CustomRelic {
 
     @Override
     public void onVictory() {
-        setArch(0);
+/*        setArch(0);
         setShield(0);
         setSpear(0);
-        setSword(0);
+        setSword(0);*/
+        setSkillPoint(0F);
         use();
     }
 
@@ -126,9 +137,8 @@ public final class ArmsProficiencyRelics extends CustomRelic {
      */
     private void reduce(AbstractCard c) {
         if (c instanceof AbstractProficiencyCard) {
-
-
-            switch (((AbstractProficiencyCard) c).arms) {
+            addSkillPoint(-((AbstractProficiencyCard) c).proficiency);
+/*            switch (((AbstractProficiencyCard) c).arms) {
                 case Arch:
                     float ar = arch - ((AbstractProficiencyCard) c).proficiency;
                     if (ar <= 0) {
@@ -163,12 +173,12 @@ public final class ArmsProficiencyRelics extends CustomRelic {
                     break;
                 default:
                     break;
-            }
+            }*/
         }
     }
 
 
-    public void addArch(float arch) {
+/*    public void addArch(float arch) {
         this.arch += arch;
         if (this.arch < 0) {
             this.arch = 0;
@@ -226,5 +236,20 @@ public final class ArmsProficiencyRelics extends CustomRelic {
 
     public void setSword(float sword) {
         this.sword = sword > 0 ? sword : 0;
+    }*/
+
+    public float getSkillPoint() {
+        return skillPoint;
+    }
+
+    public void setSkillPoint(float skillPoint) {
+        this.skillPoint = skillPoint > 0 ? skillPoint : 0;
+    }
+
+    public void addSkillPoint(float f) {
+        this.skillPoint += f;
+        if (skillPoint < 0) {
+            skillPoint = 0;
+        }
     }
 }

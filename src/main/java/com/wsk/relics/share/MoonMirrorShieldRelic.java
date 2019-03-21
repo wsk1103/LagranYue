@@ -36,7 +36,7 @@ public static final String IMG = "relics/r21.png";
 
     @Override
     public void atBattleStart() {
-        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
+
         flash();
         ActionUtil.addPower(AbstractDungeon.player, new MoonMirrorShieldPower(AbstractDungeon.player, 1));
     }

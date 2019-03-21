@@ -2,9 +2,9 @@
   "modid": "LagranYue",
   "name": "拉格朗·月",
   "author_list": ["sky"],
-  "description": "角色：武器大师·拉格朗·月，包含66张卡片，10件遗物。\n GitHub源码：https://github.com/wsk1103/LagranYue",
+  "description": "角色：武器大师·拉格朗·月，包含91张卡片，26件遗物。\n1包含件特殊遗物：使用该遗物，当SL后，初始的抽牌顺序会发生随机变化。\n GitHub源码：https://github.com/wsk1103/LagranYue ",
   "dependencies": ["basemod"],
-  "version": "1.3.0",
+  "version": "1.4.0",
   "sts_version": "03-03-2019",
   "mts_version": "3.6.0"
 }

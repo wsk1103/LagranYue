@@ -38,7 +38,7 @@ public class SkillCocoonEvolutionCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
         this.baseBlock = 10;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = false;
     }
 
@@ -61,10 +61,7 @@ public class SkillCocoonEvolutionCard extends CustomCard {
         ArrayList<AbstractRelic> relics = AbstractDungeon.player.relics;
         for (AbstractRelic relic : relics) {
             if (relic instanceof ArmsProficiencyRelics) {
-                ((ArmsProficiencyRelics) relic).addArch(1);
-                ((ArmsProficiencyRelics) relic).addShield(1);
-                ((ArmsProficiencyRelics) relic).addSword(1);
-                ((ArmsProficiencyRelics) relic).addSpear(1);
+                ((ArmsProficiencyRelics) relic).addSkillPoint(this.magicNumber);
                 ((ArmsProficiencyRelics) relic).use();
                 return;
             }

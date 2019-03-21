@@ -16,13 +16,12 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.wsk.cards.arms.SkillBrokenSwordCard;
-import com.wsk.cards.attack.*;
-import com.wsk.cards.proficiency.*;
-import com.wsk.cards.skill.*;
+import com.wsk.cards.attack.AttackTopazCard;
+import com.wsk.cards.attack.BaseAttackCard;
+import com.wsk.cards.skill.BaseDefendCard;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
 import com.wsk.relics.ArmsProficiencyRelics;
-import com.wsk.relics.share.*;
 import com.wsk.utils.AllCards;
 import com.wsk.utils.CommonUtil;
 
@@ -35,8 +34,8 @@ import java.util.Random;
  * @desc 一句话说明
  */
 public class LagranYueCharacter extends CustomPlayer {
-//    private static final int ENERGY_PER_TURN = 3;//角色的初始能量值。
-        private static final int ENERGY_PER_TURN = 15;//角色的初始能量值。
+    private static final int ENERGY_PER_TURN = 3;//角色的初始能量值。
+//        private static final int ENERGY_PER_TURN = 15;//角色的初始能量值。
     private static final String[] ORB_TEXTURES = {"LagranYue/char/orb/layer1.png",
             "LagranYue/char/orb/layer2.png",
             "LagranYue/char/orb/layer3.png",
@@ -83,26 +82,27 @@ public class LagranYueCharacter extends CustomPlayer {
     }
 
     //添加初始牌组
+    @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
         Random random = new Random();
         int a = AbstractDungeon.ascensionLevel;
-        retVal.add(AttackCrowCrossbowCard.ID);
-        retVal.add(AttackDegenerateCard.ID);
-        retVal.add(AttackDivineGuidanceCard.ID);
-        retVal.add(AttackEnchantmentCard.ID);
-        retVal.add(AttackGalacticZeroCard.ID);
-        retVal.add(AttackGodArchCard.ID);
-        retVal.add(AttackGodSpearCard.ID);
-        retVal.add(AttackGodSwordCard.ID);
-        retVal.add(AttackMagicMoonCard.ID);
-        retVal.add(AttackMagicStarsCard.ID);
-        retVal.add(AttackMagicSwordCard.ID);
-        retVal.add(SkillDisasterEquipmentCard.ID);
-        retVal.add(SkillEightFeetJadeCard.ID);
-        retVal.add(SkillHeartWaterCard.ID);
-        retVal.add(SkillLegendPaladinCard.ID);
-        retVal.add(SkillLiberationCard.ID);
+//        retVal.add(AttackCrowCrossbowCard.ID);
+//        retVal.add(AttackDegenerateCard.ID);
+//        retVal.add(AttackDivineGuidanceCard.ID);
+//        retVal.add(AttackEnchantmentCard.ID);
+//        retVal.add(AttackGalacticZeroCard.ID);
+//        retVal.add(AttackGodArchCard.ID);
+//        retVal.add(AttackGodSpearCard.ID);
+//        retVal.add(AttackGodSwordCard.ID);
+//        retVal.add(AttackMagicMoonCard.ID);
+//        retVal.add(AttackMagicStarsCard.ID);
+//        retVal.add(AttackMagicSwordCard.ID);
+//        retVal.add(SkillDisasterEquipmentCard.ID);
+//        retVal.add(SkillEightFeetJadeCard.ID);
+//        retVal.add(SkillHeartWaterCard.ID);
+//        retVal.add(SkillLegendPaladinCard.ID);
+//        retVal.add(SkillLiberationCard.ID);
         retVal.add(BaseAttackCard.ID);
         retVal.add(BaseAttackCard.ID);
         retVal.add(BaseAttackCard.ID);
@@ -111,15 +111,15 @@ public class LagranYueCharacter extends CustomPlayer {
         retVal.add(BaseDefendCard.ID);
         retVal.add(BaseDefendCard.ID);
 
-        retVal.add(AttackCellGodCard.ID);
-        retVal.add(AttackEngravingRoseCard.ID);
-        retVal.add(AttackFlintCard.ID);
-        retVal.add(SkillCocoonEvolutionCard.ID);
-        retVal.add(SkillDeadlyBloomCard.ID);
-        retVal.add(SkillDevilKissCard.ID);
-        retVal.add(SkillDistortionCard.ID);
-        retVal.add(SkillFalseAerialAceCard.ID);
-        retVal.add(SkillTestamentCard.ID);
+//        retVal.add(AttackCellGodCard.ID);
+//        retVal.add(AttackEngravingRoseCard.ID);
+//        retVal.add(AttackFlintCard.ID);
+//        retVal.add(SkillCocoonEvolutionCard.ID);
+//        retVal.add(SkillDeadlyBloomCard.ID);
+//        retVal.add(SkillDevilKissCard.ID);
+//        retVal.add(SkillDistortionCard.ID);
+//        retVal.add(SkillFalseAerialAceCard.ID);
+//        retVal.add(SkillTestamentCard.ID);
 
         retVal.add(AttackTopazCard.ID);
         retVal.add(SkillBrokenSwordCard.ID);
@@ -254,20 +254,20 @@ public class LagranYueCharacter extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-//        retVal.add(EnkiduRelics.ID);
         retVal.add(ArmsProficiencyRelics.ID);
+//        retVal.add(EnkiduRelics.ID);
 
-        retVal.add(ContractPerformanceRelic.ID);
-        retVal.add(GuidanceLightRelic.ID);
-        retVal.add(GuideDeadRelic.ID);
-        retVal.add(MagicReflectiveArmorRelic.ID);
-        retVal.add(MoonMirrorShieldRelic.ID);
-        retVal.add(NewUniverseRelic.ID);
-        retVal.add(RareGoldArmorRelic.ID);
-        retVal.add(ReturningEmperorRelic.ID);
-        retVal.add(SoulBurningRelic.ID);
-        retVal.add(SpringFairyRelic.ID);
-        retVal.add(WskJewelryRelic.ID);
+//        retVal.add(ContractPerformanceRelic.ID);
+//        retVal.add(GuidanceLightRelic.ID);
+//        retVal.add(GuideDeadRelic.ID);
+//        retVal.add(MagicReflectiveArmorRelic.ID);
+//        retVal.add(MoonMirrorShieldRelic.ID);
+//        retVal.add(NewUniverseRelic.ID);
+//        retVal.add(RareGoldArmorRelic.ID);
+//        retVal.add(ReturningEmperorRelic.ID);
+//        retVal.add(SoulBurningRelic.ID);
+//        retVal.add(SpringFairyRelic.ID);
+//        retVal.add(WskJewelryRelic.ID);
 //        retVal.add(ImprintInheritanceRelic.ID);
 //        retVal.add(BrokenPhantasmRelics.ID);
 //        retVal.add(LuEnSwordRelics.ID);
@@ -283,14 +283,15 @@ public class LagranYueCharacter extends CustomPlayer {
     }
 
     //在角色选择界面的一些描叙内容。
+    @Override
     public CharSelectInfo getLoadout() {
-//        final int currentHp = 75;//初始拥有血量
-        final int currentHp = 575;//初始拥有血量
+        final int currentHp = 75;//初始拥有血量
+//        final int currentHp = 575;//初始拥有血量
         final int maxHp = currentHp;//初始最大血量
         final int maxOrbs = 0;//球球数
         final int gold = 99;//初始金币数量
-        final int cardDraw = 10;//每回合抽牌数量
-//        final int cardDraw = 5;//每回合抽牌数量
+//        final int cardDraw = 10;//每回合抽牌数量
+        final int cardDraw = 5;//每回合抽牌数量
         return new CharSelectInfo(NAME, DESCRIPTION,
                 currentHp, maxHp, maxOrbs, gold, cardDraw,
                 this, getStartingRelics(), getStartingDeck(), false);

@@ -36,7 +36,7 @@ public static final String IMG = "relics/r9.png";
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
+
         flash();
         if (info.type == DamageInfo.DamageType.NORMAL) {
             damageAmount += 2;

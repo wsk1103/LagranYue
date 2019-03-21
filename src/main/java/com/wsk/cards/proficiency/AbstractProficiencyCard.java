@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.ArmsEnum;
+import com.wsk.utils.CommonUtil;
 import com.wsk.utils.ProficiencyUtil;
 
 /**
@@ -12,8 +13,6 @@ import com.wsk.utils.ProficiencyUtil;
  * @description 熟练度相关的卡牌
  */
 public abstract class AbstractProficiencyCard extends CustomCard {
-
-    private final static String EXTENDED = "相应的技能点不足。";
 
     /**
      * 兵器类型
@@ -32,7 +31,11 @@ public abstract class AbstractProficiencyCard extends CustomCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        this.cantUseMessage = EXTENDED;
+        String extended = "技能点不足！";
+        if (!"zhs".equals(CommonUtil.getLanguage())) {
+            extended = "Not enough SkillPoint!";
+        }
+        this.cantUseMessage = extended;
         return ProficiencyUtil.isProficiency(this);
     }
 }

@@ -30,7 +30,8 @@ public class ProficiencyUtil {
      */
     public static float getProficiency(AbstractProficiencyCard card) {
         ArmsProficiencyRelics relics = (ArmsProficiencyRelics) AbstractDungeon.player.getRelic(ArmsProficiencyRelics.ID);
-        switch (card.arms) {
+        return relics.getSkillPoint();
+/*        switch (card.arms) {
             case Arch:
                 return relics.getArch();
             case Shield:
@@ -42,7 +43,7 @@ public class ProficiencyUtil {
             default:
                 break;
         }
-        return 0;
+        return 0;*/
     }
 
 }

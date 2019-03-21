@@ -41,7 +41,7 @@ public static final String IMG = "relics/r13.png";
 
     @Override
     public void onBlockBroken(AbstractCreature m) {
-        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
+
         ActionUtil.loseHP(AbstractDungeon.player, (int) (AbstractDungeon.player.maxHealth * 0.05));
     }
 }

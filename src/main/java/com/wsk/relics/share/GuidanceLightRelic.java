@@ -37,7 +37,7 @@ public static final String IMG = "relics/r25.png";
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction action) {
-        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
+
         if (targetCard.exhaust) {
             action.exhaustCard = false;
         }

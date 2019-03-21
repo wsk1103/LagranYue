@@ -56,7 +56,7 @@
     ]
   },
   "LagranYue:LuEnSwordRelics": {
-    "NAME": "LuEnSwor",
+    "NAME": "LuEnSword",
     "FLAVOR": "If you learn the LuEn Magic which is popular in Nordic countries, you will get the true biography of LuEn Magic.",
     "DESCRIPTIONS": [
       "At turn start,deal the number of #yWeapon fix damage to ALL enemies."
@@ -76,10 +76,7 @@
     "NAME": "Skill Point",
     "FLAVOR": "Skill Point System,it`s so good....",
     "DESCRIPTIONS": [
-      " #ySkillPoint .Current situation,\nArchPoint:",
-      "\nShieldPoint:",
-      "\nSpearPoint:",
-      "\nSwordPoint:"
+      " #ySkillPoint .Each turn deals fixed damage to all enemies at the current skill points.\nCurrent skill points:"
     ]
   },
   "LagranYue:RandomDrawCardRelic": {
@@ -112,7 +109,7 @@
     ]
   },
   "LagranYue:ReturningEmperorRelic": {
-    "NAME": "The Returning Emperor",
+    "NAME": "Returning Emperor",
     "FLAVOR": "What you can't get is always in turmoil, and those who are favored are fearless.",
     "DESCRIPTIONS": [
       "Every #b3 turn, transfer your #bfirst DeBuff to the #bfirst enemy."
@@ -133,7 +130,7 @@
     ]
   },
   "LagranYue:NewUniverseRelic": {
-    "NAME": "A Simple New Universe",
+    "NAME": "Simple New Universe",
     "FLAVOR": "To have must know how to accept loss.",
     "DESCRIPTIONS": [
       "When abandoning the card voluntarily, draw #b1 card and gain [E] ."

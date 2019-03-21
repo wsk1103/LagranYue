@@ -117,58 +117,58 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "Sword of the Magic Moon",
-    "DESCRIPTION": " SwordPoint :1. Deal !D! damage !M! times. Dancing .",
+    "DESCRIPTION": " SkillPoint :1. Deal !D! damage !M! times. Dancing .",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够."
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "Magic of Glass",
-    "DESCRIPTION": " SwordPoint :2. Deal !D! damage !M! times.Gain 1 Mind . Dancing ."
+    "DESCRIPTION": " SkillPoint :2. Deal !D! damage !M! times.Gain 1 Mind . Dancing ."
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "One-stroke Sword",
-    "DESCRIPTION": " SwordPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Divinity . Dancing . NL Exhaust ."
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "Nome`s Gold Sword",
-    "DESCRIPTION": " SwordPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SwordPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "Degenerate",
-    "DESCRIPTION": " SpearPoint :1.Deal !D! damage !M! times to all enemies. Dancing .",
-    "UPGRADE_DESCRIPTION": " SpearPoint :1.Deal !D! damage !M! times to all enemies. Dancing ."
+    "DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times to all enemies. Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times to all enemies. Dancing ."
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "Enchantment",
-    "DESCRIPTION": " SpearPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing .",
-    "UPGRADE_DESCRIPTION": " SpearPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing ."
+    "DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing ."
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "Lasing of the Dragon Regiment",
-    "DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
   },
   "LagranYue:AttackGalacticZeroCard": {
     "NAME": "Galactic Zero",
-    "DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing .",
-    "UPGRADE_DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing ."
+    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing ."
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "Crow Crossbow",
-    "DESCRIPTION": " ArchPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing .",
-    "UPGRADE_DESCRIPTION": " ArchPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing ."
+    "DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing ."
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "Magic Corolla of Magic Stars",
-    "DESCRIPTION": " ArchPoint :2.Deal !D! damage !M! times.extra QAQ times.Apply 1 Distortion . Dancing .",
-    "UPGRADE_DESCRIPTION": " ArchPoint :2.Deal !D! damage !M! times.extra IOI times.Apply 1 Distortion . Dancing ."
+    "DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.extra QAQ times.Apply 1 Distortion . Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.extra IOI times.Apply 1 Distortion . Dancing ."
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "Divine Crossbow",
-    "DESCRIPTION": " ArchPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " ArchPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye . Dancing . NL Exhaust ."
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "BrokenSword",
@@ -465,31 +465,31 @@
   },
   "LagranYue:SkillCocoonEvolutionCard": {
     "NAME": "Cocoon of Super Evolution",
-    "DESCRIPTION": "Gain !B! Block .All SkillPoint increase !M! ."
+    "DESCRIPTION": "Gain !B! Block . SkillPoint increase !M! ."
   },
   "LagranYue:SkillLiberationCard": {
     "NAME": "Liberation of Gem",
-    "DESCRIPTION": " ShieldPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce .",
-    "UPGRADE_DESCRIPTION": " ShieldPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce ."
+    "DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce ."
   },
   "LagranYue:SkillEightFeetJadeCard": {
     "NAME": "Eight feet of Jade",
-    "DESCRIPTION": " ShieldPoint :2.Gain !B! Block  !M! times.Gain 1 ProtectionFromArrows . NL Retain .",
-    "UPGRADE_DESCRIPTION": " ShieldPoint :2.Gain !B! Block !M! times.Gain 1 ProtectionFromArrows . NL Retain ."
+    "DESCRIPTION": " SkillPoint :2.Gain !B! Block  !M! times.Gain 1 ProtectionFromArrows . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :2.Gain !B! Block !M! times.Gain 1 ProtectionFromArrows . NL Retain ."
   },
   "LagranYue:SkillHeartWaterCard": {
     "NAME": "Heart of Water in Mirror",
-    "DESCRIPTION": " ShieldPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain .",
-    "UPGRADE_DESCRIPTION": " ShieldPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain ."
+    "DESCRIPTION": " SkillPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain ."
   },
   "LagranYue:SkillLegendPaladinCard": {
     "NAME": "End of the Legend Paladin",
-    "DESCRIPTION": " ShieldPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 Divinity . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " ShieldPoint :3.Gain !B! Block  !M! times.extra IOI times.Gain 1 Divinity . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 Divinity . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra IOI times.Gain 1 Divinity . NL Exhaust ."
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "Disaster Equipment",
-    "DESCRIPTION": " ShieldPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 WindShelter . NL Retain .",
-    "UPGRADE_DESCRIPTION": " ShieldPoint :3.Gain !B! Block !M! times.extra IOI times.Gain 1 WindShelter . NL Retain ."
+    "DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 WindShelter . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain !B! Block !M! times.extra IOI times.Gain 1 WindShelter . NL Retain ."
   }
 }

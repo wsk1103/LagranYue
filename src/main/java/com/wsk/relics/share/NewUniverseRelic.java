@@ -37,7 +37,7 @@ public static final String IMG = "relics/r17.png";
 
     @Override
     public void onManualDiscard() {
-        ActionUtil.relicAboveCreatureAction(AbstractDungeon.player, this);
+
         flash();
         ActionUtil.gainEnergy(1);
         ActionUtil.drawCard(AbstractDungeon.player, 1);
