@@ -258,5 +258,90 @@
       "Start every turn, gain ",
       " Block. "
     ]
+  },
+  "LagranYue:AerialAcePower": {
+    "NAME": "Aerial Ace",
+    "DESCRIPTIONS": [
+      "Continue ",
+      " turn，double the block."
+    ]
+  },
+  "LagranYue:DistortionPower": {
+    "NAME": "Distortion",
+    "DESCRIPTIONS": [
+      "All types of damage increased by "
+    ]
+  },
+  "LagranYue:DivinityPower": {
+    "NAME": "Divinity",
+    "DESCRIPTIONS": [
+      "After victory in battle, gain ",
+      " extra relic."
+    ]
+  },
+  "LagranYue:GoldRatePower": {
+    "NAME": "Gold Rate",
+    "DESCRIPTIONS": [
+      "When causing damage, get 1",
+      "/6 times as much money as the damage."
+    ]
+  },
+  "LagranYue:MagicEyePower": {
+    "NAME": "Magic Eye",
+    "DESCRIPTIONS": [
+      "After the victory of the battle, gain ",
+      " extra rare card ."
+    ]
+  },
+  "LagranYue:MagicPower": {
+    "NAME": "Magic",
+    "DESCRIPTIONS": [
+      "After the victory of the battle, gain ",
+      " extra potion ."
+    ]
+  },
+  "LagranYue:MindPower": {
+    "NAME": "Mind",
+    "DESCRIPTIONS": [
+      "When cards are expended, gain ",
+      " energy."
+    ]
+  },
+  "LagranYue:PermeationPower": {
+    "NAME": "Permeation",
+    "DESCRIPTIONS": [
+      "For all types of damage, an additional ",
+      " % of the current max health is lost."
+    ]
+  },
+  "LagranYue:ProtectionArrowsPower": {
+    "NAME": "Protection Arrows",
+    "DESCRIPTIONS": [
+      "Attacked，play the top card of the discard pile automatically ",
+      " times."
+    ]
+  },
+  "LagranYue:WindShelterPower": {
+    "NAME": "Wind Shelter",
+    "DESCRIPTIONS": [
+      "Attacked，play the top card of the discard pile automatically ",
+      " times."
+    ]
+  },
+  "LagranYue:MoonMirrorShieldPower": {
+    "NAME": "Shield of Moon",
+    "DESCRIPTIONS": [
+      "The damage caused by the uncommon card or the block gained increased by ",
+      ", while the damage caused by the common card or the block gained decreased by ",
+      " ."
+    ]
+  },
+  "LagranYue:SpringFairyPower": {
+    "NAME": "Spring Fairy",
+    "DESCRIPTIONS": [
+      "Rare cards cause ",
+      " times more damage or block gain,but common cards cause ",
+      " less damage or gain blocks.(downward alignment)"
+    ]
   }
 }

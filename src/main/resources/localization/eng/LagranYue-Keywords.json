@@ -197,6 +197,139 @@
   },
   {
     "NAMES": [
+      "qaq"
+    ],
+    "PROPERNAME": "QAQ",
+    "DESCRIPTION": "Number of weapons equipped."
+  },
+  {
+    "NAMES": [
+      "ioi"
+    ],
+    "PROPERNAME": "IOI",
+    "DESCRIPTION": "The sum of weapon layers of equipment."
+  },
+  {
+    "NAMES": [
+      "skillpoint"
+    ],
+    "PROPERNAME": "SkillPoint",
+    "DESCRIPTION": "When equipped with weapons, the use of cards will accumulate corresponding skill points.COMMON：0.2，UNCOMMON：0.4，RARE：1。Some cards require skill points to use。"
+  },
+  {
+    "NAMES": [
+      "swordpoint"
+    ],
+    "PROPERNAME": "SwordPoint",
+    "DESCRIPTION": "Consumption of appropriate skill points before use."
+  },
+  {
+    "NAMES": [
+      "spearpoint"
+    ],
+    "PROPERNAME": "SpearPoint",
+    "DESCRIPTION": "Consumption of appropriate skill points before use."
+  },
+  {
+    "NAMES": [
+      "archpoint"
+    ],
+    "PROPERNAME": "ArchPoint",
+    "DESCRIPTION": "Consumption of appropriate skill points before use."
+  },
+  {
+    "NAMES": [
+      "shieldpoint"
+    ],
+    "PROPERNAME": "ShieldPoint",
+    "DESCRIPTION": "Consumption of appropriate skill points before use."
+  },
+  {
+    "NAMES": [
+      "goldrate"
+    ],
+    "PROPERNAME": "GoldRate",
+    "DESCRIPTION": "When causing damage,get 1/6 times as much money as the damage."
+  },
+  {
+    "NAMES": [
+      "mind"
+    ],
+    "PROPERNAME": "Mind",
+    "DESCRIPTION": "When cards are expended，gain [E] 。"
+  },
+  {
+    "NAMES": [
+      "windshelter"
+    ],
+    "PROPERNAME": "WindShelter",
+    "DESCRIPTION": "Attacked，play the top card of the draw pile automatically once."
+  },
+  {
+    "NAMES": [
+      "protectionfromarrows"
+    ],
+    "PROPERNAME": "ProtectionFromArrows",
+    "DESCRIPTION": "Attacked，play the top card of the discard pile automatically once."
+  },
+  {
+    "NAMES": [
+      "distortion"
+    ],
+    "PROPERNAME": "distortion",
+    "DESCRIPTION": "Increase all types of damage caused by 5."
+  },
+  {
+    "NAMES": [
+      "divinity"
+    ],
+    "PROPERNAME": "divinity",
+    "DESCRIPTION": "After the victory of the battle, an additional relic was acquired."
+  },
+  {
+    "NAMES": [
+      "aerialace"
+    ],
+    "PROPERNAME": "AerialAce",
+    "DESCRIPTION": "Continue one turn and double the block."
+  },
+  {
+    "NAMES": [
+      "permeation"
+    ],
+    "PROPERNAME": "Permeation",
+    "DESCRIPTION": "For all types of damage, an additional 5% of the current max health is lost."
+  },
+  {
+    "NAMES": [
+      "magic"
+    ],
+    "PROPERNAME": "Magic",
+    "DESCRIPTION": "After the victory of the battle, an extra potion was obtained."
+  },
+  {
+    "NAMES": [
+      "magiceye"
+    ],
+    "PROPERNAME": "MagicEye",
+    "DESCRIPTION": "After the victory of the battle, an rare card was obtained."
+  },
+  {
+    "NAMES": [
+      "moonmirrorshield"
+    ],
+    "PROPERNAME": "MoonMirrorShield",
+    "DESCRIPTION": "The damage caused by the uncommon card or the block gained increased by 3, while the damage caused by the common card or the block gained decreased by 3."
+  },
+  {
+    "NAMES": [
+      "fairyofspring"
+    ],
+    "PROPERNAME": "FairyOfSpring",
+    "DESCRIPTION": "Rare cards cause twice as much damage or gain blocks ,but common cards cause 1/2 less damage or gain blocks.(downward alignment)"
+  },
+  {
+    "NAMES": [
       "imprintofdeath"
     ],
     "PROPERNAME": "ImprintOfDeath",

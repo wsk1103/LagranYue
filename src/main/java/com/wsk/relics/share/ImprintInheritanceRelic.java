@@ -33,6 +33,9 @@ public class ImprintInheritanceRelic extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
+        if (null == name) {
+            name = "";
+        }
         return this.DESCRIPTIONS[0] + DESCRIPTIONS[1] + name;
     }
 

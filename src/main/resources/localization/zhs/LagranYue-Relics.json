@@ -74,7 +74,7 @@
   },
   "LagranYue:ArmsProficiencyRelics": {
     "NAME": "斗魂",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "技能点系统，6666....",
     "DESCRIPTIONS": [
       " #y技能点 。目前情况，\n弩技能点：",
       "\n盾技能点：",
@@ -84,14 +84,14 @@
   },
   "LagranYue:RandomDrawCardRelic": {
     "NAME": "要是能重来",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "要是能重来，我要选李白。",
     "DESCRIPTIONS": [
       "每次战斗开始，重新排序抽牌卡堆。目的是每次SL之后，让抽到的卡牌都不一样。"
     ]
   },
   "LagranYue:ImprintInheritanceRelic": {
     "NAME": "继承之印",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "越渴望见面然后发现，中间隔着那十年",
     "DESCRIPTIONS": [
       "拾起该遗物时，存储 #b1 件已经获得的遗物（无法获得初始遗物）。下1局开始会获得该遗物。",
       "已经存储的遗物："
@@ -99,28 +99,28 @@
   },
   "LagranYue:MagicReflectiveArmorRelic": {
     "NAME": "魔法反射装甲",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "流水很清楚，惜花这个责任",
     "DESCRIPTIONS": [
       "打出 #b10 张牌后，获得 #b1 层 #y缓冲 。"
     ]
   },
   "LagranYue:ContractPerformanceRelic": {
     "NAME": "契约的履行",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "掉眼泪时用笑掩过，怕人看破，顾虑好多",
     "DESCRIPTIONS": [
       "在每回合开始时获得 [E] 。但是受到的攻击伤害增加 #b2 。"
     ]
   },
   "LagranYue:ReturningEmperorRelic": {
     "NAME": "再临的帝王",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "得不到的永远在骚动，被偏爱的都有恃无恐",
     "DESCRIPTIONS": [
       "每过 #b3 回合，将自己的第 #b1 个DeBuff转移到第 #b1 个敌人身上。"
     ]
   },
   "LagranYue:GuideDeadRelic": {
     "NAME": "死灵魔导书",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "玫瑰的红容易受伤的梦，握在手中却流失于指缝",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #y壁垒 ，但当敌人的 #y格挡 被打破的时候，对自己造成当前最大生命值 #b5% 的生命流失。"
     ]
@@ -134,49 +134,49 @@
   },
   "LagranYue:NewUniverseRelic": {
     "NAME": "简易新宇宙",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "要拥有必先懂失去怎接受",
     "DESCRIPTIONS": [
       "当主动弃牌时，抽1张牌，并获得 [E] 。"
     ]
   },
   "LagranYue:RareGoldArmorRelic": {
     "NAME": "稀有黄金装甲",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "湿了多少眼眶，才能知道伤感是爱的遗产",
     "DESCRIPTIONS": [
       "当在 #b1 个回合内造成的伤害超过 #b40 ，那么奖励品的卡牌中，额外获得 #b1 张 #y金卡 。"
     ]
   },
   "LagranYue:MoonMirrorShieldRelic": {
     "NAME": "月镜盾",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "你会不会忽然的出现，在街角的咖啡店",
     "DESCRIPTIONS": [
       "战斗开始时，获得能力 #y月镜盾 。"
     ]
   },
   "LagranYue:SpringFairyRelic": {
     "NAME": "泉之精灵",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "人来人往",
     "DESCRIPTIONS": [
       "战斗开始时，获得能力 #y泉之精灵 。"
     ]
   },
   "LagranYue:GuidanceLightRelic": {
     "NAME": "光之引导",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "茫茫人生好象荒野，如孩儿能伏于爸爸的肩膊",
     "DESCRIPTIONS": [
       "在每回合开始时减少 [E] 。 #y消耗 类的卡牌打出后将不再被消耗。"
     ]
   },
   "LagranYue:MagePowerRelic": {
     "NAME": "魔导师之力",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "有梦就有蓝天，相信就能看见",
     "DESCRIPTIONS": [
       "在每回合开始时获得 [E] 。抽牌数减少 #b1 。"
     ]
   },
   "LagranYue:WskJewelryRelic": {
     "NAME": "与夺的首饰",
-    "FLAVOR": "将宝具破坏，并通过将其爆炸来瞬间提升威力。",
+    "FLAVOR": "明年今日。别要再失眠",
     "DESCRIPTIONS": [
       "每回合开始时，随机使 #b1 个 #gBuff/DeBuff 增加 #b1 层。"
     ]

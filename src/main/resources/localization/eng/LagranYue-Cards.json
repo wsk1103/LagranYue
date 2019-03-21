@@ -4,15 +4,27 @@
     "DESCRIPTION": "Deal !D! damage. Dancing "
   },
   "LagranYue:AttackBetterCard": {
-    "NAME": "The Better Strike",
+    "NAME": "Better Strike",
     "DESCRIPTION": "Deal !D! damage. Dancing ."
   },
+  "LagranYue:AttackEngravingRoseCard": {
+    "NAME": "Engraving of Rose",
+    "DESCRIPTION": "Deal !D! damage !M! times. Dancing ."
+  },
+  "LagranYue:AttackFlintCard": {
+    "NAME": "Flint Attack",
+    "DESCRIPTION": "Deal !D! damage !M! times. Dancing ."
+  },
+  "LagranYue:AttackCellGodCard": {
+    "NAME": "Eight God",
+    "DESCRIPTION": "Deal !D! damage !M! times.apply 1 Permeation .可以被多times 升级 . Dancing ."
+  },
   "LagranYue:AttackFireCard": {
-    "NAME": "The Fire of Initiation",
+    "NAME": "Fire of Initiation",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Dancing . NL Chaos ."
   },
   "LagranYue:AttackIceCard": {
-    "NAME": "The Ice of Initiation",
+    "NAME": "Ice of Initiation",
     "DESCRIPTION": "Deal !D! damage, and gain !B! Block . Dancing . NL Chaos ."
   },
   "LagranYue:AttackRubyCard": {
@@ -33,7 +45,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card, then make the cost to 0. Dancing "
   },
   "LagranYue:AttackSummerCard": {
-    "NAME": "The Gem Dream of that Summer",
+    "NAME": "Gem Dream of that Summer",
     "DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile. Dancing . ",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile, then make the cost to 0. Dancing . "
   },
@@ -58,7 +70,7 @@
   "LagranYue:AttackGoldCard": {
     "NAME": "Enuma Elish",
     "DESCRIPTION": "Deal !D! damage. Gain [E] next turn. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E]  [E] next turn. Dancing "
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] [E] next turn. Dancing "
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "Via Expugnatio",
@@ -67,8 +79,8 @@
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "Devil's Roar",
-    "DESCRIPTION": "Deal !D! damage. Gain and apply !M!  ImprintOfDeath . Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage.Apply !M!  ImprintOfDeath . Dancing "
+    "DESCRIPTION": "Deal !D! damage. Gain and apply !M! ImprintOfDeath . Dancing ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Apply !M! ImprintOfDeath . Dancing "
   },
   "LagranYue:AttackKillerCard": {
     "NAME": "Gem Killer",
@@ -82,13 +94,13 @@
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "Waltz of Love",
-    "DESCRIPTION": "Deal !D! damage N times, N=sum of  Weapon , at least 1 times. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage N times, N=sum of  Weapon `s layer, at least 1 times.  Dancing "
+    "DESCRIPTION": "Deal !D! damage QAQ times, at least 1 times. Dancing ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage IOI times, at least 1 times. Dancing "
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "Ultimate Belief",
-    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory ,N=sum of  Weapon , at least 1 times.",
-    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies N times.Then gain N TheContractOfVictory . N=sum of  Weapon `s layer , at least 1 times."
+    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies QAQ times.Then gain IOI TheContractOfVictory .At least 1 times.",
+    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies IOI times.Then gain IOI TheContractOfVictory .At least 1 times."
   },
   "LagranYue:AttackAerCard": {
     "NAME": "Aer",
@@ -97,107 +109,162 @@
   },
   "LagranYue:AttackLuEnCard": {
     "NAME": "LuEnRune·Attack",
-    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing .  NL Ethereal "
+    "DESCRIPTION": "Damage all enemy that causes !M! times the sum of all current Weapon layers. Exhaust . Dancing . NL Ethereal "
   },
   "LagranYue:AttackCarnivalCard": {
     "NAME": "幻想嘉年华·攻",
-    "DESCRIPTION": "造成 !M! 倍当前所有 Weapon 层数之和的伤害 . NL Exhaust . Dancing . "
+    "DESCRIPTION": "造成 !M! 倍当前所有 Weapon 数之和的伤害 . NL Exhaust . Dancing . "
+  },
+  "LagranYue:AttackMagicMoonCard": {
+    "NAME": "Sword of the Magic Moon",
+    "DESCRIPTION": " SwordPoint :1. Deal !D! damage !M! times. Dancing .",
+    "EXTENDED_DESCRIPTION": [
+      "兵器熟练度不够."
+    ]
+  },
+  "LagranYue:AttackDivineGuidanceCard": {
+    "NAME": "Magic of Glass",
+    "DESCRIPTION": " SwordPoint :2. Deal !D! damage !M! times.Gain 1 Mind . Dancing ."
+  },
+  "LagranYue:AttackMagicSwordCard": {
+    "NAME": "One-stroke Sword",
+    "DESCRIPTION": " SwordPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Divinity . Dancing . NL Exhaust ."
+  },
+  "LagranYue:AttackGodSwordCard": {
+    "NAME": "Nome`s Gold Sword",
+    "DESCRIPTION": " SwordPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SwordPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
+  },
+  "LagranYue:AttackDegenerateCard": {
+    "NAME": "Degenerate",
+    "DESCRIPTION": " SpearPoint :1.Deal !D! damage !M! times to all enemies. Dancing .",
+    "UPGRADE_DESCRIPTION": " SpearPoint :1.Deal !D! damage !M! times to all enemies. Dancing ."
+  },
+  "LagranYue:AttackEnchantmentCard": {
+    "NAME": "Enchantment",
+    "DESCRIPTION": " SpearPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing .",
+    "UPGRADE_DESCRIPTION": " SpearPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing ."
+  },
+  "LagranYue:AttackGodSpearCard": {
+    "NAME": "Lasing of the Dragon Regiment",
+    "DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
+  },
+  "LagranYue:AttackGalacticZeroCard": {
+    "NAME": "Galactic Zero",
+    "DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing .",
+    "UPGRADE_DESCRIPTION": " SpearPoint :3.Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing ."
+  },
+  "LagranYue:AttackCrowCrossbowCard": {
+    "NAME": "Crow Crossbow",
+    "DESCRIPTION": " ArchPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing .",
+    "UPGRADE_DESCRIPTION": " ArchPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing ."
+  },
+  "LagranYue:AttackMagicStarsCard": {
+    "NAME": "Magic Corolla of Magic Stars",
+    "DESCRIPTION": " ArchPoint :2.Deal !D! damage !M! times.extra QAQ times.Apply 1 Distortion . Dancing .",
+    "UPGRADE_DESCRIPTION": " ArchPoint :2.Deal !D! damage !M! times.extra IOI times.Apply 1 Distortion . Dancing ."
+  },
+  "LagranYue:AttackGodArchCard": {
+    "NAME": "Divine Crossbow",
+    "DESCRIPTION": " ArchPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " ArchPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye . Dancing . NL Exhaust ."
   },
   "LagranYue:SkillBrokenSwordCard": {
-    "NAME": "Weapon, BrokenSword",
-    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M!  BrokenSword . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "BrokenSword",
+    "DESCRIPTION": " Weapon , Sword . Sublimation ,Gain !M! BrokenSword . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
-      "Gain !M!  BrokenSword .",
+      "Gain !M! BrokenSword .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillWoodSpearCard": {
-    "NAME": "Weapon, BrokenSpear",
-    "DESCRIPTION": " Weapon ,  Spear . Sublimation ,Gain !M! BrokenSpear . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "BrokenSpear",
+    "DESCRIPTION": " Weapon , Spear . Sublimation ,Gain !M! BrokenSpear . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BrokenSpear .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillIncompleteArchCard": {
-    "NAME": "Weapon, BrokenCrossbow",
-    "DESCRIPTION": " Weapon ,  Crossbow . Sublimation ,Gain !M! BrokenCrossbow . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "BrokenCrossbow",
+    "DESCRIPTION": " Weapon , Crossbow . Sublimation ,Gain !M! BrokenCrossbow . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BrokenCrossbow .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillBrokenShieldCard": {
-    "NAME": "Weapon, BrokenShield",
-    "DESCRIPTION": " Weapon ,  Shield. Sublimation ,Gain !M! BrokenShield . Or Gain !B! Block . NL Exhaust .",
+    "NAME": "BrokenShield",
+    "DESCRIPTION": " Weapon , Shield. Sublimation ,Gain !M! BrokenShield . Or Gain !B! Block . NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BrokenShield .",
       "Gain !B! Block ."
     ]
   },
   "LagranYue:SkillGaeBolgCard": {
-    "NAME": "Weapon, GaeBolgBolg",
-    "DESCRIPTION": " Weapon ,  Spear . Sublimation ,Gain !M! GaeBolgBolg . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "GaeBolgBolg",
+    "DESCRIPTION": " Weapon , Spear . Sublimation ,Gain !M! GaeBolgBolg . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! GaeBolgBolg .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillDeathBolgCard": {
-    "NAME": "Weapon, GaeBolg",
-    "DESCRIPTION": " Weapon ,  Spear . Sublimation ,Gain !M! GaeBolg . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "GaeBolg",
+    "DESCRIPTION": " Weapon , Spear . Sublimation ,Gain !M! GaeBolg . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! GaeBolg .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillVictorySwordCard": {
-    "NAME": "Weapon, Excalibur",
-    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M! Excalibur . Or Deal !D! damage to ALL enemies. NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Sword . Sublimation ,Gain !M! Excalibur . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "Excalibur",
+    "DESCRIPTION": " Weapon , Sword . Sublimation ,Gain !M! Excalibur . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon , Sword . Sublimation ,Gain !M! Excalibur . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Sword .Gain !M! Excalibur .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillKadeboSwordCard": {
-    "NAME": "Weapon, BloodthirstySword",
-    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M! BloodthirstySword . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "BloodthirstySword",
+    "DESCRIPTION": " Weapon , Sword . Sublimation ,Gain !M! BloodthirstySword . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! BloodthirstySword .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
-    "NAME": "Weapon, GanJiangMoYe",
-    "DESCRIPTION": " Weapon ,  Sword . Sublimation ,Gain !M! GanJiangMoYe . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "GanJiangMoYe",
+    "DESCRIPTION": " Weapon , Sword . Sublimation ,Gain !M! GanJiangMoYe . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! GanJiangMoYe .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillChiharaHoundCard": {
-    "NAME": "Weapon, Hrunting",
-    "DESCRIPTION": " Weapon ,  Crossbow . Sublimation ,Gain !M! Hrunting . Or Deal !D! damage to ALL enemies. NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " Weapon ,  Crossbow . Sublimation ,Gain !M! Hrunting . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "NAME": "Hrunting",
+    "DESCRIPTION": " Weapon , Crossbow . Sublimation ,Gain !M! Hrunting . Or Deal !D! damage to ALL enemies. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Weapon , Crossbow . Sublimation ,Gain !M! Hrunting . Or Deal !D! damage to ALL enemies. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! Hrunting .",
       "Deal !D! damage to ALL enemies."
     ]
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
-    "NAME": "Weapon, RhoAias",
-    "DESCRIPTION": " Weapon ,  Shield . Sublimation ,Gain !M! RhoAias . Or Gain !B! Block . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon ,  Shield . Sublimation ,Gain !M! Weapon RhoAias . Or Gain !B! Block . NL Exhaust .",
+    "NAME": "RhoAias",
+    "DESCRIPTION": " Weapon , Shield . Sublimation ,Gain !M! RhoAias . Or Gain !B! Block . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon , Shield . Sublimation ,Gain !M! Weapon RhoAias . Or Gain !B! Block . NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! RhoAias .",
       "Gain !B! Block."
     ]
   },
   "LagranYue:SkillExplosiveArmorCard": {
-    "NAME": "Weapon, ExplosiveArmor",
-    "DESCRIPTION": " Weapon ,  Shield . Sublimation ,Gain !M! ExplosiveArmor . Or Gain !B! Block . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " Innate . Weapon,  Shield . Sublimation ,Gain !M! ExplosiveArmor .  Or Gain !B! Block . NL Exhaust .",
+    "NAME": "ExplosiveArmor",
+    "DESCRIPTION": " Weapon , Shield . Sublimation ,Gain !M! ExplosiveArmor . Or Gain !B! Block . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Innate . Weapon , Shield . Sublimation ,Gain !M! ExplosiveArmor . Or Gain !B! Block . NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain !M! ExplosiveArmor .",
       "Gain !B! Block ."
@@ -230,12 +297,12 @@
   },
   "LagranYue:ALeechingTouch": {
     "NAME": "Unlimited Blade Works",
-    "DESCRIPTION": "当打出1张 Weapon , 为该 Weapon 执行 !M! 次 Forging."
+    "DESCRIPTION": "当打出1张 Weapon , 为该 Weapon 执行 !M! times Forging."
   },
   "LagranYue:PowerBloodyTempleCard": {
     "NAME": "Blood Fort Andromeda",
-    "DESCRIPTION": "Start every turn, gain !M!  LuEnRuneAttack . NL Ethereal ",
-    "UPGRADE_DESCRIPTION": "Start every turn, gain !M!  LuEnRuneAttack+ . NL Ethereal "
+    "DESCRIPTION": "Start every turn, gain !M! LuEnRuneAttack . NL Ethereal ",
+    "UPGRADE_DESCRIPTION": "Start every turn, gain !M! LuEnRuneAttack+ . NL Ethereal "
   },
   "LagranYue:PowerRemoveArmorCard": {
     "NAME": "Calorie Smooth",
@@ -249,17 +316,17 @@
   },
   "LagranYue:BasePowerCard": {
     "NAME": "Support",
-    "DESCRIPTION": "Gain !M! Strength . Forging  !M! times"
+    "DESCRIPTION": "Gain !M! Strength . Forging !M! times"
   },
   "LagranYue:PowerWindKingEnchantmentCard": {
     "NAME": "Invisible Air",
-    "DESCRIPTION": "Gain !B! Block  .In the next 4 turn, gain 4 Block per turn.",
+    "DESCRIPTION": "Gain !B! Block .In the next 4 turn, gain 4 Block per turn.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block .Start every turn, gain 4 Block "
   },
   "LagranYue:PowerFurnaceCard": {
     "NAME": "Furnace",
-    "DESCRIPTION": "Start every turn,  Forging !M! times.  NL Ethereal ",
-    "UPGRADE_DESCRIPTION": "Start every turn,  Forging !M! times."
+    "DESCRIPTION": "Start every turn, Forging !M! times. NL Ethereal ",
+    "UPGRADE_DESCRIPTION": "Start every turn, Forging !M! times."
   },
   "LagranYue:PowerMaxArmsPliesCard": {
     "NAME": "Forging Master",
@@ -268,7 +335,7 @@
   },
   "LagranYue:MultipleThornsCard": {
     "NAME": "Multiple Thorns",
-    "DESCRIPTION": "Gain !B! Block and !M! Thorns.  NL Exhaust "
+    "DESCRIPTION": "Gain !B! Block and !M! Thorns. NL Exhaust "
   },
   "LagranYue:BaseDefendCard": {
     "NAME": "Defend",
@@ -306,15 +373,15 @@
   },
   "LagranYue:RubyDefendCard": {
     "NAME": "Ruby Defense",
-    "DESCRIPTION": "Gain !B! Block  .Draw !M! next turn."
+    "DESCRIPTION": "Gain !B! Block .Draw !M! next turn."
   },
   "LagranYue:SapphirePrayerCard": {
     "NAME": "All Rage",
-    "DESCRIPTION": "Lose !M! HP,  upgraded all cards in hand. NL Exhaust . NL Chaos ."
+    "DESCRIPTION": "Lose !M! HP, upgraded all cards in hand. NL Exhaust . NL Chaos ."
   },
   "LagranYue:EmeraldRemorseCard": {
-    "NAME": "The Burden of Love",
-    "DESCRIPTION": "remove first Weapon,  gain !M! Strength and !M! Dexterity .",
+    "NAME": "Burden of Love",
+    "DESCRIPTION": "remove first Weapon , gain !M! Strength and !M! Dexterity .",
     "EXTENDED_DESCRIPTION": [
       "Now you have not Weapon ."
     ]
@@ -338,8 +405,8 @@
   },
   "LagranYue:FoxForgingCard": {
     "NAME": "狐狸出嫁",
-    "DESCRIPTION": "平均分配所有  Weapon  的层数. NL Exhaust  ",
-    "UPGRADE_DESCRIPTION": " 平均分配所有  Weapon  的层数, 然后所有 Weapon 的层数增加1. NL Exhaust "
+    "DESCRIPTION": "平均分配所有 Weapon 的数. NL Exhaust ",
+    "UPGRADE_DESCRIPTION": " 平均分配所有 Weapon 的数, 然后所有 Weapon 的数增加1. NL Exhaust "
   },
   "LagranYue:ForgingCard": {
     "NAME": "Rapid Forging",
@@ -347,19 +414,19 @@
   },
   "LagranYue:OneKingCard": {
     "NAME": "Apocrypha",
-    "DESCRIPTION": "Remove all Weapon after the first Weapon , then the total number of Weapon that will be removed Forging to the first Weapon, at least 1 Forging times . NL Exhaust  "
+    "DESCRIPTION": "Remove all Weapon after the first Weapon , then the total number of Weapon that will be removed Forging to the first Weapon , at least 1 Forging times . NL Exhaust "
   },
   "LagranYue:DefendCarnivalCard": {
     "NAME": "幻想嘉年华",
-    "DESCRIPTION": "获得 !M! 倍当前所有 Weapon 的层数之和的 格挡 . NL Exhaust  "
+    "DESCRIPTION": "Gain !M! 倍当前所有 Weapon 的数之和的 格挡 . NL Exhaust "
   },
   "LagranYue:DefendLuEnCard": {
     "NAME": "LuEnRune-Defend",
-    "DESCRIPTION": "Gain the Block of M times the sum of all current Weapon layers . NL Exhaust  . NL Ethereal "
+    "DESCRIPTION": "Gain the Block of !M! times the sum of all current Weapon layers . NL Exhaust . NL Ethereal "
   },
   "LagranYue:ForgingLuEnCard": {
     "NAME": "LuEnRune-Forging",
-    "DESCRIPTION": " Forging  !M! 次. NL Exhaust  . NL Ethereal "
+    "DESCRIPTION": " Forging !M! times. NL Exhaust . NL Ethereal "
   },
   "LagranYue:FantasyCard": {
     "NAME": "Mirror Flower Water Month",
@@ -367,12 +434,62 @@
   },
   "LagranYue:TestChooseCard": {
     "NAME": "Ready",
-    "DESCRIPTION": " Choose : Gain [E] [E] . NL Or  draw 3 cards. NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " Choose : Gain [E] [E] . NL Or  draw 3 cards. NL Exhaust .",
+    "DESCRIPTION": " Choose : Gain [E] [E] . NL Or draw 3 cards. NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " Choose : Gain [E] [E] . NL Or draw 3 cards. NL Exhaust .",
     "EXTENDED_DESCRIPTION": [
       "Gain [E] [E] ",
       "draw 3 cards.",
       "Gain [E] [E] [E] ."
     ]
+  },
+  "LagranYue:SkillFalseAerialAceCard": {
+    "NAME": "Aerial Ace",
+    "DESCRIPTION": "Gain !B! Block .Gain !M! AerialAce .",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block .Gain !M! AerialAce ."
+  },
+  "LagranYue:SkillDeadlyBloomCard": {
+    "NAME": "Deadly Bloom",
+    "DESCRIPTION": "Gain !B! Block .Apply !M! ImprintOfDeath ."
+  },
+  "LagranYue:SkillTestamentCard": {
+    "NAME": "False Face Testament",
+    "DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "LagranYue:SkillDevilKissCard": {
+    "NAME": "Devil's Kiss",
+    "DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "LagranYue:SkillDistortionCard": {
+    "NAME": "Distortion",
+    "DESCRIPTION": "Gain !B! Block .Apply !M! Distortion ."
+  },
+  "LagranYue:SkillCocoonEvolutionCard": {
+    "NAME": "Cocoon of Super Evolution",
+    "DESCRIPTION": "Gain !B! Block .All SkillPoint increase !M! ."
+  },
+  "LagranYue:SkillLiberationCard": {
+    "NAME": "Liberation of Gem",
+    "DESCRIPTION": " ShieldPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce .",
+    "UPGRADE_DESCRIPTION": " ShieldPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce ."
+  },
+  "LagranYue:SkillEightFeetJadeCard": {
+    "NAME": "Eight feet of Jade",
+    "DESCRIPTION": " ShieldPoint :2.Gain !B! Block  !M! times.Gain 1 ProtectionFromArrows . NL Retain .",
+    "UPGRADE_DESCRIPTION": " ShieldPoint :2.Gain !B! Block !M! times.Gain 1 ProtectionFromArrows . NL Retain ."
+  },
+  "LagranYue:SkillHeartWaterCard": {
+    "NAME": "Heart of Water in Mirror",
+    "DESCRIPTION": " ShieldPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain .",
+    "UPGRADE_DESCRIPTION": " ShieldPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain ."
+  },
+  "LagranYue:SkillLegendPaladinCard": {
+    "NAME": "End of the Legend Paladin",
+    "DESCRIPTION": " ShieldPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 Divinity . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " ShieldPoint :3.Gain !B! Block  !M! times.extra IOI times.Gain 1 Divinity . NL Exhaust ."
+  },
+  "LagranYue:SkillDisasterEquipmentCard": {
+    "NAME": "Disaster Equipment",
+    "DESCRIPTION": " ShieldPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 WindShelter . NL Retain .",
+    "UPGRADE_DESCRIPTION": " ShieldPoint :3.Gain !B! Block !M! times.extra IOI times.Gain 1 WindShelter . NL Retain ."
   }
 }
