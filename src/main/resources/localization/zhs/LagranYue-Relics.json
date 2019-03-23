@@ -83,7 +83,7 @@
     "NAME": "要是能重来",
     "FLAVOR": "要是能重来，我要选李白。",
     "DESCRIPTIONS": [
-      "每次战斗开始，重新排序抽牌卡堆。目的是每次SL之后，让抽到的卡牌都不一样。"
+      "每次战斗开始，重新排序抽牌卡堆。目的是每次SL之后，让抽到的卡牌都不一样。(可以在配置中关闭)"
     ]
   },
   "LagranYue:ImprintInheritanceRelic": {
@@ -112,7 +112,7 @@
     "NAME": "再临的帝王",
     "FLAVOR": "得不到的永远在骚动，被偏爱的都有恃无恐",
     "DESCRIPTIONS": [
-      "每过 #b3 回合，将自己的第 #b1 个DeBuff转移到第 #b1 个敌人身上。"
+      "每过 #b5 回合，将自己的第 #b1 个DeBuff转移到第 #b1 个敌人身上。"
     ]
   },
   "LagranYue:GuideDeadRelic": {
@@ -175,7 +175,7 @@
     "NAME": "与夺的首饰",
     "FLAVOR": "明年今日。别要再失眠",
     "DESCRIPTIONS": [
-      "每回合开始时，随机使 #b1 个 #gBuff/DeBuff 增加 #b1 层。"
+      "每过 #b3 个回合，随机使 #b1 个 #gBuff/DeBuff 增加 #b1 层。"
     ]
   }
 }

@@ -45,7 +45,7 @@ public static final String IMG = "relics/r11.png";
     @Override
     public void atTurnStart() {
         flash();
-        if (counter != 0 && counter % 3 == 0) {
+        if (counter != 0 && counter % 5 == 0) {
             ArrayList<AbstractPower> powers = AbstractDungeon.player.powers;
             a:for (AbstractPower power : powers) {
                 if (power.type == AbstractPower.PowerType.DEBUFF) {

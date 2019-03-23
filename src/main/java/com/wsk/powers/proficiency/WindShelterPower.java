@@ -2,13 +2,12 @@ package com.wsk.powers.proficiency;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.TopDrawCardFeeZeroAction;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -43,13 +42,17 @@ public class WindShelterPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                AbstractDungeon.actionManager.addToBottom(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), false));
-                this.isDone = true;
+        for (int i = 0; i < amount; i++) {
+            if (info.type == DamageInfo.DamageType.NORMAL) {
+                AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        AbstractDungeon.actionManager.addToBottom(new TopDrawCardFeeZeroAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));
+                        this.isDone = true;
+                    }
+                });
             }
-        });
+        }
         return damageAmount;
     }
 }

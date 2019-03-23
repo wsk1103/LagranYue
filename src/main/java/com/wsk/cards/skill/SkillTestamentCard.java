@@ -33,7 +33,7 @@ public class SkillTestamentCard extends CustomCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 1;
-        this.magicNumber = this.baseMagicNumber = 8;
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = false;
     }
 

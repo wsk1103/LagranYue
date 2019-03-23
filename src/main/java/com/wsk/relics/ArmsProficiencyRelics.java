@@ -29,7 +29,10 @@ public final class ArmsProficiencyRelics extends CustomRelic {
     private float shield = 0F;
     private float spear = 0F;
     private float sword = 0F;*/
-    private float skillPoint = 0F;
+
+    private final float init = 0F;
+
+    private float skillPoint = init;
 
     public ArmsProficiencyRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.CLINK);
@@ -50,6 +53,11 @@ public final class ArmsProficiencyRelics extends CustomRelic {
     @Override
     public AbstractRelic makeCopy() {
         return new ArmsProficiencyRelics();
+    }
+
+    @Override
+    public void atPreBattle() {
+        use();
     }
 
     @Override
@@ -126,7 +134,7 @@ public final class ArmsProficiencyRelics extends CustomRelic {
         setShield(0);
         setSpear(0);
         setSword(0);*/
-        setSkillPoint(0F);
+        setSkillPoint(init);
         use();
     }
 

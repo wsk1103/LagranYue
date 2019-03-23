@@ -269,7 +269,7 @@
   "LagranYue:DistortionPower": {
     "NAME": "失真",
     "DESCRIPTIONS": [
-      "受到的所有类型的伤害增加"
+      "受到的伤害增加"
     ]
   },
   "LagranYue:DivinityPower": {
@@ -310,22 +310,22 @@
   "LagranYue:PermeationPower": {
     "NAME": "透化",
     "DESCRIPTIONS": [
-      "受到所有类型的伤害时，额外受到当前最大生命值",
+      "受到伤害时，额外受到当前最大生命值",
       "%的生命流失。"
     ]
   },
   "LagranYue:ProtectionArrowsPower": {
     "NAME": "避矢之加护",
     "DESCRIPTIONS": [
-      "被攻击时，自动打出弃牌堆最上面的卡牌",
-      "次。"
+      "被攻击时，将抽牌堆最下面的1",
+      "张卡牌加入弃牌堆，并且费用仅1次变为0。"
     ]
   },
   "LagranYue:WindShelterPower": {
     "NAME": "避风的加护",
     "DESCRIPTIONS": [
-      "被攻击时，自动打出抽牌堆最上面的卡牌",
-      "次。"
+      "被攻击时，将抽牌堆最上面的1",
+      "张卡牌加入弃牌堆，并且费用仅1次变为0。"
     ]
   },
   "LagranYue:MoonMirrorShieldPower": {

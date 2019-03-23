@@ -263,14 +263,14 @@
       "windshelter"
     ],
     "PROPERNAME": "WindShelter",
-    "DESCRIPTION": "Attacked，play the top card of the draw pile automatically once."
+    "DESCRIPTION": "Attacked，the top 1 card of the draw pile are added to the discard pile, and the cost is reduced to 0 only once."
   },
   {
     "NAMES": [
       "protectionfromarrows"
     ],
     "PROPERNAME": "ProtectionFromArrows",
-    "DESCRIPTION": "Attacked，play the top card of the discard pile automatically once."
+    "DESCRIPTION": "Attacked，the bottom 1 card of the draw pile are added to the discard pile, and the cost is reduced to 0 only once."
   },
   {
     "NAMES": [

@@ -32,8 +32,8 @@ public class SkillDevilKissCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = 2;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.baseBlock = 1;
+        this.magicNumber = this.baseMagicNumber = 5;
         this.exhaust = false;
     }
 

@@ -33,7 +33,7 @@ public class AttackEngravingRoseCard extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 1;
-        this.magicNumber = this.baseMagicNumber = 8;
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     @Override

@@ -83,7 +83,7 @@
     "NAME": "If I could do it again",
     "FLAVOR": "If I can come back, I will choose Li Bai.",
     "DESCRIPTIONS": [
-      "At the beginning of each battle, rearrange the stack of draw cards. The aim is to draw different cards after each Save and Load."
+      "At the beginning of each battle, rearrange the stack of draw cards. The aim is to draw different cards after each Save and Load.(You can close it in config)"
     ]
   },
   "LagranYue:ImprintInheritanceRelic": {

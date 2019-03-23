@@ -38,7 +38,7 @@ public class AttackCellGodCard extends CustomCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.ENEMY);
-        this.baseDamage = 2;
+        this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 8;
         this.timesUpgraded = upgrades;
     }

@@ -35,7 +35,7 @@ import java.util.Random;
  */
 public class LagranYueCharacter extends CustomPlayer {
     private static final int ENERGY_PER_TURN = 3;//角色的初始能量值。
-//        private static final int ENERGY_PER_TURN = 15;//角色的初始能量值。
+    //        private static final int ENERGY_PER_TURN = 15;//角色的初始能量值。
     private static final String[] ORB_TEXTURES = {"LagranYue/char/orb/layer1.png",
             "LagranYue/char/orb/layer2.png",
             "LagranYue/char/orb/layer3.png",
@@ -55,12 +55,35 @@ public class LagranYueCharacter extends CustomPlayer {
     public static final String NAME;
     public static final String DESCRIPTION;
 
+    private static final String CHAR_PATH;
+
+    private static final String IDLE;
+
+//    private static final float[] LAYER_SPEED = new float[]{-200.0F, -150.0F, -100.0F, -50.0F, 0.0F, 50.0F, 100.0F, 150.0F, 200.0F, 150.0F};
+
     private static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
     public LagranYueCharacter(String name, AbstractPlayer.PlayerClass setClass) {
-        super(name, setClass, ORB_TEXTURES, ORB_VFX,
-                CommonUtil.getResourcePath("LagranYue.g3dj")/* 人物角色立绘动画文件路径*/,
-                "LagranYue|idle"/*人物角色立绘图片名*/);
+        super(name, setClass, ORB_TEXTURES, ORB_VFX, CHAR_PATH, IDLE);
+//        super(name, setClass, ORB_TEXTURES, ORB_VFX,
+//                CommonUtil.getResourcePath("LagranYue.g3dj"),
+//                "LagranYue|idle");
+/*        super(name, setClass, ORB_TEXTURES, ORB_VFX,
+                CommonUtil.getResourcePath("berserker.g3dj"),
+                "berserker|idle");*/
+//        super(name, setClass, ORB_TEXTURES, ORB_VFX,
+//                CommonUtil.getResourcePath("lancher.g3dj"),
+//                "lancher|idle");
+//        super(name, setClass, ORB_TEXTURES, ORB_VFX,
+//                CommonUtil.getResourcePath("saber.g3dj"),
+//                "saber|idle");
+//        super(name, setClass, ORB_TEXTURES, ORB_VFX,
+//                CommonUtil.getResourcePath("archer.g3dj"),
+//                "archer|idle");
+
+
+//        super(name, setClass, ORB_TEXTURES, ORB_VFX,
+//                LAYER_SPEED, null, null);
         //人物角色立绘动画文件路径  格式："img/char/CharacterName/CharacterName_md.g3dj"。g3dj文件决定人物动画。
         //人物角色立绘图片名  格式："CharacterName_md|idle"。该文件为png格式，和CharacterName_md.g3dj放在同一目录下。
         //g3dj文件见压缩包内img文件夹内内容。
@@ -78,6 +101,8 @@ public class LagranYueCharacter extends CustomPlayer {
                 0.0F, 0.0F, 300.0F, 180.0F,
                 new EnergyManager(ENERGY_PER_TURN));
         this.dialogY += -100 * Settings.scale;
+//        this.loadAnimation(CommonUtil.getResourcePath("char/LagranYue.atlas"), CommonUtil.getResourcePath("char/LagranYue.json"), 0.5F);
+//        AnimationState.TrackEntry e = this.state.setAnimation(0, "Sprite", true);
 //        initializeSlotPositions();
     }
 
@@ -140,39 +165,39 @@ public class LagranYueCharacter extends CustomPlayer {
             ArrayList<AbstractCard> cards = AllCards.RARE_CARD;
             retVal.add(cards.get(random.nextInt(cards.size())).cardID);
         } else {
-        retVal.clear();
-        ArrayList<AbstractCard> un = AllCards.UN_COMMON_CARD;
-        ArrayList<AbstractCard> rare = AllCards.RARE_CARD;
-        int temp = 0;
-        do {
-            AbstractCard unCard;
-            if (temp < 3) {
-                unCard = un.get(random.nextInt(un.size()));
-            } else {
-                unCard = rare.get(random.nextInt(rare.size()));
-            }
-            if (unCard.type == AbstractCard.CardType.ATTACK) {
-                retVal.add(unCard.cardID);
-                temp++;
-            }
-        } while (temp < 4);
-        temp = 0;
-        do {
-            AbstractCard unCard;
-            if (temp < 3) {
-                unCard = un.get(random.nextInt(un.size()));
-            } else {
-                unCard = rare.get(random.nextInt(rare.size()));
-            }
-            if (unCard.type == AbstractCard.CardType.SKILL) {
-                retVal.add(unCard.cardID);
-                temp++;
-            }
-        } while (temp < 4);
+            retVal.clear();
+            ArrayList<AbstractCard> un = AllCards.UN_COMMON_CARD;
+            ArrayList<AbstractCard> rare = AllCards.RARE_CARD;
+            int temp = 0;
+            do {
+                AbstractCard unCard;
+                if (temp < 3) {
+                    unCard = un.get(random.nextInt(un.size()));
+                } else {
+                    unCard = rare.get(random.nextInt(rare.size()));
+                }
+                if (unCard.type == AbstractCard.CardType.ATTACK) {
+                    retVal.add(unCard.cardID);
+                    temp++;
+                }
+            } while (temp < 4);
+            temp = 0;
+            do {
+                AbstractCard unCard;
+                if (temp < 3) {
+                    unCard = un.get(random.nextInt(un.size()));
+                } else {
+                    unCard = rare.get(random.nextInt(rare.size()));
+                }
+                if (unCard.type == AbstractCard.CardType.SKILL) {
+                    retVal.add(unCard.cardID);
+                    temp++;
+                }
+            } while (temp < 4);
 
-        AbstractCard unCard;
-        unCard = un.get(random.nextInt(un.size()));
-        retVal.add(unCard.cardID);
+            AbstractCard unCard;
+            unCard = un.get(random.nextInt(un.size()));
+            retVal.add(unCard.cardID);
         }
 
 //        retVal.add(SkillWoodSpearCard.ID);
@@ -383,7 +408,28 @@ public class LagranYueCharacter extends CustomPlayer {
         CHAR_STRINGS = CardCrawlGame.languagePack.getCharacterString("LagranYue");
         NAME = CHAR_STRINGS.NAMES[0];
         DESCRIPTION = CHAR_STRINGS.TEXT[0];
+    }
 
+    static {
+        Random random = new Random();
+        int temp = random.nextInt(100);
+        System.out.println("随机的角色皮肤为：" + temp);
+        if (temp >= 90) {
+            CHAR_PATH = CommonUtil.getResourcePath("saber.g3dj");
+            IDLE = "saber|idle";
+        } else if (temp >= 80) {
+            CHAR_PATH = CommonUtil.getResourcePath("berserker.g3dj");
+            IDLE = "berserker|idle";
+        } else if (temp >= 70) {
+            CHAR_PATH = CommonUtil.getResourcePath("saber.g3dj");
+            IDLE = "saber|idle";
+        } else if (temp >= 60) {
+            CHAR_PATH = CommonUtil.getResourcePath("archer.g3dj");
+            IDLE = "archer|idle";
+        } else {
+            CHAR_PATH = CommonUtil.getResourcePath("LagranYue.g3dj");
+            IDLE = "LagranYue|idle";
+        }
     }
 
 }

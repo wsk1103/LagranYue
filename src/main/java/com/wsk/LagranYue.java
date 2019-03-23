@@ -1,15 +1,21 @@
 package com.wsk;
 
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
@@ -25,6 +31,7 @@ import com.wsk.utils.CommonUtil;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Properties;
 
 import static basemod.DevConsole.logger;
 
@@ -51,7 +58,7 @@ public class LagranYue implements PostInitializeSubscriber,
     /**
      * Mod描叙，随便写。
      */
-    private static final String DESCRIPTION = "v1.0\n Make by Sky.";
+    private static final String DESCRIPTION = "v1.4.0\n Make by Sky.";
     /**
      * mod人物对应的颜色。getColor所需的三个参数分别对应颜色的三个色相R、G、U。查找色相请打开系统自带画图，编辑颜色窗口，右下角的RGU三栏。（仅以Win10的自带画图为例）
      */
@@ -72,6 +79,12 @@ public class LagranYue implements PostInitializeSubscriber,
     private static final String ENERGY_ORB_PORTRAIT = "1024/card_LagranYue_orb.png";
 
     public static final ArrayList<AbstractCard> ALL_CARS = new ArrayList<>();
+
+    public static boolean contentSharing_relics = true;
+
+    private static final String PROP_RELIC_SHARING = "contentSharing_relics";
+
+    private static Properties lagranYueProperties = new Properties();
 
 
     public LagranYue() {
@@ -102,14 +115,14 @@ public class LagranYue implements PostInitializeSubscriber,
 //        testModDefault.setProperty(PROP_RELIC_SHARING, "FALSE");
 //        testModDefault.setProperty(PROP_POTION_SHARING, "FALSE");
 //        testModDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+        lagranYueProperties.setProperty(PROP_RELIC_SHARING, "TRUE");
 
+        loadConfigData();
         logger.info(String.format("====注入新卡片相关信息成功,%s======", AbstractCardEnum.LagranYue.toString()));
     }
 
     public static void initialize() {
-        logger.info("=========================初始化角色Mod数据=========================");
         new LagranYue();//初始化角色mod，必备。
-        logger.info("===========================角色Mod初始化成功===========================");
     }
 
     /**
@@ -118,9 +131,21 @@ public class LagranYue implements PostInitializeSubscriber,
     @Override
     public void receivePostInitialize() {
 
+        UIStrings configStrings = CardCrawlGame.languagePack.getUIString("LagranYueConfigMenuText");
+
+        ModPanel settingsPanel = new ModPanel();
+
+        ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
+                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_relics, settingsPanel, (label) -> {
+        }, (button) -> {
+            contentSharing_relics = button.enabled;
+            saveData();
+        });
+
         Texture badgeTexture = new Texture(CommonUtil.getResourcePath("badge.png"));
-        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, null);
-        logger.info("Done loading badge Image and mod options");
+        settingsPanel.addUIElement(contentSharingBtnRelics);
+        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
         logger.info("======BaseMod.registerCustomReward======");
     }
 
@@ -311,18 +336,19 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
         String charStrings = Gdx.files.internal("localization/" + language + "/LagranYue-Characters.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
-/*        String monsterStrings = Gdx.files.internal("localization/" + language + "/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String uIstrings = Gdx.files.internal("localization/" + language + "/LagranYue-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(UIStrings.class, uIstrings);
+/*        String monsterStrings = Gdx.files.internal("localization/" + language + "/LagranYue-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
-        String potionStrings = Gdx.files.internal("localization/" + language + "/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String potionStrings = Gdx.files.internal("localization/" + language + "/LagranYue-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-        String orbStrings = Gdx.files.internal("localization/" + language + "/Slimebound-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String orbStrings = Gdx.files.internal("localization/" + language + "/LagranYue-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-        String eventStrings = Gdx.files.internal("localization/" + language + "/Slimebound-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String eventStrings = Gdx.files.internal("localization/" + language + "/LagranYue-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-        String modStrings = Gdx.files.internal("localization/" + language + "/Slimebound-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String modStrings = Gdx.files.internal("localization/" + language + "/LagranYue-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RunModStrings.class, modStrings);
-        String UIStrings = Gdx.files.internal("localization/" + language + "/Slimebound-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(UIStrings.class, UIStrings);*/
+        */
 
         logger.info("done editing strings");
 
@@ -345,5 +371,32 @@ public class LagranYue implements PostInitializeSubscriber,
         } else {
             logger.info("keywords is null");
         }
+    }
+
+    private void saveData() {
+        try {
+            SpireConfig config = new SpireConfig("LagranYueMod", "LagranYueSaveData", lagranYueProperties);
+            config.setBool(PROP_RELIC_SHARING, contentSharing_relics);
+
+            config.save();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadConfigData() {
+        try {
+            logger.info("LagranYueMod | Loading Config Preferences...");
+            SpireConfig config = new SpireConfig("LagranYueMod", "LagranYueSaveData", lagranYueProperties);
+            config.load();
+            contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
+        } catch (Exception e) {
+            e.printStackTrace();
+            clearData();
+        }
+    }
+
+    private void clearData() {
+        saveData();
     }
 }

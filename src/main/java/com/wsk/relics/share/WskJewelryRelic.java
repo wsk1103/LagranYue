@@ -24,7 +24,7 @@ public static final String IMG = "relics/r29.png";
 
     public WskJewelryRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);
-        this.counter = -1;
+        this.counter = 0;
     }
 
     @Override
@@ -39,13 +39,16 @@ public static final String IMG = "relics/r29.png";
 
     @Override
     public void atTurnStart() {
-        ArrayList<AbstractPower> powers = AbstractDungeon.player.powers;
-        if (powers != null && powers.size() > 0) {
-            Random random = new Random();
-            AbstractPower power = powers.get(random.nextInt(powers.size()));
-            power.amount = 1;
-            ActionUtil.addPower(AbstractDungeon.player, power);
+        if (counter != 0 && counter % 3 == 0) {
+            ArrayList<AbstractPower> powers = AbstractDungeon.player.powers;
+            if (powers != null && powers.size() > 0) {
+                Random random = new Random();
+                AbstractPower power = powers.get(random.nextInt(powers.size()));
+                power.amount = 1;
+                ActionUtil.addPower(AbstractDungeon.player, power);
+            }
         }
+        counter ++;
         flash();
     }
 }

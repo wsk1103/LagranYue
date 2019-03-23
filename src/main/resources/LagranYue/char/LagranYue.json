@@ -1,0 +1,127 @@
+{
+  "skeleton": {
+    "width": 119,
+    "height": 172,
+    "fps": 24,
+    "hash": " ",
+    "name": "Sprite"
+  },
+  "bones": [
+    {
+      "name": "root"
+    }
+  ],
+  "slots": [
+    {
+      "name": "sheetSlot",
+      "bone": "root",
+      "attachment": "6"
+    }
+  ],
+  "skins": {
+    "default": {
+      "sheetSlot": {
+        "1": {
+          "name": "1",
+          "width": 54,
+          "height": 118
+        },
+        "2": {
+          "name": "2",
+          "width": 55,
+          "height": 118
+        },
+        "3": {
+          "name": "3",
+          "width": 64,
+          "height": 118
+        },
+        "4": {
+          "name": "4",
+          "width": 55,
+          "height": 118
+        },
+        "5": {
+          "name": "5",
+          "width": 54,
+          "height": 118
+        },
+        "6": {
+          "name": "6",
+          "width": 54,
+          "height": 117
+        },
+        "7": {
+          "name": "7",
+          "width": 54,
+          "height": 117
+        },
+        "8": {
+          "name": "8",
+          "width": 54,
+          "height": 117
+        },
+        "9": {
+          "name": "9",
+          "width": 54,
+          "height": 117
+        },
+        "10": {
+          "name": "10",
+          "width": 112,
+          "height": 146
+        }
+      }
+    }
+  },
+  "animations": {
+    "Sprite": {
+      "slots": {
+        "sheetSlot": {
+          "attachment": [
+            {
+              "time": 0,
+              "name": "1"
+            },
+            {
+              "time": 0.0417,
+              "name": "2"
+            },
+            {
+              "time": 0.0834,
+              "name": "3"
+            },
+            {
+              "time": 0.1251,
+              "name": "4"
+            },
+            {
+              "time": 0.1668,
+              "name": "5"
+            },
+            {
+              "time": 0.2085,
+              "name": "6"
+            },
+            {
+              "time": 0.2502,
+              "name": "7"
+            },
+            {
+              "time": 0.2919,
+              "name": "8"
+            },
+            {
+              "time": 0.3336,
+              "name": "9"
+            },
+            {
+              "time": 0.3753,
+              "name": "10"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

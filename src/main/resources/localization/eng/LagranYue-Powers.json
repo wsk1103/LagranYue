@@ -317,15 +317,15 @@
   "LagranYue:ProtectionArrowsPower": {
     "NAME": "Protection Arrows",
     "DESCRIPTIONS": [
-      "Attacked，play the top card of the discard pile automatically ",
-      " times."
+      "Attacked，the bottom ",
+      " card of the draw pile are added to the discard pile, and the cost is reduced to 0 only once."
     ]
   },
   "LagranYue:WindShelterPower": {
     "NAME": "Wind Shelter",
     "DESCRIPTIONS": [
-      "Attacked，play the top card of the discard pile automatically ",
-      " times."
+      "Attacked，the top ",
+      " card of the draw pile are added to the discard pile, and the cost is reduced to 0 only once.."
     ]
   },
   "LagranYue:MoonMirrorShieldPower": {
