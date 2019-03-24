@@ -40,7 +40,9 @@ public class PermeationPower extends AbstractPower {
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        ActionUtil.loseHP(owner, (int) (owner.maxHealth * amount * 0.05));
+        if (info.type == DamageInfo.DamageType.NORMAL) {
+            ActionUtil.loseHP(owner, (int) (owner.maxHealth * amount * 0.05));
+        }
         return damageAmount;
     }
 }
