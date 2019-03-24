@@ -95,6 +95,12 @@ public class SkillHeartWaterCard extends AbstractProfShieldCard {
         }
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        this.retain = true;
+    }
+
     /**
      * @param p 玩家
      * @param m m敌人

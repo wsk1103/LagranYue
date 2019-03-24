@@ -139,7 +139,7 @@ public class LagranYue implements PostInitializeSubscriber,
                 350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 contentSharing_relics, settingsPanel, (label) -> {
         }, (button) -> {
-            contentSharing_relics = button.enabled;
+            contentSharing_relics = !button.enabled;
             saveData();
         });
 

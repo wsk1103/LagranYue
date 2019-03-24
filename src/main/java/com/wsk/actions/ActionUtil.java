@@ -21,85 +21,85 @@ public class ActionUtil {
 
     //给予死亡印记
     public static void imprintPower(AbstractCreature from, AbstractCreature to, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(to, from,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(to, from,
                 new ImprintPower(to, from, amount), amount, true, AbstractGameAction.AttackEffect.POISON));
     }
 
     //给予中毒
     public static void poisonPower(AbstractCreature from, AbstractCreature to, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(to, from,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(to, from,
                 new PoisonPower(to, from, amount), amount, true, AbstractGameAction.AttackEffect.POISON));
     }
 
     //获得格挡
     public static void gainBlockAction(AbstractCreature from, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(from, from, amount));
+        AbstractDungeon.actionManager.addToTop(new GainBlockAction(from, from, amount));
     }
 
     //给予虚弱
     public static void weakPower(AbstractCreature from, AbstractCreature to, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(to, from,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(to, from,
                 new WeakPower(to, amount, false), amount,
                 true, AbstractGameAction.AttackEffect.POISON));
     }
 
     //改变力量
     public static void strengthPower(AbstractCreature from, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(from, from,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(from, from,
                 new StrengthPower(from, amount), amount));
     }
 
     //获得敏捷
     public static void dexterityPower(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, amount), amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new DexterityPower(p, amount), amount));
     }
 
     //获得壁垒
     public static void barricadePower(AbstractCreature p) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BarricadePower(p)));
     }
 
     //给予易伤
     public static void vulnerablePower(AbstractCreature from, AbstractCreature to, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(to, from,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(to, from,
                 new VulnerablePower(to, amount, false), amount,
                 true, AbstractGameAction.AttackEffect.POISON));
     }
 
     //脆弱
     public static void frailPower(AbstractCreature from, AbstractCreature to, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(to, from,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(to, from,
                 new FrailPower(to, amount, false), amount,
                 true));
     }
 
     //获得荆棘
     public static void thornsPower(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                 new ThornsPower(p, amount), amount));
     }
 
     //获得多层护甲
     public static void platedArmorPower(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                 new PlatedArmorPower(p, amount), amount));
     }
 
     //获得金金属化
     public static void metallicizePower(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MetallicizePower(p, amount), amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MetallicizePower(p, amount), amount));
     }
 
     //直接移除能力
     public static void removePower(AbstractCreature p, String powerId) {
         if (p.hasPower(powerId)) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, powerId));
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, powerId));
         }
     }
 
     //下回合抽牌
     public static void nextEnergizedPower(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextEnergizedPower(p, amount), amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new NextEnergizedPower(p, amount), amount));
     }
 
     //获得胜利契约
@@ -115,7 +115,7 @@ public class ActionUtil {
                 amount = 10 - a;
             }
         }
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                 new VictoryPower(p, amount), amount, true, AbstractGameAction.AttackEffect.POISON));
     }
 
@@ -134,7 +134,7 @@ public class ActionUtil {
 //        }
         for (int i = armsNo; i <= ArmsUtil.getArmsNum(); i++) {
             if (!ArmsUtil.areMaxArmsPlies(i)) {
-                AbstractDungeon.actionManager.addToBottom(new ForgingAction(from, i, amount));
+                AbstractDungeon.actionManager.addToTop(new ForgingAction(from, i, amount));
                 break;
             }
         }
@@ -142,23 +142,23 @@ public class ActionUtil {
 
     //获取 兵器
     public static void addArms(AbstractCreature p, AbstractArmsPower armsPower) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, armsPower, armsPower.amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, armsPower, armsPower.amount));
         armsPower.hasArms();
     }
 
     //添加能力
     public static void addPower(AbstractCreature p, AbstractPower power) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, power, power.amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, power, power.amount));
     }
 
     //添加能力
     public static void addPower(AbstractCreature s, AbstractCreature t, AbstractPower power) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(t, s, power, power.amount));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(t, s, power, power.amount));
     }
 
     //添加能力
     public static void gainEnergy(int amount) {
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(amount));
+        AbstractDungeon.actionManager.addToTop(new GainEnergyAction(amount));
     }
 
     //移除能力
@@ -189,7 +189,7 @@ public class ActionUtil {
             if (i <= amount) {
                 removePower(p, power);
             } else {
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, power, amount));
+                AbstractDungeon.actionManager.addToTop(new ReducePowerAction(p, p, power, amount));
             }
         }
     }
@@ -205,7 +205,7 @@ public class ActionUtil {
      * @param amount 多少
      */
     public static void loseHP(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, amount, AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToTop(new LoseHPAction(p, p, amount, AbstractGameAction.AttackEffect.SMASH));
     }
 
     /**
@@ -223,11 +223,11 @@ public class ActionUtil {
      * @param amount 数量
      */
     public static void drawCard(AbstractCreature p, int amount) {
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, amount));
+        AbstractDungeon.actionManager.addToTop(new DrawCardAction(p, amount));
     }
 
     public static void relicAboveCreatureAction(AbstractCreature source, AbstractRelic relic) {
-        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(source, relic));
+        AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(source, relic));
     }
 
 }
