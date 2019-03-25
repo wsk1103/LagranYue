@@ -111,10 +111,7 @@ public class LagranYue implements PostInitializeSubscriber,
         //需要新建一个AbstractCardEnum类import后使用。代码如下：
         //@SpireEnum
         //public static AbstractCard.CardColor Color; Color为你的角色对应的颜色
-//        testModDefault.setProperty(PROP_EVENT_SHARING, "FALSE");
-//        testModDefault.setProperty(PROP_RELIC_SHARING, "FALSE");
-//        testModDefault.setProperty(PROP_POTION_SHARING, "FALSE");
-//        testModDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+
         lagranYueProperties.setProperty(PROP_RELIC_SHARING, "TRUE");
 
         loadConfigData();
