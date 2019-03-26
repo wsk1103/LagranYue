@@ -24,7 +24,7 @@ Now, I am developing.
   "modid": "LagranYue",
   "name": "拉格朗·月",
   "author_list": ["sky"],
-  "description": "角色：武器大师·拉格朗·月，包含66张卡片，7件遗物。\n GitHub源码：https://github.com/wsk1103/LagranYue",
+  "description": "角色：武器大师·拉格朗·月，包含91张卡片，25件遗物。\n GitHub源码：https://github.com/wsk1103/LagranYue",
   "dependencies": ["basemod"],
   "version": "1.2.4",
   "sts_version": "03-03-2019",
