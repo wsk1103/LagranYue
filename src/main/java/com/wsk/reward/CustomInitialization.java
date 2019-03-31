@@ -33,10 +33,14 @@ public class CustomInitialization {
         final ArrayList<AbstractRelic> all = new ArrayList<>();
         if (AbstractDungeon.floorNum < 1) {
             if (LagranYue.contentSharing_relics) {
+                boolean hasRandom = false;
                 for (AbstractRelic relic : player.relics) {
                     if (relic.relicId.equals(RandomDrawCardRelic.ID)) {
+                        hasRandom = true;
                         break;
                     }
+                }
+                if (!hasRandom) {
                     all.add(new RandomDrawCardRelic());
                 }
             }

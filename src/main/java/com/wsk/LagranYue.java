@@ -17,6 +17,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.relics.Cauldron;
+import com.megacrit.cardcrawl.relics.DeadBranch;
+import com.megacrit.cardcrawl.relics.Orrery;
+import com.megacrit.cardcrawl.relics.TinyHouse;
 import com.wsk.cards.arms.*;
 import com.wsk.cards.attack.*;
 import com.wsk.cards.power.*;
@@ -189,6 +193,11 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addRelic(new SoulBurningRelic(), RelicType.SHARED);
         BaseMod.addRelic(new SpringFairyRelic(), RelicType.SHARED);
         BaseMod.addRelic(new WskJewelryRelic(), RelicType.SHARED);
+
+        BaseMod.removeRelic(new Orrery());
+        BaseMod.removeRelic(new TinyHouse());
+        BaseMod.removeRelic(new DeadBranch());
+        BaseMod.removeRelic(new Cauldron());
 
         logger.info("=========================加载新的遗容成功=========================");
     }
