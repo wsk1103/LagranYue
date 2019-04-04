@@ -317,14 +317,14 @@
   "LagranYue:ProtectionArrowsPower": {
     "NAME": "避矢之加护",
     "DESCRIPTIONS": [
-      "被攻击时，将抽牌堆最下面的1",
+      "被攻击时，将抽牌堆最下面的",
       "张卡牌加入弃牌堆，并且费用仅1次变为0。"
     ]
   },
   "LagranYue:WindShelterPower": {
     "NAME": "避风的加护",
     "DESCRIPTIONS": [
-      "被攻击时，将抽牌堆最上面的1",
+      "被攻击时，将抽牌堆最上面的",
       "张卡牌加入弃牌堆，并且费用仅1次变为0。"
     ]
   },
