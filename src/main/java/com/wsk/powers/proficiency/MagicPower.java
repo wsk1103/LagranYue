@@ -27,7 +27,7 @@ public class MagicPower extends AbstractPower {
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         this.owner = owner;
-        this.amount = amount;
+        this.amount = -99;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         this.type = POWER_TYPE;
         updateDescription();
@@ -35,14 +35,12 @@ public class MagicPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + 1 + DESCRIPTIONS[1]);
     }
 
     @Override
     public void onVictory() {
-        for (int i = 0; i < amount; i++) {
-            AbstractDungeon.getCurrRoom().addPotionToRewards(GainPotions.receiveRewards());
-        }
+        AbstractDungeon.getCurrRoom().addPotionToRewards(GainPotions.receiveRewards());
     }
 }
 

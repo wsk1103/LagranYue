@@ -15,6 +15,8 @@ public class CombatRewardScreenPatch {
 
     public static int magicEyePower = 0;
 
+    public static boolean rareGoldArmor = false;
+
     @SpireInsertPatch(locator = Locator.class)
     public static void insert(CombatRewardScreen instance) {
         //神性
@@ -26,10 +28,14 @@ public class CombatRewardScreenPatch {
 //            GainPotions.receiveRewards(instance.rewards);
 //            magicPower = 0;
 //        }
-        for (int i = 0; i < magicEyePower; i++) {
+        if (magicEyePower != 0) {
             GainRareCard.receiveRewards(instance.rewards);
-            magicEyePower = 0;
         }
+        magicEyePower = 0;
+        if (rareGoldArmor) {
+            GainRareCard.receiveRewards(instance.rewards);
+        }
+        rareGoldArmor = false;
     }
 
 

@@ -276,7 +276,7 @@
     "NAME": "神性",
     "DESCRIPTIONS": [
       "战斗胜利后，额外获得",
-      "个遗物。"
+      "个遗物（只能获取1个）。"
     ]
   },
   "LagranYue:GoldRatePower": {
@@ -290,14 +290,14 @@
     "NAME": "魔眼",
     "DESCRIPTIONS": [
       "战斗胜利后，额外获得",
-      "张金卡。"
+      "张金卡（只能获取1张）。"
     ]
   },
   "LagranYue:MagicPower": {
     "NAME": "魔术",
     "DESCRIPTIONS": [
       "战斗胜利后，额外获得",
-      "瓶药。"
+      "瓶药（只能获取1瓶）。"
     ]
   },
   "LagranYue:MindPower": {

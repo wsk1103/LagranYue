@@ -4,9 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.wsk.actions.ActionUtil;
 import com.wsk.reward.CombatRewardScreenPatch;
 import com.wsk.utils.CommonUtil;
 
@@ -21,7 +19,7 @@ public class RareGoldArmorRelic extends CustomRelic {
 public static final String IMG = "relics/r19.png";
     public static final String OUTLINE = "relics/r20.png";
 
-    private boolean more = false;
+    private boolean more = true;
 
     public RareGoldArmorRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);
@@ -42,25 +40,29 @@ public static final String IMG = "relics/r19.png";
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
 
-        flash();
-        if (info.type == DamageInfo.DamageType.NORMAL) {
+        if (more && info.type == DamageInfo.DamageType.NORMAL) {
+            flash();
             counter += damageAmount;
         }
-        if (!more && counter >= 40) {
-            CombatRewardScreenPatch.magicEyePower ++;
-            more = true;
+        if (counter >= 40) {
+            CombatRewardScreenPatch.rareGoldArmor = true;
+            more = false;
         }
     }
 
     @Override
     public void atBattleStart() {
-        CombatRewardScreenPatch.magicEyePower = 0;
+        CombatRewardScreenPatch.rareGoldArmor = true;
     }
 
     @Override
     public void atTurnStart() {
-        flash();
-        more = false;
-        counter = 0;
+        if (counter >= 40) {
+            more = false;
+        } else {
+            flash();
+            more = true;
+            counter = 0;
+        }
     }
 }
