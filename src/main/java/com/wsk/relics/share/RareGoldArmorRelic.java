@@ -55,6 +55,7 @@ public static final String IMG = "relics/r19.png";
 
     @Override
     public void atBattleStart() {
+        counter = 0;
         get = false;
     }
 
