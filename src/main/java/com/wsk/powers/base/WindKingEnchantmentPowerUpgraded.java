@@ -35,6 +35,7 @@ public class WindKingEnchantmentPowerUpgraded extends AbstractPower {
         updateDescription();
     }
 
+    @Override
     public void updateDescription() {
         this.description = (DESCRIPTIONS[0] + (this.amount * 8) + DESCRIPTIONS[1]);
     }
