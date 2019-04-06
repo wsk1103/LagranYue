@@ -21,7 +21,7 @@ public class MagicEyePower extends AbstractPower {
     private static PowerType POWER_TYPE = PowerType.DEBUFF;
 
 
-    public MagicEyePower(AbstractCreature owner, int amount) {
+    public MagicEyePower(AbstractCreature owner) {
         this.ID = POWER_ID;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;

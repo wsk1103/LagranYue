@@ -110,7 +110,7 @@ public class SkillHeartWaterCard extends AbstractProfShieldCard {
         for (int i = 0; i < this.magicNumber; i++) {
             ActionUtil.gainBlockAction(p, this.block);
         }
-        ActionUtil.addPower(p, new MagicEyePower(p, 1));
+        ActionUtil.addPower(p, new MagicEyePower(p));
     }
 
     static {

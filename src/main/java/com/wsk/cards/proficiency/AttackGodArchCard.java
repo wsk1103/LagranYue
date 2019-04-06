@@ -123,7 +123,7 @@ public class AttackGodArchCard extends AbstractProfArchCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             }
         }
-        ActionUtil.addPower(p, new MagicEyePower(p, 1));
+        ActionUtil.addPower(p, new MagicEyePower(p));
     }
 
     static {
