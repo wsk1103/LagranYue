@@ -22,7 +22,7 @@ public class MagicPower extends AbstractPower {
     private static PowerType POWER_TYPE = PowerType.DEBUFF;
 
 
-    public MagicPower(AbstractCreature owner, int amount) {
+    public MagicPower(AbstractCreature owner) {
         this.ID = POWER_ID;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;

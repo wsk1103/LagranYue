@@ -111,7 +111,7 @@ public class AttackGalacticZeroCard extends AbstractProfSpearCard {
                 AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             }
         }
-        ActionUtil.addPower(p, new MagicPower(p, 1));
+        ActionUtil.addPower(p, new MagicPower(p));
     }
 
     static {
