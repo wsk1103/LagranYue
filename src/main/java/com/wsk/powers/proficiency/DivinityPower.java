@@ -22,7 +22,7 @@ public class DivinityPower extends AbstractPower {
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
 
-    public DivinityPower(AbstractCreature owner, int amount) {
+    public DivinityPower(AbstractCreature owner) {
         this.ID = POWER_ID;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
