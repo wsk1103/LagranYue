@@ -1,13 +1,10 @@
 package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -19,7 +16,7 @@ public class WindKingEnchantmentPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:WindKingEnchantmentPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "风王的结界";//能力的名称。
 
-    public static String[] DESCRIPTIONS = {"接下来的4个回合内，每回合开始获得", "格挡 ，已经过了", "回合"};
+    public static String[] DESCRIPTIONS = {"回合开始获得", "格挡 。"};
 
     private static final String IMG = "powers/w29.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -39,19 +36,12 @@ public class WindKingEnchantmentPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (4 - this.amount) + DESCRIPTIONS[2]);
+        this.description = (DESCRIPTIONS[0] + 8 + DESCRIPTIONS[1]);
     }
 
     @Override
     public void atStartOfTurn() {
         this.flash();
-        if (this.amount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, 8));
-            //层数-1
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, WindKingEnchantmentPower.POWER_ID, 1));
-        }
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, WindKingEnchantmentPower.POWER_ID));
-        }
+        ActionUtil.reducePower(owner, this.ID, 1);
     }
 }

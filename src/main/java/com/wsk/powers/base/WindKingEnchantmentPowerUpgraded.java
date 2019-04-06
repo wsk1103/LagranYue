@@ -17,7 +17,7 @@ public class WindKingEnchantmentPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:WindKingEnchantmentPowerUpgraded";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
     public static final String NAME = "风王的结界+";//能力的名称。
 
-    public static String[] DESCRIPTIONS = {"每回合开始获得", "格挡 "};
+    public static String[] DESCRIPTIONS = {"回合开始获得", "格挡 "};
 
     private static final String IMG = "powers/w29.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
@@ -37,13 +37,13 @@ public class WindKingEnchantmentPowerUpgraded extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount * 4) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.amount * 8) + DESCRIPTIONS[1]);
     }
 
     @Override
     public void atStartOfTurn() {
         flash();
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, 8));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, (this.amount * 8)));
     }
 }
 

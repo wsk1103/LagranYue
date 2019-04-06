@@ -6,13 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.neow.NeowEvent;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.LagranYue;
-import com.wsk.relics.share.ImprintInheritanceRelic;
 import com.wsk.relics.share.RandomDrawCardRelic;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -47,7 +42,7 @@ public class CustomInitialization {
                     all.add(new RandomDrawCardRelic());
                 }
             }
-            File saveToNext = new File(ImprintInheritanceRelic.FILEPATH);
+/*            File saveToNext = new File(ImprintInheritanceRelic.FILEPATH);
             String name = null;
             if (saveToNext.exists()) {
                 try (BufferedReader reader = new BufferedReader(new FileReader(saveToNext))) {
@@ -68,7 +63,7 @@ public class CustomInitialization {
                 }
                 //删除遗物
                 saveToNext.delete();
-            }
+            }*/
         }
 
 

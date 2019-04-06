@@ -1,8 +1,6 @@
 package com.wsk.cards.power;
 
 import basemod.abstracts.CustomCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -10,8 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.base.WindKingEnchantmentPower;
 import com.wsk.powers.base.WindKingEnchantmentPowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
@@ -63,11 +61,9 @@ public class PowerWindKingEnchantmentCard extends CustomCard {
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(abstractPlayer, abstractPlayer, this.block));
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new WindKingEnchantmentPowerUpgraded(abstractPlayer, 1), 1, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.addPower(abstractPlayer, new WindKingEnchantmentPowerUpgraded(abstractPlayer, 1));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(abstractPlayer, abstractPlayer,
-                    new WindKingEnchantmentPower(abstractPlayer, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
+            ActionUtil.addPower(abstractPlayer, new WindKingEnchantmentPowerUpgraded(abstractPlayer, 4));
         }
     }
 
