@@ -4,14 +4,15 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.wsk.reward.CombatRewardScreenPatch;
+import com.wsk.reward.GainRareCard;
 import com.wsk.utils.CommonUtil;
 
 /**
  * @author wsk1103
  * @date 2019/3/20
- * @description 描述
+ * @description 当在 #b1 个回合内造成的伤害超过 #b40 ，那么奖励品的卡牌中，额外获得 #b1 张 #y金卡 (只能获取1张)。
  */
 public class RareGoldArmorRelic extends CustomRelic {
 
@@ -20,6 +21,8 @@ public static final String IMG = "relics/r19.png";
     public static final String OUTLINE = "relics/r20.png";
 
     private boolean more = true;
+
+    private boolean get = false;
 
     public RareGoldArmorRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.RARE, LandingSound.FLAT);
@@ -45,14 +48,14 @@ public static final String IMG = "relics/r19.png";
             counter += damageAmount;
         }
         if (counter >= 40) {
-            CombatRewardScreenPatch.rareGoldArmor = true;
+            get = true;
             more = false;
         }
     }
 
     @Override
     public void atBattleStart() {
-        CombatRewardScreenPatch.rareGoldArmor = true;
+        get = false;
     }
 
     @Override
@@ -63,6 +66,13 @@ public static final String IMG = "relics/r19.png";
             flash();
             more = true;
             counter = 0;
+        }
+    }
+
+    @Override
+    public void onVictory() {
+        if (get) {
+            GainRareCard.receiveRewards(AbstractDungeon.getCurrRoom().rewards);
         }
     }
 }

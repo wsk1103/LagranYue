@@ -3,8 +3,9 @@ package com.wsk.powers.proficiency;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.wsk.reward.CombatRewardScreenPatch;
+import com.wsk.reward.GainRareCard;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -39,7 +40,13 @@ public class MagicEyePower extends AbstractPower {
 
     @Override
     public void onVictory() {
-        CombatRewardScreenPatch.magicEyePower = amount;
+//        CombatRewardScreenPatch.magicEyePower = amount;
+//        RewardItem item = new RewardItem(AbstractCard.CardColor.COLORLESS);
+//        ArrayList<AbstractCard> cards = item.cards;
+//        cards.clear();
+//        cards.add(AbstractDungeon.getCardWithoutRng(AbstractCard.CardRarity.RARE));
+//        AbstractDungeon.getCurrRoom().addCardReward(item);
+        GainRareCard.receiveRewards(AbstractDungeon.getCurrRoom().rewards);
     }
 
 }

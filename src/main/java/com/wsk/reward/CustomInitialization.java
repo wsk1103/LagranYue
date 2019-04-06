@@ -9,7 +9,10 @@ import com.wsk.LagranYue;
 import com.wsk.relics.share.ImprintInheritanceRelic;
 import com.wsk.relics.share.RandomDrawCardRelic;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -57,13 +60,9 @@ public class CustomInitialization {
                 if (name != null && name.length() > 0) {
                     try {
                         Class c = Class.forName(name);
-                        try {
-                            AbstractRelic relic = (AbstractRelic) c.newInstance();
-                            all.add(relic);
-                        } catch (InstantiationException | IllegalAccessException e) {
-                            e.printStackTrace();
-                        }
-                    } catch (ClassNotFoundException e) {
+                        AbstractRelic relic = (AbstractRelic) c.newInstance();
+                        all.add(relic);
+                    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
                         e.printStackTrace();
                     }
                 }

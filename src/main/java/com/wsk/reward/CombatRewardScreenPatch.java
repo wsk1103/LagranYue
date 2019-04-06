@@ -1,3 +1,4 @@
+/*
 package com.wsk.reward;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -5,11 +6,14 @@ import com.megacrit.cardcrawl.screens.CombatRewardScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicButton;
 import javassist.CtBehavior;
 
+*/
 /**
  * @author wsk1103
  * @date 2019/3/8
- * @description 战斗结束后，奖励界面
- */
+ * @description 战斗结束后，奖励界面，会重复触发星盘仪，小屋子等效果
+ *//*
+
+@Deprecated
 @SpirePatch(clz = CombatRewardScreen.class, method = "setupItemReward")
 public class CombatRewardScreenPatch {
 
@@ -49,3 +53,4 @@ public class CombatRewardScreenPatch {
         }
     }
 }
+*/

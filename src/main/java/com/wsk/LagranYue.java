@@ -14,11 +14,11 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.relics.Cauldron;
-import com.megacrit.cardcrawl.relics.DeadBranch;
 import com.megacrit.cardcrawl.relics.Orrery;
 import com.megacrit.cardcrawl.relics.TinyHouse;
 import com.wsk.cards.arms.*;
@@ -183,7 +183,7 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addRelic(new ContractPerformanceRelic(), RelicType.SHARED);
         BaseMod.addRelic(new GuidanceLightRelic(), RelicType.SHARED);
         BaseMod.addRelic(new GuideDeadRelic(), RelicType.SHARED);
-        BaseMod.addRelic(new ImprintInheritanceRelic(), RelicType.SHARED);
+//        BaseMod.addRelic(new ImprintInheritanceRelic(), RelicType.SHARED);
         BaseMod.addRelic(new MagicReflectiveArmorRelic(), RelicType.SHARED);
         BaseMod.addRelic(new MoonMirrorShieldRelic(), RelicType.SHARED);
         BaseMod.addRelic(new NewUniverseRelic(), RelicType.SHARED);
@@ -194,10 +194,14 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addRelic(new SpringFairyRelic(), RelicType.SHARED);
         BaseMod.addRelic(new WskJewelryRelic(), RelicType.SHARED);
 
-        BaseMod.removeRelic(new Orrery());
-        BaseMod.removeRelic(new TinyHouse());
-        BaseMod.removeRelic(new DeadBranch());
-        BaseMod.removeRelic(new Cauldron());
+        AbstractDungeon.bossRelicPool.remove(Orrery.ID);
+        AbstractDungeon.bossRelicPool.remove(TinyHouse.ID);
+        AbstractDungeon.rareRelicPool.remove(TinyHouse.ID);
+        AbstractDungeon.shopRelicPool.remove(Cauldron.ID);
+//        BaseMod.removeRelic(new Orrery());
+//        BaseMod.removeRelic(new TinyHouse());
+//        BaseMod.removeRelic(new DeadBranch());
+//        BaseMod.removeRelic(new Cauldron());
 
         logger.info("=========================加载新的遗容成功=========================");
     }
