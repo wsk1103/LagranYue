@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /**
  * @author wsk1103
  * @date 2019/3/20
- * @description 获得金卡
+ * @description 获得随机金卡
  */
 public class GainRareCard {
 
