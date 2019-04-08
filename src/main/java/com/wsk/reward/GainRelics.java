@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * @author wsk1103
  * @date 2019/3/8
- * @description 获取遗物
+ * @description 获取随机遗物
  */
 public class GainRelics {
 
