@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * @author wsk1103
  * @date 2019/3/20
- * @description 获取药物
+ * @description 获取随机药物
  */
 public class GainPotions {
 
