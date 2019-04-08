@@ -119,7 +119,7 @@
     "NAME": "Guide to the Dead",
     "FLAVOR": "Rose's red dream, which is easy to hurt, is lost in the fingertips when it is held in the hand",
     "DESCRIPTIONS": [
-      "At the beginning of the battle, you gain #ybarriers, but when the enemy's #yblock is broken, you lose #b5% of your current maximum life."
+      "At the beginning of the battle, you gain #ybarriers, but gain #yblock reduced by #b2 ."
     ]
   },
   "LagranYue:SoulBurningRelic": {
@@ -147,14 +147,14 @@
     "NAME": "Shield of Moon and Mirror",
     "FLAVOR": "Would you pop up at the corner cafe?",
     "DESCRIPTIONS": [
-      "At the beginning of the battle,gain power #yMoonMirrorShield ."
+      "The damage caused by the uncommon card or the block gained increased by #y3 , while the damage caused by the common card or the block gained decreased by #r3 ."
     ]
   },
   "LagranYue:SpringFairyRelic": {
     "NAME": "Fairy of the Spring",
     "FLAVOR": "After climbing mountains and mountains, love is haunted.",
     "DESCRIPTIONS": [
-      "At the beginning of the battle,gain power #yFairyOfSpring ."
+      "The damage caused by the uncommon card or the block gained increased by #y100% , while the damage caused by the common card or the block gained decreased by #r50% ."
     ]
   },
   "LagranYue:GuidanceLightRelic": {

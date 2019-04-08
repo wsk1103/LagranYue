@@ -2,10 +2,11 @@ package com.wsk.relics.share;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.wsk.actions.ActionUtil;
-import com.wsk.powers.relics.SpringFairyPower;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -16,8 +17,10 @@ import com.wsk.utils.CommonUtil;
 public class SpringFairyRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:SpringFairyRelic";
-public static final String IMG = "relics/r23.png";
+    public static final String IMG = "relics/r23.png";
     public static final String OUTLINE = "relics/r24.png";
+
+    private AbstractCard card;
 
     public SpringFairyRelic() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.UNCOMMON, LandingSound.FLAT);
@@ -35,8 +38,43 @@ public static final String IMG = "relics/r23.png";
     }
 
     @Override
-    public void atBattleStart() {
-        flash();
-        ActionUtil.addPower(AbstractDungeon.player, new SpringFairyPower(AbstractDungeon.player, 1));
+    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
+        this.card = targetCard;
+    }
+
+    @Override
+    public int onAttackedMonster(DamageInfo info, int damageAmount) {
+        return (int) sum(damageAmount);
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        this.card = c;
+    }
+
+    @Override
+    public int onPlayerGainedBlock(float blockAmount) {
+        return (int) sum(blockAmount);
+    }
+
+    private float sum(float a) {
+        if (a <= 0) {
+            setCard();
+            return a;
+        }
+        if (card != null) {
+            flash();
+            if (card.rarity == AbstractCard.CardRarity.RARE) {
+                a += a;
+            } else if (card.rarity == AbstractCard.CardRarity.COMMON || card.rarity == AbstractCard.CardRarity.BASIC) {
+                a -= Math.floor(a * 1.00 / 2);
+            }
+        }
+        setCard();
+        return a >= 0 ? a : 0;
+    }
+
+    private void setCard() {
+        card = null;
     }
 }

@@ -214,7 +214,7 @@
       "skillpoint"
     ],
     "PROPERNAME": "SkillPoint",
-    "DESCRIPTION": "When equipped with weapons, the use of cards will accumulate corresponding skill points.COMMON：0.2，UNCOMMON：0.4，RARE：1。Advanced cards require consume skill points to use。"
+    "DESCRIPTION": "After using card, gain 0.1 SkillPoint. When equipped with weapons, it will change: COMMON：0.2，UNCOMMON：0.4，RARE：1。Advanced cards require consume skill points to use。"
   },
   {
     "NAMES": [

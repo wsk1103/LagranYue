@@ -18,37 +18,32 @@ import com.wsk.utils.CommonUtil;
  * @desc 死亡印记
  */
 public class ImprintPower extends AbstractPower {
-    public static final String POWER_ID = "LagranYue:ImprintPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
-    public static final String NAME = "死亡印记";//能力的名称。
-    public static String[] DESCRIPTIONS = {"造成伤害增加","点。每回合结束时，层数减少1。当回合开始时，如果层数大于10，给予50点固定伤害。然后移除所有印记。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static final String POWER_ID = "LagranYue:ImprintPower";
+    public static final String NAME = "死亡印记";
 
     private static final String IMG = "powers/w19.png";
-    //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.DEBUFF;
 
     private AbstractCreature source;
 
     public ImprintPower(AbstractCreature owner, AbstractCreature source, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
         this.ID = POWER_ID;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-//        this.name = NAME;
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         this.source = source;
-        updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
-        this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        this.type = POWER_TYPE;
         updateDescription();
     }
 
+    @Override
     public void updateDescription() {
-//        this.description = DESCRIPITON;//不需要调用变量的文本更新方式。
         this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
     }
 
-    //造成伤害时，返回伤害数值
     @Override
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
         if (damageType == DamageInfo.DamageType.NORMAL) {
@@ -64,7 +59,6 @@ public class ImprintPower extends AbstractPower {
         ActionUtil.reducePower(owner, this, 1);
     }
 
-    //触发时机：当回合开始时触发。
     @Override
     public void atStartOfTurn() {
         if (this.amount >= 10) {
@@ -75,4 +69,5 @@ public class ImprintPower extends AbstractPower {
             }
         }
     }
+
 }

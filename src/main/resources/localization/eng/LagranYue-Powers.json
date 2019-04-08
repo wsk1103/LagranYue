@@ -192,7 +192,7 @@
     "NAME": "ImprintOfDeath",
     "DESCRIPTIONS": [
       "The next attack deal ",
-      " damage.1 ImprintOfDeath is removed at end of turn.When the turn starts, if the ImprintOfDeath`s layer is greater than 10, give 50 fixed damage. Then remove all the ImprintOfDeath."
+      " damage.1 ImprintOfDeath is removed at end of turn.If the ImprintOfDeath`s layer is greater than 10, give 50 fixed damage. Then remove all the ImprintOfDeath."
     ]
   },
   "LagranYue:BloodyTemplePower": {

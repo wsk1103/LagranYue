@@ -2,7 +2,6 @@ package com.wsk.relics.share;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.actions.ActionUtil;
@@ -11,7 +10,7 @@ import com.wsk.utils.CommonUtil;
 /**
  * @author wsk1103
  * @date 2019/3/20
- * @description 描述
+ * @description 死灵魔导书 战斗开始时，获得 #y壁垒 ，但获得的 #y格挡 减少 #r2 。
  */
 public class GuideDeadRelic extends CustomRelic {
 
@@ -40,8 +39,11 @@ public static final String IMG = "relics/r13.png";
     }
 
     @Override
-    public void onBlockBroken(AbstractCreature m) {
-
-        ActionUtil.loseHP(AbstractDungeon.player, (int) (AbstractDungeon.player.maxHealth * 0.05));
+    public int onPlayerGainedBlock(float blockAmount) {
+        if (blockAmount >= 2) {
+            return (int) blockAmount - 2;
+        } else {
+            return (int) blockAmount;
+        }
     }
 }
