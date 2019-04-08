@@ -66,7 +66,6 @@ public class CustomInitialization {
             }*/
         }
 
-
         for (AbstractRelic relic : all) {
             int slot = player.relics.size();
             relic.makeCopy().instantObtain(player, slot, true);
