@@ -157,21 +157,23 @@ public class ActionUtil {
 
     /**
      * 减少能力的层数
-     * @param p 拥有者
-     * @param power 能力
+     *
+     * @param p      拥有者
+     * @param power  能力
      * @param amount 层数
      */
-    public static void reducePower(AbstractCreature p, AbstractPower power, int amount){
+    public static void reducePower(AbstractCreature p, AbstractPower power, int amount) {
         reducePower(p, power.ID, amount);
     }
 
     /**
      * 减少能力的层数
-     * @param p 拥有者
-     * @param power 能力
+     *
+     * @param p      拥有者
+     * @param power  能力
      * @param amount 层数
      */
-    public static void reducePower(AbstractCreature p, String power, int amount){
+    public static void reducePower(AbstractCreature p, String power, int amount) {
         AbstractPower playerP = p.getPower(power);
         if (playerP != null) {
             int i = playerP.amount;
@@ -190,7 +192,8 @@ public class ActionUtil {
 
     /**
      * 失去生命值
-     * @param p 失去者
+     *
+     * @param p      失去者
      * @param amount 多少
      */
     public static void loseHP(AbstractCreature p, int amount) {
@@ -199,7 +202,8 @@ public class ActionUtil {
 
     /**
      * 添加缓冲
-     * @param p 对象
+     *
+     * @param p      对象
      * @param amount 数量
      */
     public static void buffAction(AbstractCreature p, int amount) {
@@ -208,7 +212,8 @@ public class ActionUtil {
 
     /**
      * 抽牌
-     * @param p 对象
+     *
+     * @param p      对象
      * @param amount 数量
      */
     public static void drawCard(AbstractCreature p, int amount) {
