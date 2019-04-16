@@ -64,7 +64,8 @@ public class ArmsToHandAction extends AbstractGameAction {
                     card.current_x = CardGroup.DRAW_PILE_X;
                     card.current_y = CardGroup.DRAW_PILE_Y;
                     this.p.drawPile.removeCard(card);
-                    card.retain = true;//如果手牌未满，设置保留属性
+                    //如果手牌未满，设置保留属性
+                    card.retain = true;
                     AbstractDungeon.player.hand.addToTop(card);
                     AbstractDungeon.player.hand.refreshHandLayout();
                     AbstractDungeon.player.hand.applyPowers();
@@ -90,7 +91,8 @@ public class ArmsToHandAction extends AbstractGameAction {
                         this.p.createHandIsFullDialog();
                     } else {
                         this.p.drawPile.removeCard(card);
-                        card.retain = true;//如果手牌未满，设置保留属性
+                        //如果手牌未满，设置保留属性
+                        card.retain = true;
                         this.p.hand.addToTop(card);
                     }
 
