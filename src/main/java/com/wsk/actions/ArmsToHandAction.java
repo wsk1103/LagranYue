@@ -16,13 +16,11 @@ import java.util.Iterator;
  * @desc 将武器卡牌加入到手中
  */
 public class ArmsToHandAction extends AbstractGameAction {
-    //    private static final UIStrings uiStrings;
     public static final String TEXT;
     private AbstractPlayer p;
     private boolean update;
 
     static {
-//        uiStrings = CardCrawlGame.languagePack.getUIString("ComboFromDeckToHandAction");
         TEXT = "选择一张 兵器 牌添加到你的手牌中。";
     }
 
