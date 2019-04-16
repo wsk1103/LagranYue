@@ -15,7 +15,7 @@ import com.wsk.utils.ArmsUtil;
 /**
  * @author wsk1103
  * @date 2019/3/1
- * @desc 一句话说明
+ * @desc 集成了基本所有的操作，简便开发
  */
 public class ActionUtil {
 
