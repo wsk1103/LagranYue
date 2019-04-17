@@ -18,8 +18,8 @@ import java.util.ArrayList;
  * @desc 复制卡牌
  */
 public class CopyCardAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("DualWieldAction");
-    public static final String[] TEXT = uiStrings.TEXT;
+    private static final UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("DualWieldAction");
+    public static final String[] TEXT = UI_STRINGS.TEXT;
 
     private static final float DURATION_PER_CARD = 0.25F;
     private AbstractPlayer p;
@@ -34,6 +34,7 @@ public class CopyCardAction extends AbstractGameAction {
         this.dupeAmount = 1;
     }
 
+    @Override
     public void update() {
         int i;
         if (this.duration == Settings.ACTION_DUR_FAST) {

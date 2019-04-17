@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * @author wsk1103
  * @date 2019/3/2
- * @desc 一句话说明
+ * @desc 暗黑神殿
  */
 public class DarkTemplePowerAction {
 
