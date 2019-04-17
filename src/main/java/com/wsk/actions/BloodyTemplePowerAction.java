@@ -7,7 +7,7 @@ import com.wsk.cards.attack.AttackLuEnCard;
 /**
  * @author wsk1103
  * @date 2019/3/2
- * @desc 一句话说明
+ * @desc 鲜血神殿
  */
 public class BloodyTemplePowerAction {
 
@@ -23,24 +23,9 @@ public class BloodyTemplePowerAction {
     }
 
     static void cardAddToHand(AbstractPlayer owner, CustomCard card) {
-//        Random random = new Random();
         owner.hand.addToTop(card);
         owner.hand.refreshHandLayout();
         owner.hand.applyPowers();
-//        int temp = random.nextInt(3);
-//        switch (temp) {
-//            case 0:
-//                ActionUtil.weakPower(owner, owner, 1);
-//                break;
-//            case 1:
-//                ActionUtil.vulnerablePower(owner, owner, 1);
-//                break;
-//            case 2:
-//                ActionUtil.frailPower(owner, owner, 1);
-//                break;
-//            default:
-//                break;
-//        }
     }
 
 }
