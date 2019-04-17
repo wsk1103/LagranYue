@@ -12,7 +12,7 @@ import com.wsk.helps.ChooseHelper;
 /**
  * @author wsk1103
  * @date 2019/3/5
- * @description 描述
+ * @description 选择卡牌打出
  */
 public class ChooseAction extends AbstractGameAction {
     private boolean retrieveCard = false;
