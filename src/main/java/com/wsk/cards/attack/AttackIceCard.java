@@ -36,8 +36,8 @@ public class AttackIceCard extends CustomCard {
                 CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
-        this.baseDamage = 6;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseBlock = 5;
+        this.baseDamage = 5;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
+        this.baseBlock = 4;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
@@ -52,7 +52,7 @@ public class AttackIceCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(3);//升级而增加的伤害。增加的是baseBlock
+            this.upgradeDamage(2);//升级而增加的伤害。增加的是baseBlock
             this.upgradeBlock(2);
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。

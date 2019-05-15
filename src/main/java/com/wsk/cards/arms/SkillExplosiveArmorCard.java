@@ -34,7 +34,7 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int cardDefend = 15;
+    private static final int cardDefend = 12;
 
     public SkillExplosiveArmorCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -58,7 +58,7 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBlock(3);
+            this.upgradeBlock(4);
             this.isInnate = true;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

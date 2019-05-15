@@ -55,7 +55,7 @@ public class AttackGalacticZeroCard extends AbstractProfSpearCard {
                 CardTarget.ALL_ENEMY);
         this.proficiency = 3;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 10;
+        this.baseDamage = 5;
         this.magicNumber = this.baseMagicNumber = 3;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;

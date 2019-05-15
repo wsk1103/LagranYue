@@ -31,7 +31,7 @@ public class AttackAerCard extends CustomCard {
 
     private static final int COST = -1;//卡牌的费用。
 
-    private static final int wskAttack = 9;
+    private static final int wskAttack = 5;
 
     public AttackAerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -51,7 +51,7 @@ public class AttackAerCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(4);//升级而增加的伤害。增加的是baseBlock
+            this.upgradeDamage(3);//升级而增加的伤害。增加的是baseBlock
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

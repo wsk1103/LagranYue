@@ -277,14 +277,14 @@
       "distortion"
     ],
     "PROPERNAME": "distortion",
-    "DESCRIPTION": "Increase all types of damage caused by 5."
+    "DESCRIPTION": "Increase all types of damage caused by 2."
   },
   {
     "NAMES": [
       "divinity"
     ],
     "PROPERNAME": "divinity",
-    "DESCRIPTION": "After the victory of the battle, an additional relic was acquired."
+    "DESCRIPTION": "After the victory of the battle, an additional ordinary relic was acquired. Only once."
   },
   {
     "NAMES": [

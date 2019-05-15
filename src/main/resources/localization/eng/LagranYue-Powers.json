@@ -276,7 +276,7 @@
     "NAME": "Divinity",
     "DESCRIPTIONS": [
       "After victory in battle, gain ",
-      " extra relic."
+      " extra ordinary relic.only once."
     ]
   },
   "LagranYue:GoldRatePower": {
@@ -290,7 +290,7 @@
     "NAME": "Magic Eye",
     "DESCRIPTIONS": [
       "After the victory of the battle, gain ",
-      " extra rare card ."
+      " extra reward card .Only once."
     ]
   },
   "LagranYue:MagicPower": {

@@ -18,6 +18,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/3/20
  * @description 一击神剑
  */
+@Deprecated
 public class AttackMagicSwordCard extends AbstractProfSwordCard {
 
     /**

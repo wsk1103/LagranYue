@@ -30,15 +30,15 @@ public class AttackFaithCard extends CustomCard {
 
     private static final int COST = 0;//卡牌的费用。
 
-    private static final int wskAttack = 18;
+    private static final int wskAttack = 8;
 
     public AttackFaithCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
-                CardRarity.RARE, CardTarget.ALL_ENEMY);
+                CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
-        this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
+        this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
     }
 

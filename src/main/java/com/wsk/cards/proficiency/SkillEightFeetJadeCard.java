@@ -41,7 +41,7 @@ public class SkillEightFeetJadeCard extends AbstractProfShieldCard {
     /**
      * 卡牌的费用。
      */
-    private static final int COST = 1;
+    private static final int COST = 3;
 
 
     public SkillEightFeetJadeCard() {
@@ -80,9 +80,6 @@ public class SkillEightFeetJadeCard extends AbstractProfShieldCard {
         if (!this.upgraded) {
             //升级名称。必带。
             this.upgradeName();
-
-//            this.upgradeBlock(2);
-
             this.upgradeMagicNumber(1);
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！
 //            this.upgradeBaseCost(1);

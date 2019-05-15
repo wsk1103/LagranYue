@@ -40,7 +40,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.baseBlock = 7;
+        this.baseBlock = 6;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
         //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行

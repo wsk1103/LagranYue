@@ -2,6 +2,8 @@ package com.wsk.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.unique.RipAndTearAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.*;
@@ -222,6 +224,18 @@ public class ActionUtil {
 
     public static void relicAboveCreatureAction(AbstractCreature source, AbstractRelic relic) {
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(source, relic));
+    }
+
+    /**
+     * 随机攻击
+     * @param p
+     * @param baseDamage
+     * @param num
+     */
+    public static void randomAttack(AbstractCreature p, int baseDamage, int num) {
+        AbstractDungeon.actionManager.addToBottom(new RipAndTearAction(AbstractDungeon.getMonsters()
+                .getRandomMonster(null, true, AbstractDungeon.cardRandomRng),
+                new DamageInfo(p, baseDamage), num));
     }
 
 }

@@ -1,12 +1,8 @@
 package com.wsk.cards.proficiency;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
@@ -45,7 +41,7 @@ public class AttackDivineGuidanceCard extends AbstractProfSwordCard {
     /**
      * 卡牌的费用。
      */
-    private static final int COST = 2;
+    private static final int COST = 3;
 
 
     public AttackDivineGuidanceCard() {
@@ -57,11 +53,11 @@ public class AttackDivineGuidanceCard extends AbstractProfSwordCard {
         this.proficiency = 2;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.baseDamage = 4;
-        this.magicNumber = this.baseMagicNumber = 8;
+        this.magicNumber = this.baseMagicNumber = 4;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
         //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
-        this.exhaust = false;
+        this.exhaust = true;
         //固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.isInnate = false;
         //保留属性
@@ -105,15 +101,7 @@ public class AttackDivineGuidanceCard extends AbstractProfSwordCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.magicNumber; i++) {
-            if (i % 2 == 0) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-            }
-        }
+        ActionUtil.randomAttack(p, this.baseDamage, this.magicNumber);
         ActionUtil.addPower(p, new MindPower(p, 1));
     }
 

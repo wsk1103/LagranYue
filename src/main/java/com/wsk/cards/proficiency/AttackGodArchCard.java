@@ -56,9 +56,9 @@ public class AttackGodArchCard extends AbstractProfArchCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE,
                 CardTarget.ENEMY);
-        this.proficiency = 3;
+        this.proficiency = 2;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 6;
+        this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 6;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
@@ -87,10 +87,9 @@ public class AttackGodArchCard extends AbstractProfArchCard {
             //升级名称。必带。
             this.upgradeName();
 
-            this.upgradeDamage(1);
+            this.upgradeMagicNumber(2);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-            this.upgradeMagicNumber(1);
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！
 //            this.upgradeBaseCost(1);
             // 虚无属性。

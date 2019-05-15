@@ -68,7 +68,6 @@ public class AttackKingCard extends CustomCard {
             if (cardGroup.type == CardGroup.CardGroupType.HAND) {
                 c.superFlash();
             }
-//            c.upgrade();
             c.applyPowers();
             if (upgraded) {
                 if (c instanceof AbstractArmsCard) {

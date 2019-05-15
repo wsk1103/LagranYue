@@ -31,7 +31,7 @@ public class AttackSummerCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int wskAttack = 10;
+    private static final int wskAttack = 7;
 
     public AttackSummerCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

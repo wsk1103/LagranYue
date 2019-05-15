@@ -305,7 +305,7 @@ public class LagranYue implements PostInitializeSubscriber,
         ALL_CARS.add(new AttackGodSwordCard());
         ALL_CARS.add(new AttackMagicMoonCard());
         ALL_CARS.add(new AttackMagicStarsCard());
-        ALL_CARS.add(new AttackMagicSwordCard());
+//        ALL_CARS.add(new AttackMagicSwordCard());
         ALL_CARS.add(new SkillDisasterEquipmentCard());
         ALL_CARS.add(new SkillEightFeetJadeCard());
         ALL_CARS.add(new SkillHeartWaterCard());

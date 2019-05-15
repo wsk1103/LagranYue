@@ -46,7 +46,7 @@ public class SkillGanJiangMoYeSwordCard extends AbstractSwordCard {
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
-        this.baseDamage = 16;
+        this.baseDamage = 14;
     }
 
     public AbstractCard makeCopy() {
@@ -57,7 +57,8 @@ public class SkillGanJiangMoYeSwordCard extends AbstractSwordCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(1);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
+            this.upgradeDamage(4);
+//            this.upgradeBaseCost(1);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
         }
     }
 

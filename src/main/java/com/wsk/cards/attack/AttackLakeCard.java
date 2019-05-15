@@ -32,7 +32,7 @@ public class AttackLakeCard extends CustomCard {
 
     private static final int COST = 2;//卡牌的费用。
 
-    private static final int wskAttack = 14;
+    private static final int wskAttack = 8;
 
     public AttackLakeCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -54,7 +54,7 @@ public class AttackLakeCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(2);//升级而增加的伤害。增加的是baseBlock
+            this.upgradeDamage(3);//升级而增加的伤害。增加的是baseBlock
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。
 

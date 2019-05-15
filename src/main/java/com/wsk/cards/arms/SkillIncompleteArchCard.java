@@ -46,7 +46,7 @@ public class SkillIncompleteArchCard extends AbstractArchCard {
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
-        this.baseDamage = 8;
+        this.baseDamage = 4;
     }
 
     public AbstractCard makeCopy() {
@@ -57,7 +57,8 @@ public class SkillIncompleteArchCard extends AbstractArchCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBaseCost(0);
+            this.upgradeDamage(2);
+//            this.upgradeBaseCost(0);
         }
     }
 

@@ -9,9 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.proficiency.PermeationPower;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -52,12 +50,12 @@ public class AttackCrowCrossbowCard extends AbstractProfArchCard {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
-                CardRarity.RARE,
+                CardRarity.COMMON,
                 CardTarget.ENEMY);
         this.proficiency = 1;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.baseDamage = 1;
+        this.magicNumber = this.baseMagicNumber = 6;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
         //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
@@ -85,9 +83,7 @@ public class AttackCrowCrossbowCard extends AbstractProfArchCard {
             //升级名称。必带。
             this.upgradeName();
 
-            this.upgradeDamage(1);
-
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(2);
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！
 //            this.upgradeBaseCost(1);
             // 虚无属性。
@@ -108,13 +104,13 @@ public class AttackCrowCrossbowCard extends AbstractProfArchCard {
         for (int i = 0; i < this.magicNumber; i++) {
             if (i % 2 == 0) {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                        new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
             } else {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                        new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                        new DamageInfo(p, this.baseDamage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             }
         }
-        ActionUtil.addPower(p, m, new PermeationPower(m, 1));
+//        ActionUtil.addPower(p, m, new PermeationPower(m, 1));
     }
 
     static {

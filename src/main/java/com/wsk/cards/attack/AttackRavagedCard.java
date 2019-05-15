@@ -30,12 +30,12 @@ public class AttackRavagedCard extends CustomCard {
 
     private static final int COST = 1;//卡牌的费用。
 
-    private static final int wskAttack = 10;
+    private static final int wskAttack = 7;
 
     public AttackRavagedCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
-                CardRarity.UNCOMMON, CardTarget.ENEMY);
+                CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
@@ -49,7 +49,8 @@ public class AttackRavagedCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(4);
+            this.upgradeBaseCost(0);
+//            this.upgradeDamage(4);
             this.initializeDescription();
         }
     }//注：该部分为升级的效果部分，此处展示的代码为只能升级一次的代码，如需无限升级，卡牌代码有些许不同但不便于例出，请自行查看灼热攻击源码。

@@ -9,7 +9,7 @@
   },
   "LagranYue:AttackEngravingRoseCard": {
     "NAME": "Engraving of Rose",
-    "DESCRIPTION": "Deal !D! damage !M! times. Dancing ."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Dancing ."
   },
   "LagranYue:AttackFlintCard": {
     "NAME": "Flint Attack",
@@ -17,7 +17,7 @@
   },
   "LagranYue:AttackCellGodCard": {
     "NAME": "Eight God",
-    "DESCRIPTION": "Deal !D! damage !M! times.apply 1 Permeation .可以被多times 升级 . Dancing ."
+    "DESCRIPTION": "Deal !D! damage !M! times.apply 1 Permeation .It can upgraded more times . Dancing .NL Exhaust "
   },
   "LagranYue:AttackFireCard": {
     "NAME": "Fire of Initiation",
@@ -37,12 +37,12 @@
   },
   "LagranYue:AttackEmeraldCard": {
     "NAME": "Emerald Carnival",
-    "DESCRIPTION": "Deal !D! damage, gain !M! TheContractOfVictory . Dancing . NL Exhaust"
+    "DESCRIPTION": "Deal !D! damage, gain !M! TheContractOfVictory . Dancing . NL Exhaust "
   },
   "LagranYue:AttackPurpleCard": {
     "NAME": "Purple Strike",
-    "DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card, then make the cost to 0. Dancing "
+    "DESCRIPTION": "Deal !D! damage 2 times, and randomly get an ethereal attack card. Dancing ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 2 times, and randomly get an ethereal attack card, then make the cost to 0. Dancing "
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "Gem Dream of that Summer",
@@ -99,8 +99,8 @@
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "Ultimate Belief",
-    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies QAQ times.Then gain IOI TheContractOfVictory .At least 1 times.",
-    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies IOI times.Then gain IOI TheContractOfVictory .At least 1 times."
+    "DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies QAQ times.Then gain IOI TheContractOfVictory .At least 1 times. NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "remove all Weapon , Deal !D! damage to ALL enemies IOI times.Then gain IOI TheContractOfVictory .At least 1 times. NL Exhaust "
   },
   "LagranYue:AttackAerCard": {
     "NAME": "Aer",
@@ -117,14 +117,14 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "Sword of the Magic Moon",
-    "DESCRIPTION": " SkillPoint :1. Deal !D! damage !M! times. Dancing .",
+    "DESCRIPTION": " SkillPoint :1. Deal !D! damage !M! times.Not affected by strength . Dancing .",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够."
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "Magic of Glass",
-    "DESCRIPTION": " SkillPoint :2. Deal !D! damage !M! times.Gain 1 Mind . Dancing ."
+    "DESCRIPTION": " SkillPoint :2. Deal !D! damage to a random enemy !M! times.Gain 1 Mind . Dancing ."
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "One-stroke Sword",
@@ -132,8 +132,8 @@
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "Nome`s Gold Sword",
-    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.Gain 1 Divinity . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.Gain 1 Divinity . Dancing . NL Exhaust ."
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "Degenerate",
@@ -142,8 +142,8 @@
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "Enchantment",
-    "DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing ."
+    "DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.Gain 1 GoldRate . Dancing . NL Exhaust ."
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "Lasing of the Dragon Regiment",
@@ -157,8 +157,8 @@
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "Crow Crossbow",
-    "DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times.Apply 1 Permeation . Dancing ."
+    "DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times.Not affected by strength . Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times.Not affected by strength . Dancing ."
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "Magic Corolla of Magic Stars",
@@ -167,8 +167,8 @@
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "Divine Crossbow",
-    "DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye . Dancing . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :2.Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye . Dancing . NL Exhaust ."
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "BrokenSword",
@@ -273,7 +273,7 @@
   "LagranYue:PowerDreamCard": {
     "NAME": "Avalon",
     "DESCRIPTION": "Start every turn, Choose to get !M! Exhaust's card. NL Ethereal ",
-    "UPGRADE_DESCRIPTION": " Start every turn, Choose to get !M! Exhaust's card, then make the cost to 0."
+    "UPGRADE_DESCRIPTION": " Start every turn, Choose to get !M! Exhaust's card, then make the cost to 0. NL Ethereal "
   },
   "LagranYue:PowerKingTreasureCard": {
     "NAME": "Gate of Babylon",
@@ -469,8 +469,8 @@
   },
   "LagranYue:SkillLiberationCard": {
     "NAME": "Liberation of Gem",
-    "DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 3 AerialAce ."
+    "DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 2 AerialAce .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 2 AerialAce ."
   },
   "LagranYue:SkillEightFeetJadeCard": {
     "NAME": "Eight feet of Jade",
@@ -489,7 +489,7 @@
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "Disaster Equipment",
-    "DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 WindShelter . NL Retain .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain !B! Block !M! times.extra IOI times.Gain 1 WindShelter . NL Retain ."
+    "DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra QAQ times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain !B! Block !M! times.extra IOI times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain ."
   }
 }

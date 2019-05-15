@@ -9,7 +9,7 @@
   },
   "LagranYue:AttackEngravingRoseCard": {
     "NAME": "蔷薇的刻印",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 起舞 。"
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 起舞 。"
   },
   "LagranYue:AttackFlintCard": {
     "NAME": "燧石攻击",
@@ -17,7 +17,7 @@
   },
   "LagranYue:AttackCellGodCard": {
     "NAME": "神明八胞",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。给予1层 透化 。可以被多次 升级 。 起舞 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。给予1层 透化 。可以被多次 升级 。 起舞 。 消耗 。"
   },
   "LagranYue:AttackFireCard": {
     "NAME": "进击的火焰",
@@ -41,8 +41,8 @@
   },
   "LagranYue:AttackPurpleCard": {
     "NAME": "紫宝石的打击",
-    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌，并且费用降低为0。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张拥有 虚无 的攻击牌。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张拥有 虚无 的攻击牌，并且费用降低为0。 起舞 "
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "那年夏天的宝石梦",
@@ -99,8 +99,8 @@
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "最终信仰",
-    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 亖 次。获得 亖 层 胜利契约 。最少1次。",
-    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 兀 次。获得 兀 层 胜利契约 。最少1次。"
+    "DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 亖 次。获得 亖 层 胜利契约 。最少1次。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "移除所有 兵器 ，对所有敌人造成 !D! 点伤害 兀 次。获得 兀 层 胜利契约 。最少1次。 NL 消耗 "
   },
   "LagranYue:AttackAerCard": {
     "NAME": "阿尔托利亚",
@@ -117,14 +117,14 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "魔月之剑刃",
-    "DESCRIPTION": " 技能点 ：1。 造成 !D! 点伤害 !M! 次。 起舞 。",
+    "DESCRIPTION": " 技能点 ：1。 造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够。"
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "玻璃之神引",
-    "DESCRIPTION": " 技能点 ：2。 造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
+    "DESCRIPTION": " 技能点 ：2。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "一击神剑",
@@ -132,8 +132,8 @@
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "八汰神剑",
-    "DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "堕落",
@@ -142,8 +142,8 @@
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "魅惑",
-    "DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。"
+    "DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "驭龙团的神枪",
@@ -157,8 +157,8 @@
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "展翼鸦弩弓",
-    "DESCRIPTION": " 技能点 ：1。造成 !D! 点伤害 !M! 次。给予1层 透化 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：1。造成 !D! 点伤害 !M! 次。给予1层 透化 。 起舞 。"
+    "DESCRIPTION": " 技能点 ：1。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：1。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "戏法明星魔法花冠",
@@ -167,8 +167,8 @@
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "神明弩体",
-    "DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
@@ -273,7 +273,7 @@
   "LagranYue:PowerDreamCard": {
     "NAME": "远离尘世的理想",
     "DESCRIPTION": "每回合开始，选择获得 !M! 张被消耗的卡牌。 NL 虚无 ",
-    "UPGRADE_DESCRIPTION": " 每回合开始，选择获得 !M! 张被消耗的卡牌，并且费用置为0。"
+    "UPGRADE_DESCRIPTION": " 每回合开始，选择获得 !M! 张被消耗的卡牌，并且费用置为0。 NL 虚无 "
   },
   "LagranYue:PowerKingTreasureCard": {
     "NAME": "王之财宝",
@@ -469,8 +469,8 @@
   },
   "LagranYue:SkillLiberationCard": {
     "NAME": "宝玉的解放",
-    "DESCRIPTION": " 技能点 ：1。获得 !B! 点 格挡  !M! 次。获得3层 燕返 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：1。获得 !B! 点 格挡  !M! 次。获得3层 燕返 。"
+    "DESCRIPTION": " 技能点 ：1。获得 !B! 点 格挡  !M! 次。获得2层 燕返 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：1。获得 !B! 点 格挡  !M! 次。获得2层 燕返 。"
   },
   "LagranYue:SkillEightFeetJadeCard": {
     "NAME": "八尺勾玉",
@@ -489,7 +489,7 @@
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "灾祸的装备品",
-    "DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。获得1层 避风的加护 。 NL 保留 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡 !M! 次。额外造成 兀 次。获得1层 避风的加护 。 NL 保留 。"
+    "DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡 !M! 次。额外造成 兀 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。"
   }
 }

@@ -34,10 +34,10 @@ public class GainRelics {
     }
 
     private static AbstractRelic.RelicTier getRandomRelic() {
-        Random random = new Random();
-        int r = random.nextInt(100);
+/*        Random random = new Random();
+        int r = random.nextInt(100);*/
         AbstractRelic.RelicTier tier = AbstractRelic.RelicTier.COMMON;
-        if (r >= 91) {
+/*        if (r >= 91) {
             tier = AbstractRelic.RelicTier.BOSS;
         } else if (r >= 80) {
             tier = AbstractRelic.RelicTier.RARE;
@@ -45,7 +45,7 @@ public class GainRelics {
             tier = AbstractRelic.RelicTier.UNCOMMON;
         } else if (r >= 60) {
             tier = AbstractRelic.RelicTier.SHOP;
-        }
+        }*/
         return tier;
     }
 }

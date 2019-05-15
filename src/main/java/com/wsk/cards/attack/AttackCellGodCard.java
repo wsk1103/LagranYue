@@ -28,7 +28,7 @@ public class AttackCellGodCard extends CustomCard {
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackCellGodCard.png";
 
-    private static final int COST = 0;
+    private static final int COST = 2;
 
     public AttackCellGodCard() {
         this(0);
@@ -40,6 +40,7 @@ public class AttackCellGodCard extends CustomCard {
                 CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 1;
         this.magicNumber = this.baseMagicNumber = 8;
+        this.exhaust = true;
         this.timesUpgraded = upgrades;
     }
 

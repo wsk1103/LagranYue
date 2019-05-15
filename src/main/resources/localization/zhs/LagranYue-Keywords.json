@@ -286,14 +286,14 @@
       "失真"
     ],
     "PROPERNAME": "失真",
-    "DESCRIPTION": "受到的伤害增加5。"
+    "DESCRIPTION": "受到的伤害增加2。"
   },
   {
     "NAMES": [
       "神性"
     ],
     "PROPERNAME": "神性",
-    "DESCRIPTION": "战斗胜利后，额外获得1个遗物。"
+    "DESCRIPTION": "战斗胜利后，额外获得1个普通遗物。只能获得一个"
   },
   {
     "NAMES": [
