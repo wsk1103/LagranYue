@@ -12,7 +12,7 @@ import com.wsk.utils.CommonUtil;
 /**
  * @author wsk1103
  * @date 2019/3/20
- * @description 当在 #b1 个回合内造成的伤害超过 #b40 ，那么奖励品的卡牌中，额外获得 #b1 张 #y金卡 (只能获取1张)。
+ * @description 当在 #b1 个回合内造成的伤害超过 #b40 ，额外获得 #b1 次 #y卡牌奖励 (只能获取1张)。
  */
 public class RareGoldArmorRelic extends CustomRelic {
 
@@ -47,7 +47,7 @@ public static final String IMG = "relics/r19.png";
             flash();
             counter += damageAmount;
         }
-        if (counter >= 40) {
+        if (counter > 40) {
             get = true;
             more = false;
         }
@@ -61,7 +61,7 @@ public static final String IMG = "relics/r19.png";
 
     @Override
     public void atTurnStart() {
-        if (counter >= 40) {
+        if (counter > 40) {
             more = false;
         } else {
             flash();
