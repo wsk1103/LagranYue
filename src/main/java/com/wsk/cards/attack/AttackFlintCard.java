@@ -33,7 +33,7 @@ public class AttackFlintCard extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 1;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     @Override

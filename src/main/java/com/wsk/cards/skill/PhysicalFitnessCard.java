@@ -60,7 +60,7 @@ public class PhysicalFitnessCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToTop(new GainBlockAction(p, p, this.block));
         AbstractCard c;
         for (AbstractCard card : p.drawPile.group) {
             if (card instanceof AbstractArmsCard) {
@@ -70,7 +70,7 @@ public class PhysicalFitnessCard extends CustomCard {
                 if (upgraded) {
                     c.modifyCostForTurn(-c.cost);
                 }
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));
+                AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(c, true));
                 break;
             }
         }

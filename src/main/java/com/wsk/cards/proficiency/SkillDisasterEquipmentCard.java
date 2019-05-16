@@ -52,7 +52,7 @@ public class SkillDisasterEquipmentCard extends AbstractProfShieldCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE,
                 CardTarget.SELF);
-        this.proficiency = 3;
+        this.proficiency = this.baseProficiency = 10;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.baseBlock = 1;
         this.magicNumber = this.baseMagicNumber = 6;

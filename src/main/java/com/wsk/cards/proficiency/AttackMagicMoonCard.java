@@ -51,9 +51,9 @@ public class AttackMagicMoonCard extends AbstractProfSwordCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON,
                 CardTarget.ENEMY);
-        this.proficiency = 1;
+        this.proficiency = this.baseProficiency = 5;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 1;
+        this.baseDamage = this.damage = 1;
         this.magicNumber = this.baseMagicNumber = 5;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;

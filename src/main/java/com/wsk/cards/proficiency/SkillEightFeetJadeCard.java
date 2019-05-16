@@ -50,7 +50,7 @@ public class SkillEightFeetJadeCard extends AbstractProfShieldCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON,
                 CardTarget.SELF);
-        this.proficiency = 2;
+        this.proficiency = this.baseProficiency = 8;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.baseBlock = 5;
         this.magicNumber = this.baseMagicNumber = 3;

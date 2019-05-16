@@ -41,8 +41,8 @@
   },
   "LagranYue:AttackPurpleCard": {
     "NAME": "紫宝石的打击",
-    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张拥有 虚无 的攻击牌。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张拥有 虚无 的攻击牌，并且费用降低为0。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌。 起舞 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌，并且费用降低为0。 起舞 "
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "那年夏天的宝石梦",
@@ -117,58 +117,58 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "魔月之剑刃",
-    "DESCRIPTION": " 技能点 ：1。 造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够。"
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "玻璃之神引",
-    "DESCRIPTION": " 技能点 ：2。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "一击神剑",
-    "DESCRIPTION": " 技能点 ：3。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "八汰神剑",
-    "DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "堕落",
-    "DESCRIPTION": " 技能点 ：1。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：1。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。"
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "魅惑",
-    "DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "驭龙团的神枪",
-    "DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGalacticZeroCard": {
     "NAME": "银河零式",
-    "DESCRIPTION": " 技能点 ：3。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。"
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "展翼鸦弩弓",
-    "DESCRIPTION": " 技能点 ：1。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：1。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "戏法明星魔法花冠",
-    "DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。 起舞 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。 起舞 。"
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "神明弩体",
-    "DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：2。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",

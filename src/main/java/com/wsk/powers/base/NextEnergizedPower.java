@@ -1,6 +1,7 @@
 package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -50,6 +51,6 @@ public class NextEnergizedPower extends AbstractPower {
     public void onEnergyRecharge() {
         flash();
         AbstractDungeon.player.gainEnergy(this.amount);
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, NextEnergizedPower.POWER_ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, NextEnergizedPower.POWER_ID));
     }
 }

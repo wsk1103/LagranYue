@@ -76,7 +76,7 @@
     "NAME": "Skill Point",
     "FLAVOR": "Skill Point System,it`s so good....",
     "DESCRIPTIONS": [
-      " #ySkillPoint .Each turn deals fixed damage to all enemies at the current skill points.\nCurrent skill points:"
+      " #ySkillPoint .\nCurrent skill points:"
     ]
   },
   "LagranYue:RandomDrawCardRelic": {

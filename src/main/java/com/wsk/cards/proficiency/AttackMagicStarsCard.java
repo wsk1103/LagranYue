@@ -56,7 +56,7 @@ public class AttackMagicStarsCard extends AbstractProfArchCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON,
                 CardTarget.ENEMY);
-        this.proficiency = 2;
+        this.proficiency = this.baseProficiency = 8;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.baseDamage = 3;
         this.magicNumber = this.baseMagicNumber = 4;
@@ -112,7 +112,7 @@ public class AttackMagicStarsCard extends AbstractProfArchCard {
             u = ArmsUtil.currentAllArmsNum();
         }
         for (int i = 0; i < this.magicNumber + u; i++) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+            AbstractDungeon.actionManager.addToTop(new DamageAction(m,
                     new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SHIELD));
         }
         ActionUtil.addPower(p, m, new DistortionPower(m, 1));

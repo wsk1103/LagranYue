@@ -39,7 +39,7 @@ public class AttackCellGodCard extends CustomCard {
                 CardType.ATTACK, AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 1;
-        this.magicNumber = this.baseMagicNumber = 8;
+        this.magicNumber = this.baseMagicNumber = 6;
         this.exhaust = true;
         this.timesUpgraded = upgrades;
     }
@@ -53,10 +53,10 @@ public class AttackCellGodCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
             if (i % 2 == 0) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                AbstractDungeon.actionManager.addToTop(new DamageAction(m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SHIELD));
             } else {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                AbstractDungeon.actionManager.addToTop(new DamageAction(m,
                         new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
             }
         }

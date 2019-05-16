@@ -20,11 +20,11 @@ public final class ArmsProficiencyRelics extends CustomRelic {
     public static final String IMG = "relics/r1.png";
     public static final String OUTLINE = "relics/r2.png";
 
-    public static float point = 0.1F;
+    public static int point = 1;
 
-    private final float init = 0F;
+    private final int init = 0;
 
-    private float skillPoint = init;
+    private int skillPoint = init;
 
     public ArmsProficiencyRelics() {
         super(ID, new Texture(CommonUtil.getResourcePath(IMG)), new Texture(CommonUtil.getResourcePath(OUTLINE)), RelicTier.STARTER, LandingSound.CLINK);
@@ -32,8 +32,7 @@ public final class ArmsProficiencyRelics extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        String skill = String.format("%.1f", skillPoint);
-        return this.DESCRIPTIONS[0] + skill;
+        return this.DESCRIPTIONS[0] + skillPoint;
     }
 
     @Override
@@ -49,30 +48,30 @@ public final class ArmsProficiencyRelics extends CustomRelic {
     @Override
     public void atTurnStart() {
         flash();
-        addSkillPoint(point);
+//        addSkillPoint(point);
         use();
     }
 
     @Override
     public void onUseCard(AbstractCard c, UseCardAction action) {
         reduce(c);
-        float add = 0;
+        int add = 0;
         if (ArmsUtil.getArmsNum() > 0) {
             switch (c.rarity) {
                 case BASIC:
-                    add = 0.2F;
+                    add = 2;
                     break;
                 case SPECIAL:
-                    add = 0.2F;
+                    add = 2;
                     break;
                 case COMMON:
-                    add = 0.2F;
+                    add = 2;
                     break;
                 case UNCOMMON:
-                    add = 0.4F;
+                    add = 3;
                     break;
                 case RARE:
-                    add = 1F;
+                    add = 5;
                     break;
                 case CURSE:
                     break;
@@ -91,6 +90,7 @@ public final class ArmsProficiencyRelics extends CustomRelic {
         this.description = getUpdatedDescription();
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        counter = skillPoint;
         this.initializeTips();
     }
 
@@ -111,11 +111,11 @@ public final class ArmsProficiencyRelics extends CustomRelic {
         }
     }
 
-    public float getSkillPoint() {
+    public int getSkillPoint() {
         return skillPoint;
     }
 
-    public void setSkillPoint(float skillPoint) {
+    public void setSkillPoint(int skillPoint) {
         this.skillPoint = skillPoint > 0 ? skillPoint : 0;
     }
 

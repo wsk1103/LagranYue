@@ -35,36 +35,35 @@ public class ArmsUtil {
     //装备兵器
     public static void addOrChangArms(AbstractCreature p, AbstractArmsPower armsPower) {
 
-        if (!p.hasPower(DoubleArmsPower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                    new DoubleArmsPower(p, 0), 0, AbstractGameAction.AttackEffect.POISON));
-        }
-
         if (areYouHasArmsPower(armsPower)) {
             //使用相同兵器后，增加相应的层数
             ForgingAction.addArmsNum(armsPower, armsPower.amount);
             setTemporaryArms(false);
-            return;
-        }
-        if (isTemporaryArms()) {
-            arms++;
-            ActionUtil.addArms(p, armsPower);
-            setTemporaryArms(false);
-            return;
-        }
-        arms = getArmsNum();
-        if (getArmsNum() > getMaxArmsNum()) {
-            //移除前几把超过兵器数量上限的兵器。
-            for (int i = 0; i <= getArmsNum() - getMaxArmsNum(); i++) {
-                //每次移除第一件兵器
-                ArmsUtil.removeOnce((AbstractPlayer) p, 1);
+        } else {
+            if (isTemporaryArms()) {
+                arms++;
+                ActionUtil.addArms(p, armsPower);
+                setTemporaryArms(false);
+            } else {
+                arms = getArmsNum();
+                if (getArmsNum() > getMaxArmsNum()) {
+                    //移除前几把超过兵器数量上限的兵器。
+                    for (int i = 0; i <= getArmsNum() - getMaxArmsNum(); i++) {
+                        //每次移除第一件兵器
+                        ArmsUtil.removeOnce((AbstractPlayer) p, 1);
+                    }
+                } else if (getArmsNum() == getMaxArmsNum()) {
+                    //移除第一件兵器
+                    ArmsUtil.removeOnce((AbstractPlayer) p, 1);
+                }
+                arms++;
+                ActionUtil.addArms(p, armsPower);
             }
-        } else if (getArmsNum() == getMaxArmsNum()) {
-            //移除第一件兵器
-            ArmsUtil.removeOnce((AbstractPlayer) p, 1);
         }
-        arms++;
-        ActionUtil.addArms(p, armsPower);
+        if (!p.hasPower(DoubleArmsPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
+                    new DoubleArmsPower(p, 0), 0, AbstractGameAction.AttackEffect.POISON));
+        }
     }
 
     //移除所有武器

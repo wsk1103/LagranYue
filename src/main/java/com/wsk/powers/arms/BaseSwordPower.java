@@ -33,7 +33,6 @@ public class BaseSwordPower extends AbstractSwordPower {
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
-        updateDescription();//调用该方法（第36行）的文本更新函数,更新一次文本描叙，不可缺少。
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
