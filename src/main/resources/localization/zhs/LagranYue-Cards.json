@@ -117,7 +117,7 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "魔月之剑刃",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够。"
     ]
@@ -157,8 +157,8 @@
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "展翼鸦弩弓",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
+    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "戏法明星魔法花冠",
@@ -489,7 +489,7 @@
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "灾祸的装备品",
-    "DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡 !M! 次。额外造成 兀 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。"
+    "DESCRIPTION": " 技能点 ：3。获得 1 点 格挡  !M! 次。额外造成 亖 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 技能点 ：3。获得 1 点 格挡 !M! 次。额外造成 兀 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。"
   }
 }

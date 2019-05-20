@@ -117,7 +117,7 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "Sword of the Magic Moon",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal !D! damage !M! times.Not affected by strength . Dancing .",
+    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal 1 damage !M! times.Not affected by strength . Dancing .",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够."
     ]
@@ -157,8 +157,8 @@
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "Crow Crossbow",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Not affected by strength . Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Not affected by strength . Dancing ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal 1 damage !M! times.Not affected by strength . Dancing .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal 1 damage !M! times.Not affected by strength . Dancing ."
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "Magic Corolla of Magic Stars",
@@ -489,7 +489,7 @@
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "Disaster Equipment",
-    "DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra QAQ times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain !B! Block !M! times.extra IOI times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain ."
+    "DESCRIPTION": " SkillPoint :3.Gain 1 Block  !M! times.extra QAQ times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain 1 Block !M! times.extra IOI times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain ."
   }
 }

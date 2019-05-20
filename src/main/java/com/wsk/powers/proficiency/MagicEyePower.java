@@ -19,7 +19,7 @@ public class MagicEyePower extends AbstractPower {
     public static String[] DESCRIPTIONS;
 
     private static final String IMG = "powers/5.png";
-    private static PowerType POWER_TYPE = PowerType.DEBUFF;
+    private static PowerType POWER_TYPE = PowerType.BUFF;
 
 
     public MagicEyePower(AbstractCreature owner) {
