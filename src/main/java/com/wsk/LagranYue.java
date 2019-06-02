@@ -186,13 +186,13 @@ public class LagranYue implements PostInitializeSubscriber,
         BaseMod.addRelic(new GuideDeadRelic(), RelicType.SHARED);
 //        BaseMod.addRelic(new ImprintInheritanceRelic(), RelicType.SHARED);
         BaseMod.addRelic(new MagicReflectiveArmorRelic(), RelicType.SHARED);
-        BaseMod.addRelic(new MoonMirrorShieldRelic(), RelicType.SHARED);
+//        BaseMod.addRelic(new MoonMirrorShieldRelic(), RelicType.SHARED);
         BaseMod.addRelic(new NewUniverseRelic(), RelicType.SHARED);
         BaseMod.addRelic(new RandomDrawCardRelic(), RelicType.SHARED);
         BaseMod.addRelic(new RareGoldArmorRelic(), RelicType.SHARED);
         BaseMod.addRelic(new ReturningEmperorRelic(), RelicType.SHARED);
         BaseMod.addRelic(new SoulBurningRelic(), RelicType.SHARED);
-        BaseMod.addRelic(new SpringFairyRelic(), RelicType.SHARED);
+//        BaseMod.addRelic(new SpringFairyRelic(), RelicType.SHARED);
         BaseMod.addRelic(new WskJewelryRelic(), RelicType.SHARED);
 
         AbstractDungeon.bossRelicPool.remove(Orrery.ID);
