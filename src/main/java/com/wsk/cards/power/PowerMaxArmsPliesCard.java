@@ -41,7 +41,7 @@ public class PowerMaxArmsPliesCard extends CustomCard {
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
     }
 
-    //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
+    @Override
     public AbstractCard makeCopy() {
         return new PowerMaxArmsPliesCard();
     }
