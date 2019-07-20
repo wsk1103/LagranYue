@@ -40,6 +40,7 @@ public class PowerDoubleArmsCard extends CustomCard {
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
+    @Override
     public AbstractCard makeCopy() {
         return new PowerDoubleArmsCard();
     }
