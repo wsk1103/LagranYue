@@ -21,10 +21,10 @@ import com.wsk.utils.CommonUtil;
  */
 public class PowerGoldStartCard extends CustomCard {
     public static final String ID = "LagranYue:PowerGoldStartCard";//卡牌在游戏中的id
-    private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
+    private static final String NAME;//卡牌显示的名称
 
-    private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
-    private static final String UPGRADED_DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION;//卡牌下方的描叙内容。
+    private static final String UPGRADED_DESCRIPTION;//卡牌下方的描叙内容。
 
     private static final CardStrings cardStrings;
 

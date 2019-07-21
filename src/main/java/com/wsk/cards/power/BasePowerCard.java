@@ -17,9 +17,9 @@ import com.wsk.utils.CommonUtil;
  */
 public class BasePowerCard extends CustomCard {
     public static final String ID = "LagranYue:BasePowerCard";//卡牌在游戏中的id
-    private static final String NAME/* = "来自WSK的庇护"*/;//卡牌显示的名称
+    private static final String NAME;//卡牌显示的名称
 
-    private static final String DESCRIPTION /*= "获得 2 点 力量"*/;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION;//卡牌下方的描叙内容。
     //注：
     //描叙中存在几个特殊的字符串：
     // 1. !D! 、 !M! 、 !B!。
