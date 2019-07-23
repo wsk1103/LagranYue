@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class EatTigerCard extends CustomCard {
-    public static final String ID = "LagranYue:EatTigerCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:EatTigerCard";
     private static final String NAME;//卡牌显示的名称
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。

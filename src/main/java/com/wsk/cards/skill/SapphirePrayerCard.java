@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 蓝宝石的祈祷
  */
 public class SapphirePrayerCard extends CustomCard {
-    public static final String ID = "LagranYue:SapphirePrayerCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:SapphirePrayerCard";
     private static final String NAME;//卡牌显示的名称
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。

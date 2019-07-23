@@ -22,7 +22,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 兵器：赤原猎犬
  */
 public class SkillChiharaHoundCard extends AbstractArchCard {
-    public static final String ID = "LagranYue:SkillChiharaHoundCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:SkillChiharaHoundCard";
     private static final String NAME;//卡牌显示的名称
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。

@@ -17,7 +17,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 投影
  */
 public class ProjectionCard extends CustomCard {
-    public static final String ID = "LagranYue:ProjectionCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:ProjectionCard";
     private static final String NAME;//卡牌显示的名称
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。

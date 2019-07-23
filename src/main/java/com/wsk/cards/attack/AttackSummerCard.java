@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class AttackSummerCard extends CustomCard {
-    public static final String ID = "LagranYue:AttackSummerCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:AttackSummerCard";
     private static final String NAME /*= "来自WSK的攻击"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。

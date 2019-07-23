@@ -22,7 +22,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 兵器：突穿死翔之枪
  */
 public class SkillDeathBolgCard extends AbstractSpearCard {
-    public static final String ID = "LagranYue:SkillDeathBolgCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:SkillDeathBolgCard";
     private static final String NAME;//卡牌显示的名称
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。

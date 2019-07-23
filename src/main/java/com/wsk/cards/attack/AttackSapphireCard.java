@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 蓝宝石的鄙视
  */
 public class AttackSapphireCard extends CustomCard {
-    public static final String ID = "LagranYue:AttackSapphireCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:AttackSapphireCard";
     private static final String NAME /*= "来自WSK的攻击"*/;//卡牌显示的名称
 
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;

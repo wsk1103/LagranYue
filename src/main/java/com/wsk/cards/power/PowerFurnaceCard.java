@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  *     "DESCRIPTION": "每回合开始，第1件兵器获得 !M! 次 锻造 。  NL 虚无 ",
  */
 public class PowerFurnaceCard extends CustomCard {
-    public static final String ID = "LagranYue:PowerFurnaceCard";//卡牌在游戏中的id
+    public static final String ID = "LagranYue:PowerFurnaceCard";
     private static final String NAME;//卡牌显示的名称
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。
