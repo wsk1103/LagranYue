@@ -28,7 +28,7 @@ public class AttackLuEnCard extends CustomCard {
     private static final String IMG = "cards/AttackLuEnCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。
 
-    private static final int COST = 0;//卡牌的费用。
+    private static final int COST = 0;
 
     private static final int wskAttack = 5;
 

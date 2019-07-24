@@ -32,7 +32,7 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
 
     private static final String IMG = "cards/SkillExplosiveArmorCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 2;
 
     private static final int cardDefend = 12;
 

@@ -25,7 +25,7 @@ public class MultipleThornsCard extends CustomCard {
 
     private static final String IMG = "cards/MultipleThornsCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 1;//卡牌的费用。
+    private static final int COST = 1;
 
     private static final int DEFEND = 7;
 

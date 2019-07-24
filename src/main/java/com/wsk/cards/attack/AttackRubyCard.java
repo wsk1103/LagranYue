@@ -27,7 +27,7 @@ public class AttackRubyCard extends CustomCard {
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackRubyCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 1;//卡牌的费用。
+    private static final int COST = 1;
 
     public AttackRubyCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

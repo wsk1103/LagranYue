@@ -33,7 +33,7 @@ public class SkillGanJiangMoYeSwordCard extends AbstractSwordCard {
 
     private static final String IMG = "cards/SkillGanJiangMoYeSwordCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 2;
 
     public SkillGanJiangMoYeSwordCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

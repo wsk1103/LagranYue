@@ -32,7 +32,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
 
     private static final String IMG = "cards/SkillBlazingSevenRingsCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 3;//卡牌的费用。
+    private static final int COST = 3;
 
 
     public SkillBlazingSevenRingsCard() {

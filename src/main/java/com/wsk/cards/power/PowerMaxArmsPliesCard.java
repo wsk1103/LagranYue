@@ -28,7 +28,7 @@ public class PowerMaxArmsPliesCard extends CustomCard {
 
     private static final String IMG = "cards/PowerMaxArmsPliesCard.png";
 
-    private static final int COST = 1;//卡牌的费用。
+    private static final int COST = 1;
 
     public PowerMaxArmsPliesCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

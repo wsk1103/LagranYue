@@ -32,7 +32,7 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
 
     private static final String IMG = "cards/SkillGaeBolgCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 2;//卡牌的费用。
+    private static final int COST = 2;
 
     public SkillGaeBolgCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,

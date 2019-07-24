@@ -28,7 +28,7 @@ public class AttackWaltzCard extends CustomCard {
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackWaltzCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 1;//卡牌的费用。
+    private static final int COST = 1;
 
     private static final int wskAttack = 8;
 
