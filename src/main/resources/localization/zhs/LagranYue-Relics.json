@@ -106,7 +106,7 @@
     "NAME": "契约的履行",
     "FLAVOR": "掉眼泪时用笑掩过，怕人看破，顾虑好多",
     "DESCRIPTIONS": [
-      "在每回合开始时获得 [E] 。但是受到的攻击伤害增加 #b2 。"
+      "在每回合开始时获得 [E] 。但是受到的攻击伤害增加 #b1 。"
     ]
   },
   "LagranYue:ReturningEmperorRelic": {
