@@ -2,13 +2,11 @@ package com.wsk.relics.share;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.utils.CommonUtil;
 
-import java.util.ArrayList;
 import java.util.Collections;
 
 /**
@@ -42,13 +40,9 @@ public class RandomDrawCardRelic extends CustomRelic {
     @Override
     public void atPreBattle() {
         flash();
-
         AbstractPlayer player = AbstractDungeon.player;
         if (null != player) {
-            ArrayList<AbstractCard> cards = player.drawPile.group;
-            System.out.println(cards);
             Collections.shuffle(player.drawPile.group);
-            System.out.println(player.drawPile.group);
         }
     }
 }

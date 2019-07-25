@@ -14,12 +14,12 @@ import java.util.Random;
 /**
  * @author wsk1103
  * @date 2019/3/20
- * @description 描述
+ * @description 每过 #b3 个回合，随机使 #b1 个 #gBuff/DeBuff 增加 #b1 层。
  */
 public class WskJewelryRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:WskJewelryRelic";
-public static final String IMG = "relics/r29.png";
+    public static final String IMG = "relics/r29.png";
     public static final String OUTLINE = "relics/r30.png";
 
     public WskJewelryRelic() {
@@ -39,6 +39,7 @@ public static final String IMG = "relics/r29.png";
 
     @Override
     public void atTurnStart() {
+        counter++;
         if (counter != 0 && counter % 3 == 0) {
             ArrayList<AbstractPower> powers = AbstractDungeon.player.powers;
             if (powers != null && powers.size() > 0) {
@@ -48,7 +49,6 @@ public static final String IMG = "relics/r29.png";
                 ActionUtil.addPower(AbstractDungeon.player, power);
             }
         }
-        counter ++;
         flash();
     }
 }
