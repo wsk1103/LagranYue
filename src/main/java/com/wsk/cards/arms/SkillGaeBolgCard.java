@@ -32,7 +32,8 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
 
     private static final String IMG = "cards/SkillGaeBolgCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 2;
+    private static final int COST = 1;
+    private static final int DURABILITY = 4;
 
     public SkillGaeBolgCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
@@ -45,7 +46,8 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
-        this.baseDamage = 8;
+        this.baseDamage = 5;
+        this.durability = this.baseDurability =  DURABILITY;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
@@ -57,7 +59,8 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeDamage(4);
+            this.upgradeDamage(2);
+            this.upgradeDurability(1);
 //            this.upgradeBaseCost(1);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！
         }
     }

@@ -4,7 +4,6 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.utils.CommonUtil;
@@ -40,11 +39,6 @@ public class SpringFairyRelic extends CustomRelic {
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
         this.card = targetCard;
-    }
-
-    @Override
-    public int onAttackedMonster(DamageInfo info, int damageAmount) {
-        return (int) sum(damageAmount);
     }
 
     @Override

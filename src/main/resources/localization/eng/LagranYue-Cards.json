@@ -469,27 +469,27 @@
   },
   "LagranYue:SkillLiberationCard": {
     "NAME": "Liberation of Gem",
-    "DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 2 AerialAce .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :1.Gain !B! Block  !M! times.Gain 2 AerialAce ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.Gain 2 AerialAce .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.Gain 2 AerialAce ."
   },
   "LagranYue:SkillEightFeetJadeCard": {
     "NAME": "Eight feet of Jade",
-    "DESCRIPTION": " SkillPoint :2.Gain !B! Block  !M! times.Gain 1 ProtectionFromArrows . NL Retain .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :2.Gain !B! Block !M! times.Gain 1 ProtectionFromArrows . NL Retain ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.Gain 1 ProtectionFromArrows . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block !M! times.Gain 1 ProtectionFromArrows . NL Retain ."
   },
   "LagranYue:SkillHeartWaterCard": {
     "NAME": "Heart of Water in Mirror",
-    "DESCRIPTION": " SkillPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :2.Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.Gain 1 MagicEye . NL Exhaust . NL Retain ."
   },
   "LagranYue:SkillLegendPaladinCard": {
     "NAME": "End of the Legend Paladin",
-    "DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra QAQ times.Gain 1 Divinity . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain !B! Block  !M! times.extra IOI times.Gain 1 Divinity . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.extra QAQ times.Gain 1 Divinity . NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Gain !B! Block  !M! times.extra IOI times.Gain 1 Divinity . NL Exhaust ."
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "Disaster Equipment",
-    "DESCRIPTION": " SkillPoint :3.Gain 1 Block  !M! times.extra QAQ times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Gain 1 Block !M! times.extra IOI times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Gain 1 Block  !M! times.extra QAQ times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Gain 1 Block !M! times.extra IOI times.Not affected by Dexterity .Gain 1 WindShelter . NL Retain ."
   }
 }

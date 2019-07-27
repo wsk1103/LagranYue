@@ -29,7 +29,7 @@ public class SkillPointVariable extends DynamicVariable {
     public int value(AbstractCard card) {
         if (card instanceof AbstractProficiencyCard) {
             AbstractProficiencyCard asc = (AbstractProficiencyCard) card;
-            return (int) asc.proficiency;
+            return asc.proficiency;
         } else {
             return 0;
         }
@@ -39,7 +39,7 @@ public class SkillPointVariable extends DynamicVariable {
     public int baseValue(AbstractCard card) {
         if (card instanceof AbstractProficiencyCard) {
             AbstractProficiencyCard asc = (AbstractProficiencyCard) card;
-            return (int) asc.proficiency;
+            return asc.proficiency;
         } else {
             return 0;
         }

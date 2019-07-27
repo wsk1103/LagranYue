@@ -27,6 +27,7 @@ import com.wsk.cards.power.*;
 import com.wsk.cards.proficiency.*;
 import com.wsk.cards.skill.*;
 import com.wsk.characters.LagranYueCharacter;
+import com.wsk.helps.DurabilityVariable;
 import com.wsk.helps.SkillPointVariable;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.patches.CharacterEnum;
@@ -214,6 +215,7 @@ public class LagranYue implements PostInitializeSubscriber,
     public void receiveEditCards() {
 
         BaseMod.addDynamicVariable(new SkillPointVariable());
+        BaseMod.addDynamicVariable(new DurabilityVariable());
 
         ALL_CARS.add(new LifeForgingCard());
         ALL_CARS.add(new AttackAerCard());

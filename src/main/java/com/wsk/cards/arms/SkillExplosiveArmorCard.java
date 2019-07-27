@@ -32,20 +32,21 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
 
     private static final String IMG = "cards/SkillExplosiveArmorCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 2;
+    private static final int COST = 1;
+    private static final int DURABILITY = 4;
 
-    private static final int cardDefend = 12;
 
     public SkillExplosiveArmorCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = cardDefend;
+        this.baseBlock = 7;
         this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+        this.durability = this.baseDurability =  DURABILITY;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }
@@ -59,6 +60,7 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeBlock(4);
+            this.upgradeDurability(1);
             this.isInnate = true;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

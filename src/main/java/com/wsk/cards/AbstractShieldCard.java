@@ -8,7 +8,9 @@ import com.wsk.patches.ArmsEnum;
  * @desc 盾
  */
 public abstract class AbstractShieldCard extends AbstractArmsCard {
-    public AbstractShieldCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
-        super(id, name, img, cost, rawDescription, type, color, rarity, target, ArmsEnum.Shield);
+    public AbstractShieldCard(String id, String name, String img, int cost,
+                              String rawDescription, CardType type, CardColor color,
+                              CardRarity rarity, CardTarget target) {
+        super(id, name, img, cost, rawDescription, type, color, rarity, target, ArmsEnum.Arch);
     }
 }

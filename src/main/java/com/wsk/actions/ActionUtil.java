@@ -203,6 +203,17 @@ public class ActionUtil {
     }
 
     /**
+     * 对自己造成固定伤害
+     *
+     * @param p
+     * @param amount
+     */
+    public static void attackMySelf(AbstractCreature p, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(p,
+                new DamageInfo(p, amount, DamageInfo.DamageType.THORNS)));
+    }
+
+    /**
      * 添加缓冲
      *
      * @param p      对象
@@ -222,12 +233,33 @@ public class ActionUtil {
         AbstractDungeon.actionManager.addToTop(new DrawCardAction(p, amount));
     }
 
+    /**
+     * 丢弃一张随机牌
+     *
+     * @param p
+     * @param amount
+     */
+    public static void disRandomCard(AbstractCreature p, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, amount, true));
+    }
+
+    /**
+     * 丢弃一张选择的牌
+     *
+     * @param p
+     * @param amount
+     */
+    public static void disSelectCard(AbstractCreature p, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new DiscardAction(p, p, amount, false));
+    }
+
     public static void relicAboveCreatureAction(AbstractCreature source, AbstractRelic relic) {
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(source, relic));
     }
 
     /**
      * 随机攻击
+     *
      * @param p
      * @param baseDamage
      * @param num

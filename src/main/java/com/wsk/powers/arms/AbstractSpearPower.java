@@ -6,7 +6,9 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.NoDrawPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.ArmsEnum;
 
 /**
@@ -44,6 +46,10 @@ public abstract class AbstractSpearPower extends AbstractArmsPower {
                         new VulnerablePower(m, 1, false), 1,
                         true, AbstractGameAction.AttackEffect.POISON));
             }
+        } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
+            ActionUtil.addPower(owner, new NoDrawPower(owner));
+        } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
+            ActionUtil.drawCard(owner, 1);
         }
     }
 }

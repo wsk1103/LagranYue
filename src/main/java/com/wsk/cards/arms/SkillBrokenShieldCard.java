@@ -32,6 +32,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
     private static final String IMG = "cards/SkillBrokenShieldCard.png";//卡牌牌面的图片路径。
 
     private static final int COST = 1;
+    private static final int DURABILITY = 3;
 
 
     public SkillBrokenShieldCard() {
@@ -40,13 +41,14 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.baseBlock = 6;
+        this.baseBlock = 5;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
         //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.exhaust = true;
         //固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.isInnate = false;
+        this.durability = this.baseDurability =  DURABILITY;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }
@@ -60,6 +62,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeBaseCost(0);
+            this.upgradeDurability(1);
         }
     }
 

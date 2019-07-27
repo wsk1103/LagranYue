@@ -40,6 +40,12 @@ public abstract class AbstractArchPower extends AbstractArmsPower {
                 }
                 ActionUtil.poisonPower(AbstractDungeon.player, m, 2);
             }
+        } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
+            ActionUtil.drawCard(owner, 1);
+            ActionUtil.drawCard(owner, 1);
+        } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
+            ActionUtil.attackMySelf(owner, 1);
         }
+
     }
 }

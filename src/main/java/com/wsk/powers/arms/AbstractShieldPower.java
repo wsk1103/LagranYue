@@ -23,6 +23,11 @@ public abstract class AbstractShieldPower extends AbstractArmsPower {
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             ActionUtil.gainBlockAction(AbstractDungeon.player, 2);
+        } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
+            ActionUtil.poisonPower(owner, owner, 1);
+
+        } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
+            ActionUtil.metallicizePower(AbstractDungeon.player, 1);
         }
     }
 }

@@ -32,7 +32,8 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
 
     private static final String IMG = "cards/SkillBlazingSevenRingsCard.png";//卡牌牌面的图片路径。
 
-    private static final int COST = 3;
+    private static final int COST = 2;
+    private static final int DURABILITY = 5;
 
 
     public SkillBlazingSevenRingsCard() {
@@ -41,13 +42,14 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.baseBlock = 20;
+        this.baseBlock = 15;
         //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
         this.isEthereal = false;
         //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.exhaust = true;
         //固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.isInnate = false;
+        this.durability = this.baseDurability =  DURABILITY;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }
@@ -60,7 +62,8 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
-            this.upgradeBlock(5);
+            this.upgradeBlock(3);
+            this.upgradeDurability(1);
             this.isInnate = true;
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

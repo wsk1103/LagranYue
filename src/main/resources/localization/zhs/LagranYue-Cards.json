@@ -117,62 +117,62 @@
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "魔月之剑刃",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。 造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够。"
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "玻璃之神引",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "一击神剑",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "八汰神剑",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "堕落",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。"
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "魅惑",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "驭龙团的神枪",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:AttackGalacticZeroCard": {
     "NAME": "银河零式",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。"
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "展翼鸦弩弓",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "戏法明星魔法花冠",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。 起舞 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。 起舞 。"
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "神明弩体",
-    "DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ： !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",
-    "DESCRIPTION": " 兵器 ： 剑 。 升华 ：获得 !M! 层 断剑 。 NL 或 对所有敌人造成 !D! 伤害。  NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。 升华 ：获得 !M! 层 断剑 。 NL 或 对所有敌人造成 !D! 伤害。  NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 断剑 。",
       "对所有敌人造成 !D! 伤害。"
@@ -180,7 +180,7 @@
   },
   "LagranYue:SkillWoodSpearCard": {
     "NAME": "兵器：竹枪",
-    "DESCRIPTION": " 兵器 ： 枪 。 升华 ：获得 !M! 层 竹枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 枪 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 竹枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 竹枪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -188,7 +188,7 @@
   },
   "LagranYue:SkillIncompleteArchCard": {
     "NAME": "兵器：残弩",
-    "DESCRIPTION": " 兵器 ： 弩 。 升华 ：获得 !M! 层 残弩 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 弩 。 耐久度 : !LagranYueDurability!  升华 ：获得 !M! 层 残弩 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 残弩 。",
       "对所有敌人造成 !D! 伤害。"
@@ -196,7 +196,7 @@
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": " 兵器 ： 盾 。 升华 ：获得 !M! 层 破盾 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 破盾 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 破盾 。",
       "获得 !B!  格挡 。"
@@ -204,7 +204,7 @@
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": " 兵器 ： 枪 。 升华 ：获得 !M! 层 刺穿死棘之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 枪 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 刺穿死棘之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 刺穿死棘之枪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -212,7 +212,7 @@
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": " 兵器 ： 枪 。 升华 ：获得 !M! 层 突穿死翔之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 枪 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 突穿死翔之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 突穿死翔之枪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -220,8 +220,8 @@
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": " 兵器 ： 剑 。 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 兵器 ： 剑 。 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 誓约胜利之剑 。",
       "对所有敌人造成 !D! 伤害。"
@@ -229,7 +229,7 @@
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": " 兵器 ： 剑 。 升华 ：获得 !M! 层 喋血卡波剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 喋血卡波剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 喋血卡波剑 。",
       "对所有敌人造成 !D! 伤害。"
@@ -237,7 +237,7 @@
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": " 兵器 ： 剑 。 升华 ：获得 !M! 层 干将莫邪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 干将莫邪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 干将莫邪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -245,8 +245,8 @@
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": " 兵器 ： 弩 。 升华 ：获得 !M! 层 赤原猎犬 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 兵器 ： 弩 。 升华 ：获得 !M! 层 赤原猎犬 。 NL 或者 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 弩 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 赤原猎犬 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 兵器 : 弩 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 赤原猎犬 。 NL 或者 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 赤原猎犬 。",
       "对所有敌人造成 !D! 伤害。"
@@ -254,8 +254,8 @@
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": " 兵器 ： 盾 。 升华 ：获得 !M! 层 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 兵器 ： 盾 。 升华 ：获得 !M! 层 兵器 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 兵器 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 炽天覆七重圆环 。",
       "获得 !B!  格挡 。"
@@ -263,8 +263,8 @@
   },
   "LagranYue:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
-    "DESCRIPTION": " 兵器 ： 盾 。 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 兵器： 盾 。 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器： 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 炸裂装甲 。",
       "获得 !B!  格挡 。"
@@ -469,27 +469,27 @@
   },
   "LagranYue:SkillLiberationCard": {
     "NAME": "宝玉的解放",
-    "DESCRIPTION": " 技能点 ：1。获得 !B! 点 格挡  !M! 次。获得2层 燕返 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：1。获得 !B! 点 格挡  !M! 次。获得2层 燕返 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。获得2层 燕返 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。获得2层 燕返 。"
   },
   "LagranYue:SkillEightFeetJadeCard": {
     "NAME": "八尺勾玉",
-    "DESCRIPTION": " 技能点 ：2。获得 !B! 点 格挡  !M! 次。获得1层 避矢之加护 。 NL 保留 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：2。获得 !B! 点格挡 !M! 次。获得1层 避矢之加护 。 NL 保留 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。获得1层 避矢之加护 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点格挡 !M! 次。获得1层 避矢之加护 。 NL 保留 。"
   },
   "LagranYue:SkillHeartWaterCard": {
     "NAME": "明镜止水之心",
-    "DESCRIPTION": " 技能点 ：2。获得 !B! 点 格挡  !M! 次。获得1层 魔眼 。 NL 消耗 。 NL 保留 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：2。获得 !B! 点 格挡  !M! 次。获得1层 魔眼 。 NL 消耗 。 NL 保留 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。获得1层 魔眼 。 NL 消耗 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。获得1层 魔眼 。 NL 消耗 。 NL 保留 。"
   },
   "LagranYue:SkillLegendPaladinCard": {
     "NAME": "圣骑士传说的终幕",
-    "DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。获得1层 神性 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。获得 !B! 点 格挡  !M! 次。额外造成 兀 次。获得1层 神性 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。额外造成 亖 次。获得1层 神性 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。获得 !B! 点 格挡  !M! 次。额外造成 兀 次。获得1层 神性 。 NL 消耗 。"
   },
   "LagranYue:SkillDisasterEquipmentCard": {
     "NAME": "灾祸的装备品",
-    "DESCRIPTION": " 技能点 ：3。获得 1 点 格挡  !M! 次。额外造成 亖 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。",
-    "UPGRADE_DESCRIPTION": " 技能点 ：3。获得 1 点 格挡 !M! 次。额外造成 兀 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。获得 1 点 格挡  !M! 次。额外造成 亖 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。获得 1 点 格挡 !M! 次。额外造成 兀 次。不受 敏捷 加成影响。获得1层 避风的加护 。 NL 保留 。"
   }
 }

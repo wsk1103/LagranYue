@@ -33,6 +33,7 @@ public class SkillIncompleteArchCard extends AbstractArchCard {
     private static final String IMG = "cards/SkillIncompleteArchCard.png";//卡牌牌面的图片路径。
 
     private static final int COST = 1;
+    private static final int DURABILITY = 3;
 
 
     public SkillIncompleteArchCard() {
@@ -46,7 +47,8 @@ public class SkillIncompleteArchCard extends AbstractArchCard {
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
-        this.baseDamage = 4;
+        this.baseDamage = 3;
+        this.durability = this.baseDurability =  DURABILITY;
     }
 
     public AbstractCard makeCopy() {
@@ -58,6 +60,7 @@ public class SkillIncompleteArchCard extends AbstractArchCard {
         if (!this.upgraded) {
             this.upgradeName();//升级名称。必带。
             this.upgradeDamage(2);
+            this.upgradeDurability(1);
 //            this.upgradeBaseCost(0);
         }
     }

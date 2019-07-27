@@ -8,6 +8,13 @@
   },
   {
     "NAMES": [
+      "耐久度"
+    ],
+    "PROPERNAME": "耐久度",
+    "DESCRIPTION": "打出相应张数的卡牌后， 兵器 损坏。"
+  },
+  {
+    "NAMES": [
       "升华"
     ],
     "PROPERNAME": "升华",
