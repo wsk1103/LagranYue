@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
 public class MagePowerRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:MagePowerRelic";
-public static final String IMG = "relics/r27.png";
+    public static final String IMG = "relics/r27.png";
     public static final String OUTLINE = "relics/r28.png";
 
     public MagePowerRelic() {
