@@ -180,7 +180,7 @@
   },
   "LagranYue:SkillWoodSpearCard": {
     "NAME": "兵器：竹枪",
-    "DESCRIPTION": " 兵器 : 枪 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 竹枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 枪 。: 升华 ：获得 !M! 层 竹枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 竹枪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -188,7 +188,7 @@
   },
   "LagranYue:SkillIncompleteArchCard": {
     "NAME": "兵器：残弩",
-    "DESCRIPTION": " 兵器 : 弩 。 耐久度 : !LagranYueDurability!  升华 ：获得 !M! 层 残弩 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 弩 。 升华 ：获得 !M! 层 残弩 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 残弩 。",
       "对所有敌人造成 !D! 伤害。"
@@ -196,7 +196,7 @@
   },
   "LagranYue:SkillBrokenShieldCard": {
     "NAME": "兵器：破盾",
-    "DESCRIPTION": " 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 破盾 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 盾 。: 升华 ：获得 !M! 层 破盾 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 破盾 。",
       "获得 !B!  格挡 。"
@@ -204,7 +204,7 @@
   },
   "LagranYue:SkillGaeBolgCard": {
     "NAME": "兵器：刺穿死棘之枪",
-    "DESCRIPTION": " 兵器 : 枪 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 刺穿死棘之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 枪 。: 升华 ：获得 !M! 层 刺穿死棘之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 刺穿死棘之枪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -212,7 +212,7 @@
   },
   "LagranYue:SkillDeathBolgCard": {
     "NAME": "兵器：突穿死翔之枪",
-    "DESCRIPTION": " 兵器 : 枪 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 突穿死翔之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 枪 。: 升华 ：获得 !M! 层 突穿死翔之枪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 突穿死翔之枪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -220,8 +220,8 @@
   },
   "LagranYue:SkillVictorySwordCard": {
     "NAME": "兵器：誓约胜利之剑",
-    "DESCRIPTION": " 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。: 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器 : 剑 。: 升华 ：获得 !M! 层 誓约胜利之剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 誓约胜利之剑 。",
       "对所有敌人造成 !D! 伤害。"
@@ -229,7 +229,7 @@
   },
   "LagranYue:SkillKadeboSwordCard": {
     "NAME": "兵器：喋血卡波剑",
-    "DESCRIPTION": " 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 喋血卡波剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。: 升华 ：获得 !M! 层 喋血卡波剑 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 喋血卡波剑 。",
       "对所有敌人造成 !D! 伤害。"
@@ -237,7 +237,7 @@
   },
   "LagranYue:SkillGanJiangMoYeSwordCard": {
     "NAME": "兵器：干将莫邪",
-    "DESCRIPTION": " 兵器 : 剑 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 干将莫邪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 剑 。: 升华 ：获得 !M! 层 干将莫邪 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 干将莫邪 。",
       "对所有敌人造成 !D! 伤害。"
@@ -245,8 +245,8 @@
   },
   "LagranYue:SkillChiharaHoundCard": {
     "NAME": "兵器：赤原猎犬",
-    "DESCRIPTION": " 兵器 : 弩 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 赤原猎犬 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 兵器 : 弩 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 赤原猎犬 。 NL 或者 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 弩 。: 升华 ：获得 !M! 层 赤原猎犬 。 NL 或 对所有敌人造成 !D! 伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 兵器 : 弩 。: 升华 ：获得 !M! 层 赤原猎犬 。 NL 或者 对所有敌人造成 !D! 伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 赤原猎犬 。",
       "对所有敌人造成 !D! 伤害。"
@@ -254,8 +254,8 @@
   },
   "LagranYue:SkillBlazingSevenRingsCard": {
     "NAME": "兵器：炽天覆七重圆环",
-    "DESCRIPTION": " 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 兵器 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 盾 。: 升华 ：获得 !M! 层 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器 : 盾 。: 升华 ：获得 !M! 层 兵器 炽天覆七重圆环 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 炽天覆七重圆环 。",
       "获得 !B!  格挡 。"
@@ -263,8 +263,8 @@
   },
   "LagranYue:SkillExplosiveArmorCard": {
     "NAME": "兵器：炸裂装甲",
-    "DESCRIPTION": " 兵器 : 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 兵器： 盾 。 耐久度 : !LagranYueDurability! 。 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "DESCRIPTION": " 兵器 : 盾 。: 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 兵器： 盾 。: 升华 ：获得 !M! 层 炸裂装甲 。 NL 或 获得 !B!  格挡 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "获得 !M! 层 炸裂装甲 。",
       "获得 !B!  格挡 。"

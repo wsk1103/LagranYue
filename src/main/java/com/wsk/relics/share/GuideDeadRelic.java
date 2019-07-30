@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
 public class GuideDeadRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:GuideDeadRelic";
-public static final String IMG = "relics/r13.png";
+    public static final String IMG = "relics/r13.png";
     public static final String OUTLINE = "relics/r14.png";
 
     public GuideDeadRelic() {
