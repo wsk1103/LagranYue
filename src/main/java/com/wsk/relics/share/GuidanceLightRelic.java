@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -17,7 +16,7 @@ import com.wsk.utils.CommonUtil;
 public class GuidanceLightRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:GuidanceLightRelic";
-public static final String IMG = "relics/r25.png";
+    public static final String IMG = "relics/r25.png";
     public static final String OUTLINE = "relics/r26.png";
 
     public GuidanceLightRelic() {
