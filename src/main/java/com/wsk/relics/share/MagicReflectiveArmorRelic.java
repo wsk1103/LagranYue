@@ -17,7 +17,7 @@ import com.wsk.utils.CommonUtil;
 public class MagicReflectiveArmorRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:MagicReflectiveArmorRelic";
-public static final String IMG = "relics/r7.png";
+    public static final String IMG = "relics/r7.png";
     public static final String OUTLINE = "relics/r8.png";
 
     public MagicReflectiveArmorRelic() {
