@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
 public class NewUniverseRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:NewUniverseRelic";
-public static final String IMG = "relics/r17.png";
+    public static final String IMG = "relics/r17.png";
     public static final String OUTLINE = "relics/r18.png";
 
 
