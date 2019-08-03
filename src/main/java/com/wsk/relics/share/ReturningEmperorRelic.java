@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class ReturningEmperorRelic extends CustomRelic {
 
     public static final String ID = "LagranYue:ReturningEmperorRelic";
-public static final String IMG = "relics/r11.png";
+    public static final String IMG = "relics/r11.png";
     public static final String OUTLINE = "relics/r12.png";
 
     public ReturningEmperorRelic() {
@@ -47,7 +47,8 @@ public static final String IMG = "relics/r11.png";
         flash();
         if (counter != 0 && counter % 3 == 0) {
             ArrayList<AbstractPower> powers = AbstractDungeon.player.powers;
-            a:for (AbstractPower power : powers) {
+            a:
+            for (AbstractPower power : powers) {
                 if (power.type == AbstractPower.PowerType.DEBUFF) {
                     ActionUtil.removePower(AbstractDungeon.player, power);
                     ArrayList<AbstractMonster> monsters = AbstractDungeon.getCurrRoom().monsters.monsters;
