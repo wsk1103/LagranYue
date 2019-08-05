@@ -17,7 +17,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 妄想心音，在一回合内，打出第3张兵器牌后，获得一层 缓冲
  */
 public class ZabaniyaRelics extends CustomRelic {
-    public static final String ID = "LagranYue:ZabaniyaRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
+    public static final String ID = "LagranYue:ZabaniyaRelics";
     public static final String IMG = "relics/w41.png";//遗物图片路径
     public static final String OUTLINE = "relics/w42.png";//遗物外轮廓路径
 

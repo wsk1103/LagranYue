@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class DarkRelics extends CustomRelic {
-    public static final String ID = "LagranYue:DarkRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
+    public static final String ID = "LagranYue:DarkRelics";
     public static final String IMG = "relics/w45.png";//遗物图片路径
     public static final String OUTLINE = "relics/w46.png";//遗物外轮廓路径
 

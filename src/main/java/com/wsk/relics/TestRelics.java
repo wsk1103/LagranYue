@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
  */
 public class TestRelics extends CustomRelic{
 
-    public static final String ID = "ModBaseRelics";//遗物Id，添加遗物、替换遗物时填写该id而不是遗物类名。
+    public static final String ID = "ModBaseRelics";
     public static final String IMG = "遗物图片路径";//遗物图片路径
     public static final String OUTLINE = "遗物外轮廓路径";//遗物外轮廓路径
 
