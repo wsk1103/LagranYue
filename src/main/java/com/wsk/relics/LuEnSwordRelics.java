@@ -17,7 +17,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class LuEnSwordRelics extends CustomRelic {
     public static final String ID = "LagranYue:LuEnSwordRelics";
-    public static final String IMG = "relics/s5.png";//遗物图片路径
+    public static final String IMG = "relics/s5.png";
     public static final String OUTLINE = "relics/s6.png";//遗物外轮廓路径
 
 

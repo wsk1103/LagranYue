@@ -22,7 +22,7 @@ import java.util.Random;
  */
 public class LuEnRelics extends CustomRelic {
     public static final String ID = "LagranYue:LuEnRelics";
-    public static final String IMG = "relics/w35.png";//遗物图片路径
+    public static final String IMG = "relics/w35.png";
     public static final String OUTLINE = "relics/w36.png";//遗物外轮廓路径
 
     private Random random = new Random();

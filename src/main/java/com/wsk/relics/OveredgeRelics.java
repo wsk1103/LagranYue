@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class OveredgeRelics extends CustomRelic {
     public static final String ID = "LagranYue:OveredgeRelics";
-    public static final String IMG = "relics/s3.png";//遗物图片路径
+    public static final String IMG = "relics/s3.png";
     public static final String OUTLINE = "relics/s4.png";//遗物外轮廓路径
 
     private static boolean isUsedArms = false;

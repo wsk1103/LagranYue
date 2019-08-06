@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 public class TestRelics extends CustomRelic{
 
     public static final String ID = "ModBaseRelics";
-    public static final String IMG = "遗物图片路径";//遗物图片路径
+    public static final String IMG = "遗物图片路径";
     public static final String OUTLINE = "遗物外轮廓路径";//遗物外轮廓路径
 
     public static final String DESCRIPTION = "文本描叙";//遗物效果的文本描叙。

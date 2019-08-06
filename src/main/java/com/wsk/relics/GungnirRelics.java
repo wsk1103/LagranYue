@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class GungnirRelics extends CustomRelic {
     public static final String ID = "LagranYue:GungnirRelics";
-    public static final String IMG = "relics/w33.png";//遗物图片路径
+    public static final String IMG = "relics/w33.png";
     public static final String OUTLINE = "relics/w34.png";//遗物外轮廓路径
 
     private Random r = new Random();

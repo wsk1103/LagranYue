@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class BrokenPhantasmRelics extends CustomRelic {
     public static final String ID = "LagranYue:BrokenPhantasmRelics";
-    public static final String IMG = "relics/s1.png";//遗物图片路径
+    public static final String IMG = "relics/s1.png";
     public static final String OUTLINE = "relics/s2.png";//遗物外轮廓路径
 
     private static boolean onlyOne = true;

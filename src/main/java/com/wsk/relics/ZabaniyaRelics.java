@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class ZabaniyaRelics extends CustomRelic {
     public static final String ID = "LagranYue:ZabaniyaRelics";
-    public static final String IMG = "relics/w41.png";//遗物图片路径
+    public static final String IMG = "relics/w41.png";
     public static final String OUTLINE = "relics/w42.png";//遗物外轮廓路径
 
     public static final String DESCRIPTION = "在一回合内，打出第3张兵器牌后，获得一层 #y缓冲 ";//遗物效果的文本描叙。
