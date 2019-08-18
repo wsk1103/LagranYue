@@ -7,7 +7,7 @@ import com.wsk.cards.AbstractArmsCard;
 /**
  * @author wsk1103
  * @date 2019/7/27
- * @description 描述
+ * @description 耐久度
  */
 public class DurabilityVariable extends DynamicVariable {
     @Override
