@@ -18,7 +18,7 @@
       "dancing"
     ],
     "PROPERNAME": "Dancing",
-    "DESCRIPTION": "According to the type of Weapon, the attack effect is added. NL Sword:Apply 1 Weak after using AttackCard. NL Crossbow:Apply 2 poison after using AttackCard NL Shield:Gain 2 Block after using AttackCard NL Spear:Apply 1 Vulnerable after using AttackCard"
+    "DESCRIPTION": "According to the type of Weapon, the effect is added. NL Sword:attack,apply 1 Weak;skill:gain 1 entanglePower;power:gain 1 EnergizedPower. NL Crossbow:attack,Apply 2 poison;skill:discard and drawcard;power,attack myself 1 damage. NL Shield:attack:Gain 2 Block;skill:gain 1 poison;power:gain 1 metallicizePower. NL Spear:attack,Apply 1 Vulnerable;skill:doesn`t draw card this round;power:draw 1 card"
   },
   {
     "NAMES": [
