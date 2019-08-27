@@ -1,101 +1,101 @@
 {
   "LagranYue:BaseAttackCard": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage. Dancing "
+    "DESCRIPTION": "Deal !D! damage.  "
   },
   "LagranYue:AttackBetterCard": {
     "NAME": "Better Strike",
-    "DESCRIPTION": "Deal !D! damage. Dancing ."
+    "DESCRIPTION": "Deal !D! damage. "
   },
   "LagranYue:AttackEngravingRoseCard": {
     "NAME": "Engraving of Rose",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Dancing ."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. "
   },
   "LagranYue:AttackFlintCard": {
     "NAME": "Flint Attack",
-    "DESCRIPTION": "Deal !D! damage !M! times. Dancing ."
+    "DESCRIPTION": "Deal !D! damage !M! times. "
   },
   "LagranYue:AttackCellGodCard": {
     "NAME": "Eight God",
-    "DESCRIPTION": "Deal !D! damage !M! times.apply 1 Permeation .It can upgraded more times . Dancing .NL Exhaust "
+    "DESCRIPTION": "Deal !D! damage !M! times.apply 1 Permeation .It can upgraded more times . NL Exhaust "
   },
   "LagranYue:AttackFireCard": {
     "NAME": "Fire of Initiation",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Dancing . NL Chaos ."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies.  NL Chaos ."
   },
   "LagranYue:AttackIceCard": {
     "NAME": "Ice of Initiation",
-    "DESCRIPTION": "Deal !D! damage, and gain !B! Block . Dancing . NL Chaos ."
+    "DESCRIPTION": "Deal !D! damage, and gain !B! Block .  NL Chaos ."
   },
   "LagranYue:AttackRubyCard": {
     "NAME": "Ruby Raid",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Enemies who do not intend to attack are struck twice. Dancing "
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Enemies who do not intend to attack are struck twice.  "
   },
   "LagranYue:AttackSapphireCard": {
     "NAME": "Sapphire Contempt",
-    "DESCRIPTION": "Deal !D! damage, and apply !M! ImprintOfDeath . Dancing "
+    "DESCRIPTION": "Deal !D! damage, and apply !M! ImprintOfDeath .  "
   },
   "LagranYue:AttackEmeraldCard": {
     "NAME": "Emerald Carnival",
-    "DESCRIPTION": "Deal !D! damage, gain !M! TheContractOfVictory . Dancing . NL Exhaust "
+    "DESCRIPTION": "Deal !D! damage, gain !M! TheContractOfVictory .  NL Exhaust "
   },
   "LagranYue:AttackPurpleCard": {
     "NAME": "Purple Strike",
-    "DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card, then make the cost to 0. Dancing "
+    "DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card.  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 2 times, and randomly get an attack card, then make the cost to 0.  "
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "Gem Dream of that Summer",
-    "DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile. Dancing . ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile, then make the cost to 0. Dancing . "
+    "DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile.  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose to get a card from the Exhaust pile, then make the cost to 0.  "
   },
   "LagranYue:AttackTopazCard": {
     "NAME": "Call of YellowGems",
-    "DESCRIPTION": "Deal !D! damage.Add a Weapon card from the draw to hand, then retain it. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage.Add a Weapon card from the draw to hand, then upgraded and retain it. Dancing ",
+    "DESCRIPTION": "Deal !D! damage.Add a Weapon card from the draw to hand, then retain it.  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Add a Weapon card from the draw to hand, then upgraded and retain it.  ",
     "EXTENDED_DESCRIPTION": [
       "你的抽牌堆中没有 Weapon 牌."
     ]
   },
   "LagranYue:AttackLakeCard": {
     "NAME": "Aroundight",
-    "DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength . Dancing . NL Chaos .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength . Dancing . NL Chaos ."
+    "DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength .  NL Chaos .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. The number of additional damages based on the number of Strength .  NL Chaos ."
   },
   "LagranYue:AttackKingCard": {
     "NAME": "Ionioi Hetairoi",
-    "DESCRIPTION": "Deal !D! damage. All Weapon card cost in hand are reduced by 1. Dancing .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Reduce the cost of all Weapon cards in your hand to 0. Dancing ."
+    "DESCRIPTION": "Deal !D! damage. All Weapon card cost in hand are reduced by 1. ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Reduce the cost of all Weapon cards in your hand to 0. "
   },
   "LagranYue:AttackGoldCard": {
     "NAME": "Enuma Elish",
-    "DESCRIPTION": "Deal !D! damage. Gain [E] next turn. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] [E] next turn. Dancing "
+    "DESCRIPTION": "Deal !D! damage. Gain [E] next turn.  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] [E] next turn.  "
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "Via Expugnatio",
-    "DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer. Dancing . "
+    "DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer.  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Double the enemy's ImprintOfDeath layer.  "
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "Devil's Roar",
-    "DESCRIPTION": "Deal !D! damage. Gain and apply !M! ImprintOfDeath . Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage.Apply !M! ImprintOfDeath . Dancing "
+    "DESCRIPTION": "Deal !D! damage. Gain and apply !M! ImprintOfDeath .  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Apply !M! ImprintOfDeath .  "
   },
   "LagranYue:AttackKillerCard": {
     "NAME": "Gem Killer",
-    "DESCRIPTION": "Deal !D! damage. Double mine TheContractOfVictory . Dancing . NL Exhaust ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage.Double Mine TheContractOfVictory .If the TheContractOfVictory number is 0, gain !M! . Dancing . NL Exhaust "
+    "DESCRIPTION": "Deal !D! damage. Double mine TheContractOfVictory .  NL Exhaust ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.Double Mine TheContractOfVictory .If the TheContractOfVictory number is 0, gain !M! .  NL Exhaust "
   },
   "LagranYue:AttackFutureCard": {
     "NAME": "Past and Future",
-    "DESCRIPTION": "Deal absolute value of the difference between the number of draws and the exhaust team damage. Dancing . NL Chaos .",
-    "UPGRADE_DESCRIPTION": "Deal absolute value of the difference between the number of draws and the exhaust team damage. Dancing . NL Chaos ."
+    "DESCRIPTION": "Deal absolute value of the difference between the number of draws and the exhaust team damage.  NL Chaos .",
+    "UPGRADE_DESCRIPTION": "Deal absolute value of the difference between the number of draws and the exhaust team damage.  NL Chaos ."
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "Waltz of Love",
-    "DESCRIPTION": "Deal !D! damage QAQ times, at least 1 times. Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage IOI times, at least 1 times. Dancing "
+    "DESCRIPTION": "Deal !D! damage QAQ times, at least 1 times.  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage IOI times, at least 1 times.  "
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "Ultimate Belief",
@@ -104,71 +104,71 @@
   },
   "LagranYue:AttackAerCard": {
     "NAME": "Aer",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Dancing .if cost [E] [E] , execution !M! Forging . Dancing ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL Dancing .if cost [E] , execution !M! Forging . Dancing "
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL if cost [E] [E] , execution !M! Forging .  ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL if cost [E] , execution !M! Forging .  "
   },
   "LagranYue:AttackLuEnCard": {
     "NAME": "LuEnRune·Attack",
-    "DESCRIPTION": "Damage all enemy that causes !M! times the sum of all current Weapon layers. Exhaust . Dancing . NL Ethereal "
+    "DESCRIPTION": "Damage all enemy that causes !M! times the sum of all current Weapon layers. Exhaust .  NL Ethereal "
   },
   "LagranYue:AttackCarnivalCard": {
     "NAME": "幻想嘉年华·攻",
-    "DESCRIPTION": "造成 !M! 倍当前所有 Weapon 数之和的伤害 . NL Exhaust . Dancing . "
+    "DESCRIPTION": "造成 !M! 倍当前所有 Weapon 数之和的伤害 . NL Exhaust .  "
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "Sword of the Magic Moon",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal 1 damage !M! times.Not affected by strength . Dancing .",
+    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal 1 damage !M! times.Not affected by strength . ",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够."
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "Magic of Glass",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal !D! damage to a random enemy !M! times.Gain 1 Mind . Dancing ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal !D! damage to a random enemy !M! times.Gain 1 Mind . "
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "One-stroke Sword",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Divinity .  NL Exhaust ."
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "Nome`s Gold Sword",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Gain 1 Divinity . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Gain 1 Divinity .  NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint :3.Deal !D! damage !M! times.Gain 1 Divinity .  NL Exhaust ."
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "Degenerate",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies. Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times to all enemies. Dancing ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies. ",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times to all enemies. "
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "Enchantment",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Gain 1 GoldRate . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Gain 1 GoldRate . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Gain 1 GoldRate .  NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.Gain 1 GoldRate .  NL Exhaust ."
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "Lasing of the Dragon Regiment",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra QAQ times.Gain 1 Divinity .  NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra IOI times.Gain 1 Divinity .  NL Exhaust ."
   },
   "LagranYue:AttackGalacticZeroCard": {
     "NAME": "Galactic Zero",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Magic . Dancing ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Magic . ",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Magic . "
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "Crow Crossbow",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal 1 damage !M! times.Not affected by strength . Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal 1 damage !M! times.Not affected by strength . Dancing ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal 1 damage !M! times.Not affected by strength . ",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal 1 damage !M! times.Not affected by strength . "
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "Magic Corolla of Magic Stars",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra QAQ times.Apply 1 Distortion . Dancing .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra IOI times.Apply 1 Distortion . Dancing ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra QAQ times.Apply 1 Distortion . ",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra IOI times.Apply 1 Distortion . "
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "Divine Crossbow",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye . Dancing . NL Exhaust .",
-    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye . Dancing . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra QAQ times.Gain 1 MagicEye .  NL Exhaust .",
+    "UPGRADE_DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times.extra IOI times.Gain 1 MagicEye .  NL Exhaust ."
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "BrokenSword",

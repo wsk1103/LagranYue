@@ -1,101 +1,101 @@
 {
   "LagranYue:BaseAttackCard": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害。  "
   },
   "LagranYue:AttackBetterCard": {
     "NAME": "加强版的打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 起舞 。"
+    "DESCRIPTION": "造成 !D! 点伤害。  。"
   },
   "LagranYue:AttackEngravingRoseCard": {
     "NAME": "蔷薇的刻印",
-    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 起舞 。"
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。  。"
   },
   "LagranYue:AttackFlintCard": {
     "NAME": "燧石攻击",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 起舞 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。  。"
   },
   "LagranYue:AttackCellGodCard": {
     "NAME": "神明八胞",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。给予1层 透化 。可以被多次 升级 。 起舞 。 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。给予1层 透化 。可以被多次 升级 。  。 消耗 。"
   },
   "LagranYue:AttackFireCard": {
     "NAME": "进击的火焰",
-    "DESCRIPTION": "攻击所有敌人，造成 !D! 点伤害。 起舞 。 NL 混沌 。"
+    "DESCRIPTION": "攻击所有敌人，造成 !D! 点伤害。  。 NL 混沌 。"
   },
   "LagranYue:AttackIceCard": {
     "NAME": "进击的寒冰",
-    "DESCRIPTION": "造成 !D! 伤害, 给予自己 !B!  格挡 。  起舞 。 NL 混沌 。"
+    "DESCRIPTION": "造成 !D! 伤害, 给予自己 !B!  格挡 。   。 NL 混沌 。"
   },
   "LagranYue:AttackRubyCard": {
     "NAME": "红宝石的狂袭",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 意图 不是攻击的敌人受到2次伤害。 起舞 "
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 意图 不是攻击的敌人受到2次伤害。  "
   },
   "LagranYue:AttackSapphireCard": {
     "NAME": "蓝宝石的鄙视",
-    "DESCRIPTION": "造成 !D! 点伤害，并给予 !M! 层 死亡印记。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害，并给予 !M! 层 死亡印记。  "
   },
   "LagranYue:AttackEmeraldCard": {
     "NAME": "绿宝石的狂欢",
-    "DESCRIPTION": "造成 !D! 点伤害，获得 !M! 层 胜利契约 。 起舞 。 NL 消耗"
+    "DESCRIPTION": "造成 !D! 点伤害，获得 !M! 层 胜利契约 。  。 NL 消耗"
   },
   "LagranYue:AttackPurpleCard": {
     "NAME": "紫宝石的打击",
-    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌，并且费用降低为0。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌。  ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 2次，随机获得一张攻击牌，并且费用降低为0。  "
   },
   "LagranYue:AttackSummerCard": {
     "NAME": "那年夏天的宝石梦",
-    "DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌。 起舞 。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌，并且费用降低为0。 起舞 。 "
+    "DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌。  。 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 选择获得消耗牌堆中的一张牌，并且费用降低为0。  。 "
   },
   "LagranYue:AttackTopazCard": {
     "NAME": "黄宝石的呼唤",
-    "DESCRIPTION": "造成 !D! 点伤害。将抽牌堆中的一张兵器卡牌加入手中，并保留该牌。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将抽牌堆中的一张兵器卡牌加入手中，升级和保留该牌。 起舞 ",
+    "DESCRIPTION": "造成 !D! 点伤害。将抽牌堆中的一张兵器卡牌加入手中，并保留该牌。  ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。将抽牌堆中的一张兵器卡牌加入手中，升级和保留该牌。  ",
     "EXTENDED_DESCRIPTION": [
       "你的抽牌堆中没有 兵器 牌。"
     ]
   },
   "LagranYue:AttackLakeCard": {
     "NAME": "无毁的湖光",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 根据 力量 的层数追加伤害的次数。 起舞 。 NL 混沌 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 根据 力量 的层数追加伤害的次数。 起舞 。 NL 混沌 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 根据 力量 的层数追加伤害的次数。  。 NL 混沌 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 根据 力量 的层数追加伤害的次数。  。 NL 混沌 。"
   },
   "LagranYue:AttackKingCard": {
     "NAME": "王之军势",
-    "DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减1。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减为0。 起舞 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减1。  ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 手中所有 兵器 牌费用减为0。  。"
   },
   "LagranYue:AttackGoldCard": {
     "NAME": "冀以锁系神明",
-    "DESCRIPTION": "造成 !D! 点伤害。 下回合获得 [E] 。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 下回合获得 [E]  [E] 。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害。 下回合获得 [E] 。  ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 下回合获得 [E]  [E] 。  "
   },
   "LagranYue:AttackRavagedCard": {
     "NAME": "遥远的蹂躏制霸",
-    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。 起舞 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。  。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 翻倍敌人的 死亡契约 层数。  。"
   },
   "LagranYue:AttackDevilCard": {
     "NAME": "恶魔的咆哮",
-    "DESCRIPTION": "造成 !D! 点伤害。 给予自己和敌人 !M! 层 死亡印记 。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。给予敌人 !M! 层 死亡印记 。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害。 给予自己和敌人 !M! 层 死亡印记 。  ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。给予敌人 !M! 层 死亡印记 。  "
   },
   "LagranYue:AttackKillerCard": {
     "NAME": "宝石杀手",
-    "DESCRIPTION": "造成 !D! 点伤害。 翻倍自己的 胜利契约 层数 。 起舞 。 NL 消耗 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。翻倍自己的 胜利契约 层数 。如果没有，则添加 !M! 层。 起舞 。 NL 消耗 "
+    "DESCRIPTION": "造成 !D! 点伤害。 翻倍自己的 胜利契约 层数 。  。 NL 消耗 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。翻倍自己的 胜利契约 层数 。如果没有，则添加 !M! 层。  。 NL 消耗 "
   },
   "LagranYue:AttackFutureCard": {
     "NAME": "过去和未来",
-    "DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 起舞 。 NL 混沌 。",
-    "UPGRADE_DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 起舞 。 NL 混沌 。"
+    "DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。  。 NL 混沌 。",
+    "UPGRADE_DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。  。 NL 混沌 。"
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "爱的华尔兹",
-    "DESCRIPTION": "造成 !D! 点伤害 亖 次，最少1次。 起舞 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 兀 次，最少1次。 起舞 "
+    "DESCRIPTION": "造成 !D! 点伤害 亖 次，最少1次。  ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 兀 次，最少1次。  "
   },
   "LagranYue:AttackFaithCard": {
     "NAME": "最终信仰",
@@ -104,71 +104,71 @@
   },
   "LagranYue:AttackAerCard": {
     "NAME": "阿尔托利亚",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL 起舞 。如果消费 [E] [E] ，执行 !M! 次 锻造 。 起舞 ",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害X+1次。 NL 起舞 。如果消费 [E] ，执行 !M! 次 锻造 。 起舞 "
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害X次。 NL  。如果消费 [E] [E] ，执行 !M! 次 锻造 。  ",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害X+1次。 NL  。如果消费 [E] ，执行 !M! 次 锻造 。  "
   },
   "LagranYue:AttackLuEnCard": {
     "NAME": "卢恩符文·攻",
-    "DESCRIPTION": "对所有敌人造成 !M! 倍当前所有 兵器 层数之和的固定伤害 。 NL 消耗 。 起舞 。 NL 虚无 。"
+    "DESCRIPTION": "对所有敌人造成 !M! 倍当前所有 兵器 层数之和的固定伤害 。 NL 消耗 。  。 NL 虚无 。"
   },
   "LagranYue:AttackCarnivalCard": {
     "NAME": "幻想嘉年华·攻",
-    "DESCRIPTION": "造成 !M! 倍当前所有 兵器 层数之和的伤害 。 NL 消耗 。 起舞 。 "
+    "DESCRIPTION": "造成 !M! 倍当前所有 兵器 层数之和的伤害 。 NL 消耗 。  。 "
   },
   "LagranYue:AttackMagicMoonCard": {
     "NAME": "魔月之剑刃",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。 造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。 造成 1 点伤害 !M! 次。不受 力量 加成影响。  。",
     "EXTENDED_DESCRIPTION": [
       "兵器熟练度不够。"
     ]
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "玻璃之神引",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。  。"
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "一击神剑",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 。  。 NL 消耗 。"
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "八汰神剑",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。  。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 神性 。  。 NL 消耗 。"
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "堕落",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。  。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。  。"
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "魅惑",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。  。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。获得1层 黄金率 。  。 NL 消耗 。"
   },
   "LagranYue:AttackGodSpearCard": {
     "NAME": "驭龙团的神枪",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 神性 。  。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 神性 。  。 NL 消耗 。"
   },
   "LagranYue:AttackGalacticZeroCard": {
     "NAME": "银河零式",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。  。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。对所有敌人造成 !D! 点伤害 !M! 次。获得1层 魔术 。  。"
   },
   "LagranYue:AttackCrowCrossbowCard": {
     "NAME": "展翼鸦弩弓",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。  。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 1 点伤害 !M! 次。不受 力量 加成影响。  。"
   },
   "LagranYue:AttackMagicStarsCard": {
     "NAME": "戏法明星魔法花冠",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。 起舞 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。 起舞 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。给予1层 失真 。  。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。给予1层 失真 。  。"
   },
   "LagranYue:AttackGodArchCard": {
     "NAME": "神明弩体",
-    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。 起舞 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。 起舞 。 NL 消耗 。"
+    "DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 亖 次。获得1层 魔眼 。  。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! 。造成 !D! 点伤害 !M! 次。额外造成 兀 次。获得1层 魔眼 。  。 NL 消耗 。"
   },
   "LagranYue:SkillBrokenSwordCard": {
     "NAME": "兵器：断剑",

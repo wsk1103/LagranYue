@@ -76,7 +76,7 @@
     "NAME": "Skill Point",
     "FLAVOR": "Skill Point System,it`s so good....",
     "DESCRIPTIONS": [
-      " #ySkillPoint .\nCurrent skill points:"
+      " #ySkillPoint .After using #bWeapon , cards have #bDancing .\nCurrent skill points:"
     ]
   },
   "LagranYue:RandomDrawCardRelic": {
