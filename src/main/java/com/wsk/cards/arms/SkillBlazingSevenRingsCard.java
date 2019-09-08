@@ -35,7 +35,6 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     private static final int COST = 2;
     private static final int DURABILITY = 5;
 
-
     public SkillBlazingSevenRingsCard() {
         super(ID, NAME, CommonUtil.getResourcePath(IMG), COST, DESCRIPTION,
                 CardType.SKILL,
