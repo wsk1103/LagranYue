@@ -39,7 +39,6 @@ public class BaseArchPower extends AbstractArchPower {
 
     @Override
     public void hasArms() {
-//        ArmsUtil.addOrChangArms(owner, this, amount);
         ActionUtil.strengthPower(owner, amount);
     }
 
