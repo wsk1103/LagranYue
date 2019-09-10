@@ -22,6 +22,7 @@ public abstract class AbstractArchPower extends AbstractArmsPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             if (card.target == AbstractCard.CardTarget.ALL
                     || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
