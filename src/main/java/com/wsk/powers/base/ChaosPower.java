@@ -13,7 +13,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class ChaosPower extends AbstractPower {
-    public static final String POWER_ID = "LagranYue:ChaosPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:ChaosPower";
     public static final String NAME = "混沌";//能力的名称。
 
     public static String[] DESCRIPTIONS = {"临时使装备兵器的上限+1，装备兵器后消失。只能同时拥有1层混沌。回合结束时失去该能力。"};

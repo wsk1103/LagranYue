@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class MaxArmsPliesPower extends AbstractPower {
-    public static final String POWER_ID = "LagranYue:MaxArmsPliesPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:MaxArmsPliesPower";
     public static final String NAME = "锻造大师";//能力的名称。
 
     public static String[] DESCRIPTIONS = {" 兵器 层数的上限增加", "，目前上限:"};

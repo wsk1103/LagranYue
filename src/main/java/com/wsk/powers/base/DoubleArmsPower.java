@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 双持能力
  */
 public class DoubleArmsPower extends AbstractPower {
-    public static final String POWER_ID = "LagranYue:DoubleArmsPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:DoubleArmsPower";
     public static final String NAME = "武器大师";//能力的名称。
 
     public static String[] DESCRIPTIONS = {"装备 兵器 的数量上限为", "。已装备数量:"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。

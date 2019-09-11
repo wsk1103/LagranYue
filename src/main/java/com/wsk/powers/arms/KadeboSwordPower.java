@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class KadeboSwordPower extends AbstractSwordPower {
-    public static final String POWER_ID = "LagranYue:KadeboSwordPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:KadeboSwordPower";
     public static final String NAME = "兵器：喋血卡波剑";//能力的名称。
 
     public static String[] DESCRIPTIONS = {"获得", "点力量。攻击时，恢复该攻击卡的数值的", "倍生命值。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。

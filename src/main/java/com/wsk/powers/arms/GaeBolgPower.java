@@ -19,7 +19,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 兵器：刺穿死棘之枪
  */
 public class GaeBolgPower extends AbstractSpearPower {
-    public static final String POWER_ID = "LagranYue:GaeBolgPower";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:GaeBolgPower";
     public static final String NAME = "兵器：刺穿死棘之枪";//能力的名称。
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。

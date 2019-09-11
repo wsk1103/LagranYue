@@ -14,7 +14,7 @@ import com.wsk.utils.CommonUtil;
  * @desc 一句话说明
  */
 public class DarkTemplePowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "LagranYue:DarkTemplePowerUpgraded";//能力的ID，判断有无能力、能力层数时填写该Id而不是类名。
+    public static final String POWER_ID = "LagranYue:DarkTemplePowerUpgraded";
     public static final String NAME = "自我封印·暗黑神殿 +";//能力的名称。
     public static String[] DESCRIPTIONS = {"每回合开始获得", "张0费的 卢恩符文+·守 或 卢恩符文+·造 。"};
 
