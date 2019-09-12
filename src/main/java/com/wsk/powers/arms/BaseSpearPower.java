@@ -16,7 +16,7 @@ import com.wsk.utils.CommonUtil;
 public class BaseSpearPower extends AbstractSpearPower {
 
     public static final String POWER_ID = "LagranYue:BaseSpearPower";
-    public static final String NAME = "兵器：竹枪";//能力的名称。
+    public static final String NAME = "兵器：竹枪";
 
     public static String[] DESCRIPTIONS/* = {"获得", "点力量。"}*/;//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

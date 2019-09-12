@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class GaeBolgPower extends AbstractSpearPower {
     public static final String POWER_ID = "LagranYue:GaeBolgPower";
-    public static final String NAME = "兵器：刺穿死棘之枪";//能力的名称。
+    public static final String NAME = "兵器：刺穿死棘之枪";
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌后，获得", "层金属化 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。

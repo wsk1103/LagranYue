@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class TwelveTrialsPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:TwelveTrialsPowerUpgraded";
-    public static final String NAME = "十二试炼 + ";//能力的名称。
+    public static final String NAME = "十二试炼 + ";
 
     public static String[] DESCRIPTIONS = {"每打出1张 兵器 ，获得", "点格挡。"};
 

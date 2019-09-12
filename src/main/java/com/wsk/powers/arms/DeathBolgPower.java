@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class DeathBolgPower extends AbstractSpearPower {
     public static final String POWER_ID = "LagranYue:DeathBolgPower";
-    public static final String NAME = "兵器：突穿死翔之枪";//能力的名称。
+    public static final String NAME = "兵器：突穿死翔之枪";
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static String[] DESCRIPTIONS = {"获得", "点力量，打出攻击卡牌后，给予被攻击者", "层 死亡印记 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。

@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class RemoveArmorPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:RemoveArmorPowerUpgraded";
-    public static final String NAME = "卡路里的顺劈+";//能力的名称。
+    public static final String NAME = "卡路里的顺劈+";
 
     public static String[] DESCRIPTIONS = {"每打出1张 兵器 牌，对所有敌人造成", "点伤害。"};
 

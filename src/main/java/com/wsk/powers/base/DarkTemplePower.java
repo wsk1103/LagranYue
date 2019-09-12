@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class DarkTemplePower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:DarkTemplePower";
-    public static final String NAME = "自我封印·暗黑神殿";//能力的名称。
+    public static final String NAME = "自我封印·暗黑神殿";
 
     public static String[] DESCRIPTIONS = {"每回合开始获得", "张0费的 卢恩符文·守 或 卢恩符文·造 。"};
 

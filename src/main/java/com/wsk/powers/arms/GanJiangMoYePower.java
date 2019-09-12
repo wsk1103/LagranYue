@@ -23,7 +23,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class GanJiangMoYePower extends AbstractSwordPower {
     public static final String POWER_ID = "LagranYue:GanJiangMoYePower";
-    public static final String NAME = "兵器：干将莫邪";//能力的名称。
+    public static final String NAME = "兵器：干将莫邪";
 
     public static String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的第1张目标为敌人的攻击牌(非兵器牌)会被重复打出", "次。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

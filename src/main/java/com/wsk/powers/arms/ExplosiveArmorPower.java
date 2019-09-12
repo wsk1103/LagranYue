@@ -22,7 +22,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class ExplosiveArmorPower extends AbstractShieldPower {
     public static final String POWER_ID = "LagranYue:ExplosiveArmorPower";
-    public static final String NAME = "兵器：炸裂装甲";//能力的名称。
+    public static final String NAME = "兵器：炸裂装甲";
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
     public static String[] DESCRIPTIONS = {"增加", "点敏捷。增加", "点荆棘。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。

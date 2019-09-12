@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class BlazingSevenRingsPower extends AbstractShieldPower {
     public static final String POWER_ID = "LagranYue:BlazingSevenRingsPower";
-    public static final String NAME = "兵器：炽天覆七重圆环";//能力的名称。
+    public static final String NAME = "兵器：炽天覆七重圆环";
 
     public static String[] DESCRIPTIONS = {"获得", "点敏捷。获得 壁垒 。受到的伤害减少"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

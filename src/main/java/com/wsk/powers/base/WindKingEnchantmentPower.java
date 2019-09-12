@@ -14,7 +14,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class WindKingEnchantmentPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:WindKingEnchantmentPower";
-    public static final String NAME = "风王的结界";//能力的名称。
+    public static final String NAME = "风王的结界";
 
     public static String[] DESCRIPTIONS = {"回合开始获得", "格挡 。"};
 

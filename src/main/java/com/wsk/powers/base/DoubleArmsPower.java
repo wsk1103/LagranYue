@@ -17,7 +17,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class DoubleArmsPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:DoubleArmsPower";
-    public static final String NAME = "武器大师";//能力的名称。
+    public static final String NAME = "武器大师";
 
     public static String[] DESCRIPTIONS = {"装备 兵器 的数量上限为", "。已装备数量:"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

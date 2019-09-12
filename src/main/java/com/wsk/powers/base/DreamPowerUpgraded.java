@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class DreamPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:DreamPowerUpgraded";
-    public static final String NAME = "远离尘世的理想+";//能力的名称。
+    public static final String NAME = "远离尘世的理想+";
 
     public static String[] DESCRIPTIONS = {"每回合开始，选择获得", "张被消耗的卡牌，并且费用置为0。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

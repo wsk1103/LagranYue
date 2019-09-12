@@ -15,7 +15,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class BloodyTemplePowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:BloodyTemplePowerUpgraded";
-    public static final String NAME = "他者封印·鲜血神殿";//能力的名称。
+    public static final String NAME = "他者封印·鲜血神殿";
 
     public static String[] DESCRIPTIONS = {"每回合开始获得", "张0费的 卢恩符文·攻+ 。"};
 

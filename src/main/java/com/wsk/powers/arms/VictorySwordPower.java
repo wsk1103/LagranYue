@@ -20,7 +20,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class VictorySwordPower extends AbstractSwordPower {
     public static final String POWER_ID = "LagranYue:VictorySwordPower";
-    public static final String NAME = "兵器：誓约胜利之剑";//能力的名称。
+    public static final String NAME = "兵器：誓约胜利之剑";
 
     public static String[] DESCRIPTIONS = {"获得", "点力量。每回合开始，获得", "点 胜利誓约 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

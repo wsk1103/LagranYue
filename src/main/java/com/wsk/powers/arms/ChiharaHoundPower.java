@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class ChiharaHoundPower extends AbstractArchPower {
     public static final String POWER_ID = "LagranYue:ChiharaHoundPower";
-    public static final String NAME = "兵器：赤原猎犬";//能力的名称。
+    public static final String NAME = "兵器：赤原猎犬";
 
     public static String[] DESCRIPTIONS = {"获得", "点力量。攻击后，给予被攻击者", "层 虚弱 。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
 

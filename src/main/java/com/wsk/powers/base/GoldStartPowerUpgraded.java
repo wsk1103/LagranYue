@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class GoldStartPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "LagranYue:GoldStartPowerUpgraded";
-    public static final String NAME = "天地开辟乖离之星+";//能力的名称。
+    public static final String NAME = "天地开辟乖离之星+";
 
     public static String[] DESCRIPTIONS = {"每打出1张 兵器 ，消除所有负面状态。已经打出", "张兵器"};
 

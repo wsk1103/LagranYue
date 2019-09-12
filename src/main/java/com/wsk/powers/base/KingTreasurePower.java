@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class KingTreasurePower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:KingTreasurePower";
-    public static final String NAME = "王之财宝";//能力的名称。
+    public static final String NAME = "王之财宝";
 
     public static String[] DESCRIPTIONS = {"每打出2张 兵器 ，抽1张牌。已打出", "张兵器"};
 
