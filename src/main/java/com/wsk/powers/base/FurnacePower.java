@@ -21,7 +21,7 @@ public class FurnacePower extends AbstractPower {
     private static final String IMG = "powers/w30-1.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
-    public FurnacePower(AbstractCreature owner, int amount) {//参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+    public FurnacePower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 

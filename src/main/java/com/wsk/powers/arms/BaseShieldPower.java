@@ -25,7 +25,7 @@ public class BaseShieldPower extends AbstractShieldPower {
 
     public BaseShieldPower(AbstractCreature owner, int amount) {
         super();
-        //参数：owner-能力施加对象、amount-施加能力层数。在cards的use里面用ApplyPowerAction调用进行传递。
+
         this.ID = POWER_ID;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
