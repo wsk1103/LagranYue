@@ -23,7 +23,7 @@ public class KadeboSwordPower extends AbstractSwordPower {
     public static final String POWER_ID = "LagranYue:KadeboSwordPower";
     public static final String NAME = "兵器：喋血卡波剑";
 
-    public static String[] DESCRIPTIONS = {"获得", "点力量。攻击时，恢复该攻击卡的数值的", "倍生命值。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点力量。攻击时，恢复该攻击卡的数值的", "倍生命值。"};
 
     private static final String IMG = "powers/w6.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。

@@ -21,7 +21,7 @@
 //    public static final String NAME = "能力";
 //
 //    public static String DESCRIPITON = "能力描叙";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
-//    public static final String[] DESCRIPTIONS = {"","",""};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+//    public static final String[] DESCRIPTIONS = {"","",""};
 //    //以上两种文本描叙只需写一个，更新文本方法在第36行。
 //
 //    public TestPower(AbstractCreature owner, int amount) {

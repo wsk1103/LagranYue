@@ -17,7 +17,7 @@ public class DreamPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:DreamPower";
     public static final String NAME = "远离尘世的理想";
 
-    public static String[] DESCRIPTIONS = {"每回合开始，选择获得", "张被消耗的卡牌。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"每回合开始，选择获得", "张被消耗的卡牌。"};
 
     private static final String IMG = "powers/w22.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;

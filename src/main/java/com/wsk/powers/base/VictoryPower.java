@@ -18,7 +18,7 @@ public class VictoryPower extends AbstractPower {
     public static final String NAME = "胜利契约";
 
     //    public static final String DESCRIPITON = "攻击伤害增加印记的层数，当层数到达10层的时候，给予100点伤害";//不需要调用变量的文本描叙，例如钢笔尖（PenNibPower）。
-    public static String[] DESCRIPTIONS = {"战斗结束后，恢复", "点生命值，增加", "点最大生命值。层数最大值为10。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"战斗结束后，恢复", "点生命值，增加", "点最大生命值。层数最大值为10。"};
 
     private static final String IMG = "powers/w18.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。

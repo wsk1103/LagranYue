@@ -19,7 +19,7 @@ public class DoubleArmsPower extends AbstractPower {
     public static final String POWER_ID = "LagranYue:DoubleArmsPower";
     public static final String NAME = "武器大师";
 
-    public static String[] DESCRIPTIONS = {"装备 兵器 的数量上限为", "。已装备数量:"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"装备 兵器 的数量上限为", "。已装备数量:"};
 
     private static final String IMG = "powers/w28.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。

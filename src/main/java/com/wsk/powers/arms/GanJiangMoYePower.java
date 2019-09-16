@@ -25,7 +25,7 @@ public class GanJiangMoYePower extends AbstractSwordPower {
     public static final String POWER_ID = "LagranYue:GanJiangMoYePower";
     public static final String NAME = "兵器：干将莫邪";
 
-    public static String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的第1张目标为敌人的攻击牌(非兵器牌)会被重复打出", "次。"};//需要调用变量的文本描叙，例如力量（Strength）、敏捷（Dexterity）等。
+    public static String[] DESCRIPTIONS = {"获得", "点力量。每回合你使用的第1张目标为敌人的攻击牌(非兵器牌)会被重复打出", "次。"};
 
     private static final String IMG = "powers/w7.png";
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
