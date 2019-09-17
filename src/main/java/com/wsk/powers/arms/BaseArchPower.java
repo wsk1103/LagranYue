@@ -18,7 +18,7 @@ public class BaseArchPower extends AbstractArchPower {
     public static final String POWER_ID = "LagranYue:BaseArchPower";
     public static final String NAME = "兵器：残弩";
 
-    public static String[] DESCRIPTIONS/* = {"获得", "点力量。"}*/;
+    public static String[] DESCRIPTIONS;
 
     private static final String IMG = "powers/w9.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;

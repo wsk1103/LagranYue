@@ -18,7 +18,7 @@ public class BaseSpearPower extends AbstractSpearPower {
     public static final String POWER_ID = "LagranYue:BaseSpearPower";
     public static final String NAME = "兵器：竹枪";
 
-    public static String[] DESCRIPTIONS/* = {"获得", "点力量。"}*/;
+    public static String[] DESCRIPTIONS;
 
     private static final String IMG = "powers/w2.png";
     private static PowerType POWER_TYPE = PowerType.BUFF;
