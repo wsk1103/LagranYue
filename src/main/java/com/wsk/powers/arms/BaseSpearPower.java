@@ -32,7 +32,7 @@ public class BaseSpearPower extends AbstractSpearPower {
         this.owner = owner;
         this.amount = amount;
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
-        this.type = POWER_TYPE;//能力种类，可以不填写，会默认为PowerType.BUFF。PowerType.BUFF不会被人工制品抵消，PowerType.DEBUFF会被人工制品抵消。
+        this.type = POWER_TYPE;
         updateDescription();
     }
 
