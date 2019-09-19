@@ -23,7 +23,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class SkillGaeBolgCard extends AbstractSpearCard {
     public static final String ID = "LagranYue:SkillGaeBolgCard";
-    private static final String NAME;//卡牌显示的名称
+    private static final String NAME;
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。
     public static final String[] EXTENDED_DESCRIPTION;

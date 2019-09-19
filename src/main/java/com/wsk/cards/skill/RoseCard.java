@@ -21,7 +21,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class RoseCard extends CustomCard {
     public static final String ID = "LagranYue:RoseCard";
-    private static final String NAME;//卡牌显示的名称
+    private static final String NAME;
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。
 

@@ -23,7 +23,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class AttackLakeCard extends CustomCard {
     public static final String ID = "LagranYue:AttackLakeCard";
-    private static final String NAME /*= "来自WSK的攻击"*/;//卡牌显示的名称
+    private static final String NAME /*= "来自WSK的攻击"*/;
 
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
     private static final CardStrings cardStrings;

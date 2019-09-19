@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class BaseDefendCard extends CustomCard {
     public static final String ID = "LagranYue:BaseDefendCard";
-    private static final String NAME /*= "來自WSK的愛"*/;//卡牌显示的名称
+    private static final String NAME /*= "來自WSK的愛"*/;
 
     private static final String DESCRIPTION /*= "WSK給予 !B! 点 格挡 。"*/;//卡牌下方的描叙内容。
     //注：

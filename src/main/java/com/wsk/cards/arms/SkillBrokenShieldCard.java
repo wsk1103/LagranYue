@@ -22,7 +22,7 @@ import com.wsk.utils.CommonUtil;
  */
 public class SkillBrokenShieldCard extends AbstractShieldCard {
     public static final String ID = "LagranYue:SkillBrokenShieldCard";
-    private static final String NAME;//卡牌显示的名称
+    private static final String NAME;
 
     private static final String DESCRIPTION;//卡牌下方的描叙内容。
     public static final String[] EXTENDED_DESCRIPTION;
