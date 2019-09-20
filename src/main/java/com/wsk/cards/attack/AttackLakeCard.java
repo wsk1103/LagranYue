@@ -25,7 +25,7 @@ public class AttackLakeCard extends CustomCard {
     public static final String ID = "LagranYue:AttackLakeCard";
     private static final String NAME /*= "来自WSK的攻击"*/;
 
-    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackLakeCard.png";//卡牌牌面的图片路径。
     //例：img/cards/claw/attack/BloodSuckingClaw_Orange.png  详细情况请根据自己项目的路径布置进行填写。

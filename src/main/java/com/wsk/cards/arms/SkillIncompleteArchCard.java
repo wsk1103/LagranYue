@@ -25,7 +25,7 @@ public class SkillIncompleteArchCard extends AbstractArchCard {
     public static final String ID = "LagranYue:SkillIncompleteArchCard";
     private static final String NAME;
 
-    private static final String DESCRIPTION;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
 
     private static final CardStrings cardStrings;

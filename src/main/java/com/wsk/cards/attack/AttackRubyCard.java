@@ -23,7 +23,7 @@ public class AttackRubyCard extends CustomCard {
     public static final String ID = "LagranYue:AttackRubyCard";
     private static final String NAME /*= "来自WSK的攻击"*/;
 
-    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/AttackRubyCard.png";//卡牌牌面的图片路径。
 

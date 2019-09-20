@@ -19,7 +19,7 @@ public class BasePowerCard extends CustomCard {
     public static final String ID = "LagranYue:BasePowerCard";
     private static final String NAME;
 
-    private static final String DESCRIPTION;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION;
     //注：
     //描叙中存在几个特殊的字符串：
     // 1. !D! 、 !M! 、 !B!。

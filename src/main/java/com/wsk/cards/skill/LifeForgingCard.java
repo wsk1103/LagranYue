@@ -21,8 +21,8 @@ public class LifeForgingCard extends CustomCard {
     public static final String ID = "LagranYue:LifeForgingCard";
     private static final String NAME /*= "来自WSK的攻击"*/;
 
-    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
-    private static final String UPGRADED_DESCRIPTION /*= "造成 !D! 点伤害。"*/;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;
+    private static final String UPGRADED_DESCRIPTION /*= "造成 !D! 点伤害。"*/;
     private static final CardStrings cardStrings;
     private static final String IMG = "cards/LifeForgingCard.png";//卡牌牌面的图片路径。
 

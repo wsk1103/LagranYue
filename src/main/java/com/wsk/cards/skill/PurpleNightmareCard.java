@@ -20,7 +20,7 @@ public class PurpleNightmareCard extends CustomCard {
     public static final String ID = "LagranYue:PurpleNightmareCard";
     private static final String NAME;
 
-    private static final String DESCRIPTION;//卡牌下方的描叙内容。
+    private static final String DESCRIPTION;
 
     private static final CardStrings cardStrings;
 
