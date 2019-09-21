@@ -26,7 +26,7 @@ public class AttackWaltzCard extends CustomCard {
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;
     private static final String UPGRADED_DESCRIPTION;
     private static final CardStrings cardStrings;
-    private static final String IMG = "cards/AttackWaltzCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/AttackWaltzCard.png";
 
     private static final int COST = 1;
 

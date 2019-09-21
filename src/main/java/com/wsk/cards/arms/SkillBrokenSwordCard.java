@@ -30,7 +30,7 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/SkillBrokenSwordCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/SkillBrokenSwordCard.png";
 
     private static final int COST = 1;
     private static final int DURABILITY = 3;

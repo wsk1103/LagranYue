@@ -23,7 +23,7 @@ public class DefendBetterCard extends CustomCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/DefendBetterCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/DefendBetterCard.png";
 
     private static final int COST = 1;
 

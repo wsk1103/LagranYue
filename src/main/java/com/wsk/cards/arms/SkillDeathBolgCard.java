@@ -30,7 +30,7 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/SkillDeathBolgCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/SkillDeathBolgCard.png";
 
     private static final int COST = 1;
     private static final int DURABILITY = 4;

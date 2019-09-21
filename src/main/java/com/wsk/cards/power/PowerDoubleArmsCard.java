@@ -26,7 +26,7 @@ public class PowerDoubleArmsCard extends CustomCard {
 
     private static final CardStrings cardStrings;
 
-    private static final String IMG = "cards/PowerDoubleArmsCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/PowerDoubleArmsCard.png";
 
     private static final int COST = 1;
 

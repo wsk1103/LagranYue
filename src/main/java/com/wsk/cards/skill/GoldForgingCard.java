@@ -23,7 +23,7 @@ public class GoldForgingCard extends CustomCard {
     private static final String DESCRIPTION /*= "造成 !D! 点伤害。"*/;
 //    private static final String UPGRADED_DESCRIPTION /*= "造成 !D! 点伤害。"*/;
     private static final CardStrings cardStrings;
-    private static final String IMG = "cards/GoldForgingCard.png";//卡牌牌面的图片路径。
+    private static final String IMG = "cards/GoldForgingCard.png";
 
     private static final int COST = 1;
 
