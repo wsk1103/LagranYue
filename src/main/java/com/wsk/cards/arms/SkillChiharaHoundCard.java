@@ -42,7 +42,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ALL);
         this.magicNumber = this.baseMagicNumber = 1;
-        this.isEthereal = false;//虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
+        this.isEthereal = false;
         this.exhaust = true;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);

@@ -73,7 +73,7 @@ public class BaseAttackCard extends CustomCard {
 //        this.magicNumber = this.baseMagicNumber;
         this.tags.add(BaseModCardTags.BASIC_STRIKE);
         this.tags.add(AbstractCard.CardTags.STRIKE);
-        //虚无属性，false不虚无，true虚无。可在该类里调用改变。不虚无就可以赋值为false或者删掉这一行
+
         this.isEthereal = false;
         //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
         this.exhaust = false;
