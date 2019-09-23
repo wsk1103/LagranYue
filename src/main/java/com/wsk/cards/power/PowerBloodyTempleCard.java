@@ -38,7 +38,7 @@ public class PowerBloodyTempleCard extends CustomCard {
                 CardType.POWER,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust = false;//消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
+        this.exhaust = false;
         this.isEthereal = true;
         this.magicNumber = this.baseMagicNumber = 1;
         this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行

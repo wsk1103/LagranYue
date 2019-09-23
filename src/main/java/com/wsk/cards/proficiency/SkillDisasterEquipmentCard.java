@@ -58,7 +58,7 @@ public class SkillDisasterEquipmentCard extends AbstractProfShieldCard {
         this.magicNumber = this.baseMagicNumber = 6;
 
         this.isEthereal = false;
-        //消耗属性，false不消耗，true消耗。可在该类里调用改变。不消耗就可以赋值为false或者删掉这一行
+
         this.exhaust = false;
         //固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
         this.isInnate = false;
