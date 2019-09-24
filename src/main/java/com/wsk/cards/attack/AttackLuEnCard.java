@@ -40,7 +40,7 @@ public class AttackLuEnCard extends CustomCard {
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.isEthereal = true;
         this.exhaust = true;
-        this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+        this.isInnate = false;
     }
 
     public AbstractCard makeCopy() {

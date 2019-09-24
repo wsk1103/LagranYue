@@ -59,7 +59,7 @@ public class PolyBeamCard extends CustomCard {
 //        this.tags.add(BaseModCardTags.BASIC_DEFEND);
 //        this.isEthereal = false;
         this.exhaust = true;
-//        this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+//        this.isInnate = false;
         //例：我需要在升级后虚无、消耗、固有。即可在下方upgrade()方法里this.isEthereal/this.exhaust/this.isInnate调用 赋值为 true。
         //   使用时满足条件不虚无/消耗，在use中填写if判定语句，满足条件时，this.isEthereal/this.exhaust调用 赋值为false即可。实例不详细赘叙。
     }

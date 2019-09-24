@@ -60,7 +60,7 @@ public class AttackCrowCrossbowCard extends AbstractProfArchCard {
         this.isEthereal = false;
 
         this.exhaust = false;
-        //固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+
         this.isInnate = false;
         //保留属性
         this.retain = false;

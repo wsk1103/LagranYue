@@ -36,7 +36,7 @@ public class DefendBetterCard extends CustomCard {
                 CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = DEFEND;//基础格挡值，除升级以外无任何其他加成. this.block为有敏捷等加成的格挡值.
         this.isEthereal = false;
-        this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+        this.isInnate = false;
     }
 
     public AbstractCard makeCopy() {

@@ -38,7 +38,7 @@ public class MultipleThornsCard extends CustomCard {
         this.magicNumber = this.baseMagicNumber = 1;
         this.isEthereal = false;
         this.exhaust = true;
-        this.isInnate = false;//固有属性，false不固有，true固有。可在该类里调用改变。不固有就可以赋值为false或者删掉这一行
+        this.isInnate = false;
     }
 
     public AbstractCard makeCopy() {
