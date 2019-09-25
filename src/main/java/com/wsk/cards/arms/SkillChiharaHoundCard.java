@@ -58,7 +58,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeDamage(2);
             this.upgradeDurability(1);
             this.rawDescription = UPGRADED_DESCRIPTION;

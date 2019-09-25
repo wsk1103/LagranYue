@@ -50,7 +50,7 @@ public class PowerRemoveArmorCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeMagicNumber(2);//升级而增加的特殊值。增加的是baseMagicNumber
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

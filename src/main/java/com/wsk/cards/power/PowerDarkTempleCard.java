@@ -52,7 +52,7 @@ public class PowerDarkTempleCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
 //            this.upgradeBlock(defind * 2);//升级而增加的护甲。增加的是baseDamage
 //            this.upgradeDamage(wskAttack * 2);//升级而增加的伤害。增加的是baseBlock
             this.upgradeMagicNumber(1);//升级而增加的特殊值。增加的是baseMagicNumber

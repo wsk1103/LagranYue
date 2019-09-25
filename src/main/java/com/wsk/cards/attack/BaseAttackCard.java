@@ -105,7 +105,7 @@ public class BaseAttackCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
             //升级而增加的护甲。增加的是baseDamage
 //            this.upgradeBlock(defind * 2);

@@ -45,7 +45,7 @@ public class SkillTestamentCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeBlock(1);
         }
     }

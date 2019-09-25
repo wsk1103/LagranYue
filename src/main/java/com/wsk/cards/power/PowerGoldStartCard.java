@@ -51,7 +51,7 @@ public class PowerGoldStartCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

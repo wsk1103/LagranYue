@@ -51,7 +51,7 @@ public class PowerTwelveTrialsCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeMagicNumber(2);//升级而增加的特殊值。增加的是baseMagicNumber
             this.isEthereal = false;//虚无属性。
             this.rawDescription = UPGRADED_DESCRIPTION;

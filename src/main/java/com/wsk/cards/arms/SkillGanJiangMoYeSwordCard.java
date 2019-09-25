@@ -58,7 +58,7 @@ public class SkillGanJiangMoYeSwordCard extends AbstractSwordCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeDamage(4);
             this.upgradeDurability(1);
 //            this.upgradeBaseCost(1);//升级后的费用。注意括号内的值即为费用，与上方不同！！！！

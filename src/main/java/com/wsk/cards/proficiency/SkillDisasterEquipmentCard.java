@@ -80,7 +80,7 @@ public class SkillDisasterEquipmentCard extends AbstractProfShieldCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
             this.upgradeMagicNumber(2);
             this.rawDescription = UPGRADED_DESCRIPTION;

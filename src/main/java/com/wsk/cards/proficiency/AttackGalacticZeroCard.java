@@ -81,7 +81,7 @@ public class AttackGalacticZeroCard extends AbstractProfSpearCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
 
             this.upgradeDamage(5);

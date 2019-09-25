@@ -84,7 +84,7 @@ public class AttackGodArchCard extends AbstractProfArchCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
 
             this.upgradeMagicNumber(2);

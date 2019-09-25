@@ -80,7 +80,7 @@ public class SkillLegendPaladinCard extends AbstractProfShieldCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
             this.upgradeBaseCost(2);
             this.rawDescription = UPGRADED_DESCRIPTION;

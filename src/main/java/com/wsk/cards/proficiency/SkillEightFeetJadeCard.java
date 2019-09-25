@@ -78,7 +78,7 @@ public class SkillEightFeetJadeCard extends AbstractProfShieldCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
             this.upgradeMagicNumber(1);
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！

@@ -48,7 +48,7 @@ public class PowerDoubleArmsCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.isInnate = true;//固有属性。
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

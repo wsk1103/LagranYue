@@ -47,7 +47,7 @@ public class AttackRubyCard extends CustomCard {
 
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeDamage(2);//升级而增加的伤害。增加的是baseBlock
 //            this.upgradeBlock(900);
         }

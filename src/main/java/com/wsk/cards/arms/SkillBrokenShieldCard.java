@@ -60,7 +60,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.upgradeBaseCost(0);
             this.upgradeDurability(1);
         }

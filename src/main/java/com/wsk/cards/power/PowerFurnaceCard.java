@@ -51,7 +51,7 @@ public class PowerFurnaceCard extends CustomCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.upgradeName();//升级名称。必带。
+            this.upgradeName();
             this.isEthereal = false;//虚无属性。
             this.upgradeBaseCost(2);
             this.rawDescription = UPGRADED_DESCRIPTION;

@@ -79,7 +79,7 @@ public class AttackMagicMoonCard extends AbstractProfSwordCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
 
             this.upgradeDamage(1);

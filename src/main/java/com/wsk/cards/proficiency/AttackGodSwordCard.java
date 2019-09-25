@@ -83,7 +83,7 @@ public class AttackGodSwordCard extends AbstractProfSwordCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            //升级名称。必带。
+
             this.upgradeName();
 
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！
