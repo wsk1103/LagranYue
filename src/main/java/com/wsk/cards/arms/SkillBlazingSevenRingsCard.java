@@ -71,10 +71,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        //获得格挡
-//        ActionUtil.gainBlockAction(p, this.block);
-//        BlazingSevenRingsPower power = new BlazingSevenRingsPower(p, this.magicNumber);
-//        ArmsUtil.addOrChangArms(p, power);
+
 
         AbstractDungeon.actionManager.addToBottom(new ChooseAction(this, this.getChooseCardGroup()));
     }
