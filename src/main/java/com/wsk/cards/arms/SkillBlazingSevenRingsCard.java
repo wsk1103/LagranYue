@@ -53,6 +53,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }
 
+    @Override
     public AbstractCard makeCopy() {
         return new SkillBlazingSevenRingsCard();
     }
