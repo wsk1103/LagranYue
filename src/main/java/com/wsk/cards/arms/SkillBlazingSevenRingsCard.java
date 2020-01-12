@@ -83,7 +83,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
             ArmsUtil.addOrChangArms(AbstractDungeon.player, power);
         } else {
             if (num != 1) {
-                LogHelper.logger.info("choose card error...........");
+                LogHelper.logger.info("选择卡牌失败");
                 return;
             }
             ActionUtil.gainBlockAction(AbstractDungeon.player, this.block);
