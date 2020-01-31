@@ -18,7 +18,7 @@ import com.wsk.utils.CommonUtil;
 /**
  * @author wsk1103
  * @date 2019/2/26
- * @desc 一句话说明
+ * @desc 兵器：炽天覆七重圆环
  */
 public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     public static final String ID = "LagranYue:SkillBlazingSevenRingsCard";
