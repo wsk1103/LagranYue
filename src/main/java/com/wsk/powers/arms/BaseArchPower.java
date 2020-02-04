@@ -35,16 +35,24 @@ public class BaseArchPower extends AbstractArchPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, getLevel());
     }
 
     @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1);
+    }
+
+
+    @Override
     public void updateDescription() {
-        this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (basePower + DESCRIPTIONS[0] + this.getLevel() + DESCRIPTIONS[1]
+                + DESCRIPTIONS[2] + this.getLevel());
     }
 
     @Override
@@ -55,7 +63,7 @@ public class BaseArchPower extends AbstractArchPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            ActionUtil.strengthPower(owner, -this.amount);
+            ActionUtil.strengthPower(owner, -this.getLevel());
 //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
         }

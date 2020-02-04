@@ -41,14 +41,14 @@ public class SkillVictorySwordCard extends AbstractSwordCard {
                 CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.ALL);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.durability = this.baseDurability =  DURABILITY;
+        this.magicNumber = this.baseMagicNumber = durability;
         this.isEthereal = false;
-        this.exhaust = true;
+//        this.exhaust = true;
         this.isInnate = false;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
-        this.baseDamage = 16;
-        this.durability = this.baseDurability =  DURABILITY;
+        this.baseDamage = 14;
     }
 
     public AbstractCard makeCopy() {

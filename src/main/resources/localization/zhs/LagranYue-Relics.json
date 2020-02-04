@@ -17,7 +17,7 @@
     "NAME": "万符必将破戒",
     "FLAVOR": "此魔术武器是背叛之魔女神性的具现化。",
     "DESCRIPTIONS": [
-      "在本次战斗中，使用的第 N 张 #y兵器 将会执行 #b1 次 #y锻造 (N为3的倍数)"
+      "在本轮战斗中，每使用 #r8 张牌 ，执行 #b1 次 #y锻造。"
     ]
   },
   "LagranYue:UnlimitedBladeWorksRelics": {
@@ -31,7 +31,7 @@
     "NAME": "暗流涌动",
     "FLAVOR": "当你凝望深渊的时候，深渊也在凝望着你。",
     "DESCRIPTIONS": [
-      "在本场战斗，每打出 #b7 张攻击牌后， #y锻造  #y兵器  #b1 次"
+      "在本场战斗，每打出 #b4 张攻击牌后， #y锻造  #b1 次"
     ]
   },
   "LagranYue:LuEnRelics": {

@@ -1,14 +1,11 @@
 package com.wsk.utils;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.actions.ActionUtil;
-import com.wsk.actions.ForgingAction;
 import com.wsk.powers.arms.AbstractArmsPower;
 import com.wsk.powers.base.ChaosPower;
 import com.wsk.powers.base.DoubleArmsPower;
@@ -36,11 +33,13 @@ public class ArmsUtil {
     public static void addOrChangArms(AbstractCreature p, AbstractArmsPower armsPower) {
 
         if (areYouHasArmsPower(armsPower)) {
-            //使用相同兵器后，增加相应的层数
-            ForgingAction.addArmsNum(armsPower, armsPower.amount);
+            //使用相同兵器后，升级
+//            ForgingAction.addArmsNum(armsPower, armsPower.amount);
+            ActionUtil.upgradeArms(p, armsPower);
+//            armsPower.upgradeArms();
             setTemporaryArms(false);
         } else {
-            if (isTemporaryArms()) {
+                if (isTemporaryArms()) {
                 arms++;
                 ActionUtil.addArms(p, armsPower);
                 setTemporaryArms(false);
@@ -60,10 +59,10 @@ public class ArmsUtil {
                 ActionUtil.addArms(p, armsPower);
             }
         }
-        if (!p.hasPower(DoubleArmsPower.POWER_ID)) {
+/*        if (!p.hasPower(DoubleArmsPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p,
                     new DoubleArmsPower(p, 0), 0, AbstractGameAction.AttackEffect.POISON));
-        }
+        }*/
     }
 
     //移除所有武器
@@ -97,8 +96,14 @@ public class ArmsUtil {
         }
         int once = onceArmsPlies(i);
         int currentAll = currentMaxArmsPlies();
-        boolean result = once >= currentAll;
-        return result;
+        return once >= currentAll;
+    }
+
+    //判断第i层兵器层数是否达到该上限
+    public static boolean areMaxArmsPlies(AbstractArmsPower power) {
+        int once = power.amount;
+        int currentAll = currentMaxArmsPlies();
+        return once >= currentAll;
     }
 
     //移除第i个兵器
@@ -226,5 +231,14 @@ public class ArmsUtil {
         } else {
             ActionUtil.removePower(AbstractDungeon.player, ChaosPower.POWER_ID);
         }
+    }
+
+    public static AbstractArmsPower getFirstArmsPower() {
+        for (AbstractPower power : AbstractDungeon.player.powers) {
+            if (power instanceof AbstractArmsPower) {
+                return (AbstractArmsPower)power;
+            }
+        }
+        return null;
     }
 }

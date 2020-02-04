@@ -36,16 +36,23 @@ public class BaseShieldPower extends AbstractShieldPower {
         this.type = POWER_TYPE;
 //        hasArms(owner);
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
-        ActionUtil.dexterityPower(owner, amount);
+        ActionUtil.dexterityPower(owner, getLevel());
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.dexterityPower(owner, 1);
     }
 
     @Override
     public void updateDescription() {
-        this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (basePower + DESCRIPTIONS[0] + this.getLevel() + DESCRIPTIONS[1]
+                + DESCRIPTIONS[2] + this.getLevel());
     }
 
     @Override
@@ -57,7 +64,7 @@ public class BaseShieldPower extends AbstractShieldPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            ActionUtil.dexterityPower(owner, -this.amount);
+            ActionUtil.dexterityPower(owner, -this.getLevel());
 //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount, AbstractGameAction.AttackEffect.POISON));
         }

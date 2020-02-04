@@ -1,13 +1,11 @@
 package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.powers.base.VictoryPower;
 import com.wsk.utils.ArmsUtil;
@@ -43,16 +41,25 @@ public class VictorySwordPower extends AbstractSwordPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms(){
 //        ArmsUtil.addOrChangArms(owner, this, amount);
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, getLevel());
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1);
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] +  this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.getLevel()
+                + DESCRIPTIONS[1] +  this.getLevel()
+                + DESCRIPTIONS[2]
+                + DESCRIPTIONS[3] + this.getLevel());
     }
 
     @Override
@@ -62,11 +69,11 @@ public class VictorySwordPower extends AbstractSwordPower {
 
     //触发时机：当玩家回合开始时触发。
     public void atStartOfTurn() {
-        if (this.amount <= 0) {
+        if (this.getLevel() <= 0) {
             return;
         }
-        startEnd += this.amount;
-        ActionUtil.victoryPower(owner, this.amount);
+        startEnd += this.getLevel();
+        ActionUtil.victoryPower(owner, this.getLevel());
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                new VictoryPower(AbstractDungeon.player, this.amount), this.amount, AbstractGameAction.AttackEffect.POISON));
     }
@@ -74,18 +81,8 @@ public class VictorySwordPower extends AbstractSwordPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
-            if (AbstractDungeon.player.hasPower(VictoryPower.POWER_ID)) {
-                int num = AbstractDungeon.player.getPower(VictoryPower.POWER_ID).amount;
-                if (num - startEnd <= 0) {
-                    //如果层数不够减，直接移除能力
-                    ActionUtil.removePower(owner,VictoryPower.POWER_ID);
-                } else {
-                    ActionUtil.victoryPower(owner, -startEnd);
-                }
-                startEnd = 0;
-            }
+            ActionUtil.strengthPower(owner, -this.getLevel());
+            ActionUtil.reducePower(AbstractDungeon.player, VictoryPower.POWER_ID, this.getLevel());
         }
     }
 }

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.utils.CommonUtil;
 
@@ -46,6 +47,13 @@ public class MaxArmsPliesPower extends AbstractPower {
             this.flash();
         }
         updateDescription();
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        this.flash();
+        ActionUtil.forgingAction(owner);
+//        ActionUtil.forgingAction(owner, 1, amount);
     }
 }
 

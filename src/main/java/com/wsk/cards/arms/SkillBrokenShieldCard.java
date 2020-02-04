@@ -40,15 +40,12 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.COMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 1;
-        this.baseBlock = 5;
-
-        this.isEthereal = false;
-
-        this.exhaust = true;
-
-        this.isInnate = false;
         this.durability = this.baseDurability =  DURABILITY;
+        this.magicNumber = this.baseMagicNumber = durability;
+        this.baseBlock = 4;
+        this.isEthereal = false;
+//        this.exhaust = true;
+        this.isInnate = false;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }

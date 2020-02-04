@@ -12,7 +12,6 @@ import com.wsk.powers.arms.AbstractArmsPower;
 import com.wsk.powers.base.ImprintPower;
 import com.wsk.powers.base.NextEnergizedPower;
 import com.wsk.powers.base.VictoryPower;
-import com.wsk.utils.ArmsUtil;
 
 /**
  * @author wsk1103
@@ -122,19 +121,61 @@ public class ActionUtil {
     }
 
     //锻造
-    public static void forgingAction(AbstractCreature from, int armsNo, int amount) {
-        for (int i = armsNo; i <= ArmsUtil.getArmsNum(); i++) {
-            if (!ArmsUtil.areMaxArmsPlies(i)) {
-                AbstractDungeon.actionManager.addToTop(new ForgingAction(from, i, amount));
-                break;
+    public static void forgingAction(AbstractCreature from) {
+        for (AbstractPower power : from.powers) {
+            if (power instanceof AbstractArmsPower) {
+                power.amount = ((AbstractArmsPower)power).getDurability();
+            }
+        }
+/*        AbstractArmsPower power = ArmsUtil.getFirstArmsPower();
+        if (power == null) {
+            return;
+        }
+        if (ArmsUtil.areMaxArmsPlies(power)) {
+            //已经满层，升一级.
+            power.addLevel();
+        } else {
+            //不为满层，修复为满层.
+            power.amount = power.getDurability();
+//            AbstractDungeon.actionManager.addToTop(new ForgingAction(from, armsNo, amount));
+        }*/
+    }
+
+    /**
+     * 升级所有武器
+     * @param from
+     */
+    public static void upgradeAllArms(AbstractCreature from) {
+        for (AbstractPower power : from.powers) {
+            if (power instanceof AbstractArmsPower) {
+                ((AbstractArmsPower) power).upgrade();
             }
         }
     }
 
-    //获取 兵器
+    /**
+     * 升级第一把武器
+     * @param from
+     */
+    public static void upgradeArms(AbstractCreature from) {
+        for (AbstractPower power : from.powers) {
+            if (power instanceof AbstractArmsPower) {
+                ((AbstractArmsPower) power).upgrade();
+                return;
+            }
+        }
+    }
+
+    //新增一把 兵器
     public static void addArms(AbstractCreature p, AbstractArmsPower armsPower) {
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, armsPower, armsPower.amount));
         armsPower.hasArms();
+    }
+
+    //更新武器
+    public static void upgradeArms(AbstractCreature p, AbstractArmsPower armsPower) {
+        armsPower.upgrade();
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, armsPower, armsPower.getDurability()));
     }
 
     //添加能力

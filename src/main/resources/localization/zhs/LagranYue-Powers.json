@@ -3,35 +3,40 @@
     "NAME": "来自WSK的祝福",
     "DESCRIPTIONS": [
       "回合开始时，获得 ",
-      " 点 力量 。"
+      " 点 力量 。",
+      "等级："
     ]
   },
   "LagranYue:BaseSwordPower": {
     "NAME": "兵器：断剑",
     "DESCRIPTIONS": [
       "获得",
-      " 点力量。"
+      " 点力量。",
+      "等级："
     ]
   },
   "LagranYue:BaseSpearPower": {
     "NAME": "兵器：竹枪",
     "DESCRIPTIONS": [
       "获得",
-      "点力量。"
+      "点力量。",
+      "等级："
     ]
   },
   "LagranYue:BaseArchPower": {
     "NAME": "兵器：残弩",
     "DESCRIPTIONS": [
       "获得",
-      "点力量。"
+      "点力量。",
+      "等级："
     ]
   },
   "LagranYue:BaseShieldPower": {
     "NAME": "兵器：破盾",
     "DESCRIPTIONS": [
       "获得",
-      "点敏捷。"
+      "点敏捷。",
+      "等级："
     ]
   },
   "LagranYue:GaeBolgPower": {
@@ -39,7 +44,8 @@
     "DESCRIPTIONS": [
       "获得",
       "点力量，打出攻击卡牌后，获得",
-      "层金属化 。"
+      "层金属化 。",
+      "等级："
     ]
   },
   "LagranYue:DeathBolgPower": {
@@ -47,7 +53,8 @@
     "DESCRIPTIONS": [
       "获得",
       "点力量，打出攻击卡牌后，给予被攻击者",
-      "层 死亡印记 。"
+      "层 死亡印记 。",
+      "等级："
     ]
   },
   "LagranYue:VictorySwordPower": {
@@ -55,7 +62,8 @@
     "DESCRIPTIONS": [
       "获得",
       "点力量。每回合开始，获得",
-      "点 胜利誓约 。"
+      "点 胜利誓约 。",
+      "等级："
     ]
   },
   "LagranYue:KadeboSwordPower": {
@@ -63,7 +71,8 @@
     "DESCRIPTIONS": [
       "获得",
       "点力量。攻击时，恢复该攻击卡的数值的",
-      "倍生命值。"
+      "倍生命值。",
+      "等级："
     ]
   },
   "LagranYue:GanJiangMoYePower": {
@@ -71,7 +80,8 @@
     "DESCRIPTIONS": [
       "获得",
       "点力量。每回合你使用的第1张目标为敌人的攻击牌(非兵器牌)会被重复打出",
-      "次。"
+      "次。",
+      "等级："
     ]
   },
   "LagranYue:ChiharaHoundPower": {
@@ -79,14 +89,16 @@
     "DESCRIPTIONS": [
       "获得",
       "点力量。攻击后，给予被攻击者",
-      "层 虚弱 。"
+      "层 虚弱 。",
+      "等级："
     ]
   },
   "LagranYue:BlazingSevenRingsPower": {
     "NAME": "兵器：炽天覆七重圆环",
     "DESCRIPTIONS": [
       "获得",
-      "点敏捷。获得 壁垒 。受到的伤害减少"
+      "点敏捷。获得 壁垒 。受到的伤害减少",
+      "等级："
     ]
   },
   "LagranYue:ExplosiveArmorPower": {
@@ -94,7 +106,8 @@
     "DESCRIPTIONS": [
       "增加",
       "点敏捷。增加",
-      "点荆棘。"
+      "点荆棘。",
+      "等级："
     ]
   },
   "LagranYue:DreamPower": {
@@ -114,8 +127,8 @@
   "LagranYue:FurnacePower": {
     "NAME": "熔炉+",
     "DESCRIPTIONS": [
-      "每回合开始，兵器获得",
-      "次 锻造 "
+      "每回合开始，锻造",
+      "次 "
     ]
   },
   "LagranYue:KingTreasurePower": {

@@ -45,23 +45,15 @@ public class ChooseHelper {
             cardRewardScreen.codexCard = null;
             ((SingingBowlButton) bowlButtonF.get(cardRewardScreen)).hide();
             ((SkipCardButton) skipButtonF.get(cardRewardScreen)).hide();
-            cardRewardScreen.onCardSelect = true;
+//            cardRewardScreen.onCardSelect = true;
             AbstractDungeon.topPanel.unhoverHitboxes();
             cardRewardScreen.rewardGroup = group;
             AbstractDungeon.isScreenUp = true;
             AbstractDungeon.screen = AbstractDungeon.CurrentScreen.CARD_REWARD;
 //            AbstractDungeon.dynamicBanner.appear(StringConstant.Choose);
             placeCardsM.invoke(cardRewardScreen, (float) Settings.WIDTH / 2.0F, (Float) CARD_TARGET_YF.get(cardRewardScreen));
-        } catch (NoSuchFieldException var9) {
+        } catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException var9) {
             var9.printStackTrace();
-        } catch (IllegalAccessException var10) {
-            var10.printStackTrace();
-        } catch (IllegalArgumentException var11) {
-            var11.printStackTrace();
-        } catch (InvocationTargetException var12) {
-            var12.printStackTrace();
-        } catch (NoSuchMethodException var13) {
-            var13.printStackTrace();
         }
 
     }

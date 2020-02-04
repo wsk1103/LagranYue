@@ -67,7 +67,7 @@ public class AttackPurpleCard extends CustomCard {
         c.isEthereal = true;
         if (upgraded) {
             //改变卡牌费用
-            c.modifyCostForTurn(-c.cost);
+            c.modifyCostForCombat(-c.cost);
         }
         //拿到手中
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));

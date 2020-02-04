@@ -51,7 +51,7 @@ public class ForgingCard extends CustomCard {
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-        ActionUtil.forgingAction(p, this.magicNumber, this.magicNumber);
+        ActionUtil.forgingAction(p);
         ActionUtil.weakPower(p, p, this.magicNumber);
     }//注：卡牌效果的diy区。
 

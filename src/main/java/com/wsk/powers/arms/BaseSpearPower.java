@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.wsk.actions.ActionUtil;
+import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -34,16 +35,23 @@ public class BaseSpearPower extends AbstractSpearPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         this.type = POWER_TYPE;
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, getLevel());
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1);
     }
 
     @Override
     public void updateDescription() {
-        this.description = (basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (basePower + DESCRIPTIONS[0] + this.getLevel() + DESCRIPTIONS[1]
+                + DESCRIPTIONS[2] + this.getLevel());
     }
 
     @Override
@@ -51,4 +59,10 @@ public class BaseSpearPower extends AbstractSpearPower {
         super.onAfterUseCard(card, action);
     }
 
+    @Override
+    public void onRemove() {
+        if (!ArmsUtil.retain()) {
+            ActionUtil.strengthPower(owner, -getLevel());
+        }
+    }
 }

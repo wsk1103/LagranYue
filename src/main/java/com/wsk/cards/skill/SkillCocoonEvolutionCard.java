@@ -37,7 +37,7 @@ public class SkillCocoonEvolutionCard extends CustomCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
-        this.baseBlock = 2;
+        this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = false;
     }
@@ -51,7 +51,7 @@ public class SkillCocoonEvolutionCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(1);
+            this.upgradeBlock(2);
             this.upgradeMagicNumber(1);
         }
     }

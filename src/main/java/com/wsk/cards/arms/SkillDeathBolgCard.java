@@ -40,14 +40,14 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
                 CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ALL);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.durability = this.baseDurability =  DURABILITY;
+        this.magicNumber = this.baseMagicNumber = durability;
         this.isEthereal = false;
-        this.exhaust = true;
+//        this.exhaust = true;
         this.isInnate = false;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
-        this.baseDamage = 5;
-        this.durability = this.baseDurability =  DURABILITY;
+        this.baseDamage = 4;
     }
 
     //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。

@@ -72,7 +72,7 @@ public class AttackKingCard extends CustomCard {
             if (upgraded) {
                 if (c instanceof AbstractArmsCard) {
                     if (c.costForTurn > 0) {
-                        c.modifyCostForTurn(-c.cost);
+                        c.modifyCostForCombat(-c.cost);
                         if (c.costForTurn < 0) {
                             c.costForTurn = 0;
                         }
@@ -81,7 +81,7 @@ public class AttackKingCard extends CustomCard {
             } else {
                 if (c instanceof AbstractArmsCard) {
                     if (c.costForTurn > 0) {
-                        c.modifyCostForTurn(-1);
+                        c.modifyCostForCombat(-1);
                         if (c.costForTurn < 0) {
                             c.costForTurn = 0;
                         }

@@ -88,7 +88,7 @@ public class AttackAerCard extends CustomCard {
             }
         }
         if (froging) {
-            ActionUtil.forgingAction(p, this.magicNumber, this.magicNumber);
+            ActionUtil.forgingAction(p);
         }
         p.energy.use(EnergyPanel.totalCount);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));

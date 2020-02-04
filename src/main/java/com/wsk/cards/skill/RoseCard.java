@@ -69,7 +69,7 @@ public class RoseCard extends CustomCard {
         }
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-        c.modifyCostForTurn(-c.cost);
+        c.modifyCostForCombat(-c.cost);
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
     }
 

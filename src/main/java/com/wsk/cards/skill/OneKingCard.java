@@ -16,6 +16,7 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/3/1
  * @desc 一句话说明
  */
+@Deprecated
 public class OneKingCard extends CustomCard {
     public static final String ID = "LagranYue:OneKingCard";
     private static final String NAME /*= "来自WSK的攻击"*/;
@@ -54,10 +55,10 @@ public class OneKingCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         int temp = ArmsUtil.currentArmsNum(this.magicNumber);
         if (temp > 0) {
-            ActionUtil.forgingAction(p, this.magicNumber, temp);
+            ActionUtil.forgingAction(p);
             ArmsUtil.removeArmsAfter(this.magicNumber);
         } else {
-            ActionUtil.forgingAction(p, this.magicNumber, 1);
+            ActionUtil.forgingAction(p);
         }
     }//注：卡牌效果的diy区。
 

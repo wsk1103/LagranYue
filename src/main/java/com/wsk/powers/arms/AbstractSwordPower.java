@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.wsk.actions.ActionUtil;
+import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.ArmsEnum;
 
 /**
@@ -22,6 +23,9 @@ public abstract class AbstractSwordPower extends AbstractArmsPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (card instanceof AbstractArmsCard) {
+            return;
+        }
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             if (card.target == AbstractCard.CardTarget.ALL
                     || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
@@ -45,5 +49,6 @@ public abstract class AbstractSwordPower extends AbstractArmsPower {
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
             ActionUtil.addPower(owner, new EnergizedPower(owner, 1));
         }
+        super.onAfterUseCard(card, action);
     }
 }

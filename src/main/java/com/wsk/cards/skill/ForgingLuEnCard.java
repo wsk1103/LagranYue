@@ -52,7 +52,7 @@ public class ForgingLuEnCard extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster abstractMonster) {
-        ActionUtil.forgingAction(p, 1, this.magicNumber);
+        ActionUtil.forgingAction(p);
     }
 
     static {

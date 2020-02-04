@@ -54,7 +54,7 @@ public class BraveTemperamentCard extends CustomCard {
         for (AbstractCard card : p.hand.group) {
             if (card instanceof AbstractArmsCard) {
                 if (card.costForTurn > 0) {
-                    card.modifyCostForTurn(-card.cost);
+                    card.modifyCostForCombat(-card.cost);
                     if (card.costForTurn < 0) {
                         card.costForTurn = 0;
                     }

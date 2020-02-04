@@ -37,16 +37,24 @@ public class ChiharaHoundPower extends AbstractArchPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
-        ActionUtil.strengthPower(owner, amount * 3);
+        ActionUtil.strengthPower(owner, getLevel() * 3);
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1 * 3);
     }
 
     @Override
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount * 3 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.getLevel() * 3
+                + DESCRIPTIONS[1] + this.getLevel() + DESCRIPTIONS[2]
+                + DESCRIPTIONS[3] + this.getLevel());
     }
 
 
@@ -59,7 +67,7 @@ public class ChiharaHoundPower extends AbstractArchPower {
                     flash();
                     for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                         if ((!m.isDead) && (!m.isDying)) {
-                            ActionUtil.weakPower(owner, m, amount);
+                            ActionUtil.weakPower(owner, m, getLevel());
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
 //                new WeakPower(target, this.amount, false), this.amount, true, AbstractGameAction.AttackEffect.POISON));
                         }
@@ -70,7 +78,7 @@ public class ChiharaHoundPower extends AbstractArchPower {
                 if (action.target != null) {
                     m = (AbstractMonster) action.target;
                 }
-                ActionUtil.weakPower(owner, m, amount);
+                ActionUtil.weakPower(owner, m, getLevel());
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player,
 //                new WeakPower(target, this.amount, false), this.amount, true, AbstractGameAction.AttackEffect.POISON));
             }
@@ -81,7 +89,7 @@ public class ChiharaHoundPower extends AbstractArchPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            ActionUtil.strengthPower(owner, -this.amount * 3);
+            ActionUtil.strengthPower(owner, -getLevel() * 3);
 //            AbstractDungeon.actionManager.addToBottom(
 //                    new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount * 3));
         }

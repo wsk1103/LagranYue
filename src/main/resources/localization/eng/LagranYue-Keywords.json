@@ -4,133 +4,140 @@
       "weapon"
     ],
     "PROPERNAME": "Weapon",
-    "DESCRIPTION": "When using a Weapon card with the name attached, will get the attribute provided by the card.The upper limit of Weapons`s layer is 3, and the maximum number of equipment is 1."
+    "DESCRIPTION": "When using a Weapon card with the name attached, will get the attribute provided by the card.The maximum number of equipment is 1."
+  },
+  {
+    "NAMES": [
+      "durability"
+    ],
+    "PROPERNAME": "Durability",
+    "DESCRIPTION": "Each time you play a weapon card, the number of layers of weapon is reduced by 1."
   },
   {
     "NAMES": [
       "sublimation"
     ],
     "PROPERNAME": "Sublimation",
-    "DESCRIPTION": "When using a Weapon card with name, choose: if you already have a Weapon, increase the corresponding number of layers; otherwise, replace the attribute provided by the weapon before removing it;Or deal damage/gain block."
+    "DESCRIPTION": "choose: if you already have a Weapon, upgrade corresponding weapons; otherwise, replace the attribute provided by the weapon before removing it;Or deal damage/gain block."
   },
   {
     "NAMES": [
       "dancing"
     ],
     "PROPERNAME": "Dancing",
-    "DESCRIPTION": "According to the type of Weapon, the effect is added. NL Sword:attack,apply 1 Weak;skill:gain 1 entanglePower;power:gain 1 EnergizedPower. NL Crossbow:attack,Apply 2 poison;skill:discard and drawcard;power,attack myself 1 damage. NL Shield:attack:Gain 2 Block;skill:gain 1 poison;power:gain 1 metallicizePower. NL Spear:attack,Apply 1 Vulnerable;skill:doesn`t draw card this round;power:draw 1 card"
+    "DESCRIPTION": "According to the type of Weapon, the effect is added. NL Sword:attack,apply 1 Weak;skill:gain 1 entanglePower;power:gain 1 EnergizedPower. NL Crossbow:attack,Apply 2 poison;skill:discard and drawcard;power,attack myself 1 damage. NL Shield:attack:gain 1 poison;skill:Gain 2 Block;power:gain 1 metallicizePower. NL Spear:attack,Apply 1 Vulnerable;skill:doesn`t draw card this round;power:draw 1 card"
   },
   {
     "NAMES": [
       "sword"
     ],
     "PROPERNAME": "Sword",
-    "DESCRIPTION": "Apply 1 Weak after using AttackCard"
+    "DESCRIPTION": "Depending on the type of weapon card used, get the effect. attack,apply 1 Weak;skill:gain 1 entanglePower;power:gain 1 EnergizedPower"
   },
   {
     "NAMES": [
       "brokensword"
     ],
     "PROPERNAME": "BrokenSword",
-    "DESCRIPTION": "Gain 1 more Strength per BrokenSword . "
+    "DESCRIPTION": "Gain 1 more Strength per BrokenSword`s level . "
   },
   {
     "NAMES": [
       "ganjiangmoye"
     ],
     "PROPERNAME": "GanJiangMoYe",
-    "DESCRIPTION": "Gain 1 more Strength per GanJiangMoYe .The first target you use each round is the enemy's attack card will be repeated N times.(N=Number of layers of GanJiangMoYe)"
+    "DESCRIPTION": "Gain 1 more Strength per GanJiangMoYe`s level .The first target you use each round is the enemy's attack card will be repeated N times.(N=GanJiangMoYe`s level)"
   },
   {
     "NAMES": [
       "bloodthirstysword"
     ],
     "PROPERNAME": "BloodthirstySword",
-    "DESCRIPTION": ".Gain 1 more Strength per BloodthirstySword .After using attack card，Restores the damage N/6 times the health.(N=Number of layers of BloodthirstySword)"
+    "DESCRIPTION": "Gain 1 more Strength per BloodthirstySword`s level .After using attack card，Restores the damage N/6 times the health.(N=BloodthirstySword`s level)"
   },
   {
     "NAMES": [
       "excalibur"
     ],
     "PROPERNAME": "Excalibur",
-    "DESCRIPTION": ".Gain 1 more Strength per Excalibur .Start every turn, gain N TheContractOfVictory.(N=Number of layers of Excalibur)"
+    "DESCRIPTION": "Gain 1 more Strength per Excalibur`s level .Start every turn, gain N TheContractOfVictory.(N=Excalibur`s level)"
   },
   {
     "NAMES": [
       "crossbow"
     ],
     "PROPERNAME": "Crossbow",
-    "DESCRIPTION": "Apply 2 poison after using AttackCard"
+    "DESCRIPTION": "Depending on the type of weapon card used, get the effect.attack,Apply 2 poison;skill:discard and drawcard;power,attack myself 1 damage."
   },
   {
     "NAMES": [
       "brokencrossbow"
     ],
     "PROPERNAME": "BrokenCrossbow",
-    "DESCRIPTION": "Gain 1 more Strength per BrokenCrossbow ."
+    "DESCRIPTION": "Gain 1 more Strength per BrokenCrossbow`s level ."
   },
   {
     "NAMES": [
       "hrunting"
     ],
     "PROPERNAME": "Hrunting",
-    "DESCRIPTION": "Gain 3 more Strength per Hrunting .Apply N Weak after using attack card.(N=Number of layers of Hrunting)"
+    "DESCRIPTION": "Gain 3 more Strength per Hrunting`s level .Apply N Weak after using attack card.(N=Hrunting`s level)"
   },
   {
     "NAMES": [
       "shield"
     ],
     "PROPERNAME": "Shield",
-    "DESCRIPTION": "Gain 2 block after using AttackCard"
+    "DESCRIPTION": "Depending on the type of weapon card used, get the effectattack:Gain 2 Block;skill:gain 1 poison;power:gain 1 metallicizePower."
   },
   {
     "NAMES": [
       "brokenshield"
     ],
     "PROPERNAME": "BrokenShield",
-    "DESCRIPTION": "Gain 1 more Dexterity per BrokenShield ."
+    "DESCRIPTION": "Gain 1 more Dexterity per BrokenShield`s level ."
   },
   {
     "NAMES": [
       "explosivearmor"
     ],
     "PROPERNAME": "ExplosiveArmor",
-    "DESCRIPTION": "Gain 1 more Dexterity per ExplosiveArmor .Gain 3 more Thorns per ExplosiveArmor."
+    "DESCRIPTION": "Gain 1 more Dexterity per ExplosiveArmor`s level .Gain 3 more Thorns per ExplosiveArmor`s level."
   },
   {
     "NAMES": [
       "rhoaias"
     ],
     "PROPERNAME": "RhoAias",
-    "DESCRIPTION": "Gain 1 more Dexterity per RhoAias .Gain Barricade. Each RhoAias reduce 3 damage"
+    "DESCRIPTION": "Gain 1 more Dexterity per RhoAias`s level .Gain Barricade. Each RhoAias`s level reduce 3 damage"
   },
   {
     "NAMES": [
       "spear"
     ],
     "PROPERNAME": "Spear",
-    "DESCRIPTION": "Apply 1 Vulnerable after using AttackCard"
+    "DESCRIPTION": "Depending on the type of weapon card used, get the effectattack,Apply 1 Vulnerable;skill:doesn`t draw card this round;power:draw 1 card."
   },
   {
     "NAMES": [
       "brokenspear"
     ],
     "PROPERNAME": "BrokenSpear",
-    "DESCRIPTION": "Gain 1 more Strength per BrokenSpear ."
+    "DESCRIPTION": "Gain 1 more Strength per BrokenSpear`s level ."
   },
   {
     "NAMES": [
       "gaebolgbolg"
     ],
     "PROPERNAME": "GaeBolgBolg",
-    "DESCRIPTION": "Gain 1 more Strength per GaeBolgBolg .Each GaeBolgBolg apply 2 ImprintOfDeath after using attack card."
+    "DESCRIPTION": "Gain 1 more Strength per GaeBolgBolg`s level .Each GaeBolgBolg`s level apply 2 ImprintOfDeath after using attack card."
   },
   {
     "NAMES": [
       "gaebolg"
     ],
     "PROPERNAME": "GaeBolg",
-    "DESCRIPTION": "Gain 1 more Strength per GaeBolg .Each GaeBolg gain 1 Metalization after using attack card."
+    "DESCRIPTION": "Gain 1 more Strength per GaeBolg`s level .Each GaeBolg`s level gain 1 Metalization after using attack card."
   },
   {
     "NAMES": [
@@ -175,7 +182,7 @@
       "luenruneattack+"
     ],
     "PROPERNAME": "luenrune·attack",
-    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Dancing . Ethereal"
+    "DESCRIPTION": "Damage all enemy that causes M times the sum of all current Weapon layers. Exhaust . Ethereal"
   },
   {
     "NAMES": [

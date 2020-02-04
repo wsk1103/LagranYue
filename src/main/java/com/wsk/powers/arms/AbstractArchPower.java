@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
+import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.ArmsEnum;
 
 /**
@@ -22,7 +23,9 @@ public abstract class AbstractArchPower extends AbstractArmsPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-
+        if (card instanceof AbstractArmsCard) {
+            return;
+        }
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             if (card.target == AbstractCard.CardTarget.ALL
                     || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
@@ -47,6 +50,6 @@ public abstract class AbstractArchPower extends AbstractArmsPower {
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
             ActionUtil.attackMySelf(owner, 1);
         }
-
+        super.onAfterUseCard(card, action);
     }
 }

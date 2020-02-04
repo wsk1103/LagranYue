@@ -11,6 +11,7 @@ import com.wsk.utils.ArmsUtil;
  * @date 2019/3/1
  * @desc 移除第 !M! 件 兵器 之后的所有兵器，然后将移除的 兵器 的总层数增加到第 !M! 件 兵器
  */
+@Deprecated
 public class OneKingAction extends AbstractGameAction {
 
     private AbstractCreature p;
@@ -28,7 +29,7 @@ public class OneKingAction extends AbstractGameAction {
     public void update() {
         int num = ArmsUtil.currentArmsNum(amount);
         ArmsUtil.removeArmsAfter(amount);
-        ActionUtil.forgingAction(p, amount, num);
+//        ActionUtil.forgingAction(p, amount, num);
         this.isDone = true;
         tickDuration();
     }

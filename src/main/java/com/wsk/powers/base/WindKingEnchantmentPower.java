@@ -1,8 +1,10 @@
 package com.wsk.powers.base;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.CommonUtil;
@@ -36,12 +38,13 @@ public class WindKingEnchantmentPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + 8 + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + 4 + DESCRIPTIONS[1]);
     }
 
     @Override
     public void atStartOfTurn() {
         this.flash();
         ActionUtil.reducePower(owner, this.ID, 1);
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, 4));
     }
 }

@@ -38,6 +38,7 @@ public class BlazingSevenRingsPower extends AbstractShieldPower {
         this.img = new Texture(CommonUtil.getResourcePath(IMG));
         this.type = POWER_TYPE;
         updateDescription();
+        initDurability();
     }
 
     @Override
@@ -45,7 +46,17 @@ public class BlazingSevenRingsPower extends AbstractShieldPower {
 //        ArmsUtil.setHasRings(false);
 //        ArmsUtil.addOrChangArms(p, this, amount);
         //获得敏捷
-        ActionUtil.dexterityPower(owner, this.amount);
+        ActionUtil.dexterityPower(owner, this.getLevel());
+        //获得壁垒
+        if (!owner.hasPower(BarricadePower.POWER_ID)) {
+            ActionUtil.barricadePower(owner);
+//            ArmsUtil.setHasRings(true);
+        }
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.dexterityPower(owner, 1);
         //获得壁垒
         if (!owner.hasPower(BarricadePower.POWER_ID)) {
             ActionUtil.barricadePower(owner);
@@ -54,7 +65,9 @@ public class BlazingSevenRingsPower extends AbstractShieldPower {
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + (this.amount) + DESCRIPTIONS[1] + (this.amount * 3) + "。");
+        this.description = (super.basePower + DESCRIPTIONS[0] + (this.getLevel())
+                + DESCRIPTIONS[1] + (this.getLevel() * 3) + "。"
+                + DESCRIPTIONS[2] + this.getLevel());
     }
 
 //    @Override
@@ -69,10 +82,10 @@ public class BlazingSevenRingsPower extends AbstractShieldPower {
 
     //触发时机：当玩家被攻击时，返回伤害数值，可用来修改伤害数值。info.可调用伤害信息。
     public int onAttacked(DamageInfo info, int damageAmount) {//参数：info-伤害信息，damageAmount-伤害数值
-        if (damageAmount <= this.amount * 3) {
+        if (damageAmount <= this.getLevel() * 3) {
             damageAmount = 0;
         } else {
-            damageAmount -= this.amount * 3;
+            damageAmount -= this.getLevel() * 3;
         }
         return damageAmount;
     }
@@ -81,7 +94,7 @@ public class BlazingSevenRingsPower extends AbstractShieldPower {
     public void onRemove() {
         if (!ArmsUtil.retain()) {
             //移除敏捷
-            ActionUtil.dexterityPower(owner, -this.amount);
+            ActionUtil.dexterityPower(owner, -this.getLevel());
             //移除壁垒
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, BarricadePower.POWER_ID));
         }

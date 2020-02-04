@@ -39,21 +39,29 @@ public class DeathBolgPower extends AbstractSpearPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, getLevel());
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1);
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 2 + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.getLevel()
+                + DESCRIPTIONS[1] + this.getLevel() * 2 + DESCRIPTIONS[2]
+                + DESCRIPTIONS[3] + this.getLevel());
     }
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
-            int imprintPower = amount * 2;
+            int imprintPower = getLevel() * 2;
             if (card.target == AbstractCard.CardTarget.ALL
                     || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
                 if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
@@ -79,7 +87,7 @@ public class DeathBolgPower extends AbstractSpearPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            ActionUtil.strengthPower(owner, -amount);
+            ActionUtil.strengthPower(owner, -getLevel());
         }
     }
 }

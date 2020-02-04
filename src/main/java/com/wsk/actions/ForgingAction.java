@@ -18,6 +18,7 @@ import static basemod.patches.com.megacrit.cardcrawl.screens.options.OptionsPane
  * @date 2019/3/1
  * @desc 锻造，使第armsNo件武器的层数+amount
  */
+@Deprecated
 public class ForgingAction extends AbstractGameAction {
 
     private AbstractCreature p;

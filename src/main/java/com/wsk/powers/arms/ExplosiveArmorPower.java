@@ -1,15 +1,10 @@
 package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ArmsUtil;
@@ -44,17 +39,26 @@ public class ExplosiveArmorPower extends AbstractShieldPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, this.amount);
-        ActionUtil.dexterityPower(owner, amount);
-        ActionUtil.thornsPower(owner, amount * 3);
+        ActionUtil.dexterityPower(owner, getLevel());
+        ActionUtil.thornsPower(owner, getLevel() * 3);
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.dexterityPower(owner, 1);
+        ActionUtil.thornsPower(owner, 1 * 3);
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount * 3 + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.getLevel()
+                + DESCRIPTIONS[1] + this.getLevel() * 3 + DESCRIPTIONS[2]
+                + DESCRIPTIONS[3] + this.getLevel());
     }
 
     @Override
@@ -66,16 +70,9 @@ public class ExplosiveArmorPower extends AbstractShieldPower {
     public void onRemove() {
         if (!ArmsUtil.retain()) {
             //移除敏捷
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new DexterityPower(AbstractDungeon.player, -this.amount), -this.amount));
+            ActionUtil.dexterityPower(owner, -this.getLevel());
             //移除荆棘
-            AbstractPower power = AbstractDungeon.player.getPower(ThornsPower.POWER_ID);
-            int thornsNum = power.amount - this.amount;
-            if (thornsNum <= 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ThornsPower.POWER_ID));
-            } else {
-                ActionUtil.thornsPower(owner, -this.amount * 3);
-            }
+            ActionUtil.reducePower(owner, ThornsPower.POWER_ID, this.getLevel() * 3);
         }
     }
 }

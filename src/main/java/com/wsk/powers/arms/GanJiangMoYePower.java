@@ -1,7 +1,6 @@
 package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.utils.ArmsUtil;
@@ -45,16 +43,25 @@ public class GanJiangMoYePower extends AbstractSwordPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, getLevel());
+    }
+
+    @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1);
     }
 
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.getLevel()
+                + DESCRIPTIONS[1] + this.getLevel()
+                + DESCRIPTIONS[2]
+                + DESCRIPTIONS[3] + this.getLevel());
     }
 
     //每回合你使用的目标为敌人的牌都会被重复打出 M 次
@@ -108,8 +115,7 @@ public class GanJiangMoYePower extends AbstractSwordPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+            ActionUtil.strengthPower(owner, -this.getLevel());
         }
     }
 

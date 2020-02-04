@@ -41,7 +41,7 @@ public class FurnacePower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         this.flash();
-        ActionUtil.forgingAction(owner, 1, this.amount);
+        ActionUtil.forgingAction(owner);
 //        ActionUtil.forgingAction(owner, 1, amount);
     }
 }

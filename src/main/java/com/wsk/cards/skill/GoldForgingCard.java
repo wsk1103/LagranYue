@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -56,7 +55,8 @@ public class GoldForgingCard extends CustomCard {
 
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
-        ActionUtil.forgingAction(p, 1, ArmsUtil.onceArmsPlies(1));
+        ActionUtil.forgingAction(p);
+        ActionUtil.upgradeAllArms(p);
     }//注：卡牌效果的diy区。
 
     static {

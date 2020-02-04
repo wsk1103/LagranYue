@@ -3,35 +3,40 @@
     "NAME": "WSK",
     "DESCRIPTIONS": [
       "Start every turn, Gain  ",
-      " Strength ."
+      " Strength .",
+      "Level: "
     ]
   },
   "LagranYue:BaseSwordPower": {
     "NAME": "Weapon BrokenSword",
     "DESCRIPTIONS": [
       "Gain ",
-      " Strength."
+      " Strength.",
+      "Level: "
     ]
   },
   "LagranYue:BaseSpearPower": {
     "NAME": "Weapon BrokenSpear",
     "DESCRIPTIONS": [
       "Gain ",
-      " Strength."
+      " Strength.",
+      "Level: "
     ]
   },
   "LagranYue:BaseArchPower": {
     "NAME": "Weapon BrokenCrossbow",
     "DESCRIPTIONS": [
       "Gain ",
-      " Strength."
+      " Strength.",
+      "Level: "
     ]
   },
   "LagranYue:BaseShieldPower": {
     "NAME": "Weapon BrokenShield",
     "DESCRIPTIONS": [
       "Gain ",
-      " Dexterity."
+      " Dexterity.",
+      "Level: "
     ]
   },
   "LagranYue:GaeBolgPower": {
@@ -39,7 +44,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " Strength, Each GaeBolg gain ",
-      " Metalization after using attack card ."
+      " Metalization after using attack card .",
+      "Level: "
     ]
   },
   "LagranYue:DeathBolgPower": {
@@ -47,7 +53,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " Strength, Each GaeBolgBolg apply ",
-      " *2 ImprintOfDeath after using attack card."
+      " *2 ImprintOfDeath after using attack card.",
+      "Level: "
     ]
   },
   "LagranYue:VictorySwordPower": {
@@ -55,7 +62,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " Strength.Start every turn, gain ",
-      " TheContractOfVictory ."
+      " TheContractOfVictory .",
+      "Level: "
     ]
   },
   "LagranYue:KadeboSwordPower": {
@@ -63,7 +71,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " Strength.After using attack card, Restores the damage ",
-      " times the health."
+      " times the health.",
+      "Level: "
     ]
   },
   "LagranYue:GanJiangMoYePower": {
@@ -71,7 +80,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " Strength.The first target you use each round is the enemy's attack card will be repeated ",
-      " times."
+      " times.",
+      "Level: "
     ]
   },
   "LagranYue:ChiharaHoundPower": {
@@ -79,14 +89,16 @@
     "DESCRIPTIONS": [
       "Gain 3*",
       " Strength.Apply ",
-      " Weak after using attack card ."
+      " Weak after using attack card .",
+      "Level: "
     ]
   },
   "LagranYue:BlazingSevenRingsPower": {
     "NAME": "Weapon RhoAias",
     "DESCRIPTIONS": [
       "Gain ",
-      " Dexterity.Gain Barricade.Damage reduced "
+      " Dexterity.Gain Barricade.Damage reduced ",
+      "Level: "
     ]
   },
   "LagranYue:ExplosiveArmorPower": {
@@ -94,7 +106,8 @@
     "DESCRIPTIONS": [
       "Gain ",
       " Dexterity.Gain 3*",
-      " Thorns."
+      " Thorns.",
+      "Level: "
     ]
   },
   "LagranYue:DreamPower": {
@@ -115,7 +128,7 @@
     "NAME": "Furnace",
     "DESCRIPTIONS": [
       "Start every turn, Forging ",
-      " times "
+      " ."
     ]
   },
   "LagranYue:KingTreasurePower": {

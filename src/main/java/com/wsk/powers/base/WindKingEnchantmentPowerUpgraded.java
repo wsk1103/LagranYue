@@ -37,13 +37,13 @@ public class WindKingEnchantmentPowerUpgraded extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + (this.amount * 8) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.amount * 4) + DESCRIPTIONS[1]);
     }
 
     @Override
     public void atStartOfTurn() {
         flash();
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, (this.amount * 8)));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, (this.amount * 4)));
     }
 }
 

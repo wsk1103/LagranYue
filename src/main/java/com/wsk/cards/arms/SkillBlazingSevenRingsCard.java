@@ -40,15 +40,12 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
                 CardType.SKILL,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 1;
-        this.baseBlock = 15;
-
-        this.isEthereal = false;
-
-        this.exhaust = true;
-
-        this.isInnate = false;
         this.durability = this.baseDurability =  DURABILITY;
+        this.magicNumber = this.baseMagicNumber = durability;
+        this.baseBlock = 12;
+        this.isEthereal = false;
+//        this.exhaust = true;
+        this.isInnate = false;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
+import com.wsk.powers.base.WindKingEnchantmentPower;
 import com.wsk.powers.base.WindKingEnchantmentPowerUpgraded;
 import com.wsk.utils.CommonUtil;
 
@@ -63,7 +64,7 @@ public class PowerWindKingEnchantmentCard extends CustomCard {
         if (upgraded) {
             ActionUtil.addPower(abstractPlayer, new WindKingEnchantmentPowerUpgraded(abstractPlayer, 1));
         } else {
-            ActionUtil.addPower(abstractPlayer, new WindKingEnchantmentPowerUpgraded(abstractPlayer, 4));
+            ActionUtil.addPower(abstractPlayer, new WindKingEnchantmentPower(abstractPlayer, 1));
         }
     }
 

@@ -69,7 +69,7 @@ public class LifeForgingCard extends CustomCard {
             p.getRelic(ChemicalX.ID).flash();
         }
         for (int i = 0; i < energyOnUse; i++) {
-            ActionUtil.forgingAction(p, 1, 1);
+            ActionUtil.upgradeArms(p);
         }
         p.energy.use(EnergyPanel.totalCount);
 //        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));

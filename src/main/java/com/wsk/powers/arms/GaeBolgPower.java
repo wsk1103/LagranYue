@@ -1,14 +1,12 @@
 package com.wsk.powers.arms;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
@@ -29,8 +27,6 @@ public class GaeBolgPower extends AbstractSpearPower {
     //以上两种文本描叙只需写一个，更新文本方法在第36行。
     private static PowerType POWER_TYPE = PowerType.BUFF;
 
-    private static int metallicizePowerNum = 0;
-
     public GaeBolgPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
@@ -43,24 +39,32 @@ public class GaeBolgPower extends AbstractSpearPower {
         this.type = POWER_TYPE;
 //        hasArms();
         updateDescription();
+        initDurability();
     }
 
     @Override
     public void hasArms() {
 //        ArmsUtil.addOrChangArms(owner, this, amount);
-        ActionUtil.strengthPower(owner, amount);
+        ActionUtil.strengthPower(owner, getLevel());
     }
 
+    @Override
+    public void upgradeArms() {
+        ActionUtil.strengthPower(owner, 1);
+    }
+
+    @Override
     public void updateDescription() {
-        this.description = (super.basePower + DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        this.description = (super.basePower + DESCRIPTIONS[0] + this.getLevel()
+                + DESCRIPTIONS[1] + this.getLevel() + DESCRIPTIONS[2]
+                + DESCRIPTIONS[3] + this.getLevel());
     }
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
-            metallicizePowerNum += this.amount;
             //获得多层护甲
-            ActionUtil.metallicizePower(owner, amount);
+            ActionUtil.metallicizePower(owner, getLevel());
 //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                    new PlatedArmorPower(AbstractDungeon.player, amount), amount, AbstractGameAction.AttackEffect.POISON));
         }
@@ -78,19 +82,9 @@ public class GaeBolgPower extends AbstractSpearPower {
     @Override
     public void onRemove() {
         if (!ArmsUtil.retain()) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                    new StrengthPower(AbstractDungeon.player, -this.amount), -this.amount));
+            ActionUtil.strengthPower(AbstractDungeon.player, -this.getLevel());
             //移除金属化
-            if (owner.hasPower(MetallicizePower.POWER_ID)) {
-                int temp = owner.getPower(MetallicizePower.POWER_ID).amount;
-                if (temp <= metallicizePowerNum) {
-                    ActionUtil.removePower(owner, MetallicizePower.POWER_ID);
-                }
-                else {
-                    ActionUtil.metallicizePower(owner, -metallicizePowerNum);
-                }
-                metallicizePowerNum = 0;
-            }
+            ActionUtil.reducePower(AbstractDungeon.player, MetallicizePower.POWER_ID, this.getLevel());
         }
     }
 }

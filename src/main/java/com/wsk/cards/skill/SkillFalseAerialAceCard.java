@@ -47,14 +47,14 @@ public class SkillFalseAerialAceCard extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(2);
+            this.upgradeMagicNumber(1);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ActionUtil.gainBlockAction(p, this.block);
         ActionUtil.addPower(p, new AerialAcePower(p, this.magicNumber));
+        ActionUtil.gainBlockAction(p, this.block);
     }
 
     static {
