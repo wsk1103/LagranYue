@@ -49,6 +49,7 @@ public class AttackEngravingRoseCard extends CustomCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ActionUtil.randomAttack(p, this.baseDamage, this.magicNumber);
+        ActionUtil.imprintPower(p, m, 2);
     }
 
     static {

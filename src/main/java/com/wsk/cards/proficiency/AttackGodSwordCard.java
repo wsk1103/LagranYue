@@ -46,7 +46,7 @@ public class AttackGodSwordCard extends AbstractProfSwordCard {
     /**
      * 卡牌的费用。
      */
-    private static final int COST = 0;
+    private static final int COST = 4;
 
 
     public AttackGodSwordCard() {
@@ -57,7 +57,7 @@ public class AttackGodSwordCard extends AbstractProfSwordCard {
                 CardTarget.ENEMY);
         this.proficiency = this.baseProficiency = 10;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 1;
+        this.baseDamage = 2;
         this.magicNumber = this.baseMagicNumber = 4;
 
         this.isEthereal = false;

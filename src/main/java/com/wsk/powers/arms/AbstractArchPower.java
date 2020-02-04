@@ -33,7 +33,7 @@ public abstract class AbstractArchPower extends AbstractArmsPower {
                     flash();
                     for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                         if ((!m.isDead) && (!m.isDying)) {
-                            ActionUtil.poisonPower(AbstractDungeon.player, m, 2);
+                            ActionUtil.vulnerablePower(AbstractDungeon.player, m, 1);
                         }
                     }
                 }
@@ -42,13 +42,28 @@ public abstract class AbstractArchPower extends AbstractArmsPower {
                 if (action.target != null) {
                     m = (AbstractMonster) action.target;
                 }
-                ActionUtil.poisonPower(AbstractDungeon.player, m, 2);
+                ActionUtil.vulnerablePower(AbstractDungeon.player, m, 1);
             }
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
-            ActionUtil.disRandomCard(owner, 1);
-            ActionUtil.drawCard(owner, 1);
+            ActionUtil.frailPower(AbstractDungeon.player, AbstractDungeon.player, 1);
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
-            ActionUtil.attackMySelf(owner, 1);
+            if (card.target == AbstractCard.CardTarget.ALL
+                    || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
+                if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                    flash();
+                    for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                        if ((!m.isDead) && (!m.isDying)) {
+                            ActionUtil.attackFix(AbstractDungeon.player, m, 3);
+                        }
+                    }
+                }
+            } else {
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+                ActionUtil.attackFix(AbstractDungeon.player, m, 3);
+            }
         }
         super.onAfterUseCard(card, action);
     }

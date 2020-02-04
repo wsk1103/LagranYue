@@ -68,10 +68,11 @@ public abstract class AbstractArmsPower extends AbstractPower {
 
     public int upgrade() {
         this.flash();
+        this.amount = this.durability;
+        upgradeArms();
         setLevel(level + 1);
 //        hasArms();
         updateDescription();
-        upgradeArms();
         return level;
     }
 

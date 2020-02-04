@@ -9,11 +9,11 @@
   },
   "LagranYue:AttackEngravingRoseCard": {
     "NAME": "Engraving of Rose",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. "
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL apply 2 ImprintOfDeath "
   },
   "LagranYue:AttackFlintCard": {
     "NAME": "Flint Attack",
-    "DESCRIPTION": "Deal !D! damage !M! times. "
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain 1 Weak "
   },
   "LagranYue:AttackCellGodCard": {
     "NAME": "Eight God",
@@ -89,8 +89,8 @@
   },
   "LagranYue:AttackFutureCard": {
     "NAME": "Past and Future",
-    "DESCRIPTION": "Deal absolute value of the difference between the number of draws and the exhaust team damage. NL Chaos .",
-    "UPGRADE_DESCRIPTION": "Deal absolute value of the difference between the number of draws and the exhaust team damage. NL Chaos ."
+    "DESCRIPTION": "Deal !D! damage. Upgrade Weapon once. NL Chaos .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Upgrade and fix Weapon once. NL Chaos ."
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "Waltz of Love",
@@ -104,8 +104,8 @@
   },
   "LagranYue:AttackAerCard": {
     "NAME": "Aer",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL if cost [E] [E] , execution !M! Forging . ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL if cost [E] , execution !M! Forging . "
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL if cost [E] [E] , Forging . ",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL if cost [E] , Forging . "
   },
   "LagranYue:AttackLuEnCard": {
     "NAME": "LuEnRune·Attack",
@@ -124,11 +124,11 @@
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "Magic of Glass",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal !D! damage to a random enemy !M! times.Gain 1 Mind . "
+    "DESCRIPTION": " SkillPoint : !SkillPoint! . Deal !D! damage to a random enemy !M! times.Gain 1 Mind .  NL Exhaust ."
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "One-stroke Sword",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies.Gain 1 Divinity . NL Exhaust ."
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage ."
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "Nome`s Gold Sword",
@@ -137,8 +137,8 @@
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "Degenerate",
-    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage !M! times to all enemies. ",
-    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage !M! times to all enemies. "
+    "DESCRIPTION": " SkillPoint : !SkillPoint! .Deal !D! damage. Strength tripled.",
+    "UPGRADE_DESCRIPTION": " SkillPoint :1.Deal !D! damage . Strength tripled."
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "Enchantment",

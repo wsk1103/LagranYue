@@ -2,11 +2,13 @@ package com.wsk.powers.proficiency;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.wsk.actions.ActionUtil;
 import com.wsk.actions.BottomDrawCardFeeZeroAction;
 import com.wsk.utils.CommonUtil;
 
@@ -55,4 +57,10 @@ public class ProtectionArrowsPower extends AbstractPower {
         }
         return damageAmount;
     }
+
+    @Override
+    public void onExhaust(AbstractCard card) {
+        ActionUtil.drawCard(owner, amount);
+    }
+
 }

@@ -1,13 +1,16 @@
 package com.wsk.cards.proficiency;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
@@ -104,11 +107,20 @@ public class AttackDegenerateCard extends AbstractProfSpearCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int point = 0;
+        for (AbstractPower power : p.powers) {
+            if (power.ID.equals(StrengthPower.POWER_ID)) {
+                point = power.amount;
+                break;
+            }
+        }
         for (int i = 0; i < this.magicNumber; i++) {
             if (i % 2 == 0) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                        new DamageInfo(p, this.damage + point * 2, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
             } else {
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
+                        new DamageInfo(p, this.damage + point * 2, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
         }
     }

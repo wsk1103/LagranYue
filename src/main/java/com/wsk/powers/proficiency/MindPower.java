@@ -1,7 +1,6 @@
 package com.wsk.powers.proficiency;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -38,7 +37,16 @@ public class MindPower extends AbstractPower {
     }
 
     @Override
-    public void onExhaust(AbstractCard card) {
-        ActionUtil.gainEnergy(amount);
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.type == PowerType.DEBUFF && source == this.owner && target == this.owner) {
+            this.flash();
+            ActionUtil.drawCard(owner, 1);
+        }
+
     }
+
+//    @Override
+//    public void onExhaust(AbstractCard card) {
+//        ActionUtil.gainEnergy(amount);
+//    }
 }

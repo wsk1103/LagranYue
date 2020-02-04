@@ -18,7 +18,7 @@
       "sublimation"
     ],
     "PROPERNAME": "Sublimation",
-    "DESCRIPTION": "choose: if you already have a Weapon, upgrade corresponding weapons; otherwise, replace the attribute provided by the weapon before removing it;Or deal damage/gain block."
+    "DESCRIPTION": "choose: if you already have a Weapon, fix and upgrade corresponding weapons; otherwise, replace the attribute provided by the weapon before removing it;Or deal damage/gain block."
   },
   {
     "NAMES": [

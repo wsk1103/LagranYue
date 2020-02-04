@@ -174,8 +174,15 @@ public class ActionUtil {
 
     //更新武器
     public static void upgradeArms(AbstractCreature p, AbstractArmsPower armsPower) {
-        armsPower.upgrade();
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, armsPower, armsPower.getDurability()));
+//        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, armsPower, armsPower.getDurability()));
+        for (AbstractPower power : p.powers) {
+            if (power instanceof AbstractArmsPower) {
+                if (power.ID.equals(armsPower.ID)) {
+                    ((AbstractArmsPower) power).upgrade();
+                    return;
+                }
+            }
+        }
     }
 
     //添加能力
@@ -252,6 +259,17 @@ public class ActionUtil {
     public static void attackMySelf(AbstractCreature p, int amount) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p,
                 new DamageInfo(p, amount, DamageInfo.DamageType.THORNS)));
+    }
+
+    /**
+     * 造成固定伤害
+     *
+     * @param p
+     * @param amount
+     */
+    public static void attackFix(AbstractCreature p, AbstractCreature to, int amount) {
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(to,
+                new DamageInfo(p, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     /**

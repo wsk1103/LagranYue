@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.utils.ArmsUtil;
@@ -62,13 +63,35 @@ public class GaeBolgPower extends AbstractSpearPower {
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
+        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
+            int imprintPower = getLevel() * 2;
+            if (card.target == AbstractCard.CardTarget.ALL
+                    || card.target == AbstractCard.CardTarget.ALL_ENEMY) {
+                if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                    flash();
+                    for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+                        if ((!m.isDead) && (!m.isDying)) {
+                            ActionUtil.imprintPower(AbstractDungeon.player, m, imprintPower);
+                        }
+                    }
+                }
+            } else {
+                AbstractMonster m = null;
+                if (action.target != null) {
+                    m = (AbstractMonster) action.target;
+                }
+                ActionUtil.imprintPower(AbstractDungeon.player, m, imprintPower);
+            }
+        }
+        super.onAfterUseCard(card, action);
+/*        if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
             //获得多层护甲
             ActionUtil.metallicizePower(owner, getLevel());
 //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
 //                    new PlatedArmorPower(AbstractDungeon.player, amount), amount, AbstractGameAction.AttackEffect.POISON));
         }
         super.onAfterUseCard(card, action);
+        */
     }
 
 //    @Override

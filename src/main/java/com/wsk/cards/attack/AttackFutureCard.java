@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.ArmsUtil;
 import com.wsk.utils.CommonUtil;
@@ -59,11 +60,9 @@ public class AttackFutureCard extends CustomCard {
     //以上为卡牌的必备内容，不可缺少。
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         //注：以下注释里：执行者 指动作效果生效的目标。给予者 指产生动作效果的来源。
-        int draw = p.drawPile.group.size();
-        int exhaust = p.exhaustPile.group.size();
-        int atk = Math.abs(draw - exhaust);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
-                new DamageInfo(p, atk, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        ActionUtil.upgradeArms(p);
         ArmsUtil.setTemporaryArms(true);
     }//注：卡牌效果的diy区。
 

@@ -8,9 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
-import com.wsk.powers.proficiency.DivinityPower;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -18,7 +16,6 @@ import com.wsk.utils.CommonUtil;
  * @date 2019/3/20
  * @description 一击神剑
  */
-@Deprecated
 public class AttackMagicSwordCard extends AbstractProfSwordCard {
 
     /**
@@ -45,7 +42,7 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
     /**
      * 卡牌的费用。
      */
-    private static final int COST = 2;
+    private static final int COST = 3;
 
 
     public AttackMagicSwordCard() {
@@ -53,11 +50,11 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
                 CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
                 CardRarity.RARE,
-                CardTarget.ALL_ENEMY);
+                CardTarget.ENEMY);
         this.proficiency = this.baseProficiency = 10;
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
-        this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 9;
+        this.baseDamage = 24;
+        this.magicNumber = this.baseMagicNumber = 24;
 
         this.isEthereal = false;
 
@@ -85,9 +82,9 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
 
             this.upgradeName();
 
-//            this.upgradeDamage(5);
+            this.upgradeDamage(6);
             // 升级而增加的特殊值。增加的是baseMagicNumber
-            this.upgradeMagicNumber(3);
+//            this.upgradeMagicNumber(6);
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！
 //            this.upgradeBaseCost(1);
             // 虚无属性。
@@ -105,10 +102,8 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
      */
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ActionUtil.addPower(p, new DivinityPower(p));
-        for (int i = 0; i < this.magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-        }
+//        ActionUtil.addPower(p, new DivinityPower(p));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 
     static {

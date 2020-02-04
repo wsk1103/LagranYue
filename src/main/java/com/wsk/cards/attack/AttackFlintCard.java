@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.wsk.actions.ActionUtil;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
@@ -60,6 +61,7 @@ public class AttackFlintCard extends CustomCard {
                         new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
             }
         }
+        ActionUtil.weakPower(p, p, 1);
     }
 
     static {

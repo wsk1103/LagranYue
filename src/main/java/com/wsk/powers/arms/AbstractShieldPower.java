@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.ArmsEnum;
+import com.wsk.powers.proficiency.AerialAcePower;
 
 /**
  * @author wsk1103
@@ -26,11 +27,11 @@ public abstract class AbstractShieldPower extends AbstractArmsPower {
             return;
         }
         if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.ATTACK) {
-            ActionUtil.poisonPower(owner, owner, 1);
+            ActionUtil.weakPower(owner, owner, 1);
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
             ActionUtil.gainBlockAction(AbstractDungeon.player, 2);
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
-            ActionUtil.metallicizePower(AbstractDungeon.player, 1);
+            ActionUtil.addPower(AbstractDungeon.player, new AerialAcePower(AbstractDungeon.player, 1));
         }
         super.onAfterUseCard(card, action);
     }

@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NoDrawPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.ArmsEnum;
+import com.wsk.powers.proficiency.DistortionPower;
 
 /**
  * @author wsk1103
@@ -36,7 +36,7 @@ public abstract class AbstractSpearPower extends AbstractArmsPower {
                     for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                         if ((!m.isDead) && (!m.isDying)) {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
-                                    new VulnerablePower(m, 1, false), 1,
+                                    new PoisonPower(m, AbstractDungeon.player, 1), 1,
                                     true, AbstractGameAction.AttackEffect.POISON));
                         }
                     }
@@ -47,13 +47,13 @@ public abstract class AbstractSpearPower extends AbstractArmsPower {
                     m = (AbstractMonster) action.target;
                 }
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
-                        new VulnerablePower(m, 1, false), 1,
+                        new PoisonPower(m, AbstractDungeon.player, 1), 1,
                         true, AbstractGameAction.AttackEffect.POISON));
             }
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
-            ActionUtil.addPower(owner, new NoDrawPower(owner));
+            ActionUtil.poisonPower(owner, owner, 1);
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
-            ActionUtil.drawCard(owner, 1);
+            ActionUtil.addPower(owner, owner, new DistortionPower(owner, 1));
         }
         super.onAfterUseCard(card, action);
     }

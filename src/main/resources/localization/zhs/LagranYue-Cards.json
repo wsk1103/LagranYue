@@ -9,11 +9,11 @@
   },
   "LagranYue:AttackEngravingRoseCard": {
     "NAME": "蔷薇的刻印",
-    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 "
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次。 NL 给予 2 层 死亡印记 "
   },
   "LagranYue:AttackFlintCard": {
     "NAME": "燧石炮",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 "
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得1层 虚弱 "
   },
   "LagranYue:AttackCellGodCard": {
     "NAME": "神明八胞",
@@ -89,8 +89,8 @@
   },
   "LagranYue:AttackFutureCard": {
     "NAME": "过去和未来",
-    "DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 NL 混沌 ",
-    "UPGRADE_DESCRIPTION": "造成抽牌堆和消耗队之间数量的差值的绝对值点伤害。 NL 混沌 "
+    "DESCRIPTION": "造成 !D! 点伤害。升级 兵器 1次。 NL 混沌 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。修复和升级 兵器 1次。 NL 混沌 "
   },
   "LagranYue:AttackWaltzCard": {
     "NAME": "爱的华尔兹",
@@ -104,8 +104,8 @@
   },
   "LagranYue:AttackAerCard": {
     "NAME": "阿尔托利亚",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL 如果消费 [E] [E] ，执行 !M! 次 锻造 ",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 X+1 次。 NL 如果消费 [E] ，执行 !M! 次 锻造 "
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL 如果消费 [E] [E] ， 锻造 ",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 X+1 次。 NL 如果消费 [E] ， 锻造 "
   },
   "LagranYue:AttackLuEnCard": {
     "NAME": "卢恩符文·攻",
@@ -124,11 +124,11 @@
   },
   "LagranYue:AttackDivineGuidanceCard": {
     "NAME": "玻璃之神引",
-    "DESCRIPTION": " 技能点 : !SkillPoint! . 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 "
+    "DESCRIPTION": " 技能点 : !SkillPoint! . 随机对敌人造成 !D! 点伤害 !M! 次。获得1层 心眼 。 NL 消耗 "
   },
   "LagranYue:AttackMagicSwordCard": {
     "NAME": "一击神剑",
-    "DESCRIPTION": " 技能点 : !SkillPoint! . 对所有敌人造成 !D! 点伤害 !M! 次。获得1层 神性 NL 消耗 "
+    "DESCRIPTION": " 技能点 : !SkillPoint! . 对所有敌人造成 !D! 点伤害。"
   },
   "LagranYue:AttackGodSwordCard": {
     "NAME": "八汰神剑",
@@ -137,8 +137,8 @@
   },
   "LagranYue:AttackDegenerateCard": {
     "NAME": "堕落",
-    "DESCRIPTION": " 技能点 : !SkillPoint! .对所有敌人造成 !D! 点伤害 !M! 次。 ",
-    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! .对所有敌人造成 !D! 点伤害 !M! 次。 "
+    "DESCRIPTION": " 技能点 : !SkillPoint! .对敌人造成 !D! 点伤害。 力量 加成为3倍。 ",
+    "UPGRADE_DESCRIPTION": " 技能点 : !SkillPoint! .对敌人造成 !D! 点伤害。 力量 加成为3倍。  "
   },
   "LagranYue:AttackEnchantmentCard": {
     "NAME": "魅惑",

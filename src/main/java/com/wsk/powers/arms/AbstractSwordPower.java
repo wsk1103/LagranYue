@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
-import com.megacrit.cardcrawl.powers.EntanglePower;
 import com.wsk.actions.ActionUtil;
 import com.wsk.cards.AbstractArmsCard;
 import com.wsk.patches.ArmsEnum;
@@ -45,7 +44,7 @@ public abstract class AbstractSwordPower extends AbstractArmsPower {
                 ActionUtil.weakPower(AbstractDungeon.player, m, 1);
             }
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.SKILL) {
-            ActionUtil.addPower(owner, new EntanglePower(owner));
+            ActionUtil.disSelectCard(owner, 1);
         } else if ((!card.purgeOnUse) && card.type == AbstractCard.CardType.POWER) {
             ActionUtil.addPower(owner, new EnergizedPower(owner, 1));
         }
