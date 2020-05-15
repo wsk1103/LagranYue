@@ -82,12 +82,8 @@ public class AttackDegenerateCard extends AbstractProfSpearCard {
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-
             this.upgradeName();
-
             this.upgradeDamage(2);
-
-
             // 升级而增加的特殊值。增加的是baseMagicNumber
 //            this.upgradeMagicNumber(1);
             // 升级后的费用。注意括号内的值即为费用，与上方不同！！！！
