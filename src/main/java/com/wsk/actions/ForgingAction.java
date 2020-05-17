@@ -21,9 +21,9 @@ import static basemod.patches.com.megacrit.cardcrawl.screens.options.OptionsPane
 @Deprecated
 public class ForgingAction extends AbstractGameAction {
 
-    private AbstractCreature p;
-    private int amount;
-    private int armsNo;
+    private final AbstractCreature p;
+    private final int amount;
+    private final int armsNo;
 
     public ForgingAction(AbstractCreature creature, int armsNo, int amount) {
         this.p = creature;
