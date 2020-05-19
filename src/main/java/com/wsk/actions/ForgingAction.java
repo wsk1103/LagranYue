@@ -50,15 +50,15 @@ public class ForgingAction extends AbstractGameAction {
         tickDuration();
     }
 
-    public static boolean addArmsNum(AbstractArmsPower power, int amount) {
+    public static void addArmsNum(AbstractArmsPower power, int amount) {
         int armsNum = ArmsUtil.currentArmsNum(power);
         int maxNum = ArmsUtil.currentMaxArmsPlies();
         if (armsNum >= maxNum) {
-            return false;
+            return;
         } else if (amount + armsNum > maxNum) {
             amount = maxNum - armsNum;
         } else if (amount < 0) {
-            return false;
+            return;
         }
         AbstractArmsPower newPower = null;
         try {
@@ -79,7 +79,6 @@ public class ForgingAction extends AbstractGameAction {
 //            //获取加成
 //            newPower.hasArms();
         }
-        return true;
     }
 
 }
