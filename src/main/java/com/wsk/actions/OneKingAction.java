@@ -14,8 +14,8 @@ import com.wsk.utils.ArmsUtil;
 @Deprecated
 public class OneKingAction extends AbstractGameAction {
 
-    private AbstractCreature p;
-    private int amount;
+    private final AbstractCreature p;
+    private final int amount;
 
     public OneKingAction(AbstractCreature creature, int amount) {
         this.p = creature;
@@ -29,7 +29,6 @@ public class OneKingAction extends AbstractGameAction {
     public void update() {
         int num = ArmsUtil.currentArmsNum(amount);
         ArmsUtil.removeArmsAfter(amount);
-//        ActionUtil.forgingAction(p, amount, num);
         this.isDone = true;
         tickDuration();
     }
