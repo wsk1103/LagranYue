@@ -16,8 +16,8 @@ import com.wsk.helps.ChooseHelper;
  */
 public class ChooseAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private AbstractChooseCard card;
-    private CardGroup choices;
+    private final AbstractChooseCard card;
+    private final CardGroup choices;
 
     public ChooseAction(AbstractChooseCard c, CardGroup choices) {
         AbstractPlayer p = AbstractDungeon.player;

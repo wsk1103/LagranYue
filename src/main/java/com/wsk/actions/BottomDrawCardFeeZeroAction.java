@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  * @description 打出抽牌堆最后1张牌
  */
 public class BottomDrawCardFeeZeroAction extends AbstractGameAction {
-    private boolean exhaustCards;
+    private final boolean exhaustCards;
 
     public BottomDrawCardFeeZeroAction(AbstractCreature target, boolean exhausts) {
         this.duration = Settings.ACTION_DUR_FAST;
