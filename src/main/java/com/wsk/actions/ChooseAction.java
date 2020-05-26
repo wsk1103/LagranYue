@@ -32,7 +32,6 @@ public class ChooseAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             ChooseHelper.open(this.choices.group);
-            this.tickDuration();
         } else {
             if (!this.retrieveCard) {
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
@@ -45,7 +44,7 @@ public class ChooseAction extends AbstractGameAction {
                 this.retrieveCard = true;
             }
 
-            this.tickDuration();
         }
+        this.tickDuration();
     }
 }

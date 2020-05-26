@@ -22,9 +22,9 @@ public class CopyCardAction extends AbstractGameAction {
     public static final String[] TEXT = UI_STRINGS.TEXT;
 
     private static final float DURATION_PER_CARD = 0.25F;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private int dupeAmount = 1;
-    private ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
+    private final ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
 
     public CopyCardAction(AbstractCreature source) {
         setValues(AbstractDungeon.player, source);
