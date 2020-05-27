@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.wsk.actions.UncharnelAction;
+import com.wsk.actions.UnCharnelAction;
 import com.wsk.patches.AbstractCardEnum;
 import com.wsk.utils.CommonUtil;
 
@@ -63,9 +63,9 @@ public class AttackSummerCard extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {//局部变量：p-玩家，m敌人。
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new UncharnelAction(true, false));
+            AbstractDungeon.actionManager.addToBottom(new UnCharnelAction(true, false));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false, false));
+            AbstractDungeon.actionManager.addToBottom(new UnCharnelAction(false, false));
         }
     }//注：卡牌效果的diy区。
 

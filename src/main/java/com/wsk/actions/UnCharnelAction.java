@@ -17,15 +17,15 @@ import java.util.Iterator;
  * @date 2019/2/25
  * @desc 将消耗区中的一张牌加到手中，如果是升级过的，将费用降为0
  */
-public class UncharnelAction extends AbstractGameAction {
-    private AbstractPlayer p;
+public class UnCharnelAction extends AbstractGameAction {
+    private final AbstractPlayer p;
     private final boolean upgrade;
     private final boolean costToZero;
-    private static final UIStrings uiStrings;
+    private static final UIStrings UI_STRINGS;
     public static final String[] TEXT;
-    private ArrayList<AbstractCard> exhumes = new ArrayList<>();
+    private final ArrayList<AbstractCard> exhumes = new ArrayList<>();
 
-    public UncharnelAction(boolean costToZero, boolean upgrade) {
+    public UnCharnelAction(boolean costToZero, boolean upgrade) {
         this.upgrade = upgrade;
         this.costToZero = costToZero;
         this.setValues(this.p = AbstractDungeon.player, AbstractDungeon.player, this.amount);
@@ -116,7 +116,7 @@ public class UncharnelAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ExhumeAction");
-        TEXT = uiStrings.TEXT;
+        UI_STRINGS = CardCrawlGame.languagePack.getUIString("ExhumeAction");
+        TEXT = UI_STRINGS.TEXT;
     }
 }

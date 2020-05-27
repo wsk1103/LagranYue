@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.wsk.actions.UncharnelAction;
+import com.wsk.actions.UnCharnelAction;
 import com.wsk.utils.CommonUtil;
 
 /**
@@ -44,7 +44,7 @@ public class DreamPower extends AbstractPower {
     public void atStartOfTurn() {
         this.flash();
         for (int i = 0; i < this.amount; i++) {
-            AbstractDungeon.actionManager.addToBottom(new UncharnelAction(false, false));
+            AbstractDungeon.actionManager.addToBottom(new UnCharnelAction(false, false));
         }
     }
 }
