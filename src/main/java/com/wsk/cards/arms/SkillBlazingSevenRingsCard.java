@@ -28,7 +28,7 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     private static final String UPGRADED_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
 
-    private static final CardStrings cardStrings;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);;
 
     private static final String IMG = "cards/SkillBlazingSevenRingsCard.png";
 
@@ -89,7 +89,6 @@ public class SkillBlazingSevenRingsCard extends AbstractShieldCard {
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
