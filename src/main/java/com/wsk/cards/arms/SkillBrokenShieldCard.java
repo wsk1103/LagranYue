@@ -22,12 +22,12 @@ import com.wsk.utils.CommonUtil;
  */
 public class SkillBrokenShieldCard extends AbstractShieldCard {
     public static final String ID = "LagranYue:SkillBrokenShieldCard";
-    private static final String NAME;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String NAME = cardStrings.NAME;
 
-    private static final String DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION;
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final CardStrings cardStrings;
 
     private static final String IMG = "cards/SkillBrokenShieldCard.png";
 
@@ -50,6 +50,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
     }
 
+    @Override
     public AbstractCard makeCopy() {
         return new SkillBrokenShieldCard();
     }
@@ -86,10 +87,4 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
 
     }
 
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    }
 }
