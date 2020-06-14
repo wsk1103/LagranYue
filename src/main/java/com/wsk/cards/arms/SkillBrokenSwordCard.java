@@ -23,12 +23,12 @@ import com.wsk.utils.CommonUtil;
  */
 public class SkillBrokenSwordCard extends AbstractSwordCard {
     public static final String ID = "LagranYue:SkillBrokenSwordCard";
-    private static final String NAME;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String         NAME = cardStrings.NAME;
 
-    private static final String DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION;
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final CardStrings cardStrings;
 
     private static final String IMG = "cards/SkillBrokenSwordCard.png";
 
@@ -89,12 +89,5 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
                             AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
 
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 }
