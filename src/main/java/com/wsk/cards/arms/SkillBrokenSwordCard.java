@@ -67,9 +67,6 @@ public class SkillBrokenSwordCard extends AbstractSwordCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        //获得能力
-//        BaseSwordPower power = new BaseSwordPower(p, this.magicNumber);
-//        ArmsUtil.addOrChangArms(p, power);
         AbstractDungeon.actionManager.addToBottom(new ChooseAction(this, this.getChooseCardGroup()));
     }
 

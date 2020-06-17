@@ -23,13 +23,13 @@ import com.wsk.utils.CommonUtil;
  */
 public class SkillChiharaHoundCard extends AbstractArchCard {
     public static final String ID = "LagranYue:SkillChiharaHoundCard";
-    private static final String NAME;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String NAME = cardStrings.NAME;
 
-    private static final String DESCRIPTION;
-    private static final String UPGRADED_DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION;
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    private static final String UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final CardStrings cardStrings;
 
     private static final String IMG = "cards/SkillChiharaHoundCard.png";
 
@@ -48,7 +48,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
         this.baseDamage = 4;
-        this.durability = this.baseDurability =  DURABILITY;
+        this.durability = this.baseDurability = DURABILITY;
     }
 
     public AbstractCard makeCopy() {
@@ -89,14 +89,6 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
                             AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
 }
