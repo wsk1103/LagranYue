@@ -68,8 +68,6 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-//        ChiharaHoundPower power = new ChiharaHoundPower(abstractPlayer, this.magicNumber);
-//        ArmsUtil.addOrChangArms(abstractPlayer, power);
         AbstractDungeon.actionManager.addToBottom(new ChooseAction(this, this.getChooseCardGroup()));
     }
 
