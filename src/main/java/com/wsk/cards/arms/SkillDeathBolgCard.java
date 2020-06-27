@@ -23,12 +23,12 @@ import com.wsk.utils.CommonUtil;
  */
 public class SkillDeathBolgCard extends AbstractSpearCard {
     public static final String ID = "LagranYue:SkillDeathBolgCard";
-    private static final String NAME;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    private static final String NAME = cardStrings.NAME;
 
-    private static final String DESCRIPTION;
-    public static final String[] EXTENDED_DESCRIPTION;
+    private static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
-    private static final CardStrings cardStrings;
 
     private static final String IMG = "cards/SkillDeathBolgCard.png";
 
@@ -40,7 +40,7 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
                 CardType.ATTACK,
                 AbstractCardEnum.LagranYue,
                 CardRarity.UNCOMMON, CardTarget.ALL);
-        this.durability = this.baseDurability =  DURABILITY;
+        this.durability = this.baseDurability = DURABILITY;
         this.magicNumber = this.baseMagicNumber = durability;
         this.isEthereal = false;
 //        this.exhaust = true;
@@ -50,7 +50,7 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
         this.baseDamage = 4;
     }
 
-    //用于显示在卡牌一览里。同时也是诸多卡牌复制效果所需要调用的基本方法，用来获得一张该卡的原始模板修改后加入手牌/抽牌堆/弃牌堆/牌组。
+    @Override
     public AbstractCard makeCopy() {
         return new SkillDeathBolgCard();
     }
@@ -92,11 +92,4 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
 
     }
 
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-//        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    }
 }
