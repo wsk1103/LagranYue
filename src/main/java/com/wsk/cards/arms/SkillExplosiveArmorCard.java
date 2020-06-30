@@ -90,6 +90,5 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
             }
             ActionUtil.gainBlockAction(AbstractDungeon.player, this.block);
         }
-
     }
 }
