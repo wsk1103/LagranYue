@@ -70,9 +70,6 @@ public class SkillExplosiveArmorCard extends AbstractShieldCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //获得格挡
-//        ActionUtil.gainBlockAction(p, this.block);
-//        ExplosiveArmorPower power = new ExplosiveArmorPower(p, this.magicNumber);
-//        ArmsUtil.addOrChangArms(p, power);
         AbstractDungeon.actionManager.addToBottom(new ChooseAction(this, this.getChooseCardGroup()));
     }
 
