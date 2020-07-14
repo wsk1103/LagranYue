@@ -68,8 +68,6 @@ public class SkillGaeBolgCard extends AbstractSpearCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
         //兵器：刺穿死棘之枪
-//        GaeBolgPower power = new GaeBolgPower(abstractPlayer, this.magicNumber);
-//        ArmsUtil.addOrChangArms(abstractPlayer, power);
         AbstractDungeon.actionManager.addToBottom(new ChooseAction(this, this.getChooseCardGroup()));
     }
 
