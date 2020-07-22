@@ -26,7 +26,6 @@ public class SkillGanJiangMoYeSwordCard extends AbstractSwordCard {
     private static final String NAME;
 
     private static final String DESCRIPTION;
-    //    private static final String UPGRADED_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
 
     private static final CardStrings cardStrings;
