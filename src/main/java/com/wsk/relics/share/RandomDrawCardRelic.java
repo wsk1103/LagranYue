@@ -2,11 +2,13 @@ package com.wsk.relics.share;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.wsk.utils.CommonUtil;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 /**
@@ -42,7 +44,21 @@ public class RandomDrawCardRelic extends CustomRelic {
         flash();
         AbstractPlayer player = AbstractDungeon.player;
         if (null != player) {
-            Collections.shuffle(player.drawPile.group);
+            ArrayList<AbstractCard> innate = new ArrayList<>();
+            ArrayList<AbstractCard> other = new ArrayList<>();
+            for (AbstractCard card : player.drawPile.group) {
+                if (card.isInnate) {
+                    innate.add(card);
+                } else {
+                    other.add(card);
+                }
+            }
+            Collections.shuffle(other);
+            ArrayList<AbstractCard> all = new ArrayList<>(player.drawPile.group.size());
+            all.addAll(innate);
+            all.addAll(other);
+            player.drawPile.group = all;
+            //Collections.shuffle(player.drawPile.group);
         }
     }
 }
