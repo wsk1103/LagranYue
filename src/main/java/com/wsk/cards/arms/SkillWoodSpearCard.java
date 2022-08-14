@@ -49,6 +49,7 @@ public class SkillWoodSpearCard extends AbstractSpearCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
         this.baseDamage = 2;
+        this.isMultiDamage = true;
     }
 
     public AbstractCard makeCopy() {

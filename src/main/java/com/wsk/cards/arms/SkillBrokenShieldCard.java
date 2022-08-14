@@ -48,6 +48,7 @@ public class SkillBrokenShieldCard extends AbstractShieldCard {
         this.isInnate = false;
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
+        this.isMultiDamage = true;
     }
 
     @Override

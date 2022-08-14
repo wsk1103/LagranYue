@@ -131,6 +131,7 @@ public class LagranYueCharacter extends CustomPlayer {
         retVal.add(BaseAttackCard.ID);
         retVal.add(BaseAttackCard.ID);
         retVal.add(BaseAttackCard.ID);
+//        retVal.add(AttackMagicSwordCard.ID);
 
         retVal.add(BaseDefendCard.ID);
         retVal.add(BaseDefendCard.ID);
@@ -280,6 +281,7 @@ public class LagranYueCharacter extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(ArmsProficiencyRelics.ID);
+//        retVal.add(RandomDrawCardRelic.ID);
 //        retVal.add(EnkiduRelics.ID);
 
 //        retVal.add(ContractPerformanceRelic.ID);

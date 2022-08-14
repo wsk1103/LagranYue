@@ -57,7 +57,7 @@ public class AttackGalacticZeroCard extends AbstractProfSpearCard {
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.baseDamage = 5;
         this.magicNumber = this.baseMagicNumber = 3;
-
+        this.isMultiDamage = true;
         this.isEthereal = false;
 
         this.exhaust = false;

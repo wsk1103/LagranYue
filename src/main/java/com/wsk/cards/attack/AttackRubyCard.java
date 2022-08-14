@@ -39,6 +39,7 @@ public class AttackRubyCard extends CustomCard {
         this.isEthereal = false;
         this.exhaust = false;
         this.isInnate = false;
+        this.isMultiDamage = true;
     }
 
     public AbstractCard makeCopy() {

@@ -49,6 +49,7 @@ public class SkillChiharaHoundCard extends AbstractArchCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
         this.baseDamage = 4;
         this.durability = this.baseDurability = DURABILITY;
+        this.isMultiDamage = true;
     }
 
     public AbstractCard makeCopy() {

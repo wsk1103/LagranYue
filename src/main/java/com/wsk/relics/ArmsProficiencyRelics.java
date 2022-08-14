@@ -22,7 +22,7 @@ public final class ArmsProficiencyRelics extends CustomRelic {
 
     public static int point = 1;
 
-    private final int init = 0;
+    private final int init = 10;
 
     private int skillPoint = init;
 

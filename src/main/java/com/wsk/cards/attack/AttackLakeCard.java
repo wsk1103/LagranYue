@@ -43,6 +43,7 @@ public class AttackLakeCard extends CustomCard {
         this.isEthereal = false;
         this.exhaust = false;
         this.isInnate = false;
+        this.isMultiDamage = true;
         //例：我需要在升级后虚无、消耗、固有。即可在下方upgrade()方法里this.isEthereal/this.exhaust/this.isInnate调用 赋值为 true。
         //   使用时满足条件不虚无/消耗，在use中填写if判定语句，满足条件时，this.isEthereal/this.exhaust调用 赋值为false即可。实例不详细赘叙。
     }

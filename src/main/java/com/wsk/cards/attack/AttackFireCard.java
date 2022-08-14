@@ -38,6 +38,7 @@ public class AttackFireCard extends CustomCard {
                 CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = wskAttack;//基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.isEthereal = false;
+        this.isMultiDamage = true;
         this.exhaust = false;
         this.isInnate = false;
         //例：我需要在升级后虚无、消耗、固有。即可在下方upgrade()方法里this.isEthereal/this.exhaust/this.isInnate调用 赋值为 true。

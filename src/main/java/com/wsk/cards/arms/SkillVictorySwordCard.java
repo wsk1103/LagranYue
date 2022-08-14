@@ -49,6 +49,7 @@ public class SkillVictorySwordCard extends AbstractSwordCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
         this.baseDamage = 14;
+        this.isMultiDamage = true;
     }
 
     public AbstractCard makeCopy() {

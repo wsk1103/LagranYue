@@ -40,6 +40,7 @@ public class AttackFaithCard extends CustomCard {
         this.isEthereal = false;
         this.exhaust = true;
         this.isInnate = false;
+        this.isMultiDamage = true;
     }
 
     public AbstractCard makeCopy() {

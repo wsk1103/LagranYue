@@ -1,8 +1,7 @@
 package com.wsk.reward;
 
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.screens.CombatRewardScreen;
-import javassist.CtBehavior;
 
 /**
  * @author wsk1103
@@ -17,7 +16,7 @@ public class CombatRewardScreenPatch {
 
     public static boolean rareGoldArmor = false;
 
-    @SpireInsertPatch(locator = Locator.class)
+//    @SpireInsertPatch(locator = Locator.class)
     public static void insert(CombatRewardScreen instance) {
         //神性
 //        for (int i = 0; i < divinityPower; i++) {
@@ -39,13 +38,13 @@ public class CombatRewardScreenPatch {
     }
 
 
-    private static class Locator extends SpireInsertLocator {
-        @Override
-        public int[] Locate(CtBehavior ctMethodToPatch)
-                throws Exception {
-            Matcher finalMatcher = new Matcher.MethodCallMatcher(DynamicButton.class, "hide");
-            int[] found = LineFinder.findAllInOrder(ctMethodToPatch, finalMatcher);
-            return new int[]{found[0]};
-        }
-    }
+//    private static class Locator extends SpireInsertLocator {
+//        @Override
+//        public int[] Locate(CtBehavior ctMethodToPatch)
+//                throws Exception {
+//            Matcher finalMatcher = new Matcher.MethodCallMatcher(DynamicButton.class, "hide");
+//            int[] found = LineFinder.findAllInOrder(ctMethodToPatch, finalMatcher);
+//            return new int[]{found[0]};
+//        }
+//    }
 }

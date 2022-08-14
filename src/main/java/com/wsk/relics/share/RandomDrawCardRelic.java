@@ -55,8 +55,9 @@ public class RandomDrawCardRelic extends CustomRelic {
             }
             Collections.shuffle(other);
             ArrayList<AbstractCard> all = new ArrayList<>(player.drawPile.group.size());
-            all.addAll(innate);
+
             all.addAll(other);
+            all.addAll(innate);
             player.drawPile.group = all;
             //Collections.shuffle(player.drawPile.group);
         }

@@ -41,6 +41,7 @@ public class AttackLuEnCard extends CustomCard {
         this.isEthereal = true;
         this.exhaust = true;
         this.isInnate = false;
+        this.isMultiDamage = true;
     }
 
     public AbstractCard makeCopy() {

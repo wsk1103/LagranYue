@@ -48,6 +48,7 @@ public class SkillDeathBolgCard extends AbstractSpearCard {
         this.chooseDesc.add(EXTENDED_DESCRIPTION[0]);
         this.chooseDesc.add(EXTENDED_DESCRIPTION[1]);
         this.baseDamage = 4;
+        this.isMultiDamage = true;
     }
 
     @Override

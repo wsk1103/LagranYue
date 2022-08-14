@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.wsk.patches.AbstractCardEnum;
@@ -55,12 +54,13 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
         //基础伤害值，除升级以外无任何其他加成. this.damage为有力量、钢笔尖等加成的伤害值.
         this.baseDamage = 24;
         this.magicNumber = this.baseMagicNumber = 24;
+        this.isMultiDamage = true;
 
         this.isEthereal = false;
 
         this.exhaust = true;
 
-        this.isInnate = false;
+        this.isInnate = true;
         //保留属性
         this.retain = false;
     }
@@ -103,7 +103,11 @@ public class AttackMagicSwordCard extends AbstractProfSwordCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 //        ActionUtil.addPower(p, new DivinityPower(p));
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+//        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+//        AbstractDungeon.actionManager.addToBottom(
+//                new DamageAllEnemiesAction(AbstractDungeon.player, this.multiDamage, this.damageTypeForTurn,
+//                        AbstractGameAction.AttackEffect.FIRE));
     }
 
     static {
